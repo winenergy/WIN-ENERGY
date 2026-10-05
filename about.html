@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>About Us – Win Energy (Sustainable Engineering &amp; Clean Tech)</title>
+  <meta name="description" content="Learn about Win Energy, the innovation engine behind HydroPulse water conditioning and BuzzZap solar agricultural pest management." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .about-card-block {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-md);
+    }
+    .about-dual-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 30px;
+    }
+    .vision-card {
+      background: #f8fafc;
+      border: 1.5px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .stats-counter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .stat-counter-box {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .stat-counter-num {
+      font-family: var(--font-heading);
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .stat-counter-num.orange { color: #fb923c; }
+    .stat-counter-num.green { color: #4ade80; }
+    .stat-counter-num.blue { color: #38bdf8; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════ TOP UTILITY BAR ══════════════════ -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <div class="topbar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+919090991090">+91 90909 91090</a> / <a href="tel:+919881248812">+91 9881248812</a>
+        </div>
+        <div class="topbar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@mizusun.com">info@mizusun.com</a> / <a href="mailto:buzzzap@leanwayenergy.com">buzzzap@leanwayenergy.com</a>
+        </div>
+      </div>
+      <div class="topbar-badges">
+        <span class="badge-tag orange">● HydroPulse Water Tech</span>
+        <span class="badge-tag green">● BuzzZap Clean Agri Tech</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ HEADER ══════════════════ -->
+  <header class="header-sticky">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="brand-logo-img" />
+          <div class="brand-text">
+            <span class="brand-title">Win Energy <span class="pulse-dot"></span></span>
+            <span class="brand-subtitle">Sustainable Engineering</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Our Products</a></li>
+          <li><a href="sectors.html" class="nav-link">Sectors</a></li>
+          <li><a href="technology.html" class="nav-link">Technology</a></li>
+          <li><a href="about.html" class="nav-link active">About Win Energy</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════ SUBPAGE HERO ══════════════════ -->
+  <section class="subpage-hero">
+    <div class="container">
+      <h1>About Win Energy</h1>
+      <p>
+        An innovation-led clean-tech engineering enterprise committed to solving real-world water and agricultural resource challenges through sustainable, maintenance-free technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CORPORATE PROFILE ══════════════════ -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+
+      <!-- 1. The Win Energy Story -->
+      <div class="about-card-block">
+        <span class="section-tag tag-blue">The Corporate Umbrella</span>
+        <h2 class="section-title">Who We Are: Win Energy</h2>
+        <p class="problem-desc" style="font-size: 1.05rem;">
+          <strong>Win Energy</strong> represents the unification of cutting-edge physical engineering across water purification systems and precision agricultural technology. Housing our specialized divisions — <strong>Mizusun Pvt. Ltd.</strong> (creators of HydroPulse Hydro-Polarization Technology) and <strong>Leanway Energy Pvt. Ltd.</strong> (creators of BuzzZap Clean Solar Agricultural Traps) — Win Energy delivers chemical-free, sustainable alternatives to outdated, high-maintenance practices.
+        </p>
+        <p style="font-size: 0.95rem; color: #475569; line-height: 1.7;">
+          With engineering headquarters in Pune and high-volume manufacturing facilities in Sangli, Maharashtra, our devices are deployed across thousands of farmlands, corporate complexes, and industrial sites throughout India, and exported to international partners across Europe and Africa.
+        </p>
+      </div>
+
+      <!-- 2. Dual Pillars of Excellence -->
+      <div class="about-dual-vision">
+        
+        <!-- HydroPulse Division -->
+        <div class="vision-card" style="border-left: 4px solid var(--color-orange);">
+          <span class="card-pill orange-pill">Water Conditioning Wing</span>
+          <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--color-win-navy); margin-top: 8px;">Mizusun Pvt. Ltd. (HydroPulse)</h3>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-top: 10px;">
+            Dedicated to developing smart physical water conditioning technology that alters mineral crystallization without salt, chemicals, or filters. Protecting plumbing networks, HVAC chillers, and domestic appliances while ensuring pure, healthy mineral-rich water.
+          </p>
+        </div>
+
+        <!-- BuzzZap Division -->
+        <div class="vision-card" style="border-left: 4px solid var(--color-green);">
+          <span class="card-pill green-pill">Clean Agriculture Wing</span>
+          <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--color-win-navy); margin-top: 8px;">Leanway Energy Pvt. Ltd. (BuzzZap)</h3>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-top: 10px;">
+            Focused on revolutionizing precision agriculture through renewable solar energy, engineering, and phototropic pest attraction. Leading the movement to "Double the Farmer's Income" through pesticide-free, residue-free farming.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- 3. Mission & Vision -->
+      <div class="about-dual-vision" style="margin-top: 36px;">
+        <div class="vision-card">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div class="pillar-icon-wrap blue" style="margin-bottom: 0; width: 44px; height: 44px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-win-navy);">Our Mission</h3>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Our mission is to develop smart, sustainable technologies that conserve resources and address real-world energy, water, and agricultural challenges. We strive to make responsible, chemical-free operations accessible by providing reliable solutions that improve yield, cut waste, and protect future generations.
+          </p>
+        </div>
+
+        <div class="vision-card">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div class="pillar-icon-wrap orange" style="margin-bottom: 0; width: 44px; height: 44px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-win-navy);">Our Vision</h3>
+          </div>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Our vision is to stand as a global benchmark in sustainable clean engineering — empowering farmers to produce organic, chemical-free harvest while freeing domestic, commercial, and industrial pipelines from limescale scaling and toxic effluent.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Stats Counter Grid -->
+      <div class="stats-counter-grid">
+        <div class="stat-counter-box">
+          <div class="stat-counter-num blue">10M+ L</div>
+          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">Liters of Water Saved</div>
+        </div>
+
+        <div class="stat-counter-box">
+          <div class="stat-counter-num orange">1,000+</div>
+          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">Water Descaling Sites</div>
+        </div>
+
+        <div class="stat-counter-box">
+          <div class="stat-counter-num green">1000s</div>
+          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">BuzzZap Solar Traps Active</div>
+        </div>
+
+        <div class="stat-counter-box">
+          <div class="stat-counter-num" style="color: #ffffff;">20+</div>
+          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">Industry Sectors Served</div>
+        </div>
+      </div>
+
+      <!-- 5. Manufacturing Excellence & Certified Quality -->
+      <div class="about-card-block" style="margin-top: 40px;">
+        <span class="section-tag tag-blue">Standard of Excellence</span>
+        <h2 class="section-title">Certified Quality Management</h2>
+        <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 24px;">
+          Every unit designed by Win Energy is assembled under rigorous quality control standards and adheres to international environmental protocols.
+        </p>
+
+        <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" style="height: 48px;" />
+            <div>
+              <strong style="display: block; font-size: 0.95rem;">ISO 9001:2015</strong>
+              <span style="font-size: 0.8rem; color: #64748b;">Quality Management System</span>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" style="height: 48px;" />
+            <div>
+              <strong style="display: block; font-size: 0.95rem;">ISO 14001:2015</strong>
+              <span style="font-size: 0.8rem; color: #64748b;">Environmental Management</span>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Mark" style="height: 42px;" />
+            <div>
+              <strong style="display: block; font-size: 0.95rem;">CE Compliant</strong>
+              <span style="font-size: 0.8rem; color: #64748b;">Conformité Européenne Standards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer-corporate">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" style="width: 48px; height: 48px; border-radius: 50%;" />
+            <span class="brand-title" style="color: #ffffff;">Win Energy</span>
+          </div>
+          <p>
+            Pioneering sustainable physical water polarization and clean-energy agricultural pest solutions. Driving higher yields, lower operational costs, and zero chemical footprint across India and globally.
+          </p>
+          <div class="footer-certs">
+            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" />
+            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" />
+            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" />
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.0</a></li>
+            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.5</a></li>
+            <li><a href="products.html#hydropulse">HydroPulse Industrial</a></li>
+            <li><a href="products.html#buzzzap">BuzzZap ECO Trap</a></li>
+            <li><a href="products.html#buzzzap">BuzzZap Pro Solar Killer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <ul>
+            <li><a href="sectors.html#agri">Agriculture &amp; Vineyards</a></li>
+            <li><a href="sectors.html#domestic">Domestic Households</a></li>
+            <li><a href="sectors.html#commercial">Hotels &amp; Commercial</a></li>
+            <li><a href="sectors.html#industrial">Industrial Factories</a></li>
+            <li><a href="sectors.html#poultry">Poultry &amp; Animal Husbandry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Win Energy</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Offices</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>Pune Office:</strong> 3rd Floor, Prabhat House, Damle Path, Pune 411004</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>Sangli Works:</strong> Plot 2038/B, Malgaon Savali Rd, Sangli 416410</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Win Energy. All rights reserved.</p>
+        <span>Pan-India Delivery &amp; Global Exports</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
