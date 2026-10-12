@@ -5,20 +5,56 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Menu Toggle
+  // 1. Mobile Menu Toggle & Accordions
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navMenu = document.getElementById('navMenu');
+  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
 
   if (hamburgerBtn && navMenu) {
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('mobile-open');
     });
 
-    // Close when clicking outside or clicking any nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-open');
+      });
+    }
+
+    // Mobile Dropdown Accordion Toggles
+    const dropdownTriggers = document.querySelectorAll('.nav-link-dropdown');
+    dropdownTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1024) {
+          e.preventDefault();
+          const parent = trigger.closest('.nav-item-dropdown');
+          if (parent) {
+            const isExpanded = parent.classList.contains('mobile-expanded');
+            // Close other open accordions
+            document.querySelectorAll('.nav-item-dropdown').forEach(d => {
+              if (d !== parent) d.classList.remove('mobile-expanded');
+            });
+            parent.classList.toggle('mobile-expanded', !isExpanded);
+          }
+        }
+      });
+    });
+
+    // Close mobile drawer when clicking non-dropdown links
+    document.querySelectorAll('.nav-link:not(.nav-link-dropdown), .mega-sublink-item a, .mega-learn-more').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('mobile-open');
       });
+    });
+
+    // Close when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024 && navMenu.classList.contains('mobile-open')) {
+        if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+          navMenu.classList.remove('mobile-open');
+        }
+      }
     });
   }
 
@@ -26,20 +62,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const techTabBtns = document.querySelectorAll('.tech-tab-btn');
   const techTabPanes = document.querySelectorAll('.tech-tab-pane');
 
+  function activateTab(targetId) {
+    if (!targetId) return;
+    const matchingBtn = Array.from(techTabBtns).find(b => b.getAttribute('data-tab') === targetId);
+    const activePane = document.getElementById(targetId);
+    if (activePane) {
+      techTabBtns.forEach(b => b.classList.remove('active'));
+      techTabPanes.forEach(p => p.classList.remove('active'));
+      if (matchingBtn) matchingBtn.classList.add('active');
+      activePane.classList.add('active');
+    }
+  }
+
   techTabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-tab');
-
-      techTabBtns.forEach(b => b.classList.remove('active'));
-      techTabPanes.forEach(p => p.classList.remove('active'));
-
-      btn.classList.add('active');
-      const activePane = document.getElementById(target);
-      if (activePane) {
-        activePane.classList.add('active');
-      }
+      activateTab(target);
     });
   });
+
+  // Handle URL hash on load for deep linking (e.g. #hydropulse, #buzzzap, #techHydropulse)
+  function handleUrlHash() {
+    const hash = window.location.hash.toLowerCase();
+    if (hash.includes('buzzzap')) {
+      if (document.getElementById('techBuzzzap')) activateTab('techBuzzzap');
+      if (document.getElementById('sectorBuzzzap')) activateTab('sectorBuzzzap');
+    } else if (hash.includes('hydropulse')) {
+      if (document.getElementById('techHydropulse')) activateTab('techHydropulse');
+      if (document.getElementById('sectorHydropulse')) activateTab('sectorHydropulse');
+    }
+  }
+  handleUrlHash();
+  window.addEventListener('hashchange', handleUrlHash);
 
   // 3. Interactive Solution Finder
   const challengeSelect = document.getElementById('finderChallenge');

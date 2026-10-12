@@ -90,13 +90,219 @@
           </div>
         </a>
 
+        <!-- Desktop & Mobile Navigation Menu -->
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="products.html" class="nav-link">Our Products</a></li>
-          <li><a href="sectors.html" class="nav-link">Sectors</a></li>
-          <li><a href="technology.html" class="nav-link">Technology</a></li>
-          <li><a href="about.html" class="nav-link">About Win Energy</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          
+          <!-- Mobile Drawer Header -->
+          <li class="mobile-drawer-top">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="assets/images/company/win_energy_logo.png" alt="Win Energy" style="width: 32px; height: 32px; border-radius: 50%;" />
+              <strong style="color: var(--color-win-navy); font-size: 1.1rem;">Win Energy</strong>
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Navigation">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </li>
+
+          <!-- 1. Home -->
+          <li>
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+            </a>
+          </li>
+
+          <!-- 2. About Us -->
+          <li>
+            <a href="about.html" class="nav-link">
+              <span>About Us</span>
+            </a>
+          </li>
+
+          <!-- 3. Our Products (Mega Dropdown) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
+              <span>Our Products</span>
+              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="mega-dropdown-menu">
+              <div class="mega-dropdown-grid">
+                
+                <!-- HydroPulse Column -->
+                <div class="mega-dropdown-col">
+                  <a href="products.html#hydropulse" class="mega-col-header">
+                    <div class="mega-col-icon orange">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                    </div>
+                    <div class="mega-col-title-wrap">
+                      <span class="mega-col-title">HydroPulse</span>
+                      <span class="mega-col-subtitle">Water conditioning technology</span>
+                    </div>
+                  </a>
+                  <ul class="mega-sublinks">
+                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.0 (Apartments &amp; Homes)</a></li>
+                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.5 (Villas &amp; Commercial)</a></li>
+                    <li class="mega-sublink-item"><a href="products.html#hydropulse">HydroPulse Industrial Units</a></li>
+                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Technical Specifications &amp; Pricing</a></li>
+                  </ul>
+                  <div class="mega-col-footer">
+                    <a href="products.html#hydropulse" class="mega-learn-more orange">Learn More →</a>
+                  </div>
+                </div>
+
+                <!-- BuzzZap Column -->
+                <div class="mega-dropdown-col">
+                  <a href="products.html#buzzzap" class="mega-col-header">
+                    <div class="mega-col-icon green">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <div class="mega-col-title-wrap">
+                      <span class="mega-col-title">BuzzZap</span>
+                      <span class="mega-col-subtitle">Electrical insect control for farms</span>
+                    </div>
+                  </a>
+                  <ul class="mega-sublinks">
+                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap ECO (Solar Insect Trap)</a></li>
+                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap Pro (Heavy-Duty Killer)</a></li>
+                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Multi-Function Rain Sensor Circuit</a></li>
+                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Technical Specifications &amp; Inquiry</a></li>
+                  </ul>
+                  <div class="mega-col-footer">
+                    <a href="products.html#buzzzap" class="mega-learn-more green">Learn More →</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 4. Sectors (Mega Dropdown) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
+              <span>Sectors</span>
+              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="mega-dropdown-menu">
+              <div class="mega-dropdown-grid">
+                
+                <!-- HydroPulse Sectors -->
+                <div class="mega-dropdown-col">
+                  <a href="sectors.html#sectorHydropulse" class="mega-col-header">
+                    <div class="mega-col-icon orange">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                    </div>
+                    <div class="mega-col-title-wrap">
+                      <span class="mega-col-title">HydroPulse Sectors</span>
+                      <span class="mega-col-subtitle">Scale-free water conditioning</span>
+                    </div>
+                  </a>
+                  <ul class="mega-sublinks">
+                    <li class="mega-sublink-item"><a href="sectors.html#domestic">Domestic Households &amp; Appliances</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#commercial">Commercial &amp; Hospitality Hotels</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#industrial">Industrial Boiler &amp; Cooling Towers</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#agri">Agricultural Drip Line Systems</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#poultry">Animal Husbandry &amp; Poultry Hydration</a></li>
+                  </ul>
+                  <div class="mega-col-footer">
+                    <a href="sectors.html#sectorHydropulse" class="mega-learn-more orange">Explore Water Sectors →</a>
+                  </div>
+                </div>
+
+                <!-- BuzzZap Sectors -->
+                <div class="mega-dropdown-col">
+                  <a href="sectors.html#sectorBuzzzap" class="mega-col-header">
+                    <div class="mega-col-icon green">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="mega-col-title-wrap">
+                      <span class="mega-col-title">BuzzZap Sectors</span>
+                      <span class="mega-col-subtitle">Clean energy agricultural pest control</span>
+                    </div>
+                  </a>
+                  <ul class="mega-sublinks">
+                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Vineyards &amp; Grape Orchards</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Open-Field Vegetables &amp; Cash Crops</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Tea &amp; Coffee Plantations</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Poultry &amp; Livestock Sheds</a></li>
+                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Floriculture &amp; Organic Farms</a></li>
+                  </ul>
+                  <div class="mega-col-footer">
+                    <a href="sectors.html#sectorBuzzzap" class="mega-learn-more green">Explore Agri Sectors →</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 5. Technology (Mega Dropdown) -->
+          <li class="nav-item-dropdown">
+            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
+              <span>Technology</span>
+              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="mega-dropdown-menu">
+              <div class="mega-dropdown-grid">
+                
+                <!-- HydroPulse Technology -->
+                <div class="mega-dropdown-col">
+                  <a href="technology.html#hydropulse" class="mega-col-header">
+                    <div class="mega-col-icon orange">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+                    </div>
+                    <div class="mega-col-title-wrap">
+                      <span class="mega-col-title">HydroPulse Science</span>
+                      <span class="mega-col-subtitle">Physical hydro-polarization physics</span>
+                    </div>
+                  </a>
+                  <ul class="mega-sublinks">
+                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">How Hydro-Polarization Operates</a></li>
+                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Calcite to Aragonite Micro-Crystals</a></li>
+                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Biofilm &amp; Algae Prevention</a></li>
+                    <li class="mega-sublink-item"><a href="technology.html#pipeSliderContainer">Interactive Descaling Pipe Demo</a></li>
+                  </ul>
+                  <div class="mega-col-footer">
+                    <a href="technology.html#techHydropulse" class="mega-learn-more orange">Learn Water Physics →</a>
+                  </div>
+                </div>
+
+                <!-- BuzzZap Technology -->
+                <div class="mega-dropdown-col">
+                  <a href="technology.html#buzzzap" class="mega-col-header">
+                    <div class="mega-col-icon green">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <div class="mega-col-title-wrap">
+                      <span class="mega-col-title">BuzzZap Science</span>
+                      <span class="mega-col-subtitle">Solar phototaxis &amp; microcontrollers</span>
+                    </div>
+                  </a>
+                  <ul class="mega-sublinks">
+                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Positive Phototaxis Principle</a></li>
+                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Automated Dusk Microchip Algorithm</a></li>
+                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Integrated Rain Sensor Moisture Protection</a></li>
+                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Low-Light Diffuse Solar PV Charging</a></li>
+                  </ul>
+                  <div class="mega-col-footer">
+                    <a href="technology.html#techBuzzzap" class="mega-learn-more green">Learn Solar Agri Tech →</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 6. Contact (Active) -->
+          <li>
+            <a href="contact.html" class="nav-link active">
+              <span>Contact</span>
+            </a>
+          </li>
+
+          <!-- Mobile Only CTA -->
+          <li class="mobile-cta-wrap">
+            <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
+          </li>
+
         </ul>
 
         <div style="display: flex; align-items: center; gap: 12px;">
