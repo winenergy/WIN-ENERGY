@@ -1,534 +1,521 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>About Us – Win Energy (Sustainable Engineering &amp; Clean Tech)</title>
-  <meta name="description" content="Learn about Win Energy, the innovation engine behind HydroPulse water conditioning and BuzzZap solar agricultural pest management." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About Win Energy — Sustainable Physical Clean-Tech Innovation</title>
+    <meta name="description" content="Learn about Win Energy, pioneering chemical-free physical water polarization (HydroPulse) and clean-energy solar insect control (BuzzZap) from our Sangli Works.">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            base: '#F8FAFC',
+                            sand: '#F1F5F9',
+                            surface: '#FFFFFF',
+                            border: '#E2E8F0',
+                            dark: '#0F172A',
+                            muted: '#64748B',
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .about-card-block {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-xl);
-      padding: 40px;
-      margin-bottom: 36px;
-      box-shadow: var(--shadow-md);
-    }
-    .about-dual-vision {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-top: 30px;
-    }
-    .vision-card {
-      background: #f8fafc;
-      border: 1.5px solid var(--border-medium);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-    }
-    .stats-counter-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .stat-counter-box {
-      background: #0f172a;
-      color: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 30px 20px;
-      text-align: center;
-    }
-    .stat-counter-num {
-      font-family: var(--font-heading);
-      font-size: 2.6rem;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-    .stat-counter-num.orange { color: #fb923c; }
-    .stat-counter-num.green { color: #4ade80; }
-    .stat-counter-num.blue { color: #38bdf8; }
-  </style>
+                            hpBlue: '#0284C7',
+                            hpBlueDark: '#0369A1',
+                            hpOrange: '#EA580C',
+                            hpOrangeLight: '#FFEDD5',
+                            hpBlueLight: '#E0F2FE',
+
+                            bzYellow: '#CA8A04',
+                            bzYellowLight: '#FEF08A',
+                            bzIndigo: '#1E1B4B',
+                            bzIndigoLight: '#EEF2FF'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Instrument Serif', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/editorial-theme.css">
 </head>
-<body>
+<body class="bg-win-base text-win-dark font-sans antialiased selection:bg-win-hpBlue selection:text-white">
 
-  <!-- ══════════════════ TOP UTILITY BAR ══════════════════ -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-info">
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+919090991090">+91 90909 91090</a> / <a href="tel:+919881248812">+91 9881248812</a>
-        </div>
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@mizusun.com">info@mizusun.com</a> / <a href="mailto:buzzzap@leanwayenergy.com">buzzzap@leanwayenergy.com</a>
-        </div>
-      </div>
-      <div class="topbar-badges">
-        <span class="badge-tag orange">● HydroPulse Water Tech</span>
-        <span class="badge-tag green">● BuzzZap Clean Agri Tech</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════════ HEADER ══════════════════ -->
-  <header class="header-sticky">
-    <div class="container">
-      <div class="header-inner">
-        <a href="index.html" class="brand-logo">
-          <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="brand-logo-img" />
-          <div class="brand-text">
-            <span class="brand-title">Win Energy <span class="pulse-dot"></span></span>
-            <span class="brand-subtitle">Sustainable Engineering</span>
-          </div>
-        </a>
-
-        <!-- Desktop & Mobile Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-          
-          <!-- Mobile Drawer Header -->
-          <li class="mobile-drawer-top">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <img src="assets/images/company/win_energy_logo.png" alt="Win Energy" style="width: 32px; height: 32px; border-radius: 50%;" />
-              <strong style="color: var(--color-win-navy); font-size: 1.1rem;">Win Energy</strong>
-            </div>
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Navigation">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-          </li>
-
-          <!-- 1. Home -->
-          <li>
-            <a href="index.html" class="nav-link">
-              <span>Home</span>
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-win-border object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-xl tracking-tight text-win-dark">WIN ENERGY</span>
+                    <span class="text-[9px] tracking-widest text-win-muted uppercase font-semibold -mt-1">Sustainable Systems</span>
+                </div>
             </a>
-          </li>
 
-          <!-- 2. About Us (Active) -->
-          <li>
-            <a href="about.html" class="nav-link active">
-              <span>About Us</span>
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
+                <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Our Products</a>
+                <a href="sectors.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Sectors</a>
+                <a href="technology.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Technology</a>
+                <a href="about.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">About Win Energy</a>
+                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="contact.html" class="bg-win-dark hover:bg-win-hpBlue text-white font-heading font-semibold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase shadow-sm transition-all flex items-center gap-2">
+                    <span>Consult Engineering</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="lg:hidden p-2 text-win-dark" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
+            <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Our Products</a>
+            <a href="sectors.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Sectors</a>
+            <a href="technology.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Technology</a>
+            <a href="about.html" class="block text-base font-semibold text-win-hpBlue">About Win Energy</a>
+            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Contact</a>
+            <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
-          </li>
+        </div>
+    </header>
 
-          <!-- 3. Our Products (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Our Products</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- Subpage Hero -->
+    <section class="pt-16 pb-20 bg-win-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl space-y-6">
+                <span class="text-xs font-heading font-bold uppercase tracking-widest text-win-hpOrange bg-win-hpOrange/10 border border-win-hpOrange/30 px-3.5 py-1 rounded-full">
+                    About Win Energy
+                </span>
+                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">
+                    Pioneering <span class="italic text-win-hpBlue">Physical Clean-Tech</span> for Sustainable Progress
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    An innovation-led engineering enterprise committed to solving real-world water and agricultural resource challenges through sustainable, maintenance-free physical technologies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPORATE PROFILE & STORY -->
+    <section class="py-24 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-20">
+
+            <!-- Story Block -->
+            <div class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-6">
+                <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-win-hpBlueLight px-3 py-1 rounded-full">The Corporate Journey</span>
+                <h2 class="font-serif text-4xl sm:text-5xl text-win-dark">Who We Are: Win Energy</h2>
+                <p class="text-win-dark text-base sm:text-lg leading-relaxed font-medium">
+                    <strong>Win Energy</strong> represents the unification of cutting-edge physical engineering across clean water conditioning systems and precision agricultural technology. Win Energy delivers chemical-free, sustainable alternatives to outdated, high-maintenance practices.
+                </p>
+                <p class="text-win-muted text-sm sm:text-base leading-relaxed">
+                    With advanced manufacturing and engineering facilities at our <strong>Sangli Works in Maharashtra</strong>, our devices are deployed across thousands of farmlands, corporate complexes, and industrial sites throughout India, and exported to international partners across Europe and Africa.
+                </p>
+            </div>
+
+            <!-- Two Wings of Innovation -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- HydroPulse Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                <!-- HydroPulse Wing -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 space-y-6 editorial-shadow border-t-4 border-t-win-hpOrange">
+                    <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpOrangeLight text-win-hpOrange font-bold px-3 py-1 rounded-full">Water Conditioning Wing</span>
+                    <h3 class="font-serif text-3xl text-win-dark">HydroPulse™ Physical Descaling</h3>
+                    <p class="text-win-muted text-sm leading-relaxed">
+                        Dedicated to developing smart physical water conditioning technology that alters mineral crystallization without salt, chemicals, or filters. Protecting plumbing networks, HVAC chillers, and domestic appliances while ensuring pure, healthy mineral-rich water.
+                    </p>
+                    <div class="p-4 bg-win-sand rounded-2xl border border-win-border text-xs space-y-2">
+                        <div class="flex justify-between font-medium">
+                            <span class="text-win-muted">Flagship Systems:</span>
+                            <span class="font-semibold text-win-dark">Marlin 1.0 (₹41,999) & Marlin 1.5 (₹55,999)</span>
+                        </div>
+                        <div class="flex justify-between font-medium">
+                            <span class="text-win-muted">Core Physics:</span>
+                            <span class="font-semibold text-win-hpBlue">Capacitive Frequency Modulation</span>
+                        </div>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse</span>
-                      <span class="mega-col-subtitle">Water conditioning technology</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.0 (Apartments &amp; Homes)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.5 (Villas &amp; Commercial)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">HydroPulse Industrial Units</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Technical Specifications &amp; Pricing</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#hydropulse" class="mega-learn-more orange">Learn More →</a>
-                  </div>
                 </div>
 
-                <!-- BuzzZap Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <!-- BuzzZap Wing -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 space-y-6 editorial-shadow border-t-4 border-t-emerald-600">
+                    <span class="text-[10px] font-mono uppercase tracking-widest bg-emerald-50 text-emerald-800 font-bold px-3 py-1 rounded-full">Clean Agriculture Wing</span>
+                    <h3 class="font-serif text-3xl text-win-dark">BuzzZap™ Clean Agri-Tech</h3>
+                    <p class="text-win-muted text-sm leading-relaxed">
+                        Focused on revolutionizing precision agriculture through renewable solar energy, engineering, and phototropic biological pest attraction. Leading the movement to elevate farmer net margins through pesticide-free, residue-free farming.
+                    </p>
+                    <div class="p-4 bg-win-sand rounded-2xl border border-win-border text-xs space-y-2">
+                        <div class="flex justify-between font-medium">
+                            <span class="text-win-muted">Flagship Models:</span>
+                            <span class="font-semibold text-win-dark">BuzzZap ECO Trap & BuzzZap Pro Solar Killer</span>
+                        </div>
+                        <div class="flex justify-between font-medium">
+                            <span class="text-win-muted">Core Physics:</span>
+                            <span class="font-semibold text-emerald-700">Positive Phototaxis & Rain Protected</span>
+                        </div>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap</span>
-                      <span class="mega-col-subtitle">Electrical insect control for farms</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap ECO (Solar Insect Trap)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap Pro (Heavy-Duty Killer)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Multi-Function Rain Sensor Circuit</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Technical Specifications &amp; Inquiry</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#buzzzap" class="mega-learn-more green">Learn More →</a>
-                  </div>
                 </div>
 
-              </div>
             </div>
-          </li>
 
-          <!-- 4. Sectors (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Sectors</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+            <!-- Mission & Vision -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- HydroPulse Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorHydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 space-y-4 editorial-shadow">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-win-hpBlueLight flex items-center justify-center text-win-hpBlue">
+                            <i data-lucide="target" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-serif text-3xl text-win-dark">Our Mission</h3>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Sectors</span>
-                      <span class="mega-col-subtitle">Scale-free water conditioning</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#domestic">Domestic Households &amp; Appliances</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#commercial">Commercial &amp; Hospitality Hotels</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#industrial">Industrial Boiler &amp; Cooling Towers</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#agri">Agricultural Drip Line Systems</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#poultry">Animal Husbandry &amp; Poultry Hydration</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorHydropulse" class="mega-learn-more orange">Explore Water Sectors →</a>
-                  </div>
+                    <p class="text-win-muted text-sm leading-relaxed">
+                        Our mission is to develop smart, sustainable technologies that conserve resources and address real-world energy, water, and agricultural challenges. We strive to make responsible, chemical-free operations accessible by providing reliable solutions that improve yield, cut waste, and protect future generations.
+                    </p>
                 </div>
 
-                <!-- BuzzZap Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorBuzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 space-y-4 editorial-shadow">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-win-hpOrangeLight flex items-center justify-center text-win-hpOrange">
+                            <i data-lucide="eye" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-serif text-3xl text-win-dark">Our Vision</h3>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Sectors</span>
-                      <span class="mega-col-subtitle">Clean energy agricultural pest control</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Vineyards &amp; Grape Orchards</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Open-Field Vegetables &amp; Cash Crops</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Tea &amp; Coffee Plantations</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Poultry &amp; Livestock Sheds</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Floriculture &amp; Organic Farms</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorBuzzzap" class="mega-learn-more green">Explore Agri Sectors →</a>
-                  </div>
+                    <p class="text-win-muted text-sm leading-relaxed">
+                        Our vision is to stand as a benchmark in sustainable clean engineering — empowering farmers to produce organic, chemical-free harvest while freeing domestic, commercial, and industrial pipelines from limescale scaling and toxic chemical effluent.
+                    </p>
                 </div>
 
-              </div>
             </div>
-          </li>
 
-          <!-- 5. Technology (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Technology</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 bg-win-dark text-white p-8 sm:p-12 rounded-3xl">
+                <div class="space-y-1 text-center md:text-left">
+                    <div class="font-serif text-4xl sm:text-5xl text-win-hpBlue">10M+ L</div>
+                    <div class="text-xs text-slate-400 font-medium">Water Treated & Conserved</div>
+                </div>
+                <div class="space-y-1 text-center md:text-left">
+                    <div class="font-serif text-4xl sm:text-5xl text-win-hpOrange">1,000+</div>
+                    <div class="text-xs text-slate-400 font-medium">Water Descaling Sites</div>
+                </div>
+                <div class="space-y-1 text-center md:text-left">
+                    <div class="font-serif text-4xl sm:text-5xl text-amber-400">Thousands</div>
+                    <div class="text-xs text-slate-400 font-medium">BuzzZap Solar Traps Active</div>
+                </div>
+                <div class="space-y-1 text-center md:text-left">
+                    <div class="font-serif text-4xl sm:text-5xl text-white">20+</div>
+                    <div class="text-xs text-slate-400 font-medium">Industry Sectors Served</div>
+                </div>
+            </div>
+
+            <!-- Certified Quality Management -->
+            <div class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                <div class="space-y-3">
+                    <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-win-hpBlueLight px-3 py-1 rounded-full">Engineering Standards</span>
+                    <h3 class="font-serif text-3xl sm:text-4xl text-win-dark">Certified Quality & International Compliance</h3>
+                    <p class="text-win-muted text-sm sm:text-base leading-relaxed max-w-3xl">
+                        Every system manufactured by Win Energy is produced under stringent quality control protocols at our Sangli Works facility and adheres to international environmental standards.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-win-border">
+                    <div class="flex items-center gap-4 p-4 bg-win-base rounded-2xl border border-win-border">
+                        <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" class="h-14 object-contain">
+                        <div>
+                            <strong class="text-sm font-heading font-bold text-win-dark block">ISO 9001:2015</strong>
+                            <span class="text-xs text-win-muted">Quality Management System</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-4 bg-win-base rounded-2xl border border-win-border">
+                        <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" class="h-14 object-contain">
+                        <div>
+                            <strong class="text-sm font-heading font-bold text-win-dark block">ISO 14001:2015</strong>
+                            <span class="text-xs text-win-muted">Environmental Management</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-4 bg-win-base rounded-2xl border border-win-border">
+                        <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" class="h-12 object-contain">
+                        <div>
+                            <strong class="text-sm font-heading font-bold text-win-dark block">CE Compliant</strong>
+                            <span class="text-xs text-win-muted">Conformité Européenne</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Enterprise Client Logos Marquee Section (As shown on hydropulseindia.com/about.html) -->
+    <section class="py-16 bg-win-surface border-y border-win-border overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-8 text-center space-y-2">
+            <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold">Trusted Globally</span>
+            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark">Our Clients</h3>
+        </div>
+        <div class="relative w-full overflow-hidden">
+            <div class="animate-marquee flex items-center gap-5">
+                <!-- Set 1 -->
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl1.png" alt="Bajaj Electricals Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Bajaj Electricals Ltd.</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl2.png" alt="Mungi Engineers Pvt. Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mungi Engineers</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl3.png" alt="PWD Maharashtra" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PWD Maharashtra</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl4.png" alt="SOM Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">SOM Group</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl5.png" alt="Ramee Panchshil" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Ramee Panchshil</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl6.png" alt="PMPML Transport" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PMPML Transport</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl7.png" alt="Aakar Foundry" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Aakar Foundry</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl8.png" alt="Palvi Industries" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Palvi Industries</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl9.png" alt="Deccan Cold Storages" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Deccan Cold Storages</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl10.png" alt="Mahabal Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mahabal Group</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl11.png" alt="Western Metal Ind." class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Western Metal Ind.</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl12.png" alt="Wind Water Systems" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Wind Water</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl13.png" alt="INOX Movies" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">INOX Movies</span>
+                </div>
+
+                <!-- Set 2 (for seamless loop) -->
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl1.png" alt="Bajaj Electricals Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Bajaj Electricals Ltd.</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl2.png" alt="Mungi Engineers Pvt. Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mungi Engineers</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl3.png" alt="PWD Maharashtra" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PWD Maharashtra</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl4.png" alt="SOM Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">SOM Group</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl5.png" alt="Ramee Panchshil" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Ramee Panchshil</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl6.png" alt="PMPML Transport" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PMPML Transport</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl7.png" alt="Aakar Foundry" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Aakar Foundry</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl8.png" alt="Palvi Industries" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Palvi Industries</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl9.png" alt="Deccan Cold Storages" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Deccan Cold Storages</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl10.png" alt="Mahabal Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mahabal Group</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl11.png" alt="Western Metal Ind." class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Western Metal Ind.</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl12.png" alt="Wind Water Systems" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Wind Water</span>
+                </div>
+                <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
+                    <img src="assets/images/clientLogos/cl13.png" alt="INOX Movies" class="h-10 w-auto max-w-[120px] object-contain">
+                    <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">INOX Movies</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Corporate Footer with Social Icons & Certification Presence -->
+    <footer class="bg-win-dark text-white pt-20 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-slate-800">
                 
-                <!-- HydroPulse Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+                <!-- Brand Info + Socials + Certifications -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-slate-700 object-cover">
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-xl tracking-tight text-white">WIN ENERGY</span>
+                            <span class="text-[9px] tracking-widest text-win-hpOrange uppercase font-semibold -mt-1">Sustainable Systems</span>
+                        </div>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Science</span>
-                      <span class="mega-col-subtitle">Physical hydro-polarization physics</span>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 ₹41,999 / Marlin 1.5 ₹55,999) and BuzzZap solar agricultural insect control.
+                    </p>
+
+                    <!-- Social Media Quicklinks (Row of 8 dark circular icons) -->
+                    <div class="flex items-center gap-3 pt-1 flex-wrap">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="X / Twitter">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-600 transition-all" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919595955585" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpOrange hover:bg-win-hpOrange transition-all" aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:contact@winenergy.in" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-red-600 hover:bg-red-600 transition-all" aria-label="YouTube">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">How Hydro-Polarization Operates</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Calcite to Aragonite Micro-Crystals</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Biofilm &amp; Algae Prevention</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#pipeSliderContainer">Interactive Descaling Pipe Demo</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techHydropulse" class="mega-learn-more orange">Learn Water Physics →</a>
-                  </div>
+
+                    <!-- Certification Presence (Dark Rounded Boxes exactly like user Image 1) -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-5 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" class="h-9 w-auto object-contain brightness-95">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-400 pt-2">
+                        <p class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                            <span><strong>Sangli Works:</strong> Plot no. 2038/B, Malgaon Savali Road, Malgaon, Sangli – 416410, Maharashtra, INDIA.</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                            <span><strong>Direct Phone / WhatsApp:</strong> +91 9595955585</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                            <span><strong>Official Email:</strong> contact@winenergy.in / info@winenergy.in</span>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- BuzzZap Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Science</span>
-                      <span class="mega-col-subtitle">Solar phototaxis &amp; microcontrollers</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Positive Phototaxis Principle</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Automated Dusk Microchip Algorithm</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Integrated Rain Sensor Moisture Protection</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Low-Light Diffuse Solar PV Charging</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techBuzzzap" class="mega-learn-more green">Learn Solar Agri Tech →</a>
-                  </div>
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.0 (₹41,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.5 (₹55,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">Industrial Descaling Units</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap ECO Solar Trap</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap Pro Solar Killer</a></li>
+                    </ul>
                 </div>
 
-              </div>
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Sectors</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="sectors.html#agri" class="hover:text-win-hpBlue transition-colors">Agriculture & Vineyards</a></li>
+                        <li><a href="sectors.html#domestic" class="hover:text-win-hpBlue transition-colors">Domestic & Villas</a></li>
+                        <li><a href="sectors.html#commercial" class="hover:text-win-hpBlue transition-colors">Hotels & Commercial</a></li>
+                        <li><a href="sectors.html#industrial" class="hover:text-win-hpBlue transition-colors">Industrial Boilers</a></li>
+                        <li><a href="sectors.html#poultry" class="hover:text-win-hpBlue transition-colors">Poultry & Husbandry</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="technology.html" class="hover:text-win-hpBlue transition-colors">Core Physics & Science</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Engineering</a></li>
+                    </ul>
+                </div>
             </div>
-          </li>
 
-          <!-- 6. Contact -->
-          <li>
-            <a href="contact.html" class="nav-link">
-              <span>Contact</span>
-            </a>
-          </li>
-
-          <!-- Mobile Only CTA -->
-          <li class="mobile-cta-wrap">
-            <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          </li>
-
-        </ul>
-
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ══════════════════ SUBPAGE HERO ══════════════════ -->
-  <section class="subpage-hero">
-    <div class="container">
-      <h1>About Win Energy</h1>
-      <p>
-        An innovation-led clean-tech engineering enterprise committed to solving real-world water and agricultural resource challenges through sustainable, maintenance-free technologies.
-      </p>
-    </div>
-  </section>
-
-  <!-- ══════════════════ CORPORATE PROFILE ══════════════════ -->
-  <section style="padding: 60px 0;">
-    <div class="container">
-
-      <!-- 1. The Win Energy Story -->
-      <div class="about-card-block">
-        <span class="section-tag tag-blue">The Corporate Umbrella</span>
-        <h2 class="section-title">Who We Are: Win Energy</h2>
-        <p class="problem-desc" style="font-size: 1.05rem;">
-          <strong>Win Energy</strong> represents the unification of cutting-edge physical engineering across water purification systems and precision agricultural technology. Housing our specialized divisions — <strong>Mizusun Pvt. Ltd.</strong> (creators of HydroPulse Hydro-Polarization Technology) and <strong>Leanway Energy Pvt. Ltd.</strong> (creators of BuzzZap Clean Solar Agricultural Traps) — Win Energy delivers chemical-free, sustainable alternatives to outdated, high-maintenance practices.
-        </p>
-        <p style="font-size: 0.95rem; color: #475569; line-height: 1.7;">
-          With engineering headquarters in Pune and high-volume manufacturing facilities in Sangli, Maharashtra, our devices are deployed across thousands of farmlands, corporate complexes, and industrial sites throughout India, and exported to international partners across Europe and Africa.
-        </p>
-      </div>
-
-      <!-- 2. Dual Pillars of Excellence -->
-      <div class="about-dual-vision">
-        
-        <!-- HydroPulse Division -->
-        <div class="vision-card" style="border-left: 4px solid var(--color-orange);">
-          <span class="card-pill orange-pill">Water Conditioning Wing</span>
-          <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--color-win-navy); margin-top: 8px;">Mizusun Pvt. Ltd. (HydroPulse)</h3>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-top: 10px;">
-            Dedicated to developing smart physical water conditioning technology that alters mineral crystallization without salt, chemicals, or filters. Protecting plumbing networks, HVAC chillers, and domestic appliances while ensuring pure, healthy mineral-rich water.
-          </p>
-        </div>
-
-        <!-- BuzzZap Division -->
-        <div class="vision-card" style="border-left: 4px solid var(--color-green);">
-          <span class="card-pill green-pill">Clean Agriculture Wing</span>
-          <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--color-win-navy); margin-top: 8px;">Leanway Energy Pvt. Ltd. (BuzzZap)</h3>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-top: 10px;">
-            Focused on revolutionizing precision agriculture through renewable solar energy, engineering, and phototropic pest attraction. Leading the movement to "Double the Farmer's Income" through pesticide-free, residue-free farming.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- 3. Mission & Vision -->
-      <div class="about-dual-vision" style="margin-top: 36px;">
-        <div class="vision-card">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-            <div class="pillar-icon-wrap blue" style="margin-bottom: 0; width: 44px; height: 44px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
+                </div>
             </div>
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-win-navy);">Our Mission</h3>
-          </div>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
-            Our mission is to develop smart, sustainable technologies that conserve resources and address real-world energy, water, and agricultural challenges. We strive to make responsible, chemical-free operations accessible by providing reliable solutions that improve yield, cut waste, and protect future generations.
-          </p>
         </div>
+    </footer>
 
-        <div class="vision-card">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-            <div class="pillar-icon-wrap orange" style="margin-bottom: 0; width: 44px; height: 44px;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--color-win-navy);">Our Vision</h3>
-          </div>
-          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
-            Our vision is to stand as a global benchmark in sustainable clean engineering — empowering farmers to produce organic, chemical-free harvest while freeing domestic, commercial, and industrial pipelines from limescale scaling and toxic effluent.
-          </p>
-        </div>
-      </div>
-
-      <!-- 4. Stats Counter Grid -->
-      <div class="stats-counter-grid">
-        <div class="stat-counter-box">
-          <div class="stat-counter-num blue">10M+ L</div>
-          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">Liters of Water Saved</div>
-        </div>
-
-        <div class="stat-counter-box">
-          <div class="stat-counter-num orange">1,000+</div>
-          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">Water Descaling Sites</div>
-        </div>
-
-        <div class="stat-counter-box">
-          <div class="stat-counter-num green">1000s</div>
-          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">BuzzZap Solar Traps Active</div>
-        </div>
-
-        <div class="stat-counter-box">
-          <div class="stat-counter-num" style="color: #ffffff;">20+</div>
-          <div style="font-size: 0.88rem; color: #cbd5e1; font-weight: 600;">Industry Sectors Served</div>
-        </div>
-      </div>
-
-      <!-- 5. Manufacturing Excellence & Certified Quality -->
-      <div class="about-card-block" style="margin-top: 40px;">
-        <span class="section-tag tag-blue">Standard of Excellence</span>
-        <h2 class="section-title">Certified Quality Management</h2>
-        <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 24px;">
-          Every unit designed by Win Energy is assembled under rigorous quality control standards and adheres to international environmental protocols.
-        </p>
-
-        <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" style="height: 48px;" />
-            <div>
-              <strong style="display: block; font-size: 0.95rem;">ISO 9001:2015</strong>
-              <span style="font-size: 0.8rem; color: #64748b;">Quality Management System</span>
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" style="height: 48px;" />
-            <div>
-              <strong style="display: block; font-size: 0.95rem;">ISO 14001:2015</strong>
-              <span style="font-size: 0.8rem; color: #64748b;">Environmental Management</span>
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Mark" style="height: 42px;" />
-            <div>
-              <strong style="display: block; font-size: 0.95rem;">CE Compliant</strong>
-              <span style="font-size: 0.8rem; color: #64748b;">Conformité Européenne Standards</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════ FOOTER ══════════════════ -->
-  <footer class="footer-corporate">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="brand-logo" style="margin-bottom: 12px;">
-            <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" style="width: 48px; height: 48px; border-radius: 50%;" />
-            <span class="brand-title" style="color: #ffffff;">Win Energy</span>
-          </div>
-          <p>
-            Pioneering sustainable physical water polarization and clean-energy agricultural pest solutions. Driving higher yields, lower operational costs, and zero chemical footprint across India and globally.
-          </p>
-          <div class="footer-certs">
-            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" />
-            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" />
-            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" />
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.0</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.5</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Industrial</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap ECO Trap</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap Pro Solar Killer</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sectors</h4>
-          <ul>
-            <li><a href="sectors.html#agri">Agriculture &amp; Vineyards</a></li>
-            <li><a href="sectors.html#domestic">Domestic Households</a></li>
-            <li><a href="sectors.html#commercial">Hotels &amp; Commercial</a></li>
-            <li><a href="sectors.html#industrial">Industrial Factories</a></li>
-            <li><a href="sectors.html#poultry">Poultry &amp; Animal Husbandry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Win Energy</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Our Offices</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Pune Office:</strong> 3rd Floor, Prabhat House, Damle Path, Pune 411004</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Sangli Works:</strong> Plot 2038/B, Malgaon Savali Rd, Sangli 416410</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Win Energy. All rights reserved.</p>
-        <span>Pan-India Delivery &amp; Global Exports</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="assets/js/ai-chat.js"></script>
 </body>
 </html>

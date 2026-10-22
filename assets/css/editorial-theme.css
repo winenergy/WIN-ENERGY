@@ -1,0 +1,32 @@
+/* Win Energy Editorial Design System Enhancements */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 35s linear infinite;
+}
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+.editorial-shadow {
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05);
+}
+.editorial-shadow-lg {
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+}

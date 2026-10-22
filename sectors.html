@@ -1,852 +1,768 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Sectors We Serve – Win Energy (HydroPulse &amp; BuzzZap)</title>
-  <meta name="description" content="Explore how Win Energy serves agriculture, domestic households, commercial hospitality, and industrial facilities with HydroPulse and BuzzZap clean technologies." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sectors We Serve — Win Energy</title>
+    <meta name="description" content="Explore Win Energy physical clean-tech applications across agriculture, vineyards, domestic homes, hospitality, industrial manufacturing, and poultry.">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            base: '#F8FAFC',
+                            sand: '#F1F5F9',
+                            surface: '#FFFFFF',
+                            border: '#E2E8F0',
+                            dark: '#0F172A',
+                            muted: '#64748B',
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .sector-switch-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: -30px;
-      margin-bottom: 50px;
-      position: relative;
-      z-index: 10;
-    }
-    .sector-switch-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 24px 36px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: var(--shadow-lg);
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: all var(--transition-normal);
-      min-width: 340px;
-    }
-    .sector-switch-card:hover {
-      transform: translateY(-4px);
-    }
-    .sector-switch-card.active-hydropulse {
-      border-color: var(--color-orange);
-      background: var(--color-orange-light);
-    }
-    .sector-switch-card.active-buzzzap {
-      border-color: var(--color-green);
-      background: var(--color-green-light);
-    }
-    .sector-detail-block {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-xl);
-      padding: 44px;
-      margin-bottom: 40px;
-      box-shadow: var(--shadow-md);
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .sector-media-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .media-card {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: #f1f5f9;
-      box-shadow: var(--shadow-sm);
-    }
-    .media-card img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
-    .media-card span {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: #334155;
-      padding: 8px 10px;
-      background: #ffffff;
-      line-height: 1.3;
-    }
-    @media (max-width: 900px) {
-      .sector-detail-block {
-        grid-template-columns: 1fr;
-        padding: 24px;
-      }
-      .sector-switch-tabs {
-        flex-direction: column;
-      }
-      .sector-switch-card {
-        min-width: auto;
-      }
-    }
-  </style>
+                            hpBlue: '#0284C7',
+                            hpBlueDark: '#0369A1',
+                            hpOrange: '#EA580C',
+                            hpOrangeLight: '#FFEDD5',
+                            hpBlueLight: '#E0F2FE',
+
+                            bzYellow: '#CA8A04',
+                            bzYellowLight: '#FEF08A',
+                            bzIndigo: '#1E1B4B',
+                            bzIndigoLight: '#EEF2FF'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Instrument Serif', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/editorial-theme.css">
 </head>
-<body>
+<body class="bg-win-base text-win-dark font-sans antialiased selection:bg-win-hpBlue selection:text-white">
 
-  <!-- ══════════════════ TOP UTILITY BAR ══════════════════ -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-info">
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+919090991090">+91 90909 91090</a> / <a href="tel:+919881248812">+91 9881248812</a>
-        </div>
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@mizusun.com">info@mizusun.com</a> / <a href="mailto:buzzzap@leanwayenergy.com">buzzzap@leanwayenergy.com</a>
-        </div>
-      </div>
-      <div class="topbar-badges">
-        <span class="badge-tag orange">● HydroPulse Water Tech</span>
-        <span class="badge-tag green">● BuzzZap Clean Agri Tech</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════════════ HEADER ══════════════════ -->
-  <header class="header-sticky">
-    <div class="container">
-      <div class="header-inner">
-        <a href="index.html" class="brand-logo">
-          <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="brand-logo-img" />
-          <div class="brand-text">
-            <span class="brand-title">Win Energy <span class="pulse-dot"></span></span>
-            <span class="brand-subtitle">Sustainable Engineering</span>
-          </div>
-        </a>
-
-        <!-- Desktop & Mobile Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-          
-          <!-- Mobile Drawer Header -->
-          <li class="mobile-drawer-top">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <img src="assets/images/company/win_energy_logo.png" alt="Win Energy" style="width: 32px; height: 32px; border-radius: 50%;" />
-              <strong style="color: var(--color-win-navy); font-size: 1.1rem;">Win Energy</strong>
-            </div>
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Navigation">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-          </li>
-
-          <!-- 1. Home -->
-          <li>
-            <a href="index.html" class="nav-link">
-              <span>Home</span>
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-win-border object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-xl tracking-tight text-win-dark">WIN ENERGY</span>
+                    <span class="text-[9px] tracking-widest text-win-muted uppercase font-semibold -mt-1">Sustainable Systems</span>
+                </div>
             </a>
-          </li>
 
-          <!-- 2. About Us -->
-          <li>
-            <a href="about.html" class="nav-link">
-              <span>About Us</span>
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
+                <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Our Products</a>
+                <a href="sectors.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">Sectors</a>
+                <a href="technology.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Technology</a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
+                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="contact.html" class="bg-win-dark hover:bg-win-hpBlue text-white font-heading font-semibold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase shadow-sm transition-all flex items-center gap-2">
+                    <span>Consult Engineering</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="lg:hidden p-2 text-win-dark" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
+            <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Our Products</a>
+            <a href="sectors.html" class="block text-base font-semibold text-win-hpBlue">Sectors</a>
+            <a href="technology.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Technology</a>
+            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
+            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Contact</a>
+            <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
-          </li>
+        </div>
+    </header>
 
-          <!-- 3. Our Products (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Our Products</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- Subpage Hero -->
+    <section class="pt-16 pb-20 bg-win-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl space-y-6">
+                <span class="text-xs font-heading font-bold uppercase tracking-widest text-win-hpOrange bg-win-hpOrange/10 border border-win-hpOrange/30 px-3.5 py-1 rounded-full">
+                    Operational Sectors We Serve
+                </span>
+                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">
+                    Engineered Precision for <span class="italic text-win-hpBlue">Every Operating Environment</span>
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    From organic vineyards protecting fruit skins from pest damage to heavy thermal power plants eliminating boiler scale, Win Energy delivers verified, chemical-free solutions.
+                </p>
                 
-                <!-- HydroPulse Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse</span>
-                      <span class="mega-col-subtitle">Water conditioning technology</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.0 (Apartments &amp; Homes)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.5 (Villas &amp; Commercial)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">HydroPulse Industrial Units</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Technical Specifications &amp; Pricing</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#hydropulse" class="mega-learn-more orange">Learn More →</a>
-                  </div>
+                <!-- Division Sector Switcher Header Buttons -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button onclick="switchSectorTab('hydropulse')" id="tab-btn-hp" class="bg-win-hpBlue text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm">
+                        <i data-lucide="droplets" class="w-4 h-4"></i>
+                        <span>HydroPulse Water Sectors</span>
+                    </button>
+                    <button onclick="switchSectorTab('buzzzap')" id="tab-btn-bz" class="bg-slate-800 text-slate-300 hover:text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                        <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+                        <span>BuzzZap Agri Clean Tech</span>
+                    </button>
                 </div>
-
-                <!-- BuzzZap Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap</span>
-                      <span class="mega-col-subtitle">Electrical insect control for farms</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap ECO (Solar Insect Trap)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap Pro (Heavy-Duty Killer)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Multi-Function Rain Sensor Circuit</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Technical Specifications &amp; Inquiry</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#buzzzap" class="mega-learn-more green">Learn More →</a>
-                  </div>
-                </div>
-
-              </div>
             </div>
-          </li>
+        </div>
+    </section>
 
-          <!-- 4. Sectors (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown active" type="button" aria-expanded="false">
-              <span>Sectors</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- SECTORS CONTENT PANE -->
+    <section class="py-20 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-24">
+
+            <!-- ================= HYDROPULSE WATER SECTORS ================= -->
+            <div id="pane-hydropulse" class="space-y-20">
                 
-                <!-- HydroPulse Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorHydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Sectors</span>
-                      <span class="mega-col-subtitle">Scale-free water conditioning</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#domestic">Domestic Households &amp; Appliances</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#commercial">Commercial &amp; Hospitality Hotels</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#industrial">Industrial Boiler &amp; Cooling Towers</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#agri">Agricultural Drip Line Systems</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#poultry">Animal Husbandry &amp; Poultry Hydration</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorHydropulse" class="mega-learn-more orange">Explore Water Sectors →</a>
-                  </div>
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <span class="text-xs font-heading font-bold uppercase tracking-widest bg-win-sand text-slate-700 px-3.5 py-1 rounded-full border border-win-border">HydroPulse Water Polarization</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl text-win-dark">Resolving Limescale Across Water Networks</h2>
+                    <p class="text-win-muted text-sm sm:text-base">Marlin 1.0 (₹41,999) & Marlin 1.5 (₹55,999) and Industrial custom systems protecting pipes, heaters, and chillers.</p>
                 </div>
 
-                <!-- BuzzZap Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorBuzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <!-- Water Sector 1: Domestic -->
+                <div id="domestic" class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-win-hpOrange font-bold">Water Sector 01</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Domestic Households & Luxury Villas</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-win-hpOrangeLight text-win-hpOrange px-4 py-1.5 rounded-full self-start md:self-auto">Marlin 1.0 (₹41,999) & Marlin 1.5 (₹55,999)</span>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Sectors</span>
-                      <span class="mega-col-subtitle">Clean energy agricultural pest control</span>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                Limescale is a constant nuisance in domestic homes. Hard water destroys water heaters and solar geysers, clogs showerheads and mixer faucets with white crust, leaves persistent stains on glass shower partitions, and strips natural oils from skin and hair.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0 mt-0.5"></i>
+                                    <span><strong>Appliance Life:</strong> Prevents scale buildup on geyser heating coils and washing machine drums, cutting electric power bills.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0 mt-0.5"></i>
+                                    <span><strong>High Flow Showers:</strong> Stops white crusting in shower spray nozzles and aerators without needing harsh acid washes.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0 mt-0.5"></i>
+                                    <span><strong>Zero Consumables:</strong> Pure clamp-on frequency modulation with zero salt bags, zero plumbing cuts, and zero maintenance.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=domestic" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-win-hpBlue hover:underline">
+                                    <span>Enquire for Homes & Villas</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/dom_limescale_faucet.png" alt="Choked Faucet" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Choking of Shower & Taps</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/dom_water_stains.png" alt="Hard Water Stains" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Stains on Tap & Glass</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/dom_geyser_scale.jpg" alt="Scale on Geyser" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Scale on Geyser Coils</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/dom_dishwasher_scale.jpg" alt="Scale in Washing Machine" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Washing Machine Scaling</span>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Vineyards &amp; Grape Orchards</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Open-Field Vegetables &amp; Cash Crops</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Tea &amp; Coffee Plantations</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Poultry &amp; Livestock Sheds</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Floriculture &amp; Organic Farms</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorBuzzzap" class="mega-learn-more green">Explore Agri Sectors →</a>
-                  </div>
                 </div>
 
-              </div>
+                <!-- Water Sector 2: Commercial & Hospitality -->
+                <div id="commercial" class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold">Water Sector 02</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Hotels, Resorts & Commercial Complexes</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-win-hpBlueLight text-win-hpBlue px-4 py-1.5 rounded-full self-start md:self-auto">Commercial Marlin 1.5 & Industrial Series</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                In hotels and commercial resorts, guest satisfaction is directly tied to pristine water quality. Hard water ruins luxury bath fittings, clouds glassware and partitions, burns out commercial laundry heat coils, and degrades centralized HVAC chiller efficiency.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0 mt-0.5"></i>
+                                    <span><strong>Spotless Glass & Fixtures:</strong> Eliminates stubborn water spots on glass partitions, tiles, and chrome fittings.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0 mt-0.5"></i>
+                                    <span><strong>Laundry & Boiler Savings:</strong> Reduces commercial detergent usage by 25-35% and extends hotel linen longevity.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0 mt-0.5"></i>
+                                    <span><strong>HVAC Chiller Protection:</strong> Prevents condenser tube scaling, keeping cooling coefficients at peak factory specs.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=commercial" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-win-hpBlue hover:underline">
+                                    <span>Enquire for Hospitality Facilities</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/comm_scale_fixture.jpg" alt="Choked Pipeline" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Commercial Pipeline Scaling</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/comm_chiller_scale.jpg" alt="Chiller Scale" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Reduced Chiller Efficiency</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/comm_bathroom_tiles.jpg" alt="Tiles Scale" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Hard Water Mineral Marks</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/hotel_hero.png" alt="Hotel Water" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">5-Star Guest Water Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Water Sector 3: Industrial Boilers & Plants -->
+                <div id="industrial" class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-win-hpOrange font-bold">Water Sector 03</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Industrial Boilers, Cooling Towers & Plants</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-win-hpOrangeLight text-win-hpOrange px-4 py-1.5 rounded-full self-start md:self-auto">Industrial High-Capacity Multi-Coil</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                Industrial water loops, cooling towers, and boiler networks are highly vulnerable to mineral crystallization. A 1mm scale layer on boiler plates or heat exchangers increases fuel consumption by up to 10–15% due to its severe thermal insulation effect.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                                    <span><strong>Thermal Insulation Elimination:</strong> Prevents hard calcite accumulation, sustaining optimal thermal conductivity in heat exchangers.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                                    <span><strong>No Toxic Acid Cleaning:</strong> Eliminates hazardous descaling acids and recurring chemical softeners, creating clean discharge water.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                                    <span><strong>Boiler Blowdown Reduction:</strong> Reduces blowdown cycles and conserves millions of liters of treated industrial water.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=industrial" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-win-hpOrange hover:underline">
+                                    <span>Request Industrial Sizing Consultation</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/ind_clogged_pipe.png" alt="Clogged Pipe" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Clogged Industrial Pipeline</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/ind_boiler_scale.png" alt="Boiler Scale" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Boiler Fuel Penalty Loss</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/ind_cooling_tower.png" alt="Cooling Tower" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Cooling Tower Biofouling</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/ind_chiller_scale.png" alt="Chiller Scale" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Heat Exchanger Protection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Water Sector 4: Agriculture Irrigation -->
+                <div id="agri" class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold">Water Sector 04</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Drip Irrigation & Agricultural Borewells</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 px-4 py-1.5 rounded-full self-start md:self-auto">Zero Drip Emitter Clogs</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                Hard borewell water crystallizes into calcite, blocking tiny drip irrigation emitters and micro-sprinklers. Over time, salt crusts form on topsoil, locking out essential fertilizers and stunting root development.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Unclogged Drip Lines:</strong> Converts calcite into aragonite, allowing water to flow evenly across every plant row.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Breaks Hard Soil Crusts:</strong> Improves soil porosity, enabling deep water infiltration and enhanced root fertilizer uptake.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Protects Borewell Pumps:</strong> Prevents mineral scaling on submersible pump impellers, extending pump lifetime.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=agri" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-win-hpBlue hover:underline">
+                                    <span>Enquire for Farm Irrigation</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/agri_clogged_drip.png" alt="Clogged Drip" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Clogged Micro Drip Emitters</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/agri_salty_soil.png" alt="Salty Soil" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Low Water Infiltration & Salt Crust</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/agri_stunted_crop.png" alt="Stunted Crop" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Nutrient Lockout Stunting</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/agri_pump_scale.png" alt="Pump Scale" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Scale on Pump Impellers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Water Sector 5: Animal Husbandry & Poultry -->
+                <div id="poultry" class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-win-hpOrange font-bold">Water Sector 05</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Poultry Farming & Animal Husbandry</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-win-hpOrangeLight text-win-hpOrange px-4 py-1.5 rounded-full self-start md:self-auto">Biofilm & Pathogen Protection</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                In poultry operations, flock health depends on continuous clean hydration. Fine calcium scale blocks delicate nipple drinkers, causing dehydration and weight drops, while rough pipe walls harbor dangerous Salmonella and E. coli biofilms.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                                    <span><strong>Smooth Flow in Nipple Drinkers:</strong> Ensures constant water availability so birds maintain optimum feed-conversion ratios.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                                    <span><strong>Eliminates Biofilm Anchors:</strong> Removes rough scale layers required by bacterial colonies, improving flock health naturally.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                                    <span><strong>Cuts Medication Overhead:</strong> Healthier water directly translates to lower veterinary and antibiotic costs.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=poultry" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-win-hpOrange hover:underline">
+                                    <span>Enquire for Poultry Sheds</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/poultry_hero.png" alt="Poultry Feed" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Choking of Water Drinkers</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/poultry_biofilm.png" alt="Biofilm" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Algae & Biofilm Formation</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/poultry_stressed_flock.png" alt="Flock Health" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">E. Coli Related Flock Health</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/hydropulse/poultry_water_losses.png" alt="Water Losses" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Higher FCR & Mortality Prevention</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </li>
 
-          <!-- 5. Technology (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Technology</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+            <!-- ================= BUZZZAP CLEAN AGRI SECTORS ================= -->
+            <div id="pane-buzzzap" class="hidden space-y-20">
                 
-                <!-- HydroPulse Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Science</span>
-                      <span class="mega-col-subtitle">Physical hydro-polarization physics</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">How Hydro-Polarization Operates</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Calcite to Aragonite Micro-Crystals</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Biofilm &amp; Algae Prevention</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#pipeSliderContainer">Interactive Descaling Pipe Demo</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techHydropulse" class="mega-learn-more orange">Learn Water Physics →</a>
-                  </div>
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <span class="text-xs font-heading font-bold uppercase tracking-widest bg-amber-100 text-amber-800 px-3.5 py-1 rounded-full border border-amber-200">BuzzZap Clean Agri-Tech</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl text-win-dark">100% Solar-Powered Insect Pest Control</h2>
+                    <p class="text-win-muted text-sm sm:text-base">Protecting vineyards, cash crops, and tea estates from nocturnal pests without toxic agrochemical sprays.</p>
                 </div>
 
-                <!-- BuzzZap Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <!-- Agri Sector 1: Vineyards & Grape Orchards -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">Agri Sector 01</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Vineyards & High-Value Horticulture</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 px-4 py-1.5 rounded-full self-start md:self-auto">Export Compliance Guaranteed</span>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Science</span>
-                      <span class="mega-col-subtitle">Solar phototaxis &amp; microcontrollers</span>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                Grape farming and exotic fruit orchards face night-flying beetles, leafhoppers, and berry moths that puncture fruit skins, inviting fungal blight. Chemical sprays leave toxic residues on grape skins, restricting export compliance. BuzzZap provides continuous solar-powered defense directly in the vineyard rows.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Zero Chemical Residue:</strong> 100% compliant with strict European and global export threshold standards.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Coverage up to 2.0 Acres:</strong> Height-adjustable pole stand protects surrounding trellis rows effectively.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>50% Cost Savings:</strong> Drastically slashes expensive spray labor and agrochemical procurement bills.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=vineyard" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-amber-700 hover:underline">
+                                    <span>Enquire for Vineyards & Orchards</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_vineyard_field.jpg" alt="Vineyard Trellis" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Vineyard Row Trellis Mount</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_field_wide.jpg" alt="Wide Field" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Clean Solar Power in Field</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_insect_tray.jpg" alt="Beetle Catch" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Hundreds of Beetles Trapped</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_night_grid.jpg" alt="Nocturnal UV Light" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Calibrated Night Wavelength</span>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Positive Phototaxis Principle</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Automated Dusk Microchip Algorithm</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Integrated Rain Sensor Moisture Protection</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Low-Light Diffuse Solar PV Charging</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techBuzzzap" class="mega-learn-more green">Learn Solar Agri Tech →</a>
-                  </div>
                 </div>
 
-              </div>
+                <!-- Agri Sector 2: Open Field Vegetables & Cash Crops -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">Agri Sector 02</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Open Field Vegetables & Cash Crops</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-4 py-1.5 rounded-full self-start md:self-auto">Cotton, Tomato, Chilli, Okra</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                Tomato, chilli, cotton, brinjal, and pulse crops suffer from devastating cycles of fruit borers, whiteflies, and bollworms. Female moths lay hundreds of eggs during evening flight hours. BuzzZap catches parent moths automatically, stopping reproduction before larvae can hatch.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Halts Egg-Laying Cycles:</strong> Eliminates parent moths before destructive caterpillar larvae hatch.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Automated Dusk Sensor:</strong> Activates for 2 to 4 hours post-sunset without manual supervision.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Rain Sensor Protection:</strong> Auto-shutoff prevents circuitry damage during sudden monsoon downpours.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=crops" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-amber-700 hover:underline">
+                                    <span>Enquire for Cash Crops</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_eco_hero.jpg" alt="BuzzZap Eco" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">BuzzZap ECO Capture Basin</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="BuzzZap Pro" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Heavy-Duty Pro Killer</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/slide_vision.png" alt="Double Farmer Margin" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Elevating Net Farmer Margin</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/slide_sustainable.png" alt="Sustainable IPM" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Integrated Pest Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agri Sector 3: Tea & Coffee Plantations -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 lg:p-12 editorial-shadow space-y-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-win-border">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">Agri Sector 03</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-1">Tea & Coffee Plantations</h3>
+                        </div>
+                        <span class="text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 px-4 py-1.5 rounded-full self-start md:self-auto">Chamong & Sycotta Estates Tested</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-6 space-y-4">
+                            <p class="text-win-muted text-sm leading-relaxed">
+                                World-renowned tea gardens produce delicate export flushes where strict pesticide residue limits apply. BuzzZap solar traps protect massive hilly acreage from looper caterpillars, green flies, and berry borers without chemical tainting.
+                            </p>
+                            <ul class="space-y-3 text-xs text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Tested in Darjeeling & Assam:</strong> Proven effective in tea gardens with zero pesticide residues.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>100% Off-Grid Autonomy:</strong> Self-contained solar panel and battery eliminates wiring in remote hills.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Low-Light PV Charging:</strong> Charges effectively even under heavy monsoon overcast conditions.</span>
+                                </li>
+                            </ul>
+                            <div class="pt-4">
+                                <a href="contact.html?sector=tea" class="inline-flex items-center gap-2 text-xs font-heading font-bold text-amber-700 hover:underline">
+                                    <span>Enquire for Plantations</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/slide_clients.png" alt="Tea Clients" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Trusted by Chamong & Sycotta</span>
+                            </div>
+                            <div class="bg-win-base rounded-2xl p-3 border border-win-border text-center space-y-2">
+                                <img src="assets/images/buzzzap/buzzzap_factory_stock.jpg" alt="Commercial Estate Supply" class="h-32 w-full object-cover rounded-xl">
+                                <span class="text-[11px] font-medium text-slate-700 block">Commercial Plantation Shipments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </li>
 
-          <!-- 6. Contact -->
-          <li>
-            <a href="contact.html" class="nav-link">
-              <span>Contact</span>
-            </a>
-          </li>
-
-          <!-- Mobile Only CTA -->
-          <li class="mobile-cta-wrap">
-            <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          </li>
-
-        </ul>
-
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
         </div>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- ══════════════════ SUBPAGE HERO ══════════════════ -->
-  <section class="subpage-hero">
-    <div class="container">
-      <h1>Sectors We Serve</h1>
-      <p>
-        Pioneering restructuring and clean-energy pest control technologies engineered to deliver measurable operational performance across diverse fields and industries.
-      </p>
-    </div>
-  </section>
+    <!-- Comprehensive Corporate Footer -->
+    <footer class="bg-win-dark text-white pt-20 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-slate-800">
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-slate-700 object-cover">
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-xl tracking-tight text-white">WIN ENERGY</span>
+                            <span class="text-[9px] tracking-widest text-win-hpOrange uppercase font-semibold -mt-1">Sustainable Systems</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 ₹41,999 / Marlin 1.5 ₹55,999) and BuzzZap solar agricultural insect control.
+                    </p>
 
-  <!-- ══════════════════ PRODUCT SECTOR SWITCHER ══════════════════ -->
-  <section style="padding: 20px 0 60px;">
-    <div class="container">
-      <div class="sector-switch-tabs">
-        <!-- Card 1: BuzzZap Agri Sectors -->
-        <div class="sector-switch-card active-buzzzap tech-tab-btn" data-tab="sectorBuzzzap">
-          <div class="pillar-icon-wrap green" style="margin-bottom: 0;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div>
-            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-green-dark);">BuzzZap Sectors</h3>
-            <p style="font-size: 0.82rem; color: #475569;">Vineyards, Crops, Tea Gardens &amp; Organic Farms</p>
-          </div>
+                    <!-- Social Media Quicklinks (Row of 8 dark circular icons) -->
+                    <div class="flex items-center gap-3 pt-1 flex-wrap">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="X / Twitter">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-600 transition-all" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919595955585" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpOrange hover:bg-win-hpOrange transition-all" aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:contact@winenergy.in" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-red-600 hover:bg-red-600 transition-all" aria-label="YouTube">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Certification Presence (Dark Rounded Boxes exactly like user Image 1) -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-5 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" class="h-9 w-auto object-contain brightness-95">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-400 pt-2">
+                        <p class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                            <span><strong>Sangli Works:</strong> Plot no. 2038/B, Malgaon Savali Road, Malgaon, Sangli – 416410, Maharashtra, INDIA.</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                            <span><strong>Direct Phone / WhatsApp:</strong> +91 9595955585</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                            <span><strong>Official Email:</strong> contact@winenergy.in / info@winenergy.in</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.0 (₹41,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.5 (₹55,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">Industrial Descaling Units</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap ECO Solar Trap</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap Pro Solar Killer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Sectors</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="sectors.html#agri" class="hover:text-win-hpBlue transition-colors">Agriculture & Vineyards</a></li>
+                        <li><a href="sectors.html#domestic" class="hover:text-win-hpBlue transition-colors">Domestic & Villas</a></li>
+                        <li><a href="sectors.html#commercial" class="hover:text-win-hpBlue transition-colors">Hotels & Commercial</a></li>
+                        <li><a href="sectors.html#industrial" class="hover:text-win-hpBlue transition-colors">Industrial Boilers</a></li>
+                        <li><a href="sectors.html#poultry" class="hover:text-win-hpBlue transition-colors">Poultry & Husbandry</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="technology.html" class="hover:text-win-hpBlue transition-colors">Core Physics & Science</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Engineering</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <!-- Card 2: HydroPulse Water Sectors -->
-        <div class="sector-switch-card tech-tab-btn" data-tab="sectorHydropulse">
-          <div class="pillar-icon-wrap orange" style="margin-bottom: 0;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
-          </div>
-          <div>
-            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-orange-dark);">HydroPulse Sectors</h3>
-            <p style="font-size: 0.82rem; color: #475569;">Domestic, Commercial, Industrial, Irrigation &amp; Poultry</p>
-          </div>
-        </div>
-      </div>
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-      <!-- ================= BUZZZAP SECTORS PANE ================= -->
-      <div class="tech-tab-pane active" id="sectorBuzzzap">
+        // Tab switcher
+        function switchSectorTab(sector) {
+            const btnHp = document.getElementById('tab-btn-hp');
+            const btnBz = document.getElementById('tab-btn-bz');
+            const paneHp = document.getElementById('pane-hydropulse');
+            const paneBz = document.getElementById('pane-buzzzap');
 
-        <!-- Buzzzap Sector 1: Vineyards & Grape Orchards -->
-        <div class="sector-detail-block">
-          <div>
-            <span class="card-pill green-pill">Agri Sector 01</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Vineyards &amp; High-Value Horticulture</h2>
-            <p class="problem-desc">
-              Grape farming and exotic fruit orchards are especially prone to night-flying beetles, leafhoppers, and berry moths that puncture skins and invite fungal blight. Chemical sprays leave toxic residues on grape skins, restricting export compliance. BuzzZap provides continuous solar-powered defense directly in the vineyard rows, preserving export grades and eliminating expensive manual spraying.
-            </p>
-            <ul class="problem-points">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Zero chemical residue on grape clusters — 100% compliant with global export thresholds</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Effective up to 2 acres per unit with sturdy height-adjustable pole stands</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>50% cost savings on specialized horticultural agrochemicals and spray labor</span>
-              </li>
-            </ul>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_vineyard_field.jpg" alt="BuzzZap in Vineyard" />
-              <span>Mounted in Vineyard Trellises</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_field_wide.jpg" alt="BuzzZap Field Overview" />
-              <span>Solar Clean Energy in Field</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_insect_tray.jpg" alt="Heavy Beetle Catch" />
-              <span>Mass Trapping of Destructive Beetles</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_night_grid.jpg" alt="Nocturnal UV Attraction" />
-              <span>Specialized Phototropic Night Lamp</span>
-            </div>
-          </div>
-        </div>
+            if(sector === 'hydropulse') {
+                btnHp.className = "bg-win-hpBlue text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm";
+                btnBz.className = "bg-slate-800 text-slate-300 hover:text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2";
+                paneHp.classList.remove('hidden');
+                paneBz.classList.add('hidden');
+            } else {
+                btnBz.className = "bg-amber-600 text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm";
+                btnHp.className = "bg-slate-800 text-slate-300 hover:text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2";
+                paneBz.classList.remove('hidden');
+                paneHp.classList.add('hidden');
+            }
+        }
 
-        <!-- Buzzzap Sector 2: Open Field Vegetables & Cash Crops -->
-        <div class="sector-detail-block">
-          <div>
-            <span class="card-pill green-pill">Agri Sector 02</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Vegetables &amp; Cash Crops</h2>
-            <p class="problem-desc">
-              Tomato, chilli, cotton, okra, eggplant (brinjal), and pulse crops face persistent cycles of shoot and fruit borers, whiteflies, and bollworms. Female moths lay hundreds of eggs during the evening flight window. BuzzZap eliminates the parent generation automatically each evening, halting reproduction before destructive caterpillar larvae can hatch.
-            </p>
-            <ul class="problem-points">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Halts egg-laying cycles of fruit borers and armyworms before crop damage occurs</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Automated dusk-activation runs 2 to 4 hours post-sunset without manual supervision</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Rain sensor ensures automatic circuit protection during sudden monsoon showers</span>
-              </li>
-            </ul>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_eco_hero.jpg" alt="BuzzZap Eco Model in Farmland" />
-              <span>BuzzZap ECO Yellow Basin Trap</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="BuzzZap Pro Model in Farmland" />
-              <span>BuzzZap High-Voltage Solar Killer</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/slide_vision.png" alt="Double Farmer Income Vision" />
-              <span>Double the Farmer's Net Margin</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/slide_sustainable.png" alt="Sustainable IPM" />
-              <span>Integrated Pest Management (IPM)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Buzzzap Sector 3: Tea & Coffee Plantations -->
-        <div class="sector-detail-block">
-          <div>
-            <span class="card-pill green-pill">Agri Sector 03</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Tea &amp; Coffee Plantations</h2>
-            <p class="problem-desc">
-              World-renowned tea gardens (including our clients Chamong Tea Estates and Sycotta Tea Co.) produce delicate export teas where strict pesticide residue limits apply. BuzzZap solar traps protect massive hilly acreage from looper caterpillars, green flies, and berry borers without chemical tainting.
-            </p>
-            <ul class="problem-points">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Proven in premier Darjeeling and Assam tea gardens with zero chemical residues</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Works on self-contained solar power — zero grid wiring required in remote hilly terrains</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Specialized PV controller charges effectively even during overcast monsoon cloud cover</span>
-              </li>
-            </ul>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/buzzzap/slide_clients.png" alt="Tea Estates & Global Reach" />
-              <span>Trusted by Chamong &amp; Sycotta Tea</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/buzzzap/buzzzap_factory_stock.jpg" alt="Commercial Supply" />
-              <span>Bulk Commercial Estate Shipments</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ================= HYDROPULSE SECTORS PANE ================= -->
-      <div class="tech-tab-pane" id="sectorHydropulse">
-
-        <!-- Sector 1: Domestic -->
-        <div class="sector-detail-block" id="domestic">
-          <div>
-            <span class="card-pill orange-pill">Water Sector 01: Domestic</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Household Scale Issues &amp; Appliance Damage</h2>
-            <p class="problem-desc">
-              Limescale is a constant menace in domestic households. Hard water destroys expensive home appliances, clogs geysers and showerheads, leaves ugly white stains on premium bathroom fixtures, and harms skin and hair health.
-            </p>
-            <div class="problem-highlights">
-              <h4 style="margin-bottom: 10px; font-weight: 700;">Key Hard Water Problems in Home:</h4>
-              <ul class="problem-points">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Appliance Damage &amp; Efficiency Loss:</strong> Limescale deposits coat heating elements of washing machines and geysers, drawing more electricity and failing prematurely.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Clogged Showerheads &amp; Taps:</strong> Mineral buildup blocks tiny holes, causing uneven flow, low pressure, and requiring harsh acid descaling.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Rough Hair &amp; Dry Skin:</strong> Minerals react with soaps to form sticky scum that clogs pores and strips natural hair oils.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/hydropulse/dom_limescale_faucet.png" alt="Choking of Faucets" />
-              <span>Choking of Shower and Tap Fixtures</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/dom_water_stains.png" alt="Hard Water Stains" />
-              <span>Hard Water Stains on Tap and Glass</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/dom_geyser_scale.jpg" alt="Scale on Geysers" />
-              <span>Scale on Geysers and Heat Pumps</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/dom_dishwasher_scale.jpg" alt="Limescale in Appliances" />
-              <span>Limescale in Washing Machines</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sector 2: Commercial / Hospitality -->
-        <div class="sector-detail-block" id="commercial">
-          <div>
-            <span class="card-pill orange-pill">Water Sector 02: Commercial</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Commercial Plumbing &amp; Aesthetic Losses</h2>
-            <p class="problem-desc">
-              In hotels, commercial complexes, and retail centers, guest experience is directly linked to water quality. Hard water ruins plumbing fixtures, leaves ugly white stains, damages expensive appliances, and increases detergent and maintenance expenditures.
-            </p>
-            <div class="problem-highlights">
-              <h4 style="margin-bottom: 10px; font-weight: 700;">Key Hard Water Problems in Hospitality:</h4>
-              <ul class="problem-points">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Damaged Luxury Bath Fixtures:</strong> White limescale on showerheads and mixers looks unhygienic to guests and restricts pressure.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Stained Glassware &amp; Surfaces:</strong> Glass shower panels and glassware dry with white spots, requiring intensive manual chemical polishing.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Chiller &amp; Boiler Failure:</strong> Boiler elements and commercial laundry machines scale up rapidly, causing burnouts and high power bills.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/hydropulse/comm_scale_fixture.jpg" alt="Choking of Pipelines" />
-              <span>Choking of Commercial Pipelines</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/comm_chiller_scale.jpg" alt="Reduced Chiller Efficiency" />
-              <span>Reduced Chiller &amp; HVAC Efficiency</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/comm_bathroom_tiles.jpg" alt="Hard Water Stains on Tiles" />
-              <span>Stains on Tiles, Floors &amp; Glass</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/hotel_hero.png" alt="Hotel Water" />
-              <span>Luxury Guest Experience Without Salt</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sector 3: Industrial Operations -->
-        <div class="sector-detail-block" id="industrial">
-          <div>
-            <span class="card-pill orange-pill">Water Sector 03: Industrial Operations</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Industrial Efficiency Loss &amp; Maintenance</h2>
-            <p class="problem-desc">
-              Industrial water networks, cooling towers, and boiler systems are highly vulnerable to mineral crystallization. Scaling acts as an aggressive thermal barrier, leading to massive heat transfer losses, soaring energy consumption, and high operational costs.
-            </p>
-            <div class="problem-highlights">
-              <h4 style="margin-bottom: 10px; font-weight: 700;">Key Hard Water Problems in Industry:</h4>
-              <ul class="problem-points">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Heat Transfer Loss (Insulation Effect):</strong> Even a 1mm scale layer on heat exchanger plates or boiler tubes acts as a thermal insulator, increasing fuel consumption by up to 10-15%.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Machinery Breakdown &amp; Piping Clog:</strong> Heavy mineral scale restricts flow paths in cooling pipelines, causing equipment to overheat and trigger emergency shutdowns.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>High Cost of Chemical Treatments:</strong> Traditional descaling requires aggressive acid washes or expensive chemical softeners, creating toxic effluent water.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/hydropulse/ind_clogged_pipe.png" alt="Clogged Pipelines" />
-              <span>Clogged Industrial Pipeline Networks</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/ind_boiler_scale.png" alt="Boiler Scale" />
-              <span>Boiler Scale &amp; Efficiency Loss</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/ind_cooling_tower.png" alt="Cooling Tower Scaling" />
-              <span>Cooling Tower Biofouling &amp; Scaling</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/ind_chiller_scale.png" alt="Chiller Scaling" />
-              <span>Heat Exchanger Tube Protection</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sector 4: Agriculture Irrigation -->
-        <div class="sector-detail-block" id="agri">
-          <div>
-            <span class="card-pill orange-pill">Water Sector 04: Agriculture</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Agricultural Water Challenges</h2>
-            <p class="problem-desc">
-              In modern agriculture, water is the lifeblood of crop yields and soil viability. However, hard water containing high concentrations of calcium and magnesium minerals poses a critical threat to modern farming. Over time, these minerals crystallize, creating persistent challenges that degrade equipment, lock out nutrients, and reduce farm profitability.
-            </p>
-            <div class="problem-highlights">
-              <h4 style="margin-bottom: 10px; font-weight: 700;">Key Hard Water Problems in Agriculture:</h4>
-              <ul class="problem-points">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Severe Irrigation Clogging:</strong> Calcium carbonate scaling blocks micro-sprinklers and drip emitter orifices, causing dry spots and crop dehydration.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Nutrient &amp; Fertilizer Lockout:</strong> High mineral levels bind chemically with soil fertilizers. Plants cannot absorb nutrients, causing stunted yellow leaves.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Soil Salinization &amp; Crust:</strong> Hard water leaves mineral crust on soil surfaces, reducing water infiltration and increasing surface runoff.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/hydropulse/agri_clogged_drip.png" alt="Clogged Drip" />
-              <span>Clogged Drip Irrigation Emitters</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/agri_salty_soil.png" alt="Salty Soil" />
-              <span>Low Water Absorption &amp; Hard Soil Crust</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/agri_stunted_crop.png" alt="Stunted Crop" />
-              <span>Nutrient Deficient Stunted Plants</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/agri_pump_scale.png" alt="Pump Scale" />
-              <span>Scale Buildup on Pump Impellers</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sector 5: Animal Husbandry & Poultry -->
-        <div class="sector-detail-block" id="poultry">
-          <div>
-            <span class="card-pill orange-pill">Water Sector 05: Animal Husbandry</span>
-            <h2 class="section-title" style="font-size: 2rem; margin-top: 10px;">Livestock &amp; Poultry Hydration &amp; Pathogen Hazards</h2>
-            <p class="problem-desc">
-              In animal husbandry and poultry operations, animal health is heavily dependent on clean, continuous hydration. Hard water causes blockage in delicate drinking systems and acts as a breeding ground for dangerous bacterial pathogens, leading to flock and herd health issues.
-            </p>
-            <div class="problem-highlights">
-              <h4 style="margin-bottom: 10px; font-weight: 700;">Key Hard Water Problems in Livestock &amp; Poultry:</h4>
-              <ul class="problem-points">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Blocked Nipple Drinkers:</strong> Fine calcium scale blocks delicate poultry nipple drinkers, depriving birds of water and dropping egg/meat production.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Biofilm &amp; Pathogen Accumulation:</strong> Scaled pipe interiors provide an anchor for slimy bacterial biofilms harboring Salmonella and E. coli.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  <span><strong>Elevated Mortality &amp; Medication Costs:</strong> Poor water quality compromises immunity, leading to higher disease transmission and veterinary costs.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="sector-media-grid">
-            <div class="media-card">
-              <img src="assets/images/hydropulse/poultry_hero.png" alt="Poultry Farm Hydration" />
-              <span>Choking of Water Feed Pipes</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/poultry_biofilm.png" alt="Algae in Water" />
-              <span>Algae &amp; Biofilm inside Feedlines</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/poultry_stressed_flock.png" alt="Stressed Flock" />
-              <span>E-Coli Related Health Concerns</span>
-            </div>
-            <div class="media-card">
-              <img src="assets/images/hydropulse/poultry_water_losses.png" alt="Mortality Reduction" />
-              <span>High Mortality and Low Farm Yields</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════ CTA ══════════════════ -->
-  <section class="section-cta-banner">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Custom Engineering Specifications For Your Sector</h2>
-        <p>
-          Consult with our technical engineers to determine the exact sizing, placement, and model requirements for your farm acreage or facility volume.
-        </p>
-        <a href="contact.html" class="btn btn-primary" style="background: #ffffff; color: var(--color-win-navy);">
-          Request Sector Consultation →
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════ FOOTER ══════════════════ -->
-  <footer class="footer-corporate">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="brand-logo" style="margin-bottom: 12px;">
-            <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" style="width: 48px; height: 48px; border-radius: 50%;" />
-            <span class="brand-title" style="color: #ffffff;">Win Energy</span>
-          </div>
-          <p>
-            Pioneering sustainable physical water polarization and clean-energy agricultural pest solutions. Driving higher yields, lower operational costs, and zero chemical footprint across India and globally.
-          </p>
-          <div class="footer-certs">
-            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" />
-            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" />
-            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" />
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.0</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.5</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Industrial</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap ECO Trap</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap Pro Solar Killer</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sectors</h4>
-          <ul>
-            <li><a href="sectors.html#agri">Agriculture &amp; Vineyards</a></li>
-            <li><a href="sectors.html#domestic">Domestic Households</a></li>
-            <li><a href="sectors.html#commercial">Hotels &amp; Commercial</a></li>
-            <li><a href="sectors.html#industrial">Industrial Factories</a></li>
-            <li><a href="sectors.html#poultry">Poultry &amp; Animal Husbandry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Win Energy</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Our Offices</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Pune Office:</strong> 3rd Floor, Prabhat House, Damle Path, Off Law College Rd, Pune 411004</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Sangli Works:</strong> Plot 2038/B, Malgaon Savali Rd, Malgaon, Sangli 416410</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Win Energy. All rights reserved.</p>
-        <span>Pan-India Delivery &amp; Global Exports</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+        // Check if hash present in URL
+        window.addEventListener('DOMContentLoaded', () => {
+            if(window.location.hash.includes('Buzzzap') || window.location.hash.includes('buzzzap')) {
+                switchSectorTab('buzzzap');
+            }
+        });
+    </script>
+    <script src="assets/js/ai-chat.js"></script>
 </body>
 </html>

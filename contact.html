@@ -1,525 +1,467 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Contact Us – Win Energy (Offices &amp; Inquiries)</title>
-  <meta name="description" content="Get in touch with Win Energy corporate offices in Pune and manufacturing facilities in Sangli. Dealership and enterprise technical inquiries." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact & Technical Inquiries — Win Energy</title>
+    <meta name="description" content="Get in touch with Win Energy engineering and manufacturing facility in Sangli, Maharashtra. Enterprise inquiries, orders, and regional dealership opportunities.">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            base: '#F8FAFC',
+                            sand: '#F1F5F9',
+                            surface: '#FFFFFF',
+                            border: '#E2E8F0',
+                            dark: '#0F172A',
+                            muted: '#64748B',
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .contact-card-box {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-xl);
-      padding: 40px;
-      box-shadow: var(--shadow-md);
-    }
-    .office-card {
-      background: #f8fafc;
-      border: 1.5px solid var(--border-medium);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-bottom: 20px;
-    }
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(8px);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .modal-content {
-      background: #ffffff;
-      border-radius: var(--radius-xl);
-      padding: 40px;
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-      box-shadow: var(--shadow-xl);
-    }
-  </style>
+                            hpBlue: '#0284C7',
+                            hpBlueDark: '#0369A1',
+                            hpOrange: '#EA580C',
+                            hpOrangeLight: '#FFEDD5',
+                            hpBlueLight: '#E0F2FE',
+
+                            bzYellow: '#CA8A04',
+                            bzYellowLight: '#FEF08A',
+                            bzIndigo: '#1E1B4B',
+                            bzIndigoLight: '#EEF2FF'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Instrument Serif', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/editorial-theme.css">
 </head>
-<body>
+<body class="bg-win-base text-win-dark font-sans antialiased selection:bg-win-hpBlue selection:text-white">
 
-  <!-- ══════════════════ TOP UTILITY BAR ══════════════════ -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-info">
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+919090991090">+91 90909 91090</a> / <a href="tel:+919881248812">+91 9881248812</a>
+    <!-- Toast Notification Element -->
+    <div id="toast" class="fixed top-6 right-6 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 bg-win-dark text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <div>
+            <h4 class="font-heading font-semibold text-sm">Win Energy Desk</h4>
+            <p id="toast-msg" class="text-xs text-slate-300">Inquiry registered successfully.</p>
         </div>
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@mizusun.com">info@mizusun.com</a> / <a href="mailto:buzzzap@leanwayenergy.com">buzzzap@leanwayenergy.com</a>
-        </div>
-      </div>
-      <div class="topbar-badges">
-        <span class="badge-tag orange">● HydroPulse Water Tech</span>
-        <span class="badge-tag green">● BuzzZap Clean Agri Tech</span>
-      </div>
     </div>
-  </div>
 
-  <!-- ══════════════════ HEADER ══════════════════ -->
-  <header class="header-sticky">
-    <div class="container">
-      <div class="header-inner">
-        <a href="index.html" class="brand-logo">
-          <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="brand-logo-img" />
-          <div class="brand-text">
-            <span class="brand-title">Win Energy <span class="pulse-dot"></span></span>
-            <span class="brand-subtitle">Sustainable Engineering</span>
-          </div>
-        </a>
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-win-border object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-xl tracking-tight text-win-dark">WIN ENERGY</span>
+                    <span class="text-[9px] tracking-widest text-win-muted uppercase font-semibold -mt-1">Sustainable Systems</span>
+                </div>
+            </a>
 
-        <!-- Desktop & Mobile Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-          
-          <!-- Mobile Drawer Header -->
-          <li class="mobile-drawer-top">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <img src="assets/images/company/win_energy_logo.png" alt="Win Energy" style="width: 32px; height: 32px; border-radius: 50%;" />
-              <strong style="color: var(--color-win-navy); font-size: 1.1rem;">Win Energy</strong>
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
+                <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Our Products</a>
+                <a href="sectors.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Sectors</a>
+                <a href="technology.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Technology</a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
+                <a href="contact.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:+919595955585" class="bg-win-dark hover:bg-win-hpBlue text-white font-heading font-semibold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase shadow-sm transition-all flex items-center gap-2">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-win-hpOrange"></i>
+                    <span>+91 9595955585</span>
+                </a>
             </div>
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Navigation">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="lg:hidden p-2 text-win-dark" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
-          </li>
+        </div>
 
-          <!-- 1. Home -->
-          <li>
-            <a href="index.html" class="nav-link">
-              <span>Home</span>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
+            <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Our Products</a>
+            <a href="sectors.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Sectors</a>
+            <a href="technology.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Technology</a>
+            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
+            <a href="contact.html" class="block text-base font-semibold text-win-hpBlue">Contact</a>
+            <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
-          </li>
+        </div>
+    </header>
 
-          <!-- 2. About Us -->
-          <li>
-            <a href="about.html" class="nav-link">
-              <span>About Us</span>
-            </a>
-          </li>
+    <!-- Subpage Hero -->
+    <section class="pt-16 pb-20 bg-win-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl space-y-6">
+                <span class="text-xs font-heading font-bold uppercase tracking-widest text-win-hpOrange bg-win-hpOrange/10 border border-win-hpOrange/30 px-3.5 py-1 rounded-full">
+                    Direct Engineering Consultation
+                </span>
+                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">
+                    Let's Connect for <span class="italic text-win-hpBlue">Technical Inquiries</span> & Orders
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    Whether you manage an agricultural estate, industrial boiler plant, luxury villa, or wish to represent Win Energy as an authorized regional dealer, our engineering team is here to assist.
+                </p>
+            </div>
+        </div>
+    </section>
 
-          <!-- 3. Our Products (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Our Products</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- CONTACT GRID & FORM -->
+    <section class="py-24 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                 
-                <!-- HydroPulse Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                <!-- Left: Headquarters & Works Information -->
+                <div class="lg:col-span-5 space-y-8">
+                    
+                    <div class="bg-win-surface border border-win-border rounded-3xl p-8 editorial-shadow space-y-6">
+                        <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-win-hpBlueLight px-3 py-1 rounded-full">Engineering & Works</span>
+                        <h3 class="font-serif text-3xl text-win-dark">Manufacturing & Engineering Facility</h3>
+                        
+                        <div class="space-y-4 pt-2 text-sm text-slate-700">
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-win-hpOrangeLight text-win-hpOrange flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-win-dark block font-heading">Sangli Works (Facility & Manufacturing)</strong>
+                                    <p class="text-xs text-win-muted leading-relaxed mt-0.5">
+                                        Plot no. 2038/B, Malgaon Savali Road, Malgaon, Sangli – 416410, Maharashtra, INDIA.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-win-hpBlueLight text-win-hpBlue flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-win-dark block font-heading">Direct Phone & WhatsApp Desk</strong>
+                                    <a href="tel:+919595955585" class="text-xs font-bold text-win-hpBlue hover:underline">
+                                        +91 9595955585
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-win-dark block font-heading">Official Email Desk</strong>
+                                    <a href="mailto:contact@winenergy.in" class="text-xs text-win-muted hover:text-win-hpBlue block">
+                                        contact@winenergy.in
+                                    </a>
+                                    <a href="mailto:info@winenergy.in" class="text-xs text-win-muted hover:text-win-hpBlue block">
+                                        info@winenergy.in
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="truck" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-win-dark block font-heading">Logistics & Supply</strong>
+                                    <span class="text-xs text-win-muted">Pan-India Courier & Global Air/Sea Freight Available</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Direct WhatsApp Quick-Connect -->
+                        <div class="pt-4 border-t border-win-border">
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Connect Instantly on WhatsApp (+91 9595955585)</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse</span>
-                      <span class="mega-col-subtitle">Water conditioning technology</span>
+
+                    <!-- Direct Pricing Reference Card -->
+                    <div class="bg-win-sand border border-win-border rounded-3xl p-6 space-y-3">
+                        <span class="text-[10px] font-mono uppercase tracking-widest text-win-hpBlue font-bold">Standard Pricing Reference</span>
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <div class="p-3 bg-white rounded-xl border border-win-border">
+                                <span class="text-win-muted block text-[11px]">HydroPulse Marlin 1.0</span>
+                                <strong class="text-win-dark text-lg font-serif">₹41,999</strong>
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-win-border">
+                                <span class="text-win-muted block text-[11px]">HydroPulse Marlin 1.5</span>
+                                <strong class="text-win-dark text-lg font-serif">₹55,999</strong>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-win-muted">Industrial water systems and BuzzZap agricultural units are quoted based on pipeline size and acreage.</p>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.0 (Apartments &amp; Homes)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.5 (Villas &amp; Commercial)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">HydroPulse Industrial Units</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Technical Specifications &amp; Pricing</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#hydropulse" class="mega-learn-more orange">Learn More →</a>
-                  </div>
+
                 </div>
 
-                <!-- BuzzZap Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <!-- Right: Interactive Inquiry & Dealership Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-win-surface border border-win-border rounded-3xl p-8 sm:p-10 editorial-shadow space-y-6">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-win-hpOrange font-bold bg-win-hpOrangeLight px-3 py-1 rounded-full">Inquiry & Dealership</span>
+                            <h3 class="font-serif text-3xl sm:text-4xl text-win-dark mt-2">Send Technical Inquiry</h3>
+                            <p class="text-win-muted text-xs sm:text-sm mt-1">Please provide your contact information and operating requirements below. Our engineering desk will respond promptly.</p>
+                        </div>
+
+                        <form id="contactForm" onsubmit="event.preventDefault(); handleFormSubmit();" class="space-y-4 pt-2">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label for="contactName" class="text-xs font-heading font-semibold text-slate-700">Full Name / Contact Person *</label>
+                                    <input type="text" id="contactName" placeholder="e.g. Ramesh Patel" required class="w-full bg-win-base border border-win-border rounded-xl px-4 py-3 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue">
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label for="contactPhone" class="text-xs font-heading font-semibold text-slate-700">Mobile Number (WhatsApp Enabled) *</label>
+                                    <input type="tel" id="contactPhone" placeholder="e.g. +91 98765 43210" required class="w-full bg-win-base border border-win-border rounded-xl px-4 py-3 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label for="contactEmail" class="text-xs font-heading font-semibold text-slate-700">Work Email Address</label>
+                                    <input type="email" id="contactEmail" placeholder="e.g. contact@domain.com" class="w-full bg-win-base border border-win-border rounded-xl px-4 py-3 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue">
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label for="contactProduct" class="text-xs font-heading font-semibold text-slate-700">Product / Division of Interest *</label>
+                                    <select id="contactProduct" required class="w-full bg-win-base border border-win-border rounded-xl px-4 py-3 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue">
+                                        <option value="HydroPulse Marlin 1.0 (₹41,999)">HydroPulse Marlin 1.0 (₹41,999) — Homes</option>
+                                        <option value="HydroPulse Marlin 1.5 (₹55,999)">HydroPulse Marlin 1.5 (₹55,999) — Villas/Commercial</option>
+                                        <option value="Industrial HydroPulse">HydroPulse Industrial (Boiler/Cooling Tower)</option>
+                                        <option value="BuzzZap ECO">BuzzZap ECO (0.5 - 1.0 Acre Solar Trap)</option>
+                                        <option value="BuzzZap Pro">BuzzZap Pro (Up to 2.0 Acres Solar Killer)</option>
+                                        <option value="Dealership Opportunity">Regional Dealership / Distribution</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label for="contactSector" class="text-xs font-heading font-semibold text-slate-700">Operating Application / Sector</label>
+                                <select id="contactSector" class="w-full bg-win-base border border-win-border rounded-xl px-4 py-3 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue">
+                                    <option value="Residential">Residential Villa / Apartment</option>
+                                    <option value="Agriculture">Agriculture / Vineyard / Orchard</option>
+                                    <option value="Hospitality">Hotels & Commercial Real Estate</option>
+                                    <option value="Industrial">Industrial Manufacturing & Boilers</option>
+                                    <option value="Poultry">Poultry / Livestock</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-1.5">
+                                <label for="contactMessage" class="text-xs font-heading font-semibold text-slate-700">Requirement Details / Water Problem</label>
+                                <textarea id="contactMessage" rows="4" placeholder="Mention pipeline diameter, water hardness issues, or farm acreage..." class="w-full bg-win-base border border-win-border rounded-xl p-4 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-4 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm flex items-center justify-center gap-2">
+                                <span>Submit Technical Inquiry</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </form>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap</span>
-                      <span class="mega-col-subtitle">Electrical insect control for farms</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap ECO (Solar Insect Trap)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap Pro (Heavy-Duty Killer)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Multi-Function Rain Sensor Circuit</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Technical Specifications &amp; Inquiry</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#buzzzap" class="mega-learn-more green">Learn More →</a>
-                  </div>
                 </div>
 
-              </div>
             </div>
-          </li>
+        </div>
+    </section>
 
-          <!-- 4. Sectors (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Sectors</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
-                
-                <!-- HydroPulse Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorHydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+    <!-- Comprehensive Corporate Footer -->
+    <footer class="bg-win-dark text-white pt-20 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-slate-800">
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-slate-700 object-cover">
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-xl tracking-tight text-white">WIN ENERGY</span>
+                            <span class="text-[9px] tracking-widest text-win-hpOrange uppercase font-semibold -mt-1">Sustainable Systems</span>
+                        </div>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Sectors</span>
-                      <span class="mega-col-subtitle">Scale-free water conditioning</span>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 ₹41,999 / Marlin 1.5 ₹55,999) and BuzzZap solar agricultural insect control.
+                    </p>
+
+                    <!-- Social Media Quicklinks (Row of 8 dark circular icons) -->
+                    <div class="flex items-center gap-3 pt-1 flex-wrap">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="X / Twitter">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-600 transition-all" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919595955585" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpOrange hover:bg-win-hpOrange transition-all" aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:contact@winenergy.in" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-red-600 hover:bg-red-600 transition-all" aria-label="YouTube">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#domestic">Domestic Households &amp; Appliances</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#commercial">Commercial &amp; Hospitality Hotels</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#industrial">Industrial Boiler &amp; Cooling Towers</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#agri">Agricultural Drip Line Systems</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#poultry">Animal Husbandry &amp; Poultry Hydration</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorHydropulse" class="mega-learn-more orange">Explore Water Sectors →</a>
-                  </div>
+
+                    <!-- Certification Presence (Dark Rounded Boxes exactly like user Image 1) -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-5 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" class="h-9 w-auto object-contain brightness-95">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-400 pt-2">
+                        <p class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                            <span><strong>Sangli Works:</strong> Plot no. 2038/B, Malgaon Savali Road, Malgaon, Sangli – 416410, Maharashtra, INDIA.</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                            <span><strong>Direct Phone / WhatsApp:</strong> +91 9595955585</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                            <span><strong>Official Email:</strong> contact@winenergy.in / info@winenergy.in</span>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- BuzzZap Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorBuzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Sectors</span>
-                      <span class="mega-col-subtitle">Clean energy agricultural pest control</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Vineyards &amp; Grape Orchards</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Open-Field Vegetables &amp; Cash Crops</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Tea &amp; Coffee Plantations</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Poultry &amp; Livestock Sheds</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Floriculture &amp; Organic Farms</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorBuzzzap" class="mega-learn-more green">Explore Agri Sectors →</a>
-                  </div>
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.0 (₹41,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.5 (₹55,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">Industrial Descaling Units</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap ECO Solar Trap</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap Pro Solar Killer</a></li>
+                    </ul>
                 </div>
 
-              </div>
-            </div>
-          </li>
-
-          <!-- 5. Technology (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Technology</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
-                
-                <!-- HydroPulse Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Science</span>
-                      <span class="mega-col-subtitle">Physical hydro-polarization physics</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">How Hydro-Polarization Operates</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Calcite to Aragonite Micro-Crystals</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Biofilm &amp; Algae Prevention</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#pipeSliderContainer">Interactive Descaling Pipe Demo</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techHydropulse" class="mega-learn-more orange">Learn Water Physics →</a>
-                  </div>
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Sectors</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="sectors.html#agri" class="hover:text-win-hpBlue transition-colors">Agriculture & Vineyards</a></li>
+                        <li><a href="sectors.html#domestic" class="hover:text-win-hpBlue transition-colors">Domestic & Villas</a></li>
+                        <li><a href="sectors.html#commercial" class="hover:text-win-hpBlue transition-colors">Hotels & Commercial</a></li>
+                        <li><a href="sectors.html#industrial" class="hover:text-win-hpBlue transition-colors">Industrial Boilers</a></li>
+                        <li><a href="sectors.html#poultry" class="hover:text-win-hpBlue transition-colors">Poultry & Husbandry</a></li>
+                    </ul>
                 </div>
 
-                <!-- BuzzZap Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Science</span>
-                      <span class="mega-col-subtitle">Solar phototaxis &amp; microcontrollers</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Positive Phototaxis Principle</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Automated Dusk Microchip Algorithm</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Integrated Rain Sensor Moisture Protection</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Low-Light Diffuse Solar PV Charging</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techBuzzzap" class="mega-learn-more green">Learn Solar Agri Tech →</a>
-                  </div>
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="technology.html" class="hover:text-win-hpBlue transition-colors">Core Physics & Science</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Engineering</a></li>
+                    </ul>
                 </div>
-
-              </div>
             </div>
-          </li>
 
-          <!-- 6. Contact (Active) -->
-          <li>
-            <a href="contact.html" class="nav-link active">
-              <span>Contact</span>
-            </a>
-          </li>
-
-          <!-- Mobile Only CTA -->
-          <li class="mobile-cta-wrap">
-            <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          </li>
-
-        </ul>
-
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </footer>
 
-  <!-- ══════════════════ SUBPAGE HERO ══════════════════ -->
-  <section class="subpage-hero">
-    <div class="container">
-      <h1>Contact Win Energy</h1>
-      <p>
-        Get in touch with our engineering team for technical evaluations, custom project sizing, or regional dealership partnerships.
-      </p>
-    </div>
-  </section>
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-  <!-- ══════════════════ CONTACT GRID ══════════════════ -->
-  <section style="padding: 60px 0 80px;" id="dealership">
-    <div class="container">
-      <div class="contact-section-grid">
-        
-        <!-- Left: Office Locations & Channels -->
-        <div class="contact-card-box">
-          <span class="section-tag tag-blue">Direct Contact</span>
-          <h2 class="section-title" style="font-size: 2rem;">Our Headquarters &amp; Works</h2>
-          <p class="problem-desc" style="margin-bottom: 24px;">
-            Whether you represent an agricultural estate, industrial plant, or retail distribution network, our technical specialists are at your service.
-          </p>
+        // Toast Helper
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.textContent = msg;
+            toast.classList.remove('-translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('-translate-y-24', 'opacity-0');
+            }, 4500);
+        }
 
-          <!-- Pune Office -->
-          <div class="office-card" style="border-left: 4px solid var(--color-green);">
-            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-win-navy); margin-bottom: 4px;">
-              Corporate &amp; Innovation Office (Pune)
-            </h4>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.5;">
-              3rd Floor, Prabhat House, Damle Path, Off Law College Road, Pune – 411004, Maharashtra, INDIA.
-            </p>
-            <div style="margin-top: 10px; font-size: 0.88rem; font-weight: 600; color: #16a34a;">
-              📞 +91 9881248812 / +91 9595955585
-            </div>
-          </div>
+        // Form Submit Handler
+        function handleFormSubmit() {
+            const name = document.getElementById('contactName').value;
+            const phone = document.getElementById('contactPhone').value;
+            const product = document.getElementById('contactProduct').value;
 
-          <!-- Sangli Facility -->
-          <div class="office-card" style="border-left: 4px solid var(--color-orange);">
-            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--color-win-navy); margin-bottom: 4px;">
-              Manufacturing &amp; Engineering Facility (Sangli)
-            </h4>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.5;">
-              Plot no. 2038/B, Malgaon Savali Road, Malgaon, Sangli – 416410, Maharashtra, INDIA.
-            </p>
-            <div style="margin-top: 10px; font-size: 0.88rem; font-weight: 600; color: #f07020;">
-              📞 +91 90909 91090
-            </div>
-          </div>
+            showToast(`Thank you ${name}! Your inquiry for ${product} has been registered. An engineer will call ${phone} shortly.`);
+            document.getElementById('contactForm').reset();
+        }
 
-          <!-- Direct Channels -->
-          <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px;">
-            <div class="footer-contact-item" style="color: #334155;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <span><strong>Official Email:</strong> info@mizusun.com / buzzzap@leanwayenergy.com</span>
-            </div>
-            <div class="footer-contact-item" style="color: #334155;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-              <span><strong>Logistics:</strong> Pan-India Courier &amp; Export Freight Available</span>
-            </div>
-          </div>
+        // Parse query params for pre-selecting product or sector
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const product = urlParams.get('product');
+            const sector = urlParams.get('sector');
 
-          <div style="margin-top: 24px;">
-            <a href="https://wa.me/919090991090" target="_blank" rel="noopener noreferrer" class="btn btn-green" style="gap: 8px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              Quick Connect on WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Inquiry / Dealership Form -->
-        <div class="contact-card-box">
-          <span class="section-tag tag-orange">Inquiry &amp; Dealership</span>
-          <h2 class="section-title" style="font-size: 2rem;">Send an Inquiry</h2>
-          <p class="problem-desc" style="margin-bottom: 24px;">
-            Tell us about your project requirements or apply to represent Win Energy technologies in your region.
-          </p>
-
-          <form id="corporateInquiryForm">
-            <div class="form-group">
-              <label for="inqName">Full Name / Contact Person *</label>
-              <input type="text" id="inqName" placeholder="e.g. Ramesh Patel" required />
-            </div>
-
-            <div class="form-group">
-              <label for="inqPhone">Mobile Number (WhatsApp Enabled) *</label>
-              <input type="tel" id="inqPhone" placeholder="e.g. +91 98765 43210" required />
-            </div>
-
-            <div class="form-group">
-              <label for="inqEmail">Email Address</label>
-              <input type="email" id="inqEmail" placeholder="e.g. contact@domain.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="inqProduct">Product of Interest *</label>
-              <select id="inqProduct" required>
-                <option value="both">Both Technologies (Comprehensive Solution)</option>
-                <option value="buzzzap">BuzzZap Solar Insect Killer / Trap</option>
-                <option value="hydropulse">HydroPulse Physical Water Conditioner</option>
-                <option value="dealership">Dealership / Franchise Opportunity</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="inqLocation">City, State &amp; Application Details</label>
-              <textarea id="inqLocation" rows="3" placeholder="Tell us about your farm crop, acreage, or pipeline scale..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px;">
-              Submit Inquiry to Engineering Team →
-            </button>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════ MODAL CONFIRMATION ══════════════════ -->
-  <div id="formSuccessModal" class="modal-overlay">
-    <div class="modal-content">
-      <div style="width: 60px; height: 60px; border-radius: 50%; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-win-navy); margin-bottom: 8px;">Inquiry Received!</h3>
-      <p style="font-size: 0.95rem; color: #475569; margin-bottom: 24px; line-height: 1.6;">
-        Thank you for connecting with <strong>Win Energy</strong>. Our technical engineering team has received your details and will get in touch with product specifications and recommendations shortly.
-      </p>
-      <button id="closeModalBtn" class="btn btn-primary" style="padding: 10px 30px;">
-        Done
-      </button>
-    </div>
-  </div>
-
-  <!-- ══════════════════ FOOTER ══════════════════ -->
-  <footer class="footer-corporate">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="brand-logo" style="margin-bottom: 12px;">
-            <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" style="width: 48px; height: 48px; border-radius: 50%;" />
-            <span class="brand-title" style="color: #ffffff;">Win Energy</span>
-          </div>
-          <p>
-            Pioneering sustainable physical water polarization and clean-energy agricultural pest solutions. Driving higher yields, lower operational costs, and zero chemical footprint across India and globally.
-          </p>
-          <div class="footer-certs">
-            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" />
-            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" />
-            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" />
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.0</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.5</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Industrial</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap ECO Trap</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap Pro Solar Killer</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sectors</h4>
-          <ul>
-            <li><a href="sectors.html#agri">Agriculture &amp; Vineyards</a></li>
-            <li><a href="sectors.html#domestic">Domestic Households</a></li>
-            <li><a href="sectors.html#commercial">Hotels &amp; Commercial</a></li>
-            <li><a href="sectors.html#industrial">Industrial Factories</a></li>
-            <li><a href="sectors.html#poultry">Poultry &amp; Animal Husbandry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Win Energy</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Our Offices</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Pune Office:</strong> 3rd Floor, Prabhat House, Damle Path, Pune 411004</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Sangli Works:</strong> Plot 2038/B, Malgaon Savali Rd, Sangli 416410</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Win Energy. All rights reserved.</p>
-        <span>Pan-India Delivery &amp; Global Exports</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+            if(product) {
+                const prodSelect = document.getElementById('contactProduct');
+                for(let opt of prodSelect.options) {
+                    if(opt.value.toLowerCase().includes(product.toLowerCase())) {
+                        prodSelect.value = opt.value;
+                        break;
+                    }
+                }
+            }
+            if(sector) {
+                const sectorSelect = document.getElementById('contactSector');
+                for(let opt of sectorSelect.options) {
+                    if(opt.value.toLowerCase().includes(sector.toLowerCase())) {
+                        sectorSelect.value = opt.value;
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="assets/js/ai-chat.js"></script>
 </body>
 </html>

@@ -1,662 +1,590 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Our Products – Win Energy (HydroPulse &amp; BuzzZap)</title>
-  <meta name="description" content="Discover the full lineup of Win Energy products: HydroPulse physical water descalers and BuzzZap solar agricultural insect killers." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Our Products — Win Energy (HydroPulse & BuzzZap)</title>
+    <meta name="description" content="Discover the full lineup of Win Energy products: HydroPulse physical water descalers (Marlin 1.0 & 1.5) and BuzzZap solar agricultural insect killers.">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            base: '#F8FAFC',
+                            sand: '#F1F5F9',
+                            surface: '#FFFFFF',
+                            border: '#E2E8F0',
+                            dark: '#0F172A',
+                            muted: '#64748B',
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .product-section-header {
-      padding: 30px;
-      border-radius: var(--radius-xl);
-      color: #ffffff;
-      margin-bottom: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .header-hydropulse {
-      background: linear-gradient(135deg, #0f1f38 0%, #1e3a5f 100%);
-      border: 1px solid rgba(240, 112, 32, 0.4);
-    }
-    .header-buzzzap {
-      background: linear-gradient(135deg, #0e271a 0%, #17422b 100%);
-      border: 1px solid rgba(22, 163, 74, 0.4);
-    }
-    .spec-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-    .spec-table th, .spec-table td {
-      padding: 16px 20px;
-      text-align: left;
-      border-bottom: 1px solid var(--border-light);
-      font-size: 0.92rem;
-    }
-    .spec-table th {
-      background: #0f172a;
-      color: #ffffff;
-      font-family: var(--font-heading);
-      font-weight: 700;
-    }
-  </style>
+                            hpBlue: '#0284C7',
+                            hpBlueDark: '#0369A1',
+                            hpOrange: '#EA580C',
+                            hpOrangeLight: '#FFEDD5',
+                            hpBlueLight: '#E0F2FE',
+
+                            bzYellow: '#CA8A04',
+                            bzYellowLight: '#FEF08A',
+                            bzIndigo: '#1E1B4B',
+                            bzIndigoLight: '#EEF2FF'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Instrument Serif', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/editorial-theme.css">
 </head>
-<body>
+<body class="bg-win-base text-win-dark font-sans antialiased selection:bg-win-hpBlue selection:text-white">
 
-  <!-- ══════════════════ TOP UTILITY BAR ══════════════════ -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-info">
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+919090991090">+91 90909 91090</a> / <a href="tel:+919881248812">+91 9881248812</a>
-        </div>
-        <div class="topbar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@mizusun.com">info@mizusun.com</a> / <a href="mailto:buzzzap@leanwayenergy.com">buzzzap@leanwayenergy.com</a>
-        </div>
-      </div>
-      <div class="topbar-badges">
-        <span class="badge-tag orange">● HydroPulse Water Tech</span>
-        <span class="badge-tag green">● BuzzZap Clean Agri Tech</span>
-      </div>
-    </div>
-  </div>
+    <!-- Sticky Minimalist Header -->
+    <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-win-border object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-xl tracking-tight text-win-dark">WIN ENERGY</span>
+                    <span class="text-[9px] tracking-widest text-win-muted uppercase font-semibold -mt-1">Sustainable Systems</span>
+                </div>
+            </a>
 
-  <!-- ══════════════════ HEADER ══════════════════ -->
-  <header class="header-sticky">
-    <div class="container">
-      <div class="header-inner">
-        <a href="index.html" class="brand-logo">
-          <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="brand-logo-img" />
-          <div class="brand-text">
-            <span class="brand-title">Win Energy <span class="pulse-dot"></span></span>
-            <span class="brand-subtitle">Sustainable Engineering</span>
-          </div>
-        </a>
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
+                <a href="products.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">Our Products</a>
+                <a href="sectors.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Sectors</a>
+                <a href="technology.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Technology</a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
+                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Contact</a>
+            </nav>
 
-        <!-- Desktop & Mobile Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-          
-          <!-- Mobile Drawer Header -->
-          <li class="mobile-drawer-top">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <img src="assets/images/company/win_energy_logo.png" alt="Win Energy" style="width: 32px; height: 32px; border-radius: 50%;" />
-              <strong style="color: var(--color-win-navy); font-size: 1.1rem;">Win Energy</strong>
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="contact.html" class="bg-win-dark hover:bg-win-hpBlue text-white font-heading font-semibold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase shadow-sm transition-all flex items-center gap-2">
+                    <span>Consult Engineering</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
             </div>
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Navigation">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="lg:hidden p-2 text-win-dark" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
-          </li>
+        </div>
 
-          <!-- 1. Home -->
-          <li>
-            <a href="index.html" class="nav-link">
-              <span>Home</span>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
+            <a href="products.html" class="block text-base font-semibold text-win-hpBlue">Our Products</a>
+            <a href="sectors.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Sectors</a>
+            <a href="technology.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Technology</a>
+            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
+            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Contact</a>
+            <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
-          </li>
+        </div>
+    </header>
 
-          <!-- 2. About Us -->
-          <li>
-            <a href="about.html" class="nav-link">
-              <span>About Us</span>
-            </a>
-          </li>
+    <!-- Subpage Hero -->
+    <section class="pt-16 pb-20 bg-win-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl space-y-6">
+                <span class="text-xs font-heading font-bold uppercase tracking-widest text-win-hpOrange bg-win-hpOrange/10 border border-win-hpOrange/30 px-3.5 py-1 rounded-full">
+                    Engineered Product Portfolio
+                </span>
+                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">
+                    Precision Physical Systems for <span class="italic text-win-hpBlue">Water</span> & <span class="italic text-amber-400">Agriculture</span>
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    Designed for lifetime durability, maintenance-free performance, and rapid operational return on investment. 100% free of hazardous chemicals and recurring consumables.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#hydropulse" class="bg-win-hpBlue hover:bg-win-hpBlueDark text-white px-6 py-3 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider transition-colors flex items-center gap-2">
+                        <i data-lucide="droplets" class="w-4 h-4"></i>
+                        <span>HydroPulse Water Tech</span>
+                    </a>
+                    <a href="#buzzzap" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl text-xs font-heading font-semibold uppercase tracking-wider transition-colors flex items-center gap-2">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                        <span>BuzzZap Agri Clean Tech</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          <!-- 3. Our Products (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown active" type="button" aria-expanded="false">
-              <span>Our Products</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- DIVISION 1: HYDROPULSE WATER DESCALERS -->
+    <section id="hydropulse" class="py-24 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-win-border">
+                <div class="space-y-3 max-w-2xl">
+                    <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-win-hpBlueLight px-3 py-1 rounded-full">Product Line 01 · Water Polarization</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl text-win-dark">HydroPulse™ Electronic Water Descalers</h2>
+                    <p class="text-win-muted text-sm sm:text-base leading-relaxed">
+                        Eco-friendly physical descalers engineered for molecular crystal restructuring. Zero salt refills, zero chemicals, zero pressure drop across pipelines.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-bold text-win-hpOrange bg-win-hpOrangeLight border border-win-hpOrange/30 px-4 py-2 rounded-xl flex items-center gap-2">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> Salt-Free · 100% Eco-Friendly
+                    </span>
+                </div>
+            </div>
+
+            <!-- HydroPulse Product Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
                 
-                <!-- HydroPulse Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                <!-- Marlin 1.0 (Price: ₹41,999) -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between space-y-6 editorial-shadow hover:border-win-hpBlue transition-colors">
+                    <div class="space-y-6">
+                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin 1.0" class="max-h-40 object-contain">
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpOrangeLight text-win-hpOrange font-bold px-2.5 py-1 rounded-full">Apartments & Small Homes</span>
+                            <h3 class="font-serif text-3xl text-win-dark mt-2">Marlin 1.0</h3>
+                            <p class="text-win-muted text-xs leading-relaxed mt-2">
+                                Perfect limescale control for apartments, flats, and medium bungalows (up to 1.0-inch / 25mm pipelines). Protects water heaters, solar geysers, showers, and plumbing fittings.
+                            </p>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="p-4 bg-win-sand rounded-2xl border border-win-border">
+                            <div class="text-xs text-win-muted font-medium">Standard Retail Price</div>
+                            <div class="font-serif text-4xl font-bold text-win-dark">₹41,999</div>
+                            <div class="text-xs text-win-hpBlue font-semibold mt-1">Plug-in Non-Invasive Clamp-On</div>
+                        </div>
+
+                        <!-- Spec List -->
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Pipeline Size:</strong> Up to 1.0 Inch (25mm)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Power:</strong> &lt; 15W continuous low consumption</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Installation:</strong> Clamp-on DIY (No cutting pipe)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Pipe Compatibility:</strong> PVC, CPVC, GI, Copper, HDPE</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse</span>
-                      <span class="mega-col-subtitle">Water conditioning technology</span>
+
+                    <div class="pt-6 border-t border-win-border space-y-3">
+                        <a href="contact.html?product=marlin-1.0" class="w-full bg-win-dark hover:bg-win-hpBlue text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center block transition-colors">
+                            Enquire Marlin 1.0 →
+                        </a>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse%20Marlin%201.0%20(₹41,999)" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-2 transition-colors">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Order on WhatsApp (+91 9595955585)
+                        </a>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.0 (Apartments &amp; Homes)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Marlin 1.5 (Villas &amp; Commercial)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">HydroPulse Industrial Units</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#hydropulse">Technical Specifications &amp; Pricing</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#hydropulse" class="mega-learn-more orange">Learn More →</a>
-                  </div>
                 </div>
 
-                <!-- BuzzZap Column -->
-                <div class="mega-dropdown-col">
-                  <a href="products.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <!-- Marlin 1.5 (Price: ₹55,999) -->
+                <div class="bg-win-surface border-2 border-win-hpBlue rounded-3xl p-8 flex flex-col justify-between space-y-6 editorial-shadow relative">
+                    <div class="absolute -top-3.5 right-8 bg-win-hpBlue text-white text-[10px] font-heading font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+                        Flagship Commercial
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap</span>
-                      <span class="mega-col-subtitle">Electrical insect control for farms</span>
+
+                    <div class="space-y-6">
+                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin 1.5" class="max-h-40 object-contain">
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpBlueLight text-win-hpBlue font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
+                            <h3 class="font-serif text-3xl text-win-dark mt-2">Marlin 1.5</h3>
+                            <p class="text-win-muted text-xs leading-relaxed mt-2">
+                                Reinforced dual-frequency signal loop for luxury villas, penthouses, commercial setups, and swimming pool loops (pipelines up to 1.5-inch / 40mm). Handles continuous high discharge rates.
+                            </p>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="p-4 bg-win-hpBlueLight/30 rounded-2xl border border-win-hpBlue/30">
+                            <div class="text-xs text-win-muted font-medium">Standard Retail Price</div>
+                            <div class="font-serif text-4xl font-bold text-win-dark">₹55,999</div>
+                            <div class="text-xs text-win-hpBlue font-semibold mt-1">Dual-Coil High Resonance System</div>
+                        </div>
+
+                        <!-- Spec List -->
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Pipeline Size:</strong> Up to 1.5 Inch (40mm)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Technology:</strong> Deep capacitive resonance frequency modulation</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Warranty:</strong> 5 Years Comprehensive Factory Warranty</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                                <span><strong>Delivery:</strong> Ready Stock · Pan-India Dispatch</span>
+                            </li>
+                        </ul>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap ECO (Solar Insect Trap)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">BuzzZap Pro (Heavy-Duty Killer)</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Multi-Function Rain Sensor Circuit</a></li>
-                    <li class="mega-sublink-item"><a href="products.html#buzzzap">Technical Specifications &amp; Inquiry</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="products.html#buzzzap" class="mega-learn-more green">Learn More →</a>
-                  </div>
+
+                    <div class="pt-6 border-t border-win-border space-y-3">
+                        <a href="contact.html?product=marlin-1.5" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center block transition-colors">
+                            Enquire Marlin 1.5 →
+                        </a>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse%20Marlin%201.5%20(₹55,999)" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-2 transition-colors">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Order on WhatsApp (+91 9595955585)
+                        </a>
+                    </div>
                 </div>
 
-              </div>
+                <!-- Industrial Units -->
+                <div class="bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between space-y-6 editorial-shadow hover:border-win-hpBlue transition-colors">
+                    <div class="space-y-6">
+                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
+                            <img src="assets/images/hydropulse/product_agriculture.png" alt="HydroPulse Industrial Unit" class="max-h-40 object-contain">
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-slate-200 text-slate-800 font-bold px-2.5 py-1 rounded-full">Factories & Agriculture</span>
+                            <h3 class="font-serif text-3xl text-win-dark mt-2">Industrial Series</h3>
+                            <p class="text-win-muted text-xs leading-relaxed mt-2">
+                                Heavy-duty multi-coil systems designed for boiler feedwater lines, cooling towers, heat exchangers, RO pre-treatment, and high-volume agricultural drip irrigation mains.
+                            </p>
+                        </div>
+
+                        <!-- Price Tag -->
+                        <div class="p-4 bg-win-sand rounded-2xl border border-win-border">
+                            <div class="text-xs text-win-muted font-medium">Pricing Model</div>
+                            <div class="font-serif text-3xl font-bold text-win-dark">Project Quote</div>
+                            <div class="text-xs text-win-hpOrange font-semibold mt-1">Sized to Pipe Diameter & Flow</div>
+                        </div>
+
+                        <!-- Spec List -->
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <span><strong>Pipeline Size:</strong> 2.0" to 12.0"+ (Customizable)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <span><strong>Flow Capacity:</strong> Hundreds of m³/hour</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <span><strong>Enclosure:</strong> Weatherproof IP65 Industrial Box</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <span><strong>Payback:</strong> Under 6–12 months in fuel & acid savings</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-win-border space-y-3">
+                        <a href="contact.html?product=industrial" class="w-full bg-win-dark hover:bg-win-hpOrange text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center block transition-colors">
+                            Request Custom Sizing Quote →
+                        </a>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20need%20a%20quote%20for%20Industrial%20HydroPulse" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-2 transition-colors">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Chat on WhatsApp (+91 9595955585)
+                        </a>
+                    </div>
+                </div>
+
             </div>
-          </li>
+        </div>
+    </section>
 
-          <!-- 4. Sectors (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Sectors</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- DIVISION 2: BUZZZAP CLEAN AGRI-TECH -->
+    <section id="buzzzap" class="py-24 bg-win-surface border-t border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-win-border">
+                <div class="space-y-3 max-w-2xl">
+                    <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold bg-amber-100 px-3 py-1 rounded-full">Product Line 02 · Clean Agri-Tech</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl text-win-dark">BuzzZap™ Solar Agricultural Insect Killers</h2>
+                    <p class="text-win-muted text-sm sm:text-base leading-relaxed">
+                        100% solar autonomous pest control for open farms, vineyards, orchards, and tea gardens. Made in India with multi-functional protective microcontrollers and rain sensors.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-4 py-2 rounded-xl flex items-center gap-2">
+                        <i data-lucide="leaf" class="w-4 h-4 text-emerald-600"></i> Up to 50–80% Chemical Cost Savings
+                    </span>
+                </div>
+            </div>
+
+            <!-- BuzzZap Product Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
                 
-                <!-- HydroPulse Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorHydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                <!-- BuzzZap ECO Card -->
+                <div class="bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between space-y-6 editorial-shadow hover:border-amber-600 transition-colors">
+                    <div class="space-y-6">
+                        <div class="h-64 bg-white rounded-2xl p-6 flex items-center justify-center border border-win-border overflow-hidden">
+                            <img src="assets/images/buzzzap/buzzzap_eco_hero.jpg" alt="BuzzZap ECO Solar Insect Trap" class="max-h-56 object-contain">
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded-full">Small & Medium Farms</span>
+                            <h3 class="font-serif text-3xl text-win-dark mt-2">BuzzZap ECO Trap</h3>
+                            <p class="text-win-muted text-xs leading-relaxed mt-2">
+                                Fully automatic solar insect trap equipped with yellow capture basin and single controlling microchip. Best-selling unit for small farmers, horticulture plots, and organic certifications.
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-2xl border border-win-border">
+                            <div class="text-xs text-win-muted font-medium">Commercial Status</div>
+                            <div class="font-serif text-3xl font-bold text-win-dark">Direct Inquiry Available</div>
+                            <div class="text-xs text-emerald-700 font-semibold mt-1">Subsidy & Cooperative Friendly</div>
+                        </div>
+
+                        <!-- Specs -->
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <span><strong>Effective Coverage:</strong> Up to 0.5 – 1.0 Acre</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <span><strong>Operating Time:</strong> Automatic 2–3 Hours post-sunset</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <span><strong>Power System:</strong> High-efficiency PV panel with low-light diffuse charging</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <span><strong>Circuit Protection:</strong> Overcharge & deep-discharge safety software</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Sectors</span>
-                      <span class="mega-col-subtitle">Scale-free water conditioning</span>
+
+                    <div class="pt-6 border-t border-win-border space-y-3">
+                        <a href="contact.html?product=buzzzap-eco" class="w-full bg-win-dark hover:bg-amber-600 text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center block transition-colors">
+                            Enquire BuzzZap ECO →
+                        </a>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20would%20like%20to%20enquire%20about%20BuzzZap%20ECO" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-2 transition-colors">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Order on WhatsApp (+91 9595955585)
+                        </a>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#domestic">Domestic Households &amp; Appliances</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#commercial">Commercial &amp; Hospitality Hotels</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#industrial">Industrial Boiler &amp; Cooling Towers</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#agri">Agricultural Drip Line Systems</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#poultry">Animal Husbandry &amp; Poultry Hydration</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorHydropulse" class="mega-learn-more orange">Explore Water Sectors →</a>
-                  </div>
                 </div>
 
-                <!-- BuzzZap Sectors -->
-                <div class="mega-dropdown-col">
-                  <a href="sectors.html#sectorBuzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <!-- BuzzZap Pro Card -->
+                <div class="bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between space-y-6 editorial-shadow hover:border-amber-600 transition-colors">
+                    <div class="space-y-6">
+                        <div class="h-64 bg-white rounded-2xl overflow-hidden border border-win-border">
+                            <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="BuzzZap Pro Solar Insect Killer" class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-win-bzIndigoLight text-win-bzIndigo font-bold px-2.5 py-1 rounded-full">Commercial & Large Acreage</span>
+                            <h3 class="font-serif text-3xl text-win-dark mt-2">BuzzZap Pro (Heavy-Duty)</h3>
+                            <p class="text-win-muted text-xs leading-relaxed mt-2">
+                                High-capacity rectangular solar insect killer with high-voltage physical grid, collection tray, and advanced rain-sensing circuitry. Designed for vineyards, orchards, and tea estates.
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-2xl border border-win-border">
+                            <div class="text-xs text-win-muted font-medium">Commercial Status</div>
+                            <div class="font-serif text-3xl font-bold text-win-dark">Estate & Bulk Orders</div>
+                            <div class="text-xs text-emerald-700 font-semibold mt-1">Multi-Acre Plantation Package</div>
+                        </div>
+
+                        <!-- Specs -->
+                        <ul class="space-y-2.5 text-xs text-slate-700">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Effective Coverage:</strong> Up to 2.0 Acres per unit</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Operating Time:</strong> 4 Hours runtime post-sunset</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Sensor Safety:</strong> Automatic rain sensor turns off unit during rainfall</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Pest Spectrum:</strong> Proven effective on over 1,800 nocturnal insect species</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Sectors</span>
-                      <span class="mega-col-subtitle">Clean energy agricultural pest control</span>
+
+                    <div class="pt-6 border-t border-win-border space-y-3">
+                        <a href="contact.html?product=buzzzap-pro" class="w-full bg-win-bzIndigo hover:bg-black text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center block transition-colors">
+                            Enquire BuzzZap Pro →
+                        </a>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20would%20like%20to%20enquire%20about%20BuzzZap%20Pro" target="_blank" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-2 transition-colors">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Order on WhatsApp (+91 9595955585)
+                        </a>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Vineyards &amp; Grape Orchards</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Open-Field Vegetables &amp; Cash Crops</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Tea &amp; Coffee Plantations</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Poultry &amp; Livestock Sheds</a></li>
-                    <li class="mega-sublink-item"><a href="sectors.html#sectorBuzzzap">Floriculture &amp; Organic Farms</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="sectors.html#sectorBuzzzap" class="mega-learn-more green">Explore Agri Sectors →</a>
-                  </div>
                 </div>
 
-              </div>
             </div>
-          </li>
+        </div>
+    </section>
 
-          <!-- 5. Technology (Mega Dropdown) -->
-          <li class="nav-item-dropdown">
-            <button class="nav-link nav-link-dropdown" type="button" aria-expanded="false">
-              <span>Technology</span>
-              <svg class="chevron-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="mega-dropdown-menu">
-              <div class="mega-dropdown-grid">
+    <!-- Comprehensive Corporate Footer -->
+    <footer class="bg-win-dark text-white pt-20 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-slate-800">
                 
-                <!-- HydroPulse Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#hydropulse" class="mega-col-header">
-                    <div class="mega-col-icon orange">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-slate-700 object-cover">
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-xl tracking-tight text-white">WIN ENERGY</span>
+                            <span class="text-[9px] tracking-widest text-win-hpOrange uppercase font-semibold -mt-1">Sustainable Systems</span>
+                        </div>
                     </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">HydroPulse Science</span>
-                      <span class="mega-col-subtitle">Physical hydro-polarization physics</span>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 ₹41,999 / Marlin 1.5 ₹55,999) and BuzzZap solar agricultural insect control.
+                    </p>
+
+                    <!-- Social Media Quicklinks (Row of 8 dark circular icons) -->
+                    <div class="flex items-center gap-3 pt-1 flex-wrap">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="X / Twitter">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-600 transition-all" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919595955585" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpOrange hover:bg-win-hpOrange transition-all" aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:contact@winenergy.in" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-red-600 hover:bg-red-600 transition-all" aria-label="YouTube">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
                     </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">How Hydro-Polarization Operates</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Calcite to Aragonite Micro-Crystals</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#hydropulse">Biofilm &amp; Algae Prevention</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#pipeSliderContainer">Interactive Descaling Pipe Demo</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techHydropulse" class="mega-learn-more orange">Learn Water Physics →</a>
-                  </div>
+
+                    <!-- Certification Presence (Dark Rounded Boxes exactly like user Image 1) -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" class="h-10 w-auto object-contain brightness-95">
+                        </div>
+                        <div class="h-16 px-5 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
+                            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" class="h-9 w-auto object-contain brightness-95">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-400 pt-2">
+                        <p class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-win-hpOrange shrink-0 mt-0.5"></i>
+                            <span><strong>Sangli Works:</strong> Plot no. 2038/B, Malgaon Savali Road, Malgaon, Sangli – 416410, Maharashtra, INDIA.</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                            <span><strong>Direct Phone / WhatsApp:</strong> +91 9595955585</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
+                            <span><strong>Official Email:</strong> contact@winenergy.in / info@winenergy.in</span>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- BuzzZap Technology -->
-                <div class="mega-dropdown-col">
-                  <a href="technology.html#buzzzap" class="mega-col-header">
-                    <div class="mega-col-icon green">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <div class="mega-col-title-wrap">
-                      <span class="mega-col-title">BuzzZap Science</span>
-                      <span class="mega-col-subtitle">Solar phototaxis &amp; microcontrollers</span>
-                    </div>
-                  </a>
-                  <ul class="mega-sublinks">
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Positive Phototaxis Principle</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Automated Dusk Microchip Algorithm</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Integrated Rain Sensor Moisture Protection</a></li>
-                    <li class="mega-sublink-item"><a href="technology.html#buzzzap">Low-Light Diffuse Solar PV Charging</a></li>
-                  </ul>
-                  <div class="mega-col-footer">
-                    <a href="technology.html#techBuzzzap" class="mega-learn-more green">Learn Solar Agri Tech →</a>
-                  </div>
+                <!-- Products -->
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.0 (₹41,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse Marlin 1.5 (₹55,999)</a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">Industrial Descaling Units</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap ECO Solar Trap</a></li>
+                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap Pro Solar Killer</a></li>
+                    </ul>
                 </div>
 
-              </div>
-            </div>
-          </li>
+                <!-- Sectors -->
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Sectors</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="sectors.html#agri" class="hover:text-win-hpBlue transition-colors">Agriculture & Vineyards</a></li>
+                        <li><a href="sectors.html#domestic" class="hover:text-win-hpBlue transition-colors">Domestic & Villas</a></li>
+                        <li><a href="sectors.html#commercial" class="hover:text-win-hpBlue transition-colors">Hotels & Commercial</a></li>
+                        <li><a href="sectors.html#industrial" class="hover:text-win-hpBlue transition-colors">Industrial Boilers</a></li>
+                        <li><a href="sectors.html#poultry" class="hover:text-win-hpBlue transition-colors">Poultry & Husbandry</a></li>
+                    </ul>
+                </div>
 
-          <!-- 6. Contact -->
-          <li>
-            <a href="contact.html" class="nav-link">
-              <span>Contact</span>
-            </a>
-          </li>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="technology.html" class="hover:text-win-hpBlue transition-colors">Core Physics & Science</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Engineering</a></li>
+                    </ul>
+                </div>
 
-          <!-- Mobile Only CTA -->
-          <li class="mobile-cta-wrap">
-            <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          </li>
-
-        </ul>
-
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <a href="contact.html" class="nav-cta-btn">Connect With Us →</a>
-          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ══════════════════ SUBPAGE HERO ══════════════════ -->
-  <section class="subpage-hero">
-    <div class="container">
-      <h1>Engineered Product Portfolio</h1>
-      <p>
-        Precision-manufactured devices designed for lifetime durability, maintenance-free performance, and rapid operational return on investment.
-      </p>
-    </div>
-  </section>
-
-  <!-- ══════════════════ PRODUCT DIVISION 1: BUZZZAP CLEAN AGRI TECH ══════════════════ -->
-  <section class="product-split-section" id="buzzzap">
-    <div class="container">
-      
-      <!-- Section Header -->
-      <div class="product-section-header header-buzzzap">
-        <div>
-          <span class="card-pill green-pill">Product Line 01</span>
-          <h2 style="font-size: 2.2rem; color: #ffffff; margin-top: 8px;">BuzzZap Solar Insect Killers &amp; Traps</h2>
-          <p style="color: #cbd5e1; max-width: 650px;">
-            100% solar autonomous pest control for open farms, vineyards, orchards, and tea gardens. Made in India with multi-functional protective software and rain sensors.
-          </p>
-        </div>
-        <div>
-          <span style="font-size: 0.9rem; font-weight: 700; color: #86efac; border: 1px solid #16a34a; padding: 6px 16px; border-radius: var(--radius-full);">
-            50% Agrochemical Cost Savings
-          </span>
-        </div>
-      </div>
-
-      <!-- BuzzZap Cards -->
-      <div class="product-showcase-grid" style="grid-template-columns: 1fr 1fr;">
-        
-        <!-- BuzzZap Eco Card -->
-        <div class="product-item-card featured-green">
-          <div class="product-img-holder">
-            <img src="assets/images/buzzzap/buzzzap_eco_hero.jpg" alt="BuzzZap ECO Solar Insect Trap in Farmland" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md); max-height: 200px; width: auto; object-fit: contain;" />
-          </div>
-          <div class="product-card-details">
-            <div>
-              <span class="card-pill green-pill">Small &amp; Medium Farms</span>
-              <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-win-navy);">BuzzZap ECO</h3>
-              <p style="font-size: 0.9rem; color: #64748b; margin-top: 6px;">
-                Fully automatic solar insect trap equipped with yellow capture basin. Single controlling microchip operated system. Best-selling unit for small farmers, government subsidy projects, and NGOs.
-              </p>
-              
-              <div class="product-price-badge green">
-                Direct Inquiry Available
-              </div>
-
-              <ul class="spec-list">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Effective Coverage:</strong> Up to 0.5 – 1.0 Acre</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Operating Time:</strong> Automatic 2–3 Hours post-sunset</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Power System:</strong> High-quality PV low-light battery charging</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Protections:</strong> Low battery &amp; overcharge protection software</span>
-                </li>
-              </ul>
             </div>
 
-            <a href="contact.html?product=buzzzap-eco" class="btn btn-green" style="width: 100%;">
-              Enquire BuzzZap ECO →
-            </a>
-          </div>
-        </div>
-
-        <!-- BuzzZap Pro Card -->
-        <div class="product-item-card featured-green">
-          <div class="product-img-holder">
-            <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="BuzzZap Pro Solar Insect Killer in Farmland" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md); max-height: 200px; width: auto; object-fit: cover;" />
-          </div>
-          <div class="product-card-details">
-            <div>
-              <span class="card-pill green-pill">Commercial &amp; Large Acreage</span>
-              <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-win-navy);">BuzzZap Pro (Heavy-Duty)</h3>
-              <p style="font-size: 0.9rem; color: #64748b; margin-top: 6px;">
-                High-capacity rectangular solar insect killer with high-voltage physical grid, collection tray, and advanced rain-sensing circuitry. Designed for vineyards, orchards, and tea estates.
-              </p>
-              
-              <div class="product-price-badge green">
-                Direct Inquiry / Estate Orders
-              </div>
-
-              <ul class="spec-list">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Effective Coverage:</strong> Up to 2.0 Acres per machine</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Operating Time:</strong> 4 Hours runtime post-sunset</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Sensor Safety:</strong> Automatic Rain Sensor auto-shutoff</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Pest Spectrum:</strong> Proven effective on over 1,800 insect species</span>
-                </li>
-              </ul>
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
+                </div>
             </div>
-
-            <a href="contact.html?product=buzzzap-pro" class="btn btn-green" style="width: 100%;">
-              Enquire BuzzZap Pro →
-            </a>
-          </div>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════ PRODUCT DIVISION 2: HYDROPULSE WATER TECH ══════════════════ -->
-  <section class="product-split-section" id="hydropulse" style="background: #f1f5f9; padding-top: 80px;">
-    <div class="container">
-      
-      <!-- Section Header -->
-      <div class="product-section-header header-hydropulse">
-        <div>
-          <span class="card-pill orange-pill">Product Line 02</span>
-          <h2 style="font-size: 2.2rem; color: #ffffff; margin-top: 8px;">HydroPulse Water Polarization Units</h2>
-          <p style="color: #cbd5e1; max-width: 650px;">
-            Eco-friendly electronic water descalers engineered for physical crystal restructuring. Zero chemicals, zero salt refills, zero pressure drops.
-          </p>
-        </div>
-        <div>
-          <span style="font-size: 0.9rem; font-weight: 700; color: #fdba74; border: 1px solid #f07020; padding: 6px 16px; border-radius: var(--radius-full);">
-            Salt-Free • 100% Eco-Friendly
-          </span>
-        </div>
-      </div>
-
-      <!-- HydroPulse Cards -->
-      <div class="product-showcase-grid">
-        
-        <!-- Marlin 1.0 -->
-        <div class="product-item-card">
-          <div class="product-img-holder">
-            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin 1.0" />
-          </div>
-          <div class="product-card-details">
-            <div>
-              <span class="card-pill orange-pill">Apartments &amp; Small Homes</span>
-              <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--color-win-navy);">Marlin 1.0</h3>
-              <p style="font-size: 0.9rem; color: #64748b; margin-top: 6px;">
-                Perfect limescale control for apartments and medium bungalows (1-inch pipelines). Prevents scale on water heaters, showers, and taps.
-              </p>
-
-              <div class="product-price-badge orange">
-                ₹35,999
-              </div>
-
-              <ul class="spec-list">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Pipeline Size:</strong> Up to 1.0 Inch (25mm)</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Power:</strong> 12V Low Consumption (Plug-in)</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Installation:</strong> Clamp-on DIY (No cutting pipe)</span>
-                </li>
-              </ul>
-            </div>
-
-            <a href="contact.html?product=marlin-1.0" class="btn btn-orange" style="width: 100%;">
-              Enquire Marlin 1.0 →
-            </a>
-          </div>
-        </div>
-
-        <!-- Marlin 1.5 -->
-        <div class="product-item-card featured-orange">
-          <div class="product-img-holder">
-            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin 1.5" />
-          </div>
-          <div class="product-card-details">
-            <div>
-              <span class="card-pill orange-pill">Villas &amp; Commercial</span>
-              <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--color-win-navy);">Marlin 1.5</h3>
-              <p style="font-size: 0.9rem; color: #64748b; margin-top: 6px;">
-                Reinforced signal loop for luxury villas, penthouses, swimming pools, and corporate setups (1.5-inch lines). Handles high continuous flow.
-              </p>
-
-              <div class="product-price-badge orange">
-                ₹47,999
-              </div>
-
-              <ul class="spec-list">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Pipeline Size:</strong> Up to 1.5 Inch (40mm)</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Dual Coil Frequency:</strong> Deep resonance loop</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Status:</strong> Ready Stock • Pan-India Delivery</span>
-                </li>
-              </ul>
-            </div>
-
-            <a href="contact.html?product=marlin-1.5" class="btn btn-orange" style="width: 100%;">
-              Enquire Marlin 1.5 →
-            </a>
-          </div>
-        </div>
-
-        <!-- Industrial Unit -->
-        <div class="product-item-card">
-          <div class="product-img-holder">
-            <img src="assets/images/hydropulse/product_agriculture.png" alt="HydroPulse Industrial Unit" />
-          </div>
-          <div class="product-card-details">
-            <div>
-              <span class="card-pill orange-pill">Factories &amp; Agriculture</span>
-              <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--color-win-navy);">HydroPulse Industrial</h3>
-              <p style="font-size: 0.9rem; color: #64748b; margin-top: 6px;">
-                Heavy-duty multi-coil unit for factory mainlines, cooling towers, boiler feed water, and large-scale agricultural drip irrigation mains.
-              </p>
-
-              <div class="product-price-badge orange" style="font-size: 1.25rem;">
-                Custom Project Quote
-              </div>
-
-              <ul class="spec-list">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Pipeline Size:</strong> 2.0" to 12.0"+ (Customizable)</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Flow Capacity:</strong> Up to hundreds of m³/hr</span>
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f07020" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span><strong>Enclosure:</strong> Weatherproof IP65 Industrial Box</span>
-                </li>
-              </ul>
-            </div>
-
-            <a href="contact.html?product=industrial" class="btn btn-primary" style="width: 100%;">
-              Request Custom Quote →
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════ FOOTER ══════════════════ -->
-  <footer class="footer-corporate">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="brand-logo" style="margin-bottom: 12px;">
-            <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" style="width: 48px; height: 48px; border-radius: 50%;" />
-            <span class="brand-title" style="color: #ffffff;">Win Energy</span>
-          </div>
-          <p>
-            Pioneering sustainable physical water polarization and clean-energy agricultural pest solutions. Driving higher yields, lower operational costs, and zero chemical footprint across India and globally.
-          </p>
-          <div class="footer-certs">
-            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" />
-            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" />
-            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" />
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.0</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Marlin 1.5</a></li>
-            <li><a href="products.html#hydropulse">HydroPulse Industrial</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap ECO Trap</a></li>
-            <li><a href="products.html#buzzzap">BuzzZap Pro Solar Killer</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sectors</h4>
-          <ul>
-            <li><a href="sectors.html#agri">Agriculture &amp; Vineyards</a></li>
-            <li><a href="sectors.html#domestic">Domestic Households</a></li>
-            <li><a href="sectors.html#commercial">Hotels &amp; Commercial</a></li>
-            <li><a href="sectors.html#industrial">Industrial Factories</a></li>
-            <li><a href="sectors.html#poultry">Poultry &amp; Animal Husbandry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Win Energy</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Our Offices</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Pune Office:</strong> 3rd Floor, Prabhat House, Damle Path, Pune 411004</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Sangli Works:</strong> Plot 2038/B, Malgaon Savali Rd, Sangli 416410</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Win Energy. All rights reserved.</p>
-        <span>Pan-India Delivery &amp; Global Exports</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="assets/js/ai-chat.js"></script>
 </body>
 </html>
