@@ -63,12 +63,12 @@ function initFloatingWidgets() {
       background: #0F172A;
       color: #FFFFFF;
       border: 1px solid #334155;
-      padding: 10px 18px;
+      padding: 11px 20px;
       border-radius: 9999px;
       cursor: pointer;
       box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.35);
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
       transition: all 0.3s ease;
     }
@@ -132,15 +132,15 @@ function initFloatingWidgets() {
     }
     .chat-bubble {
       max-width: 85%;
-      padding: 10px 14px;
+      padding: 12px 16px;
       border-radius: 16px;
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.55;
     }
     .bubble-bot {
       background: #FFFFFF;
-      color: #1E293B;
-      border: 1px solid #E2E8F0;
+      color: #0F172A;
+      border: 1px solid #CBD5E1;
       align-self: flex-start;
       border-bottom-left-radius: 4px;
     }
@@ -160,11 +160,11 @@ function initFloatingWidgets() {
     }
     .win-chat-quickpills button {
       background: #F1F5F9;
-      border: 1px solid #E2E8F0;
-      color: #334155;
-      padding: 6px 12px;
+      border: 1px solid #CBD5E1;
+      color: #1E293B;
+      padding: 7px 14px;
       border-radius: 20px;
-      font-size: 11px;
+      font-size: 12.5px;
       font-weight: 600;
       white-space: nowrap;
       cursor: pointer;
@@ -186,8 +186,8 @@ function initFloatingWidgets() {
       flex: 1;
       border: 1px solid #CBD5E1;
       border-radius: 12px;
-      padding: 8px 14px;
-      font-size: 13px;
+      padding: 10px 16px;
+      font-size: 14px;
       outline: none;
       font-family: inherit;
     }

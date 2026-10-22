@@ -1,4 +1,84 @@
 /* Win Energy Editorial Design System Enhancements */
+
+/* Global Anti-aliasing & Text Clarity */
+*, *::before, *::after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+/* Crisp, Solid, High-Clarity Headings (Eliminating Blurry Faux-Bold Serifs) */
+h1, h2, h3, h4, h5, h6, .font-heading, .font-serif {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+}
+
+/* Increased Font Sizes for Effortless Readability */
+.text-\[9px\] {
+    font-size: 0.72rem !important; /* ~11.5px */
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.text-\[10px\] {
+    font-size: 0.78rem !important; /* ~12.5px */
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+
+.text-\[11px\] {
+    font-size: 0.82rem !important; /* ~13.2px */
+    font-weight: 600;
+}
+
+.text-xs {
+    font-size: 0.875rem !important; /* 14px instead of 12px */
+    line-height: 1.55 !important;
+}
+
+.text-sm {
+    font-size: 0.965rem !important; /* ~15.5px instead of 14px */
+    line-height: 1.6 !important;
+}
+
+/* High Contrast & Crisp Text Colors (Eliminating Blurry/Washed-Out Grays) */
+.text-win-muted {
+    color: #334155 !important; /* Slate-700 instead of faint #64748B */
+}
+
+p.text-slate-500, span.text-slate-500 {
+    color: #334155 !important;
+}
+
+p.text-slate-400, span.text-slate-400 {
+    color: #475569 !important; /* Slate-600 for light backgrounds */
+}
+
+/* Clear contrast in Dark Containers (Footer & Dark Sections) */
+.bg-win-dark p.text-slate-400,
+.bg-win-dark span.text-slate-400,
+.bg-win-dark li a.text-slate-400,
+footer p.text-slate-400,
+footer span.text-slate-400,
+footer li a,
+footer ul li a {
+    color: #cbd5e1 !important; /* Slate-300 on dark background */
+}
+
+.bg-win-dark p.text-slate-500,
+footer p.text-slate-500,
+footer .text-slate-500 {
+    color: #94a3b8 !important; /* Slate-400 */
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -12,6 +92,8 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #94A3B8;
 }
+
+/* Marquee Animation */
 @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
@@ -24,6 +106,8 @@
 .animate-marquee:hover {
     animation-play-state: paused;
 }
+
+/* Subtle Shadows */
 .editorial-shadow {
     box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05);
 }
