@@ -114,3 +114,363 @@ footer .text-slate-500 {
 .editorial-shadow-lg {
     box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
 }
+
+/* ══════════════════════════════════════════════
+   HYDROPULSE INTERACTIVE ANIMATED PIPE SLIDER
+   ══════════════════════════════════════════════ */
+.pipe-comparison-container {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.25);
+    user-select: none;
+    cursor: ew-resize;
+    touch-action: pan-y;
+}
+
+.pipe-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* BOTH SIDES HAVE THE EXACT SAME WATERCOLOR AS REQUESTED */
+.pipe-clean, .pipe-clogged {
+    background: linear-gradient(180deg, #07172e 0%, #0d2850 50%, #082245 100%);
+}
+
+.pipe-clean {
+    z-index: 1;
+}
+
+.pipe-clogged {
+    z-index: 2;
+    clip-path: inset(0 50% 0 0);
+    will-change: clip-path;
+}
+
+/* Pipe casing walls */
+.pipe-wall {
+    height: 30px;
+    width: 100%;
+    z-index: 3;
+    position: relative;
+}
+
+.top-wall {
+    background: linear-gradient(180deg, #475569 0%, #1e293b 100%);
+    border-bottom: 2px solid #334155;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.15), 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.bottom-wall {
+    background: linear-gradient(0deg, #475569 0%, #1e293b 100%);
+    border-top: 2px solid #334155;
+    box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.15), 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.pipe-water-flow {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Water currents animation */
+.water-current-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.water-current-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.current-line {
+    stroke-dasharray: 120 180;
+    animation: flowWater 3.5s infinite linear;
+}
+
+.c1 { animation-duration: 3.2s; }
+.c2 { animation-duration: 2.8s; animation-delay: 0.3s; }
+.c3 { animation-duration: 3.5s; animation-delay: 0.7s; }
+.c4 { animation-duration: 3.0s; animation-delay: 0.2s; }
+.c5 { animation-duration: 2.5s; animation-delay: 0.5s; }
+.c6 { animation-duration: 3.3s; animation-delay: 0.8s; }
+.c7 { animation-duration: 2.9s; animation-delay: 0.4s; }
+
+@keyframes flowWater {
+    0% { stroke-dashoffset: 600; }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Micro bubbles */
+.water-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.wb1 { width: 5px; height: 5px; top: 70%; animation: floatBubble 5.5s infinite linear; }
+.wb2 { width: 7px; height: 7px; top: 35%; animation: floatBubble 4.8s infinite linear 1.2s; }
+.wb3 { width: 4px; height: 4px; top: 55%; animation: floatBubble 6.2s infinite linear 2.5s; }
+.wb4 { width: 6px; height: 6px; top: 22%; animation: floatBubble 4.2s infinite linear 0.7s; }
+.wb5 { width: 5px; height: 5px; top: 60%; animation: floatBubble 5.2s infinite linear 1.8s; }
+
+@keyframes floatBubble {
+    0% { left: -5%; transform: translateY(0) scale(0.6); opacity: 0; }
+    10% { opacity: 0.8; }
+    50% { transform: translateY(-6px) scale(1); }
+    90% { opacity: 0.8; }
+    100% { left: 105%; transform: translateY(-12px) scale(0.6); opacity: 0; }
+}
+
+/* Murky flow lines */
+.murky-flow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.murky-flow-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.murky-line {
+    stroke-dasharray: 60 200;
+    animation: flowMurkyWater 9s infinite linear;
+}
+
+.ml1 { animation-duration: 8.5s; }
+.ml2 { animation-duration: 10s; animation-delay: 1s; }
+.ml3 { animation-duration: 9.2s; animation-delay: 2s; }
+
+@keyframes flowMurkyWater {
+    0% { stroke-dashoffset: 500; }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Microbes / Pathogens */
+.pathogen-organism {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.85));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.pathogen-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.p1 { top: 32px; animation: flowPathogen1 12s infinite linear; }
+.p2 { top: 105px; animation: flowPathogen2 14s infinite linear; animation-delay: 2.5s; }
+.p3 { top: 58px; animation: flowPathogen3 11s infinite linear; animation-delay: 5s; }
+.p4 { top: 118px; animation: flowPathogen4 15s infinite linear; animation-delay: 1s; }
+
+@keyframes flowPathogen1 {
+    0% { left: -15%; transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10% { opacity: 0.9; }
+    25% { transform: translateY(-10px) rotate(20deg) scale(1.05); }
+    50% { transform: translateY(10px) rotate(-15deg) scale(0.95); }
+    75% { transform: translateY(-6px) rotate(25deg) scale(1.02); }
+    90% { opacity: 0.9; }
+    100% { left: 115%; transform: translateY(0) rotate(90deg) scale(1); opacity: 0; }
+}
+
+@keyframes flowPathogen2 {
+    0% { left: -15%; transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10% { opacity: 0.9; }
+    33% { transform: translateY(12px) rotate(-25deg) scale(0.95); }
+    66% { transform: translateY(-12px) rotate(30deg) scale(1.08); }
+    90% { opacity: 0.9; }
+    100% { left: 115%; transform: translateY(0) rotate(-60deg) scale(1); opacity: 0; }
+}
+
+@keyframes flowPathogen3 {
+    0% { left: -15%; transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10% { opacity: 0.9; }
+    20% { transform: translateY(8px) rotate(15deg) scale(1.05); }
+    45% { transform: translateY(-12px) rotate(-20deg) scale(0.9); }
+    75% { transform: translateY(6px) rotate(30deg) scale(1.05); }
+    90% { opacity: 0.9; }
+    100% { left: 115%; transform: translateY(0) rotate(120deg) scale(1); opacity: 0; }
+}
+
+@keyframes flowPathogen4 {
+    0% { left: -15%; transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10% { opacity: 0.9; }
+    40% { transform: translateY(-14px) rotate(35deg) scale(1.08); }
+    70% { transform: translateY(14px) rotate(-25deg) scale(0.95); }
+    90% { opacity: 0.9; }
+    100% { left: 115%; transform: translateY(0) rotate(90deg) scale(1); opacity: 0; }
+}
+
+/* Scale particles */
+.scale-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #f1ebd9;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 4px rgba(241, 235, 217, 0.8));
+    z-index: 2;
+}
+
+.sp1 { animation: floatAndStick1 7s infinite linear; }
+.sp2 { animation: floatAndStick2 9s infinite linear; animation-delay: 1.5s; }
+.sp3 { animation: floatAndStick3 6s infinite linear; animation-delay: 3s; }
+.sp4 { animation: floatAndStick4 8s infinite linear; animation-delay: 0.8s; }
+.sp5 { animation: floatAndStick5 10s infinite linear; animation-delay: 2.2s; }
+.sp6 { animation: floatAndStick6 7.5s infinite linear; animation-delay: 4s; }
+
+@keyframes floatAndStick1 {
+    0% { left: -5%; top: 45%; opacity: 0; transform: scale(0.6); }
+    10% { opacity: 0.9; }
+    65% { left: 40%; top: 18%; opacity: 0.95; }
+    75% { left: 43%; top: 14%; opacity: 1; transform: scale(1.2); }
+    95% { left: 43%; top: 14%; opacity: 1; }
+    100% { left: 43%; top: 14%; opacity: 0; }
+}
+
+@keyframes floatAndStick2 {
+    0% { left: -5%; top: 55%; opacity: 0; transform: scale(0.7); }
+    10% { opacity: 0.9; }
+    60% { left: 55%; top: 82%; opacity: 0.95; }
+    70% { left: 58%; top: 86%; opacity: 1; transform: scale(1.3); }
+    95% { left: 58%; top: 86%; opacity: 1; }
+    100% { left: 58%; top: 86%; opacity: 0; }
+}
+
+@keyframes floatAndStick3 {
+    0% { left: -5%; top: 38%; opacity: 0; transform: scale(0.5); }
+    10% { opacity: 0.9; }
+    70% { left: 70%; top: 16%; opacity: 0.95; }
+    80% { left: 73%; top: 13%; opacity: 1; transform: scale(1.1); }
+    95% { left: 73%; top: 13%; opacity: 1; }
+    100% { left: 73%; top: 13%; opacity: 0; }
+}
+
+@keyframes floatAndStick4 {
+    0% { left: -5%; top: 62%; opacity: 0; transform: scale(0.8); }
+    10% { opacity: 0.9; }
+    55% { left: 32%; top: 83%; opacity: 0.95; }
+    65% { left: 34%; top: 87%; opacity: 1; transform: scale(1.4); }
+    95% { left: 34%; top: 87%; opacity: 1; }
+    100% { left: 34%; top: 87%; opacity: 0; }
+}
+
+@keyframes floatAndStick5 {
+    0% { left: -5%; top: 50%; opacity: 0; transform: scale(0.6); }
+    10% { opacity: 0.9; }
+    72% { left: 78%; top: 82%; opacity: 0.95; }
+    82% { left: 81%; top: 86%; opacity: 1; transform: scale(1.2); }
+    95% { left: 81%; top: 86%; opacity: 1; }
+    100% { left: 81%; top: 86%; opacity: 0; }
+}
+
+@keyframes floatAndStick6 {
+    0% { left: -5%; top: 42%; opacity: 0; transform: scale(0.5); }
+    10% { opacity: 0.9; }
+    62% { left: 50%; top: 17%; opacity: 0.95; }
+    72% { left: 53%; top: 13%; opacity: 1; transform: scale(1.1); }
+    95% { left: 53%; top: 13%; opacity: 1; }
+    100% { left: 53%; top: 13%; opacity: 0; }
+}
+
+/* Water labels */
+.bottom-phase-label {
+    position: absolute;
+    bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    z-index: 5;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.label-before {
+    color: #ff6b6b;
+    left: 24px;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.8), 0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+.label-after {
+    color: #3dfcbe;
+    right: 24px;
+    text-shadow: 0 0 10px rgba(61, 252, 190, 0.8), 0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+/* Divider Line & Slider Handle */
+.pipe-divider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.slider-drag-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f07020;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(240, 112, 32, 0.6);
+    z-index: 12;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.pipe-comparison-container:hover .slider-drag-handle {
+    background: #ea580c;
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+.drag-arrows {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
