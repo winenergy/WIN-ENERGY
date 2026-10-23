@@ -20,7 +20,31 @@ function initFloatingWidgets() {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 14px;
+      gap: 12px;
+    }
+    @media (max-width: 640px) {
+      .win-float-container {
+        bottom: 14px;
+        right: 14px;
+        gap: 8px;
+      }
+      .win-wa-btn {
+        width: 46px !important;
+        height: 46px !important;
+      }
+      .win-wa-btn svg {
+        width: 22px !important;
+        height: 22px !important;
+      }
+      .win-ai-trigger {
+        padding: 7px 14px !important;
+        font-size: 12px !important;
+        gap: 6px !important;
+      }
+      .win-ai-trigger .bot-dot {
+        width: 6px !important;
+        height: 6px !important;
+      }
     }
     .win-wa-btn {
       width: 54px;

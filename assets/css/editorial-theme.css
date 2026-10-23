@@ -1,10 +1,16 @@
 /* Win Energy Editorial Design System Enhancements */
 
 /* Global Anti-aliasing & Text Clarity */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 *, *::before, *::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    box-sizing: border-box;
 }
 
 body {
@@ -547,4 +553,30 @@ footer .text-slate-500 {
     font-size: 13px;
     font-weight: 900;
     letter-spacing: -1px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+    .pipe-comparison-container {
+        height: 200px !important;
+        border-radius: 18px !important;
+    }
+    .bottom-phase-label {
+        font-size: 0.68rem !important;
+        bottom: 8px !important;
+        letter-spacing: 0.05em !important;
+    }
+    .label-before {
+        left: 10px !important;
+    }
+    .label-after {
+        right: 10px !important;
+    }
+    .slider-drag-handle {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    .drag-arrows {
+        font-size: 11px !important;
+    }
 }
