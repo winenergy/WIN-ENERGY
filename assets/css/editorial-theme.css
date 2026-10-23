@@ -20,37 +20,50 @@ h1, h2, h3, h4, h5, h6, .font-heading, .font-serif {
     font-weight: 700;
 }
 
-/* Increased Font Sizes for Effortless Readability */
+/* Increased Font Sizes for Effortless Readability & Professional Clarity */
 .text-\[9px\] {
-    font-size: 0.72rem !important; /* ~11.5px */
+    font-size: 0.78rem !important; /* ~12.5px */
     letter-spacing: 0.05em;
     font-weight: 600;
 }
 
 .text-\[10px\] {
-    font-size: 0.78rem !important; /* ~12.5px */
+    font-size: 0.825rem !important; /* ~13.2px */
     letter-spacing: 0.04em;
     font-weight: 600;
 }
 
 .text-\[11px\] {
-    font-size: 0.82rem !important; /* ~13.2px */
+    font-size: 0.875rem !important; /* ~14px */
     font-weight: 600;
 }
 
 .text-xs {
-    font-size: 0.875rem !important; /* 14px instead of 12px */
-    line-height: 1.55 !important;
-}
-
-.text-sm {
-    font-size: 0.965rem !important; /* ~15.5px instead of 14px */
+    font-size: 0.95rem !important; /* ~15.2px - crisp, readable subtext, lists & labels */
     line-height: 1.6 !important;
 }
 
-/* High Contrast & Crisp Text Colors (Eliminating Blurry/Washed-Out Grays) */
+.text-sm {
+    font-size: 1.05rem !important; /* ~16.8px - comfortable editorial body readability */
+    line-height: 1.65 !important;
+}
+
+.text-base {
+    font-size: 1.125rem !important; /* ~18px - prominent lead/body paragraphs */
+    line-height: 1.7 !important;
+}
+
+/* High Contrast & Crisp Text Colors (Eliminating Blurry/Washed-Out Grays on light surfaces) */
 .text-win-muted {
-    color: #334155 !important; /* Slate-700 instead of faint #64748B */
+    color: #1e293b !important; /* Slate-800: sharp clarity & high contrast */
+}
+
+.text-slate-700 {
+    color: #0f172a !important; /* Slate-900: executive visibility */
+}
+
+.text-slate-600 {
+    color: #1e293b !important;
 }
 
 p.text-slate-500, span.text-slate-500 {
@@ -58,13 +71,33 @@ p.text-slate-500, span.text-slate-500 {
 }
 
 p.text-slate-400, span.text-slate-400 {
-    color: #475569 !important; /* Slate-600 for light backgrounds */
+    color: #334155 !important; /* High contrast on light backgrounds */
+}
+
+/* Enhanced legibility for body, paragraphs, and list elements */
+p, li, .text-xs, .text-sm {
+    text-rendering: optimizeLegibility;
+}
+
+.flex.items-start.text-xs,
+.flex.items-start.text-sm,
+ul.text-xs li,
+ul.text-sm li {
+    font-weight: 450;
 }
 
 /* Clear contrast in Dark Containers (Footer & Dark Sections) */
+.bg-win-dark,
+.bg-win-dark .text-win-muted,
+.bg-win-dark .text-slate-700,
+.bg-win-dark .text-slate-600,
 .bg-win-dark p.text-slate-400,
 .bg-win-dark span.text-slate-400,
 .bg-win-dark li a.text-slate-400,
+footer,
+footer .text-win-muted,
+footer .text-slate-700,
+footer .text-slate-600,
 footer p.text-slate-400,
 footer span.text-slate-400,
 footer li a,
