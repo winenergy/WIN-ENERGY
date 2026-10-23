@@ -171,16 +171,16 @@
     </header>
 
     <!-- Subpage Hero -->
-    <section class="pt-16 pb-20 bg-win-dark text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <section class="pt-16 pb-20 editorial-sky-hero relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
             <div class="max-w-3xl space-y-6">
-                <span class="text-xs font-heading font-bold uppercase tracking-widest text-win-hpOrange bg-win-hpOrange/10 border border-win-hpOrange/30 px-3.5 py-1 rounded-full">
+                <span class="text-xs font-heading font-bold uppercase tracking-widest text-win-hpOrange bg-orange-100/90 border border-win-hpOrange/30 px-3.5 py-1 rounded-full shadow-sm">
                     Core Physics & Engineering
                 </span>
-                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">
+                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-win-dark">
                     Replacing Toxic Chemistry with <span class="italic text-win-hpBlue">Pure Applied Physics</span>
                 </h1>
-                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                <p class="text-slate-700 text-base sm:text-lg leading-relaxed">
                     Explore how capacitive frequency resonance transforms mineral crystal geometry and calibrated phototropic spectrums control agricultural insect swarms without chemicals.
                 </p>
 
@@ -190,8 +190,8 @@
                         <i data-lucide="droplets" class="w-4 h-4"></i>
                         <span>HydroPulse Hydro-Polarization</span>
                     </button>
-                    <button onclick="switchTechTab('buzzzap')" id="tab-btn-bz" class="bg-slate-800 text-slate-300 hover:text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2">
-                        <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+                    <button onclick="switchTechTab('buzzzap')" id="tab-btn-bz" class="bg-white hover:bg-slate-50 text-slate-700 border border-sky-200 shadow-sm px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                        <i data-lucide="sun" class="w-4 h-4 text-amber-500"></i>
                         <span>BuzzZap Solar Phototropism</span>
                     </button>
                 </div>
@@ -747,12 +747,12 @@
 
             if(tech === 'hydropulse') {
                 btnHp.className = "bg-win-hpBlue text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm";
-                btnBz.className = "bg-slate-800 text-slate-300 hover:text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2";
+                btnBz.className = "bg-white hover:bg-slate-50 text-slate-700 border border-sky-200 shadow-sm px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2";
                 paneHp.classList.remove('hidden');
                 paneBz.classList.add('hidden');
             } else {
                 btnBz.className = "bg-amber-600 text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm";
-                btnHp.className = "bg-slate-800 text-slate-300 hover:text-white px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2";
+                btnHp.className = "bg-white hover:bg-slate-50 text-slate-700 border border-sky-200 shadow-sm px-6 py-3 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all flex items-center gap-2";
                 paneBz.classList.remove('hidden');
                 paneHp.classList.add('hidden');
                 lucide.createIcons();

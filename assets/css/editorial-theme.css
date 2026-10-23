@@ -111,6 +111,47 @@ footer .text-slate-500 {
     color: #94a3b8 !important; /* Slate-400 */
 }
 
+/* Sky Blue Hero & Banner Sections (Light Theme Harmony) */
+.editorial-sky-hero {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 45%, #e0f2fe 100%) !important;
+    border-bottom: 1px solid #bae6fd !important;
+    position: relative;
+    color: #0f172a !important;
+}
+
+.editorial-sky-hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, rgba(224, 242, 254, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.editorial-sky-cta {
+    background: linear-gradient(135deg, #e0f2fe 0%, #eff6ff 50%, #e0f7fa 100%) !important;
+    border-top: 1px solid #bae6fd !important;
+    border-bottom: 1px solid #bae6fd !important;
+    position: relative;
+    color: #0f172a !important;
+}
+
+.editorial-sky-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.11) 0%, rgba(224, 242, 254, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
