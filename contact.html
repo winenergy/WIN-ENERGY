@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Contact & Technical Inquiries — Win Energy</title>
     <meta name="description" content="Get in touch with Win Energy engineering and manufacturing facility in Sangli, Maharashtra. Enterprise inquiries, orders, and regional dealership opportunities.">
-    <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -74,45 +74,57 @@
     <!-- Sticky Header -->
     <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-win-border object-cover shadow-sm group-hover:scale-105 transition-transform">
-                <div class="flex flex-col">
-                    <span class="font-heading font-bold text-xl tracking-tight text-win-dark">WIN ENERGY</span>
-                    <span class="text-[9px] tracking-widest text-win-muted uppercase font-semibold -mt-1">Sustainable Systems</span>
-                </div>
+            <a href="index.html" class="flex items-center group py-1">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
             </a>
 
-            <!-- Navigation Links -->
+                        <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
                 <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Our Products</a>
-                <a href="sectors.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Sectors</a>
-                <a href="technology.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Technology</a>
                 <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
                 <a href="contact.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">Contact</a>
             </nav>
 
-            <div class="hidden sm:flex items-center gap-4">
-                <a href="tel:+919595955585" class="bg-win-dark hover:bg-win-hpBlue text-white font-heading font-semibold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase shadow-sm transition-all flex items-center gap-2">
-                    <i data-lucide="phone" class="w-3.5 h-3.5 text-win-hpOrange"></i>
-                    <span>+91 9595955585</span>
-                </a>
-            </div>
+            <!-- User & Commerce Actions -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <!-- Log In Button -->
+                <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-win-hpBlue px-3.5 py-2.5 rounded-xl border border-win-border hover:border-win-hpBlue bg-white shadow-xs transition-all">
+                    <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span class="header-user-label hidden sm:inline">Account</span>
+                </button>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="lg:hidden p-2 text-win-dark" aria-label="Toggle Menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-sky-100 hover:bg-sky-200 text-sky-900 font-heading font-bold px-3.5 sm:px-4 py-2.5 rounded-xl text-xs tracking-wide border border-sky-200 shadow-xs transition-all group">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="header-cart-count" class="px-1.5 py-0.5 bg-sky-600 text-white text-[10px] font-bold rounded-full min-w-[18px] text-center leading-none">0</span>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-btn" class="lg:hidden p-2 text-win-dark hover:bg-slate-100 rounded-xl transition-colors ml-1" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
-            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
+                        <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
             <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Our Products</a>
-            <a href="sectors.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Sectors</a>
-            <a href="technology.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Technology</a>
             <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
             <a href="contact.html" class="block text-base font-semibold text-win-hpBlue">Contact</a>
+            
+            <div class="pt-3 border-t border-win-border grid grid-cols-2 gap-3">
+                <button onclick="openLoginModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
+                    <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span>Log In</span>
+                </button>
+                <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-2 text-xs font-heading font-bold text-sky-900 py-3 rounded-xl bg-sky-100 hover:bg-sky-200 border border-sky-200 transition-colors">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600"></i>
+                    <span>Cart (<span class="header-cart-count-mobile">0</span>)</span>
+                </button>
+            </div>
             <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
                 <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
@@ -298,13 +310,9 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-slate-800">
                 <div class="lg:col-span-2 space-y-6">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-slate-700 object-cover">
-                        <div class="flex flex-col">
-                            <span class="font-heading font-bold text-xl tracking-tight text-white">WIN ENERGY</span>
-                            <span class="text-[9px] tracking-widest text-win-hpOrange uppercase font-semibold -mt-1">Sustainable Systems</span>
-                        </div>
-                    </div>
+                    <a href="index.html" class="inline-flex items-center">
+                        <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain">
+                    </a>
                     <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
                         Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 / Marlin 1.5) and BuzzZap solar agricultural insect control.
                     </p>
@@ -366,6 +374,7 @@
                     </div>
                 </div>
 
+                <!-- Products -->
                 <div>
                     <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
@@ -377,24 +386,26 @@
                     </ul>
                 </div>
 
+                <!-- Navigation -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Sectors</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Navigation</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="sector-agriculture.html" class="hover:text-win-hpBlue transition-colors">Agriculture & Farming</a></li>
-                        <li><a href="sector-residential.html" class="hover:text-win-hpBlue transition-colors">Residential Homes</a></li>
-                        <li><a href="sector-commercial.html" class="hover:text-win-hpBlue transition-colors">Hotels & Commercial</a></li>
-                        <li><a href="sector-industrial.html" class="hover:text-win-hpBlue transition-colors">Industrial Factories</a></li>
-                        <li><a href="sectors.html" class="hover:text-win-hpBlue transition-colors">All Sector Applications &rarr;</a></li>
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="products.html" class="hover:text-win-hpBlue transition-colors">Our Products</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html#dealership" class="hover:text-win-hpBlue transition-colors">Become a Dealer</a></li>
                     </ul>
                 </div>
 
+                <!-- Quick Help -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Company</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Help</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
-                        <li><a href="technology.html" class="hover:text-win-hpBlue transition-colors">Core Physics & Science</a></li>
-                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Engineering</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Request a Consultation</a></li>
+                        <li><a href="tel:+919595955585" class="hover:text-win-hpBlue transition-colors">+91 9595955585</a></li>
+                        <li><a href="mailto:contact@winenergy.in" class="hover:text-win-hpBlue transition-colors">contact@winenergy.in</a></li>
+                        <li><a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Chat on WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
@@ -468,5 +479,6 @@
         });
     </script>
     <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/store.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Win Energy — Sustainable Physical Clean-Tech & Water Engineering</title>
     <meta name="description" content="Win Energy pioneers chemical-free physical water descaling (HydroPulse) and solar-powered agricultural insect control (BuzzZap). Engineered in Maharashtra, India.">
-    <link rel="icon" type="image/png" href="assets/images/company/win_energy_logo.png">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -66,233 +66,63 @@
     <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-win-border object-cover shadow-sm group-hover:scale-105 transition-transform">
-                <div class="flex flex-col">
-                    <span class="font-heading font-bold text-xl tracking-tight text-win-dark">WIN ENERGY</span>
-                    <span class="text-[9px] tracking-widest text-win-muted uppercase font-semibold -mt-1">Sustainable Systems</span>
-                </div>
+            <a href="index.html" class="flex items-center group py-1">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
             </a>
 
-            <!-- Navigation Links -->
+                        <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">Home</a>
                 <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Our Products</a>
-                <a href="sectors.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Sectors</a>
-                <a href="technology.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Technology</a>
                 <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
                 <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Contact</a>
             </nav>
 
             <!-- CTA -->
-            <div class="hidden sm:flex items-center gap-4">
-                <a href="contact.html" class="bg-win-dark hover:bg-win-hpBlue text-white font-heading font-semibold px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase shadow-sm transition-all flex items-center gap-2">
-                    <span>Consult Engineering</span>
-                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-            </div>
+            <!-- User & Commerce Actions -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <!-- Log In Button -->
+                <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-win-hpBlue px-3.5 py-2.5 rounded-xl border border-win-border hover:border-win-hpBlue bg-white shadow-xs transition-all">
+                    <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span class="header-user-label hidden sm:inline">Account</span>
+                </button>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="lg:hidden p-2 text-win-dark" aria-label="Toggle Menu">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-sky-100 hover:bg-sky-200 text-sky-900 font-heading font-bold px-3.5 sm:px-4 py-2.5 rounded-xl text-xs tracking-wide border border-sky-200 shadow-xs transition-all group">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="header-cart-count" class="px-1.5 py-0.5 bg-sky-600 text-white text-[10px] font-bold rounded-full min-w-[18px] text-center leading-none">0</span>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-btn" class="lg:hidden p-2 text-win-dark hover:bg-slate-100 rounded-xl transition-colors ml-1" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
-            <a href="index.html" class="block text-base font-semibold text-win-hpBlue">Home</a>
+                        <a href="index.html" class="block text-base font-semibold text-win-hpBlue">Home</a>
             <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Our Products</a>
-            <a href="sectors.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Sectors</a>
-            <a href="technology.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Technology</a>
             <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
             <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Contact</a>
+            
+            <div class="pt-3 border-t border-win-border grid grid-cols-2 gap-3">
+                <button onclick="openLoginModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
+                    <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span>Log In</span>
+                </button>
+                <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-2 text-xs font-heading font-bold text-sky-900 py-3 rounded-xl bg-sky-100 hover:bg-sky-200 border border-sky-200 transition-colors">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600"></i>
+                    <span>Cart (<span class="header-cart-count-mobile">0</span>)</span>
+                </button>
+            </div>
             <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
                 <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
         </div>
     </header>
-
-    <!-- Editorial Hero Section -->
-    <section class="pt-12 pb-20 lg:pt-16 lg:pb-28 bg-win-base relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                
-                <!-- Left Column: Typography & Metrics -->
-                <div class="lg:col-span-7 space-y-8">
-                    <!-- Top Badge Row: Aligned with Product Toggle on Right -->
-                    <div class="flex items-center min-h-[40px] lg:min-h-[76px] lg:pt-8">
-                        <div class="inline-flex items-center gap-2.5 bg-win-sand border border-win-border px-4 py-2 rounded-full text-xs font-semibold text-slate-800 shadow-xs hover:border-slate-300 transition-colors">
-                            <span class="w-2.5 h-2.5 rounded-full bg-win-hpOrange ring-4 ring-orange-100"></span>
-                            <span>ISO 9001:2015 & CE Certified</span>
-                        </div>
-                    </div>
-
-                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-7xl tracking-tight text-win-dark leading-[1.08] sm:leading-[1.02]">
-                        Engineering Solutions that <span class="italic text-win-hpBlue">Make a Measurable Difference</span>
-                    </h1>
-
-                    <div class="space-y-3.5 text-sm sm:text-base text-win-muted leading-relaxed max-w-2xl">
-                        <p>
-                            <strong class="text-win-dark font-semibold">Win Energy</strong> develops smart engineering solutions to solve everyday and industrial challenges in a sustainable and efficient way.
-                        </p>
-                        <p>
-                            Our products include <strong class="text-win-dark font-semibold">HydroPulse™</strong>, a water conditioning device that helps remove existing limescale deposits caused by hard water and prevents new deposits from building up, while also reducing other problems caused by hard water - all without ever touching the water.
-                        </p>
-                        <p>
-                            We also offer <strong class="text-win-dark font-semibold">BuzzZap™</strong>, a solar-powered agricultural device that attracts and kills harmful insects, helping farmers reduce their dependence on chemical insecticides, and also helping reduce the manual labour done to spray the insecticides.
-                        </p>
-                        <p class="font-semibold text-win-dark pt-1">
-                            100% chemical-free solutions. No regular consumables. Sustainable by design.
-                        </p>
-                    </div>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-                        <a href="products.html" class="bg-win-hpBlue hover:bg-win-hpBlueDark text-white px-8 py-4 rounded-xl font-heading font-semibold text-sm shadow-sm transition-all text-center flex items-center justify-center gap-3">
-                            <span>Explore Product Lineup</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                        <a href="#matcher" class="bg-win-surface hover:bg-win-sand text-win-dark border border-win-border px-8 py-4 rounded-xl font-heading font-semibold text-sm transition-all text-center flex items-center justify-center gap-2">
-                            <span>Find Your Solution</span>
-                            <i data-lucide="sliders" class="w-4 h-4 text-win-hpOrange"></i>
-                        </a>
-                    </div>
-
-                    <!-- Key Field Metrics Bar -->
-                    <div class="pt-8 border-t border-win-border grid grid-cols-3 gap-6 sm:gap-8">
-                        <div>
-                            <p class="font-serif text-3xl sm:text-4xl text-win-dark">100%</p>
-                            <p class="text-xs text-win-muted font-medium mt-1">Chemical & Salt Free</p>
-                        </div>
-                        <div>
-                            <p class="font-serif text-3xl sm:text-4xl text-win-dark">1,800+</p>
-                            <p class="text-xs text-win-muted font-medium mt-1">Insect Species Controlled</p>
-                        </div>
-                        <div>
-                            <p class="font-serif text-3xl sm:text-4xl text-win-dark">&lt; 12 Mo</p>
-                            <p class="text-xs text-win-muted font-medium mt-1">Average Payback Window</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Interactive Dual Division Showcase Card -->
-                <div class="lg:col-span-5">
-                    <div class="bg-win-surface border border-win-border rounded-3xl p-6 sm:p-8 editorial-shadow space-y-6">
-                        
-                        <!-- Toggle Switcher -->
-                        <div class="grid grid-cols-2 gap-1.5 sm:gap-2 bg-win-sand p-1.5 rounded-2xl border border-win-border">
-                            <button onclick="switchHeroProduct('hydropulse')" id="hero-btn-hp" class="py-2.5 px-2 sm:py-3 sm:px-3 rounded-xl font-heading transition-all bg-win-hpBlue text-white shadow-sm flex flex-col items-center justify-center text-center">
-                                <div class="flex items-center gap-1.5 font-bold text-xs sm:text-sm uppercase tracking-wide truncate max-w-full">
-                                    <i data-lucide="droplets" class="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0"></i>
-                                    <span>HydroPulse™</span>
-                                </div>
-                                <span id="hero-sub-hp" class="text-[10px] sm:text-[11px] font-medium text-sky-100 mt-0.5 truncate max-w-full">Water Descaling</span>
-                            </button>
-                            <button onclick="switchHeroProduct('buzzzap')" id="hero-btn-bz" class="py-2.5 px-2 sm:py-3 sm:px-3 rounded-xl font-heading transition-all text-slate-700 hover:text-win-dark flex flex-col items-center justify-center text-center">
-                                <div class="flex items-center gap-1.5 font-bold text-xs sm:text-sm uppercase tracking-wide truncate max-w-full">
-                                    <i data-lucide="sun" class="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-amber-500"></i>
-                                    <span>BuzzZap™</span>
-                                </div>
-                                <span id="hero-sub-bz" class="text-[10px] sm:text-[11px] font-medium text-slate-500 mt-0.5 truncate max-w-full">Agri Pest Trap</span>
-                            </button>
-                        </div>
-
-                        <!-- HydroPulse Showcase Pane -->
-                        <div id="hero-pane-hp" class="space-y-6">
-                            <div class="flex items-center justify-between pb-4 border-b border-win-border">
-                                <div>
-                                    <span class="text-[10px] font-mono uppercase tracking-widest text-win-hpBlue font-bold">Division 01 · Hydropolarization</span>
-                                    <h3 class="font-serif text-3xl text-win-dark">HydroPulse™ Electronic Descaler</h3>
-                                </div>
-                                <div class="w-12 h-12 rounded-2xl bg-win-hpBlueLight flex items-center justify-center text-win-hpBlue">
-                                    <i data-lucide="droplets" class="w-6 h-6"></i>
-                                </div>
-                            </div>
-                            
-                            <div class="relative rounded-2xl overflow-hidden bg-slate-50 border border-win-border p-4 flex justify-center items-center">
-                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Unit" class="h-44 object-contain">
-                            </div>
-
-                            <p class="text-win-muted text-sm leading-relaxed">
-                                Applied externally to main pipelines. Induces modulated capacitive audio resonance, restructuring hard calcite scale into harmless suspended aragonite micro-crystals without salt or chemicals.
-                            </p>
-
-                            <div class="space-y-2.5 bg-win-sand p-4 sm:p-5 rounded-2xl border border-win-border text-xs">
-                                <div class="flex items-baseline gap-2.5 sm:gap-3">
-                                    <span class="text-win-muted font-medium w-28 sm:w-32 shrink-0">Flagship Models:</span>
-                                    <span class="text-win-dark font-semibold">Marlin 1.0 & Marlin 1.5</span>
-                                </div>
-                                <div class="flex items-baseline gap-2.5 sm:gap-3">
-                                    <span class="text-win-muted font-medium w-28 sm:w-32 shrink-0">Installation:</span>
-                                    <span class="text-win-hpBlue font-semibold">Non-invasive clamp-on (zero pipe cutting)</span>
-                                </div>
-                                <div class="flex items-baseline gap-2.5 sm:gap-3">
-                                    <span class="text-win-muted font-medium w-28 sm:w-32 shrink-0">Maintenance:</span>
-                                    <span class="text-win-dark font-semibold">Zero consumables · 5-Year Warranty</span>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-3">
-                                <a href="products.html#hydropulse" class="flex-1 bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center transition-colors shadow-xs flex items-center justify-center">
-                                    View HydroPulse Products
-                                </a>
-                                <a href="contact.html?product=hydropulse" class="px-5 py-3 bg-win-sand hover:bg-slate-200 text-win-dark rounded-xl font-heading font-semibold text-xs uppercase flex items-center justify-center transition-colors">
-                                    Enquire
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- BuzzZap Showcase Pane -->
-                        <div id="hero-pane-bz" class="hidden space-y-6">
-                            <div class="flex items-center justify-between pb-4 border-b border-win-border">
-                                <div>
-                                    <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Division 02 · Clean Agri-Tech</span>
-                                    <h3 class="font-serif text-3xl text-win-dark">BuzzZap™ Solar Insect Killer</h3>
-                                </div>
-                                <div class="w-12 h-12 rounded-2xl bg-win-bzYellowLight flex items-center justify-center text-amber-800">
-                                    <i data-lucide="sun" class="w-6 h-6"></i>
-                                </div>
-                            </div>
-
-                            <div class="relative rounded-2xl overflow-hidden bg-slate-50 border border-win-border p-4 flex justify-center items-center">
-                                <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="BuzzZap Farmland Deployment" class="h-44 w-full object-cover rounded-xl">
-                            </div>
-
-                            <p class="text-win-muted text-sm leading-relaxed">
-                                100% solar autonomous insect control for farmlands, vineyards, and orchards. Precision phototropic light wavelengths attract nocturnal pests, destroying them before egg-laying.
-                            </p>
-
-                            <div class="space-y-2.5 bg-win-sand p-4 sm:p-5 rounded-2xl border border-win-border text-xs">
-                                <div class="flex items-baseline gap-2.5 sm:gap-3">
-                                    <span class="text-win-muted font-medium w-36 sm:w-40 shrink-0">Effective Coverage:</span>
-                                    <span class="text-win-dark font-semibold">Up to 2.0 Acres per unit</span>
-                                </div>
-                                <div class="flex items-baseline gap-2.5 sm:gap-3">
-                                    <span class="text-win-muted font-medium w-36 sm:w-40 shrink-0">Agrochemical Savings:</span>
-                                    <span class="text-emerald-700 font-semibold">50% to 80% reduction in spray costs</span>
-                                </div>
-                                <div class="flex items-baseline gap-2.5 sm:gap-3">
-                                    <span class="text-win-muted font-medium w-36 sm:w-40 shrink-0">Weather Protection:</span>
-                                    <span class="text-win-dark font-semibold">Automatic Rain Sensor + Dusk Timer</span>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-3">
-                                <a href="products.html#buzzzap" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center transition-colors shadow-sm">
-                                    View BuzzZap Lineup
-                                </a>
-                                <a href="contact.html?product=buzzzap" class="px-4 py-3 bg-win-sand hover:bg-slate-200 text-win-dark rounded-xl font-heading font-semibold text-xs uppercase flex items-center justify-center">
-                                    Enquire
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Enterprise Client Logos Marquee (Cards with Real Corporate Logos) -->
     <div class="py-14 bg-win-surface border-y border-win-border overflow-hidden">
@@ -413,108 +243,6 @@
         </div>
     </div>
 
-    <!-- The Dual Challenge: Problem vs Solution -->
-    <section class="py-24 bg-win-base">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-xs font-heading font-bold uppercase tracking-widest bg-win-sand text-slate-700 px-3.5 py-1 rounded-full border border-win-border">The Root Challenges We Solve</span>
-                <h2 class="font-serif text-5xl sm:text-6xl text-win-dark">Two Critical Challenges. Two Engineered Solutions.</h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Challenge 1: HydroPulse Water Systems Challenge (Left) -->
-                <div class="bg-sky-50/80 border border-sky-200 rounded-3xl p-10 space-y-6 editorial-shadow flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between pb-6 border-b border-sky-200/70">
-                            <span class="text-xs font-mono uppercase tracking-widest text-sky-800 font-bold">Water Systems Challenge</span>
-                            <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700">
-                                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-2xl border border-sky-200">
-                            <img src="assets/images/hydropulse/tech_limescale_pipe.png" alt="Limescale choked pipes" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-serif text-3xl text-win-dark">Limescale Deposition & Flow Inefficiency</h3>
-                        <p class="text-slate-700 text-sm leading-relaxed">
-                            Hard water minerals (calcium and magnesium) crystallize into rock-like layers on heat exchangers, boilers, domestic plumbing, and drip irrigation emitters, choking flow and causing severe energy losses.
-                        </p>
-                        <div class="space-y-3 pt-2">
-                            <div class="flex items-start gap-3 text-xs text-slate-800">
-                                <i data-lucide="x-circle" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
-                                <span>Biofilm and microbial growth making algae and corrosion inside the pipelines</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-800">
-                                <i data-lucide="x-circle" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
-                                <span>Choked pipelines, water fittings and water appliances</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-800">
-                                <i data-lucide="x-circle" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
-                                <span>Constant chemical washes or expensive salt softener maintenance to control the problem</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pt-6 border-t border-sky-200/70 space-y-4">
-                        <div class="flex items-center justify-between">
-                            <a href="technology.html#hydropulse" class="text-xs font-bold text-sky-800 hover:text-sky-950 hover:underline flex items-center gap-1">
-                                <span>HydroPulse Frequency Modulation</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                            </a>
-                            <span class="text-xs text-sky-800 font-semibold bg-white border border-sky-200 px-2.5 py-1 rounded-full shadow-xs">Zero Salt or Chemicals</span>
-                        </div>
-                        <a href="products.html#hydropulse" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center transition-colors shadow-xs flex items-center justify-center gap-2">
-                            <span>Explore Products</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Challenge 2: BuzzZap Agriculture Challenge (Right) -->
-                <div class="bg-amber-50/80 border border-amber-200 rounded-3xl p-10 space-y-6 editorial-shadow flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between pb-6 border-b border-amber-200/70">
-                            <span class="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">Agriculture Challenge</span>
-                            <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800">
-                                <i data-lucide="bug" class="w-5 h-5"></i>
-                            </div>
-                        </div>
-                        <div class="h-48 overflow-hidden rounded-2xl border border-amber-200">
-                            <img src="assets/images/hydropulse/agri_stunted_crop.png" alt="Crop pest damage" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-serif text-3xl text-win-dark">Chemical Overuse & Pest Immunity</h3>
-                        <p class="text-slate-700 text-sm leading-relaxed">
-                            Years of repeated insecticide spraying have caused rapid cuticular and behavioral resistance in agricultural enemy insects. Farmers face high chemical costs while the toxins in insecticides can create the problem of export rejections.
-                        </p>
-                        <div class="space-y-3 pt-2">
-                            <div class="flex items-start gap-3 text-xs text-slate-800">
-                                <i data-lucide="x-circle" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
-                                <span>Insect mutations and changes making expensive chemical sprays ineffective</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-800">
-                                <i data-lucide="x-circle" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
-                                <span>Heavy repeating costs of toxic insecticides</span>
-                            </div>
-                            <div class="flex items-start gap-3 text-xs text-slate-800">
-                                <i data-lucide="x-circle" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
-                                <span>Killing of useful insect pollinators and soil’s natural beneficial bacteria and insects</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pt-6 border-t border-amber-200/70 space-y-4">
-                        <div class="flex items-center justify-between">
-                            <a href="technology.html#buzzzap" class="text-xs font-bold text-amber-800 hover:text-amber-950 hover:underline flex items-center gap-1">
-                                <span>BuzzZap Phototropic Physics</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                            </a>
-                            <span class="text-xs text-amber-800 font-semibold bg-white border border-amber-200 px-2.5 py-1 rounded-full shadow-xs">50–80% Spray Savings</span>
-                        </div>
-                        <a href="products.html#buzzzap" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase text-center transition-colors shadow-xs flex items-center justify-center gap-2">
-                            <span>Explore Products</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Sectors Overview Grid with Authentic Images -->
     <section class="py-24 bg-win-base">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -538,7 +266,7 @@
                                 Prevent irrigation line clogging, improve soil nutrient absorption for healthier crops without regular maintenance.
                             </p>
                         </div>
-                        <a href="sector-agriculture.html" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
+                        <a href="products.html#hydropulse" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
                             <span>Explore Farm Solutions</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -558,7 +286,7 @@
                                 Protect geysers, taps, and luxury fittings from choking and white limescale stains without constant maintenance.
                             </p>
                         </div>
-                        <a href="sector-residential.html" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
+                        <a href="products.html#hydropulse" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
                             <span>Explore Home Solutions</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -578,7 +306,7 @@
                                 Protect geysers, taps, and luxury fittings from choking, better water pressure without constant chemicals and softener maintenance, clear bathroom glass fittings.
                             </p>
                         </div>
-                        <a href="sector-commercial.html" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
+                        <a href="products.html#hydropulse" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
                             <span>Explore Hotel Solutions</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -598,7 +326,7 @@
                                 High-capacity descaling protection for steam boilers, heat exchangers, and cooling towers, preventing fuel loss.
                             </p>
                         </div>
-                        <a href="sector-industrial.html" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
+                        <a href="products.html#hydropulse" class="pt-4 border-t border-win-border text-xs font-semibold text-win-hpBlue flex items-center justify-between">
                             <span>Explore Industrial Solutions</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -731,13 +459,9 @@
                 
                 <!-- Brand Info + Socials + Certifications -->
                 <div class="lg:col-span-2 space-y-6">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/company/win_energy_logo.png" alt="Win Energy Logo" class="w-10 h-10 rounded-full border border-slate-700 object-cover">
-                        <div class="flex flex-col">
-                            <span class="font-heading font-bold text-xl tracking-tight text-white">WIN ENERGY</span>
-                            <span class="text-[9px] tracking-widest text-win-hpOrange uppercase font-semibold -mt-1">Sustainable Systems</span>
-                        </div>
-                    </div>
+                    <a href="index.html" class="inline-flex items-center">
+                        <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain">
+                    </a>
                     <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
                         Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 / Marlin 1.5) and BuzzZap solar agricultural insect control.
                     </p>
@@ -811,27 +535,26 @@
                     </ul>
                 </div>
 
-                <!-- Sectors -->
+                <!-- Navigation -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Sectors</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Navigation</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="sector-agriculture.html" class="hover:text-win-hpBlue transition-colors">Agriculture & Farming</a></li>
-                        <li><a href="sector-residential.html" class="hover:text-win-hpBlue transition-colors">Residential Homes</a></li>
-                        <li><a href="sector-commercial.html" class="hover:text-win-hpBlue transition-colors">Hotels & Commercial</a></li>
-                        <li><a href="sector-industrial.html" class="hover:text-win-hpBlue transition-colors">Industrial Factories</a></li>
-                        <li><a href="sectors.html" class="hover:text-win-hpBlue transition-colors">All Sector Applications &rarr;</a></li>
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="products.html" class="hover:text-win-hpBlue transition-colors">Our Products</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html#dealership" class="hover:text-win-hpBlue transition-colors">Become a Dealer</a></li>
                     </ul>
                 </div>
 
-                <!-- Quick Links -->
+                <!-- Quick Help -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Company</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Help</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
-                        <li><a href="technology.html" class="hover:text-win-hpBlue transition-colors">Core Physics & Science</a></li>
-                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Engineering</a></li>
-                        <li><a href="contact.html#dealership" class="hover:text-win-hpBlue transition-colors">Become a Dealer</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Request a Consultation</a></li>
+                        <li><a href="tel:+919595955585" class="hover:text-win-hpBlue transition-colors">+91 9595955585</a></li>
+                        <li><a href="mailto:contact@winenergy.in" class="hover:text-win-hpBlue transition-colors">contact@winenergy.in</a></li>
+                        <li><a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Chat on WhatsApp</a></li>
                     </ul>
                 </div>
 
@@ -860,34 +583,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Hero Product Switcher
-        function switchHeroProduct(product) {
-            const btnHp = document.getElementById('hero-btn-hp');
-            const btnBz = document.getElementById('hero-btn-bz');
-            const subHp = document.getElementById('hero-sub-hp');
-            const subBz = document.getElementById('hero-sub-bz');
-            const paneHp = document.getElementById('hero-pane-hp');
-            const paneBz = document.getElementById('hero-pane-bz');
-
-            if(product === 'hydropulse') {
-                btnHp.className = "py-2.5 px-2 sm:py-3 sm:px-3 rounded-xl font-heading transition-all bg-win-hpBlue text-white shadow-sm flex flex-col items-center justify-center text-center";
-                btnBz.className = "py-2.5 px-2 sm:py-3 sm:px-3 rounded-xl font-heading transition-all text-slate-700 hover:text-win-dark flex flex-col items-center justify-center text-center";
-                if(subHp) subHp.className = "text-[10px] sm:text-[11px] font-medium text-sky-100 mt-0.5 truncate max-w-full";
-                if(subBz) subBz.className = "text-[10px] sm:text-[11px] font-medium text-slate-500 mt-0.5 truncate max-w-full";
-                paneHp.classList.remove('hidden');
-                paneBz.classList.add('hidden');
-            } else {
-                btnBz.className = "py-2.5 px-2 sm:py-3 sm:px-3 rounded-xl font-heading transition-all bg-amber-600 text-white shadow-sm flex flex-col items-center justify-center text-center";
-                btnHp.className = "py-2.5 px-2 sm:py-3 sm:px-3 rounded-xl font-heading transition-all text-slate-700 hover:text-win-dark flex flex-col items-center justify-center text-center";
-                if(subBz) subBz.className = "text-[10px] sm:text-[11px] font-medium text-amber-100 mt-0.5 truncate max-w-full";
-                if(subHp) subHp.className = "text-[10px] sm:text-[11px] font-medium text-slate-500 mt-0.5 truncate max-w-full";
-                paneBz.classList.remove('hidden');
-                paneHp.classList.add('hidden');
-            }
-            if(window.lucide) {
-                lucide.createIcons();
-            }
-        }
 
         // Solution Matcher Logic
         function selectChallenge(type) {
@@ -921,5 +616,6 @@
         }
     </script>
     <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/store.js"></script>
 </body>
 </html>
