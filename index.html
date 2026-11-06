@@ -124,7 +124,357 @@
         </div>
     </header>
 
-    <!-- Enterprise Client Logos Marquee (Cards with Real Corporate Logos) -->
+    
+    <!-- ============================================================== -->
+    <!-- HERO SECTION: WIN ENERGY 3-PRODUCT CINEMATIC CAROUSEL (HYDRO-STYLE) -->
+    <!-- Authentic background photography, high-contrast crisp typography, -->
+    <!-- horizontal metric stats, floating product visual & sleek pills.   -->
+    <!-- ============================================================== -->
+    <style id="win-hero-styles">
+        @keyframes kenburnsZoom {
+            0% { transform: scale(1.0); }
+            100% { transform: scale(1.09); }
+        }
+        .hero-bg-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transform-origin: center center;
+            will-change: transform;
+        }
+        /* Cinematic Scrim: deep navy on left for crisp pure-white text, transparent on right for vivid visible scenery */
+        .hero-scrim-cinematic {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(8, 20, 38, 0.94) 0%,
+                rgba(8, 20, 38, 0.82) 42%,
+                rgba(8, 20, 38, 0.38) 75%,
+                rgba(8, 20, 38, 0.12) 100%
+            );
+            pointer-events: none;
+        }
+        @media (max-width: 1024px) {
+            .hero-scrim-cinematic {
+                background: linear-gradient(
+                    180deg,
+                    rgba(8, 20, 38, 0.94) 0%,
+                    rgba(8, 20, 38, 0.88) 60%,
+                    rgba(8, 20, 38, 0.70) 100%
+                );
+            }
+        }
+        .hero-dot {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+
+    <section id="hero-slider" class="relative w-full min-h-[640px] sm:min-h-[680px] lg:min-h-[720px] bg-slate-950 select-none flex items-center overflow-hidden" aria-label="Win Energy Featured Clean-Tech Innovations">
+        
+        <!-- ============================================================== -->
+        <!-- SLIDE 1: SCALEBRECK™ Electronic Water Conditioner               -->
+        <!-- ============================================================== -->
+        <div class="hero-slide active absolute inset-0 w-full h-full items-center" style="display: flex; opacity: 1;" data-slide-index="0" aria-hidden="false">
+            <!-- Background Photography with Ken Burns Effect -->
+            <div class="hero-bg-photo" style="background-image: url('assets/images/hydropulse/domestic_hero.png');"></div>
+            <!-- Cinematic Scrim Gradient -->
+            <div class="hero-scrim-cinematic"></div>
+
+            <!-- Slide Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-16 pb-28 sm:pt-20 sm:pb-32 lg:pt-20 lg:pb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left: Copy, Stats & CTAs -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Category Tag -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-amber-300 text-xs font-mono font-semibold tracking-wider uppercase shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                            <span>• Domestic & Commercial Water</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight">
+                            Soft Water <br>
+                            <span class="bg-gradient-to-r from-sky-400 via-sky-300 to-amber-400 bg-clip-text text-transparent">For Every Home</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl font-normal drop-shadow-sm">
+                            Protect your home's appliances, plumbing, and health. SCALEBRECK™ dissolves existing limescale and prevents new deposits in geysers, showers, and pipelines with zero salts and zero maintenance.
+                        </p>
+
+                        <!-- 3 Stats Badges (HydroPulse Horizontal Style) -->
+                        <div class="flex items-center gap-6 sm:gap-8 pt-2">
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 font-heading tracking-tight">UPTO 90%</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Scale Protection</div>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 font-heading tracking-tight">UPTO 50%</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Maintenance Saving</div>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-heading tracking-tight">Easy DIY</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Clamp-On Install</div>
+                            </div>
+                        </div>
+
+                        <!-- Pill Buttons -->
+                        <div class="flex flex-wrap items-center gap-4 pt-3">
+                            <a href="products.html#scalebreck" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-heading font-bold text-sm tracking-wide shadow-lg shadow-sky-500/30 transition-all transform hover:-translate-y-0.5 group">
+                                <span>Explore Domestic Solutions</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <button onclick="window.winCart.addItem('scalebreck-standard')" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 text-white font-heading font-semibold text-sm tracking-wide backdrop-blur-md transition-all shadow-sm cursor-pointer">
+                                <i data-lucide="shopping-cart" class="w-4 h-4 text-sky-300"></i>
+                                <span>Add to Cart (₹38,999)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Product Visual Showcase -->
+                    <div class="hidden lg:flex lg:col-span-5 items-center justify-center relative">
+                        <!-- Ambient Radial Glow -->
+                        <div class="absolute w-80 h-80 rounded-full bg-red-500/15 blur-3xl pointer-events-none"></div>
+                        <!-- Card Frame -->
+                        <div class="relative w-full max-w-[420px] rounded-3xl overflow-hidden border border-white/25 shadow-2xl bg-slate-900/40 backdrop-blur-md p-3.5 group">
+                            <div class="relative h-[340px] rounded-2xl overflow-hidden">
+                                <img src="assets/images/scalebreck/scalebreck_installation.jpg" alt="ScaleBreck Live Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                                <div class="absolute top-3 left-3 bg-red-600/90 text-white text-[11px] font-heading font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm flex items-center gap-1.5 shadow-md">
+                                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                                    <span>Live Installation</span>
+                                </div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                                    <span class="font-mono text-slate-200">±12V DC Induction Loop</span>
+                                    <span class="font-bold text-sky-300">Zero Pressure Drop</span>
+                                </div>
+                            </div>
+                            <div class="pt-3 pb-1 px-2 flex items-center justify-between text-xs text-slate-300">
+                                <span>100% Salt-Free & Chemical-Free</span>
+                                <span class="font-semibold text-emerald-400">20+ Years Lifespan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- SLIDE 2: HYDROPULSE™ Electronic Water Descalers                 -->
+        <!-- ============================================================== -->
+        <div class="hero-slide absolute inset-0 w-full h-full items-center" style="display: none; opacity: 0;" data-slide-index="1" aria-hidden="true">
+            <!-- Background Photography with Ken Burns Effect -->
+            <div class="hero-bg-photo" style="background-image: url('assets/images/hydropulse/industry_hero.png');"></div>
+            <!-- Cinematic Scrim Gradient -->
+            <div class="hero-scrim-cinematic"></div>
+
+            <!-- Slide Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-16 pb-28 sm:pt-20 sm:pb-32 lg:pt-20 lg:pb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left: Copy, Stats & CTAs -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Category Tag -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-sky-300 text-xs font-mono font-semibold tracking-wider uppercase shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                            <span>• Industrial & Commercial Water</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight">
+                            Advanced Descaling <br>
+                            <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">For Boilers & Pipelines</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl font-normal drop-shadow-sm">
+                            Deep capacitive resonance frequency modulation prevents heavy calcite scaling and bacterial biofilm across commercial setups, factory boilers, heat exchangers, and cooling towers.
+                        </p>
+
+                        <!-- 3 Stats Badges -->
+                        <div class="flex items-center gap-6 sm:gap-8 pt-2">
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-sky-400 font-heading tracking-tight">2" to 12"+</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Custom Pipe Sizing</div>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-emerald-400 font-heading tracking-tight">6–12 Mo.</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Payback Period</div>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-heading tracking-tight">0% Drop</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Pressure Loss</div>
+                            </div>
+                        </div>
+
+                        <!-- Pill Buttons -->
+                        <div class="flex flex-wrap items-center gap-4 pt-3">
+                            <a href="products.html#hydropulse" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-sky-500 to-cyan-600 hover:from-sky-400 hover:to-cyan-500 text-white font-heading font-bold text-sm tracking-wide shadow-lg shadow-sky-500/30 transition-all transform hover:-translate-y-0.5 group">
+                                <span>Explore Industrial Range</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <button onclick="window.winCart.addItem('hp-domestic')" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 text-white font-heading font-semibold text-sm tracking-wide backdrop-blur-md transition-all shadow-sm cursor-pointer">
+                                <i data-lucide="shopping-cart" class="w-4 h-4 text-sky-300"></i>
+                                <span>Add to Cart (₹41,999)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Seamless Floating Marlin on Pipe (HydroPulse Style) -->
+                    <div class="hidden lg:flex lg:col-span-5 items-center justify-center relative">
+                        <!-- Ambient Radial Glow -->
+                        <div class="absolute w-96 h-96 rounded-full bg-sky-500/20 blur-3xl pointer-events-none"></div>
+                        <!-- Floating Tilted Pipe with HydroPulse Unit -->
+                        <div class="relative z-10 w-full flex flex-col items-center">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Unit on Pipe" class="w-full max-w-[500px] object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.65)] hover:scale-105 transition-transform duration-500">
+                            <!-- Floating Info Tag -->
+                            <div class="mt-2 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/70 border border-white/20 backdrop-blur-md text-xs text-white shadow-xl">
+                                <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse"></span>
+                                <span class="font-heading font-bold">HydroPulse™ Marlin</span>
+                                <span class="text-slate-400">|</span>
+                                <span class="text-slate-300 font-mono">5-Year Factory Warranty</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- SLIDE 3: BUZZZAP™ Solar Agricultural Insect Killers             -->
+        <!-- ============================================================== -->
+        <div class="hero-slide absolute inset-0 w-full h-full items-center" style="display: none; opacity: 0;" data-slide-index="2" aria-hidden="true">
+            <!-- Background Photography with Ken Burns Effect -->
+            <div class="hero-bg-photo" style="background-image: url('assets/images/hydropulse/farmland_hero.png');"></div>
+            <!-- Cinematic Scrim Gradient -->
+            <div class="hero-scrim-cinematic"></div>
+
+            <!-- Slide Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-16 pb-28 sm:pt-20 sm:pb-32 lg:pt-20 lg:pb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left: Copy, Stats & CTAs -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Category Tag -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-emerald-300 text-xs font-mono font-semibold tracking-wider uppercase shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>• 100% Solar Clean Agri-Tech</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight">
+                            Autonomous Solar <br>
+                            <span class="bg-gradient-to-r from-emerald-400 via-lime-300 to-amber-400 bg-clip-text text-transparent">Pest Protection</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl font-normal drop-shadow-sm">
+                            Eliminates over 1,800 nocturnal crop pest species automatically post-sunset. 100% solar autonomous with intelligent rain sensor protection, cutting chemical pesticide costs by up to 50–80%.
+                        </p>
+
+                        <!-- 3 Stats Badges -->
+                        <div class="flex items-center gap-6 sm:gap-8 pt-2">
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-emerald-400 font-heading tracking-tight">Up to 2.0</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Acres Coverage</div>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 font-heading tracking-tight">50–80%</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Pesticide Savings</div>
+                            </div>
+                            <div class="w-px h-10 bg-white/20"></div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-heading tracking-tight">100% Solar</div>
+                                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mt-0.5">Rain Sensor Auto</div>
+                            </div>
+                        </div>
+
+                        <!-- Pill Buttons -->
+                        <div class="flex flex-wrap items-center gap-4 pt-3">
+                            <a href="products.html#buzzzap" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-heading font-bold text-sm tracking-wide shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5 group">
+                                <span>Explore BuzzZap Traps</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20BuzzZap%20Solar%20Insect%20Traps" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 text-white font-heading font-semibold text-sm tracking-wide backdrop-blur-md transition-all shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Product Visual Showcase -->
+                    <div class="hidden lg:flex lg:col-span-5 items-center justify-center relative">
+                        <!-- Ambient Radial Glow -->
+                        <div class="absolute w-80 h-80 rounded-full bg-emerald-500/20 blur-3xl pointer-events-none"></div>
+                        <!-- Card Frame -->
+                        <div class="relative w-full max-w-[420px] rounded-3xl overflow-hidden border border-white/25 shadow-2xl bg-slate-900/40 backdrop-blur-md p-3.5 group">
+                            <div class="relative h-[340px] rounded-2xl overflow-hidden">
+                                <img src="assets/images/buzzzap/buzzzap_field_wide.jpg" alt="BuzzZap Field Trap" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                                <div class="absolute top-3 left-3 bg-emerald-600/90 text-white text-[11px] font-heading font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm flex items-center gap-1.5 shadow-md">
+                                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                    <span>100% Solar Autonomous</span>
+                                </div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                                    <span class="font-mono text-slate-200">Dusk-to-Dawn Timer</span>
+                                    <span class="font-bold text-amber-300">Rain Sensor Auto</span>
+                                </div>
+                            </div>
+                            <div class="pt-3 pb-1 px-2 flex items-center justify-between text-xs text-slate-300">
+                                <span>Targets 1,800+ Nocturnal Pests</span>
+                                <span class="font-semibold text-emerald-400">Organic Certified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- SLIDER CONTROLS: PREV / NEXT CIRCULAR GLASS ARROWS             -->
+        <!-- ============================================================== -->
+        <button id="hero-prev-btn" aria-label="Previous Slide" class="hidden sm:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900/40 hover:bg-slate-900/80 border border-white/20 text-white backdrop-blur-md shadow-xl transition-all items-center justify-center group cursor-pointer">
+            <i data-lucide="chevron-left" class="w-6 h-6 group-hover:-translate-x-0.5 transition-transform"></i>
+        </button>
+        <button id="hero-next-btn" aria-label="Next Slide" class="hidden sm:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900/40 hover:bg-slate-900/80 border border-white/20 text-white backdrop-blur-md shadow-xl transition-all items-center justify-center group cursor-pointer">
+            <i data-lucide="chevron-right" class="w-6 h-6 group-hover:translate-x-0.5 transition-transform"></i>
+        </button>
+
+        <!-- ============================================================== -->
+        <!-- SLIDER CONTROLS: BOTTOM MINIMALIST DOTS & 01/03 COUNTER        -->
+        <!-- ============================================================== -->
+        <div class="absolute bottom-6 left-0 right-0 z-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between pointer-events-none">
+            <!-- Center Dots / Indicator Pills -->
+            <div class="flex items-center gap-2.5 pointer-events-auto">
+                <button data-hero-slide-to="0" class="hero-dot w-10 h-2.5 rounded-full bg-amber-400 cursor-pointer shadow-md" aria-label="Slide 1: ScaleBreck"></button>
+                <button data-hero-slide-to="1" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/45 hover:bg-white/80 cursor-pointer shadow-sm" aria-label="Slide 2: HydroPulse"></button>
+                <button data-hero-slide-to="2" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/45 hover:bg-white/80 cursor-pointer shadow-sm" aria-label="Slide 3: BuzzZap"></button>
+            </div>
+
+            <!-- Slide Counter (e.g. 01 / 03) -->
+            <div class="text-xs font-mono text-white/80 tracking-widest font-semibold flex items-center gap-1.5 bg-slate-900/40 px-3.5 py-1.5 rounded-full border border-white/15 backdrop-blur-md">
+                <span id="hero-current-slide" class="text-white text-sm font-bold">01</span>
+                <span class="text-white/40">/</span>
+                <span class="text-white/60">03</span>
+            </div>
+        </div>
+
+    </section>
+
+<!-- Enterprise Client Logos Marquee (Cards with Real Corporate Logos) -->
     <div class="py-14 bg-win-surface border-y border-win-border overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-8 text-center space-y-2">
             <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold">Trusted Globally</span>
@@ -617,5 +967,6 @@
     </script>
     <script src="assets/js/ai-chat.js?v=2.1"></script>
     <script src="assets/js/store.js"></script>
+    <script src="assets/js/hero-slider.js"></script>
 </body>
 </html>

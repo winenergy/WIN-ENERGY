@@ -580,3 +580,66 @@ footer .text-slate-500 {
         font-size: 11px !important;
     }
 }
+
+/* ============================================================== */
+/* HERO CAROUSEL: KEN BURNS ZOOM & SLIDE TRANSITIONS               */
+/* ============================================================== */
+@keyframes kenburnsZoom {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.12);
+    }
+}
+
+.hero-kenburns {
+    will-change: transform;
+    transform-origin: center center;
+}
+
+.hero-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1), visibility 800ms;
+    pointer-events: none;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.hero-slide.active .hero-kenburns {
+    animation: kenburnsZoom 7.5s ease-out forwards;
+}
+
+/* Glassmorphism Badges in Hero */
+.hero-glass-pill {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-glass-card {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Slide Indicator Active Styling */
+.hero-indicator-btn.active-indicator {
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.hero-indicator-btn.active-indicator .indicator-title {
+    color: #ffffff !important;
+}
+

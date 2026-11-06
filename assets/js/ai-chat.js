@@ -379,11 +379,22 @@ function generateAIResponse(query) {
 
   if (q.includes('price') || q.includes('cost') || q.includes('rate')) {
     return `<strong>Win Energy Standard Pricing:</strong>
+      <br>• <strong>SCALEBRECK™ Conditioner:</strong> ₹38,999 (High TDS, Homes & Commercial)
       <br>• <strong>HydroPulse Marlin 1.0:</strong> ₹41,999 (Up to 1" pipe)
       <br>• <strong>HydroPulse Marlin 1.5:</strong> ₹55,999 (Up to 1.5" pipe)
       <br>• <strong>Industrial HydroPulse (2" - 12"+):</strong> Custom project quote based on pipe size and flow rate.
-      <br>• <strong>BuzzZap ECO & Pro:</strong> Direct quote based on acreage.
+      <br>• <strong>BuzzZap ECO Trap:</strong> ₹7,499 (0.5 – 1.0 Acre)
+      <br>• <strong>BuzzZap Pro:</strong> ₹18,499 (Up to 2.0 Acres)
       <br><br>Call <strong>+91 9595955585</strong> for customized quotes!`;
+  }
+
+  // ScaleBreck / Scale breaker
+  if (q.includes('scalebreck') || q.includes('scalebreck') || q.includes('breaker') || q.includes('tds') || q.includes('leanway')) {
+    return `<strong>SCALEBRECK™ Electronic Water Conditioner:</strong>
+      <br>Engineered by <strong>Leanway Energy & Win Energy</strong> for high-TDS hard water management:
+      <br>• <strong>Mechanism:</strong> Delivers modulated square-wave frequencies (1 kHz – 20 kHz) at low potential (±12 V DC) to alter calcium & magnesium crystal habits.
+      <br>• <strong>Benefits:</strong> Dissolves existing limescale, prevents showerhead & geyser choking, ends hair fall and dry skin.
+      <br>• <strong>Installation:</strong> Clamp-on DIY without cutting pipe or adding salts. Solid-state core with 20+ years component life!`;
   }
 
   // HydroPulse / How it works
