@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>HydroPulse™ Electronic Water Descalers — Technology & Solutions | Win Energy</title>
+    <meta name="description" content="Explore HydroPulse physical water conditioning powered by Hydro-Polarization technology. Salt-free, chemical-free limescale, corrosion, and biofilm control for homes, commercial complexes, industry, and agriculture.">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            base: '#F8FAFC',
+                            sand: '#F1F5F9',
+                            surface: '#FFFFFF',
+                            border: '#E2E8F0',
+                            dark: '#0F172A',
+                            muted: '#1E293B',
+                            hpBlue: '#0284C7',
+                            hpBlueDark: '#0369A1',
+                            hpOrange: '#EA580C',
+                            hpOrangeLight: '#FFEDD5',
+                            hpBlueLight: '#E0F2FE'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/editorial-theme.css?v=2.1">
+</head>
+<body class="bg-win-base text-win-dark font-sans antialiased selection:bg-win-hpBlue selection:text-white">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center group py-1">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
+                <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Our Products</a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
+                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Contact</a>
+            </nav>
+
+            <!-- Commerce Actions -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-win-hpBlue px-3.5 py-2.5 rounded-xl border border-win-border bg-white shadow-xs transition-all">
+                    <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span class="header-user-label hidden sm:inline">Account</span>
+                </button>
+
+                <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-sky-100 hover:bg-sky-200 text-sky-900 font-heading font-bold px-3.5 sm:px-4 py-2.5 rounded-xl text-xs tracking-wide border border-sky-200 shadow-xs transition-all group">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="header-cart-count" class="px-1.5 py-0.5 bg-sky-600 text-white text-[10px] font-bold rounded-full min-w-[18px] text-center leading-none">0</span>
+                </button>
+
+                <button id="menu-btn" class="lg:hidden p-2 text-win-dark hover:bg-slate-100 rounded-xl transition-colors ml-1" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
+            <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Our Products</a>
+            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
+            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Contact</a>
+            
+            <div class="pt-3 border-t border-win-border grid grid-cols-2 gap-3">
+                <button onclick="openLoginModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
+                    <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span>Log In</span>
+                </button>
+                <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-2 text-xs font-heading font-bold text-sky-900 py-3 rounded-xl bg-sky-100 hover:bg-sky-200 border border-sky-200 transition-colors">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600"></i>
+                    <span>Cart (<span class="header-cart-count-mobile">0</span>)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-Navigation Bar -->
+    <div class="bg-white/80 backdrop-blur-md border-b border-win-border sticky top-20 z-30 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between text-xs font-heading font-semibold text-slate-600 overflow-x-auto">
+            <div class="flex items-center gap-6">
+                <a href="#overview" class="hover:text-win-hpBlue transition-colors">Overview</a>
+                <a href="#technology" class="hover:text-win-hpBlue transition-colors">Hydro-Polarization Technology</a>
+                <a href="#biofilm" class="hover:text-win-hpBlue transition-colors">Biofilm & Corrosion Control</a>
+                <a href="#sectors" class="hover:text-win-hpBlue transition-colors">Sectors & Solutions</a>
+                <a href="#models" class="hover:text-win-hpBlue transition-colors">Models & Specifications</a>
+                <a href="#advantages" class="hover:text-win-hpBlue transition-colors">Operational Advantages</a>
+            </div>
+            <a href="products.html#hydropulse" class="text-win-hpBlue hover:text-win-hpBlueDark flex items-center gap-1 font-bold">
+                <span>View Models in Catalog</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative py-16 sm:py-24 bg-gradient-to-b from-sky-50/60 via-win-base to-win-base overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-mono font-bold uppercase tracking-wider">
+                        <i data-lucide="droplet" class="w-3.5 h-3.5 text-win-hpBlue"></i> Product Line 02 · Hydropolarization Technology
+                    </div>
+                    
+                    <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-win-dark tracking-tight leading-tight">
+                        HydroPulse™ <span class="text-win-hpBlue">Electronic Water Descalers</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                        A smart, eco-friendly, physical water conditioning system engineered for molecular crystal restructuring. Unlike traditional water softeners that rely on chemical consumables or exchange minerals for sodium, HydroPulse provides a 100% chemical-free, salt-free, and maintenance-free solution for limescale, biofilm, and corrosion control.
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="p-3 bg-white rounded-xl border border-sky-200/80 shadow-xs">
+                            <span class="text-[11px] font-bold text-win-hpBlue block uppercase tracking-wide">100% Salt-Free</span>
+                            <span class="text-xs text-slate-700 font-medium">Zero sodium addition</span>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-sky-200/80 shadow-xs">
+                            <span class="text-[11px] font-bold text-win-hpBlue block uppercase tracking-wide">Zero Chemicals</span>
+                            <span class="text-xs text-slate-700 font-medium">Zero acid or resin refills</span>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-sky-200/80 shadow-xs">
+                            <span class="text-[11px] font-bold text-win-hpBlue block uppercase tracking-wide">Zero Flow Loss</span>
+                            <span class="text-xs text-slate-700 font-medium">100% pressure maintained</span>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <button onclick="addToCart('HydroPulse Marlin 1.0', 41999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="px-7 py-3.5 rounded-xl bg-win-hpBlue hover:bg-win-hpBlueDark text-white font-heading font-semibold text-sm flex items-center gap-2 shadow-lg shadow-sky-500/20 transition-all cursor-pointer">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Buy Marlin 1.0 (₹41,999)</span>
+                        </button>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20am%20interested%20in%20HydroPulse%20Water%20Descalers" target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 font-heading font-semibold text-sm flex items-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                            <span>WhatsApp Consultation</span>
+                        </a>
+                        <a href="contact.html?product=industrial" class="px-6 py-3.5 rounded-xl bg-win-sand hover:bg-slate-200 text-slate-800 font-heading font-semibold text-sm flex items-center gap-2 transition-all">
+                            <i data-lucide="file-text" class="w-4 h-4 text-slate-600"></i>
+                            <span>Request Industrial Sizing</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Marlin Unit -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-white rounded-3xl p-6 border border-win-border shadow-sm">
+                        <div class="h-64 sm:h-72 rounded-2xl bg-slate-50 flex items-center justify-center p-6 border border-slate-100 overflow-hidden">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Unit" class="max-h-52 object-contain">
+                        </div>
+                        <div class="mt-4 flex items-center justify-between text-xs text-slate-500 font-mono">
+                            <span>High-Frequency RFID Modulation</span>
+                            <span class="text-win-hpBlue font-bold">0 – 160 kHz Dynamic Range</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 bg-white rounded-2xl border border-win-border flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-sky-100 flex items-center justify-center text-win-hpBlue shrink-0">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-xs">
+                                <strong class="block text-slate-900">5-Year Warranty</strong>
+                                <span class="text-slate-500">Marlin 1.5 Flagship</span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-2xl border border-win-border flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-sky-100 flex items-center justify-center text-win-hpBlue shrink-0">
+                                <i data-lucide="activity" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-xs">
+                                <strong class="block text-slate-900">&lt; 15W Consumption</strong>
+                                <span class="text-slate-500">Continuous operation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: HYDRO-POLARIZATION TECHNOLOGY -->
+    <section id="technology" class="py-20 bg-white border-y border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-sky-100 px-3 py-1 rounded-full">Scientific Mechanism</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">The Technology: Hydro-Polarization</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Physical water conditioning alters the physical crystal structure of hard water minerals rather than chemically extracting them:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-win-base p-8 rounded-3xl border border-win-border space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-win-hpBlue">
+                        <i data-lucide="radio" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-slate-900">1. High-Frequency RFID Signals</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        The electronic control unit generates high-frequency signals (typically ranging between 0–160 kHz) transmitting dynamic electromagnetic waves across the entire water distribution network.
+                    </p>
+                </div>
+
+                <div class="bg-win-base p-8 rounded-3xl border border-win-border space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-win-hpBlue">
+                        <i data-lucide="atom" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-slate-900">2. Aragonite Crystal Formation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Instead of letting calcium (Ca²⁺) and carbonate (CO₃²⁻) ions crystallize into sticky calcite scale, frequency vibrations trigger active ions to combine into tiny, neutral microscopic crystals.
+                    </p>
+                </div>
+
+                <div class="bg-win-base p-8 rounded-3xl border border-win-border space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-win-hpBlue">
+                        <i data-lucide="wind" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-slate-900">3. Continuous Fluid Suspension</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        These microscopic crystals remain suspended and free-flowing in the water rather than clinging to pipe walls, geysers, or cooling elements, washing out harmlessly downstream.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Technology Visuals Comparison -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-4">
+                <div class="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-3">
+                    <div class="h-48 rounded-2xl overflow-hidden bg-white border border-slate-200">
+                        <img src="assets/images/hydropulse/tech_limescale_pipe.png" alt="Untreated Limescale in Pipe" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-heading font-bold text-sm text-slate-900">Untreated Water: Sticky Calcite Scale</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Calcium and carbonate ions bind strongly to plumbing walls and heating elements, forming insulating, rock-hard calcite scale that restricts flow and ruins heat exchange efficiency.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-sky-50/50 rounded-3xl border border-sky-200 space-y-3">
+                    <div class="h-48 rounded-2xl overflow-hidden bg-white border border-sky-200 flex items-center justify-center p-4">
+                        <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Conditioned Flow" class="h-full object-contain">
+                    </div>
+                    <h4 class="font-heading font-bold text-sm text-win-hpBlue">HydroPulse Treated: Suspended Micro-Crystals</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Controlled RFID waves induce homogeneous nucleation in the bulk water flow. Ions bind to each other as neutral micro-crystals instead of bonding to pipes or heating surfaces.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: BIOFILM & CORROSION CONTROL -->
+    <section id="biofilm" class="py-20 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-sky-100 px-3 py-1 rounded-full">Biological & Metallurgical Defense</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Combating Biofilm, Algae & Internal Corrosion</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    By eliminating scale roughness, HydroPulse eliminates the breeding shelter that harmful bacteria and biofilm colonies require:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="p-5 bg-white rounded-2xl border border-win-border shadow-xs space-y-2">
+                        <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                            <i data-lucide="shield-alert" class="w-4 h-4 text-win-hpBlue"></i> Starving Microbial Biofilm Colonies
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Bacteria and algae thrive in the micro-crevices of jagged limescale deposits. HydroPulse keeps surfaces smooth, denying biofilms the anchor point needed to colonize internal pipe walls and cooling towers.
+                        </p>
+                    </div>
+
+                    <div class="p-5 bg-white rounded-2xl border border-win-border shadow-xs space-y-2">
+                        <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                            <i data-lucide="layers" class="w-4 h-4 text-win-hpBlue"></i> Passivation Against Galvanic Corrosion
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Scale deposits cause uneven oxygen concentration cells, leading to severe localized pitting corrosion. Clean, scale-free pipe walls form a protective oxide passivation layer that significantly prolongs piping lifespan.
+                        </p>
+                    </div>
+
+                    <div class="p-5 bg-white rounded-2xl border border-win-border shadow-xs space-y-2">
+                        <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                            <i data-lucide="refresh-cw" class="w-4 h-4 text-win-hpBlue"></i> Progressive Pre-existing Descaling
+                        </h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            As conditioned water flows through older plumbing, it gradually dissolves and carries away preexisting limescale layers without requiring aggressive acid washes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 border border-win-border shadow-sm space-y-4">
+                    <div class="h-64 rounded-2xl overflow-hidden border border-slate-200">
+                        <img src="assets/images/hydropulse/tech_bact_algae.jpg" alt="Biofilm and Algae Control" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-xs text-slate-600 leading-relaxed">
+                        <strong>Microbial Protection in Cooling Towers & Livestock Lines:</strong> Prevents slimy bacterial buildup in cooling tower fills and automated poultry nipple drinkers, maintaining peak water hygiene.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: SECTOR SOLUTIONS -->
+    <section id="sectors" class="py-20 bg-white border-y border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-sky-100 px-3 py-1 rounded-full">Sector Engineering</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Sector Breakdown & Applications</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    HydroPulse systems are engineered across domestic, commercial, industrial, and agricultural environments:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Domestic -->
+                <div class="bg-win-base p-6 rounded-3xl border border-win-border space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                            <i data-lucide="home" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-slate-900">Domestic & Residential</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Marlin series for flats, apartments, and luxury villas (up to 1.5" lines). Protects geysers, showers, chrome taps, glass partitions, and home appliances with zero salt refills.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 text-[11px] text-slate-500 font-mono">
+                        Pipeline: 1.0" & 1.5"
+                    </div>
+                </div>
+
+                <!-- Commercial -->
+                <div class="bg-win-base p-6 rounded-3xl border border-win-border space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                            <i data-lucide="building" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-slate-900">Hospitality & Commercial</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Hotels, hospitals, resorts, malls, and restaurants. Protects combi-steam ovens, dishwashers, coffee machines, centralized hot water boilers, and cooling loops.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 text-[11px] text-slate-500 font-mono">
+                        Zero glass spotting
+                    </div>
+                </div>
+
+                <!-- Industrial -->
+                <div class="bg-win-base p-6 rounded-3xl border border-win-border space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                            <i data-lucide="factory" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-slate-900">Heavy Industry & Boilers</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Steam boilers, cooling towers, heat exchangers, chiller circuits, and process plants. Restores heat transfer rates and eliminates acid descaling downtime.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 text-[11px] text-slate-500 font-mono">
+                        Pipeline: 2" to 12"+ lines
+                    </div>
+                </div>
+
+                <!-- Agriculture & Livestock -->
+                <div class="bg-win-base p-6 rounded-3xl border border-win-border space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                            <i data-lucide="sprout" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-slate-900">Agriculture & Livestock</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Drip line unclogging, greenhouse misting nozzles, dairy water supplies, and automated poultry nipple drinkers. Increases water infiltration and crop nutrient uptake.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 text-[11px] text-slate-500 font-mono">
+                        Drip emitter protection
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: MODELS & SPECIFICATIONS -->
+    <section id="models" class="py-20 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-sky-100 px-3 py-1 rounded-full">Product Lineup</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">HydroPulse™ Models & Specifications</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Choose the right unit based on pipeline size and operational requirements:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Marlin 1.0 -->
+                <div class="bg-white rounded-3xl p-8 border border-win-border shadow-xs flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="h-44 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="Marlin 1.0" class="h-full object-contain">
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-full">Flats & Apartments</span>
+                            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">Marlin 1.0</h3>
+                            <p class="text-xs text-slate-600 mt-1">Sized for apartments, flats, and smaller homes up to 1.0-inch / 25mm pipe diameter.</p>
+                        </div>
+                        <div class="p-4 bg-sky-50/50 rounded-2xl border border-sky-100">
+                            <span class="text-xs text-slate-500">Standard Price</span>
+                            <div class="font-heading font-bold text-3xl text-slate-900">₹41,999</div>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Up to 1.0" (25mm) Pipe Size</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> &lt; 15W Power Consumption</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Clamp-on DIY (No pipe cutting)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Fits PVC, CPVC, GI, Copper, HDPE</li>
+                        </ul>
+                    </div>
+                    <button onclick="addToCart('HydroPulse Marlin 1.0', 41999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="w-full py-3 bg-win-hpBlue hover:bg-win-hpBlueDark text-white rounded-xl font-heading font-semibold text-xs tracking-wider uppercase transition-colors">
+                        Add to Cart (₹41,999)
+                    </button>
+                </div>
+
+                <!-- Marlin 1.5 -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-win-hpBlue shadow-lg relative flex flex-col justify-between space-y-6">
+                    <div class="absolute -top-3.5 right-8 bg-win-hpBlue text-white text-[10px] font-heading font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">
+                        Flagship Residential
+                    </div>
+                    <div class="space-y-4">
+                        <div class="h-44 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="Marlin 1.5" class="h-full object-contain">
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
+                            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">Marlin 1.5</h3>
+                            <p class="text-xs text-slate-600 mt-1">Dual-frequency high-resonance loop for luxury villas, bungalows, and high-flow pipelines.</p>
+                        </div>
+                        <div class="p-4 bg-sky-50/50 rounded-2xl border border-sky-100">
+                            <span class="text-xs text-slate-500">Standard Price</span>
+                            <div class="font-heading font-bold text-3xl text-slate-900">₹55,999</div>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Up to 1.5" (40mm) Pipe Size</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Dual-Signal Frequency Modulation</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> 5 Years Comprehensive Warranty</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Ready Stock · Pan-India Dispatch</li>
+                        </ul>
+                    </div>
+                    <button onclick="addToCart('HydroPulse Marlin 1.5', 55999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="w-full py-3 bg-win-hpBlue hover:bg-win-hpBlueDark text-white rounded-xl font-heading font-semibold text-xs tracking-wider uppercase transition-colors">
+                        Add to Cart (₹55,999)
+                    </button>
+                </div>
+
+                <!-- Industrial Series -->
+                <div class="bg-white rounded-3xl p-8 border border-win-border shadow-xs flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="h-44 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100">
+                            <img src="assets/images/hydropulse/product_agriculture.png" alt="HydroPulse Industrial Unit" class="h-full object-contain">
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest bg-slate-200 text-slate-800 font-bold px-2.5 py-1 rounded-full">Factories & Agriculture</span>
+                            <h3 class="font-heading font-bold text-2xl text-slate-900 mt-2">Industrial Series</h3>
+                            <p class="text-xs text-slate-600 mt-1">Multi-coil systems for boilers, cooling towers, heat exchangers, and farm irrigation mains.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <span class="text-xs text-slate-500">Pricing Model</span>
+                            <div class="font-heading font-bold text-3xl text-slate-900">Project Quote</div>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> 2.0" to 12.0"+ Pipe Diameters</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Hundreds of m³/hour Capacity</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Weatherproof IP65 Industrial Box</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-win-hpBlue"></i> Payback under 6–12 months</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html?product=industrial" class="w-full py-3 bg-win-dark hover:bg-win-hpBlue text-white text-center rounded-xl font-heading font-semibold text-xs tracking-wider uppercase transition-colors block">
+                        Request Sizing Quote
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: OPERATIONAL ADVANTAGES -->
+    <section id="advantages" class="py-20 bg-white border-t border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-sky-100 px-3 py-1 rounded-full">Return on Investment</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Operational & Environmental Advantages</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Why physical conditioning outperforms traditional chemical softening systems:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="p-6 bg-win-base rounded-2xl border border-win-border space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                        <i data-lucide="droplets" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-sm text-slate-900">Zero Water Wastage</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Unlike RO or softeners that generate 25–40% reject brine water, HydroPulse uses 100% of supply water with zero waste.</p>
+                </div>
+
+                <div class="p-6 bg-win-base rounded-2xl border border-win-border space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-sm text-slate-900">Safe Healthy Water</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Retains essential calcium and magnesium in drinking water without adding unwanted sodium ions.</p>
+                </div>
+
+                <div class="p-6 bg-win-base rounded-2xl border border-win-border space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                        <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-sm text-slate-900">Zero Recurring Cost</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">No salt bags to haul, no chemicals to store, no monthly maintenance contracts, and no filter changes.</p>
+                </div>
+
+                <div class="p-6 bg-win-base rounded-2xl border border-win-border space-y-2">
+                    <div class="w-10 h-10 rounded-xl bg-sky-100 text-win-hpBlue flex items-center justify-center">
+                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-sm text-slate-900">Energy Efficiency</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Clears heating coil scale layers, restoring boiler and geyser heat transfer and dropping power consumption.</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA Banner -->
+            <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-win-hpBlue to-sky-700 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                <div class="space-y-2 max-w-xl">
+                    <h3 class="font-heading font-bold text-2xl">Upgrade Your Water Conditioning Today</h3>
+                    <p class="text-xs sm:text-sm text-sky-100 leading-relaxed">
+                        Experience limescale-free plumbing, soft laundry, and protected heating appliances with zero recurring chemicals.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <button onclick="addToCart('HydroPulse Marlin 1.0', 41999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="px-6 py-3.5 bg-white text-win-hpBlue rounded-xl font-heading font-bold text-xs uppercase tracking-wider hover:bg-sky-50 transition-colors shadow-md">
+                        Buy Marlin 1.0
+                    </button>
+                    <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse" target="_blank" class="px-6 py-3.5 bg-slate-900/40 hover:bg-slate-900/60 border border-white/20 text-white rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-colors">
+                        WhatsApp Consultation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="bg-win-dark text-white border-t border-slate-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+                <div class="lg:col-span-2 space-y-6">
+                    <a href="index.html" class="inline-block">
+                        <img src="assets/images/company/win_energy_logo_white.png" alt="Win Energy — Always Reliable" class="h-10 sm:h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Win Energy engineers clean, non-chemical, maintenance-free physical solutions for water conditioning, limescale mitigation, and sustainable crop pest management.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://wa.me/919595955585" target="_blank" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-600 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919595955585" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpOrange hover:bg-win-hpOrange transition-all">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:contact@winenergy.in" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="scalebreck.html" class="hover:text-orange-400 transition-colors">ScaleBreck™ Water Conditioner</a></li>
+                        <li><a href="hydropulse.html" class="text-win-hpBlue font-semibold">HydroPulse™ Electronic Descalers</a></li>
+                        <li><a href="buzzzap.html" class="hover:text-emerald-400 transition-colors">BuzzZap™ Solar Insect Killers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Navigation</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="products.html" class="hover:text-win-hpBlue transition-colors">Our Products</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Help</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Request Consultation</a></li>
+                        <li><a href="tel:+919595955585" class="hover:text-win-hpBlue transition-colors">+91 9595955585</a></li>
+                        <li><a href="mailto:contact@winenergy.in" class="hover:text-win-hpBlue transition-colors">contact@winenergy.in</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+    <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/store.js"></script>
+</body>
+</html>

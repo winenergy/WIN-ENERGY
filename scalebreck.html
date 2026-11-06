@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>SCALEBRECK™ Electronic Water Conditioner — Product Information | Win Energy</title>
+    <meta name="description" content="Official technical specifications, working principle, laboratory test data, and application sectors for SCALEBRECK Non-Chemical Physical Water Conditioner by Win Energy.">
+    <link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        win: {
+                            base: '#F8FAFC',
+                            sand: '#F1F5F9',
+                            surface: '#FFFFFF',
+                            border: '#E2E8F0',
+                            dark: '#0F172A',
+                            muted: '#1E293B',
+                            hpBlue: '#0284C7',
+                            hpBlueDark: '#0369A1',
+                            hpOrange: '#EA580C',
+                            hpOrangeLight: '#FFEDD5',
+                            hpBlueLight: '#E0F2FE'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/editorial-theme.css?v=2.1">
+</head>
+<body class="bg-win-base text-win-dark font-sans antialiased selection:bg-orange-600 selection:text-white">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center group py-1">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-orange-600 transition-colors">Home</a>
+                <a href="products.html" class="text-sm font-medium text-slate-700 hover:text-orange-600 transition-colors">Our Products</a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-orange-600 transition-colors">About Win Energy</a>
+                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-orange-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Commerce Actions -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-orange-600 px-3.5 py-2.5 rounded-xl border border-win-border bg-white shadow-xs transition-all">
+                    <i data-lucide="user" class="w-4 h-4 text-orange-600"></i>
+                    <span class="header-user-label hidden sm:inline">Account</span>
+                </button>
+
+                <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-orange-50 hover:bg-orange-100 text-orange-950 font-heading font-bold px-3.5 sm:px-4 py-2.5 rounded-xl text-xs tracking-wide border border-orange-200 shadow-xs transition-all group">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-orange-600 group-hover:scale-110 transition-transform"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="header-cart-count" class="px-1.5 py-0.5 bg-orange-600 text-white text-[10px] font-bold rounded-full min-w-[18px] text-center leading-none">0</span>
+                </button>
+
+                <button id="menu-btn" class="lg:hidden p-2 text-win-dark hover:bg-slate-100 rounded-xl transition-colors ml-1" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-orange-600">Home</a>
+            <a href="products.html" class="block text-base font-medium text-slate-700 hover:text-orange-600">Our Products</a>
+            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-orange-600">About Win Energy</a>
+            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-orange-600">Contact</a>
+            
+            <div class="pt-3 border-t border-win-border grid grid-cols-2 gap-3">
+                <button onclick="openLoginModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
+                    <i data-lucide="user" class="w-4 h-4 text-orange-600"></i>
+                    <span>Log In</span>
+                </button>
+                <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-2 text-xs font-heading font-bold text-orange-950 py-3 rounded-xl bg-orange-100 hover:bg-orange-200 border border-orange-200 transition-colors">
+                    <i data-lucide="shopping-bag" class="w-4 h-4 text-orange-600"></i>
+                    <span>Cart (<span class="header-cart-count-mobile">0</span>)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-Navigation Bar -->
+    <div class="bg-white/80 backdrop-blur-md border-b border-win-border sticky top-20 z-30 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between text-xs font-heading font-semibold text-slate-600 overflow-x-auto">
+            <div class="flex items-center gap-6">
+                <a href="#overview" class="hover:text-orange-600 transition-colors">Overview</a>
+                <a href="#problems" class="hover:text-orange-600 transition-colors">Hard Water Problems</a>
+                <a href="#mechanism" class="hover:text-orange-600 transition-colors">Working Principle</a>
+                <a href="#advantages" class="hover:text-orange-600 transition-colors">Key Advantages</a>
+                <a href="#segments" class="hover:text-orange-600 transition-colors">Segments (Domestic / Poultry / Agri)</a>
+                <a href="#lab-tests" class="hover:text-orange-600 transition-colors">Lab Test Report</a>
+                <a href="#specs" class="hover:text-orange-600 transition-colors">Technical Specifications</a>
+                <a href="#disclaimers" class="hover:text-orange-600 transition-colors">Operational Boundaries</a>
+            </div>
+            <a href="products.html#scalebreck" class="text-orange-700 hover:text-orange-800 flex items-center gap-1 font-bold">
+                <span>View Models in Catalog</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative py-16 sm:py-24 bg-gradient-to-b from-orange-50/50 via-win-base to-win-base overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-mono font-bold uppercase tracking-wider">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-orange-600"></i> Product Line 01 · Non-Chemical Physical Conditioning
+                    </div>
+                    
+                    <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-win-dark tracking-tight leading-tight">
+                        SCALEBRECK™ <span class="text-orange-600">Electronic Water Conditioner</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                        An eco-friendly, non-chemical physical water conditioning system engineered by <strong>Leanway Energy Pvt. Ltd. & Win Energy</strong> to mitigate limescale deposits and manage high Total Dissolved Solids (TDS) water. Pure physical conditioning with zero salts, zero recurring chemicals, and zero water pressure drop.
+                    </p>
+
+                    <!-- Slogans & Badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="p-3 bg-white rounded-xl border border-orange-200/60 shadow-xs">
+                            <span class="text-[11px] font-bold text-orange-700 block uppercase tracking-wide">Domestic Slogan</span>
+                            <span class="text-xs text-slate-700 font-medium">"Better Water. Smarter Home. Easier Maintenance."</span>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-orange-200/60 shadow-xs">
+                            <span class="text-[11px] font-bold text-orange-700 block uppercase tracking-wide">Poultry & Livestock</span>
+                            <span class="text-xs text-slate-700 font-medium">"Better Water Management. Smarter Farming."</span>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-orange-200/60 shadow-xs">
+                            <span class="text-[11px] font-bold text-orange-700 block uppercase tracking-wide">Agriculture</span>
+                            <span class="text-xs text-slate-700 font-medium">"Smart Water Conditioning for Agriculture"</span>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <button onclick="addToCart('ScaleBreck 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="px-7 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-heading font-semibold text-sm flex items-center gap-2 shadow-lg shadow-orange-500/20 transition-all cursor-pointer">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Buy ScaleBreck (₹38,999)</span>
+                        </button>
+                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20am%20interested%20in%20ScaleBreck%20Water%20Conditioner" target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 font-heading font-semibold text-sm flex items-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                            <span>WhatsApp Consultation</span>
+                        </a>
+                        <a href="contact.html?product=scalebreck" class="px-6 py-3.5 rounded-xl bg-win-sand hover:bg-slate-200 text-slate-800 font-heading font-semibold text-sm flex items-center gap-2 transition-all">
+                            <i data-lucide="file-text" class="w-4 h-4 text-slate-600"></i>
+                            <span>Custom Sizing Quote</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Clean Product & Live Pipe -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-white rounded-3xl p-6 border border-win-border shadow-sm">
+                        <div class="h-64 sm:h-72 rounded-2xl bg-slate-50 flex items-center justify-center p-4 border border-slate-100 overflow-hidden">
+                            <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="SCALEBRECK Base Unit" class="h-full object-contain">
+                        </div>
+                        <div class="mt-4 flex items-center justify-between text-xs text-slate-500 font-mono">
+                            <span>Clamp-On Induction Loop</span>
+                            <span class="text-orange-600 font-bold">12V Power Supply · Solid State</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 bg-white rounded-2xl border border-win-border flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-xs">
+                                <strong class="block text-slate-900">Zero Pipe Cutting</strong>
+                                <span class="text-slate-500">External clamp install</span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-2xl border border-win-border flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-xs">
+                                <strong class="block text-slate-900">1-Year Warranty</strong>
+                                <span class="text-slate-500">>20 Year component life</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: HARD WATER PROBLEMS ADDRESSED -->
+    <section id="problems" class="py-20 bg-white border-y border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Core Challenge</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Hard Water Problems Addressed</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Hard water carries elevated concentrations of dissolved calcium and magnesium minerals, leading to frequent operational, cosmetic, and financial damage across properties:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Personal Care -->
+                <div class="bg-win-base p-8 rounded-3xl border border-win-border space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-600">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-slate-900">Personal Care & Wellness</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Hard water minerals react with soap to form insoluble curd, causing excessive hair fall, frizzy rough hair, dry itchy skin, and dermatitis flare-ups.
+                    </p>
+                    <ul class="text-xs text-slate-700 space-y-2 pt-2 border-t border-slate-200">
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> Hair fall and scalp irritation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> Dry skin from mineral residue</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> 40% more shampoo & soap consumption</li>
+                    </ul>
+                </div>
+
+                <!-- Fixtures & Surfaces -->
+                <div class="bg-win-base p-8 rounded-3xl border border-win-border space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-600">
+                        <i data-lucide="droplet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-slate-900">Fixtures & Surfaces</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Choked showerheads, stubborn white mineral stains on utensils, white crusty patches on luxury chrome taps, and limescale fogging glass bathroom partitions.
+                    </p>
+                    <ul class="text-xs text-slate-700 space-y-2 pt-2 border-t border-slate-200">
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> Choked shower micro-nozzles</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> White stains on stainless-steel sinks</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> Scale on glass partitions and tiles</li>
+                    </ul>
+                </div>
+
+                <!-- Plumbing & Equipment -->
+                <div class="bg-win-base p-8 rounded-3xl border border-win-border space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-600">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-slate-900">Plumbing & Equipment</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Internal lime buildup insulates geyser heating elements, spikes electricity bills, ruins washing machines/dishwashers, and chokes water supply pipelines.
+                    </p>
+                    <ul class="text-xs text-slate-700 space-y-2 pt-2 border-t border-slate-200">
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> 1mm scale = up to 10% thermal fuel loss</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> Frequent geyser coil burnouts</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-red-500"></i> Mineral accumulation inside pipe walls</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Hard Water Damage Banner Photo -->
+            <div class="rounded-3xl border border-win-border p-6 bg-orange-50/40 flex flex-col md:flex-row items-center gap-6">
+                <img src="assets/images/scalebreck/hardwater_scale_damage.jpg" alt="Typical Hard Water Damage Solved by ScaleBreck" class="w-full md:w-72 h-44 rounded-2xl object-cover border border-orange-200 shrink-0">
+                <div class="space-y-2">
+                    <div class="text-xs font-bold font-mono text-orange-800 uppercase tracking-wider">Visual Evidence</div>
+                    <h4 class="font-heading font-bold text-base text-win-dark">Severe Limescale Encrustation Inside Plumbing & Showers</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Without treatment, dissolved calcium carbonate crystallizes into rock-hard calcite scale. SCALEBRECK alters ion structures to aragonite crystal habits, preventing surface bonding and gently dissolving preexisting encrustations over continuous water flow.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: WORKING PRINCIPLE & MECHANISM -->
+    <section id="mechanism" class="py-20 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Engineering Principle</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Working Principle & 4-Stage Mechanism</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    SCALEBRECK applies an advanced hydro-polarization electronic method directly onto your existing pipeline without chemical dosing:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Stage 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-win-border shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-lg">Stage 01</span>
+                    <h3 class="font-heading font-bold text-base text-slate-900">Signal Generation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        The control unit transmits a complex, modulated signal from an internal converter running at a low, non-hazardous potential of <strong>±12 V DC</strong>.
+                    </p>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-win-border shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-lg">Stage 02</span>
+                    <h3 class="font-heading font-bold text-base text-slate-900">Induction Field</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        A dedicated signal cable wrapped externally around the water supply pipe delivers an alternating square-wave frequency ranging between <strong>1,000 to 20,000 cycles/sec (1 kHz – 20 kHz)</strong>.
+                    </p>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-win-border shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-lg">Stage 03</span>
+                    <h3 class="font-heading font-bold text-base text-slate-900">Ionic Alteration</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        The induced variable electrical field disrupts and modifies the physical structure of hard mineral ions (calcium/magnesium), altering their crystal habits and boosting overall solubility.
+                    </p>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-win-border shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-lg">Stage 04</span>
+                    <h3 class="font-heading font-bold text-base text-slate-900">Descaling Action</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Conditioned water retains the capacity to absorb more dissolved minerals, preventing new deposit formation while gradually dissolving existing limescale within downstream plumbing.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: KEY PRODUCT ADVANTAGES -->
+    <section id="advantages" class="py-20 bg-white border-y border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Competitive Edge</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Key Product Advantages</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Designed for lifetime durability, maintenance-free performance, and rapid operational return on investment:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="p-6 rounded-2xl bg-win-base border border-win-border flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="wrench" class="w-5 h-5"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Non-Invasive Clamp-On</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Clamps directly onto pipes with no pipe cutting, no open coils, and no hanging wires.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-win-base border border-win-border flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="gauge" class="w-5 h-5"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Zero Pressure Drop</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Operates externally with 100% full water flow and zero obstruction inside lines.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-win-base border border-win-border flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="leaf" class="w-5 h-5"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">100% Eco-Friendly</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Operates without salts, chemical additives, or resin regeneration wastewater discharge.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-win-base border border-win-border flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Zero Maintenance</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Solid-state design requiring no recurring servicing, filter replacements, or consumables.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-win-base border border-win-border flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Energy & Detergent Savings</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Decreases heating power consumption by clearing scale layers; requires substantially less soap.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-win-base border border-win-border flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="home" class="w-5 h-5"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Broad Application Reach</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Protects pipes, geysers, washing machines, coffee machines, dishwashers, and radiant heating loops.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: SEGMENTS (DOMESTIC / POULTRY / AGRICULTURE) -->
+    <section id="segments" class="py-20 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Tailored Solutions</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Sector Breakdown & Applications</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Specific configurations engineered for homes, livestock management, and agricultural irrigation:
+                </p>
+            </div>
+
+            <!-- Segment 1: Domestic -->
+            <div class="bg-white rounded-3xl p-8 border border-win-border shadow-xs space-y-6">
+                <div class="flex items-center justify-between flex-wrap gap-2 pb-4 border-b border-slate-100">
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-3 py-1 rounded-full">Segment 1</span>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mt-2">ScaleBreak™ Domestic</h3>
+                    </div>
+                    <span class="text-xs text-slate-500 font-medium">1.0" · 1.5" · 2.0" Pipeline Diameters</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-slate-700">
+                    <div class="space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Hard Water Problems Addressed:</h4>
+                        <ul class="space-y-2 list-disc pl-4 text-slate-600">
+                            <li><strong>Bathroom & Showers:</strong> White mineral stains on tiles, scale on glass partitions and chrome fittings, encrusted deposits around showerheads and faucets.</li>
+                            <li><strong>Kitchen & Sinks:</strong> White deposits around taps, water outlets, and mineral stains on stainless-steel sinks.</li>
+                            <li><strong>Geysers & Water Heaters:</strong> Scale buildup inside heating tanks and on heating elements, which reduces thermal efficiency.</li>
+                            <li><strong>Washing Machines & Home Appliances:</strong> Mineral scaling in water-connected internal parts, increasing maintenance needs.</li>
+                            <li><strong>Plumbing Network:</strong> Mineral scale inside internal piping, accumulating in valves, restricting water flow.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Target Applications:</h4>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <span class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">Residential Apartments</span>
+                            <span class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">Independent Houses</span>
+                            <span class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">Bungalows & Luxury Villas</span>
+                            <span class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">Housing Societies</span>
+                            <span class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">Hotels & Guest Houses</span>
+                            <span class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">Main Water Inlet Lines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segment 2: Poultry & Animal Management -->
+            <div class="bg-white rounded-3xl p-8 border border-win-border shadow-xs space-y-6">
+                <div class="flex items-center justify-between flex-wrap gap-2 pb-4 border-b border-slate-100">
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-3 py-1 rounded-full">Segment 2</span>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mt-2">ScaleBreak™ Poultry & Animal Management</h3>
+                    </div>
+                    <span class="text-xs text-slate-500 font-medium">Automatic Drinker Lines & Farm Networks</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-slate-700">
+                    <div class="space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Farm Water Challenges Addressed:</h4>
+                        <ul class="space-y-2 list-disc pl-4 text-slate-600">
+                            <li><strong>Water Quality for Livestock:</strong> Water is vital for animal drinking, digestion, feed intake, nutrient transport, and thermoregulation.</li>
+                            <li><strong>Hard Water in Pipelines:</strong> High calcium and magnesium cause scale accumulation in valves, pipe interiors, and water distribution outlets.</li>
+                            <li><strong>Poultry Nipple Drinker Clogging:</strong> Scaling chokes small nipple drinkers, restricts water flow, and disrupts automated drinking systems.</li>
+                            <li><strong>Livestock Troughs:</strong> Mineral buildup inside livestock water pipes, trough lines, and automatic drinking bowls.</li>
+                            <li><strong>Complex Contaminants:</strong> High TDS, nitrates, and microbiological load affecting farm efficiency.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Specific Farm Applications:</h4>
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                                <strong>Poultry Farms:</strong> Broiler farms, layer farms, breeder units, nipple drinker pipelines, and automated drinking systems.
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                                <strong>Dairy & Cattle:</strong> Dairy water pipelines, cattle drinking-water systems, automatic water bowls, and water trough supply lines.
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                                <strong>Goat & Sheep:</strong> Goat and sheep farms, livestock drinking-water lines, and general farm water distribution networks.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segment 3: Agriculture -->
+            <div class="bg-white rounded-3xl p-8 border border-win-border shadow-xs space-y-6">
+                <div class="flex items-center justify-between flex-wrap gap-2 pb-4 border-b border-slate-100">
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-3 py-1 rounded-full">Segment 3</span>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mt-2">ScaleBreak™ Agriculture</h3>
+                    </div>
+                    <span class="text-xs text-slate-500 font-medium">Drip Mains · Sprinklers · Polyhouses</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-slate-700">
+                    <div class="space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Agricultural & Irrigation Problems Addressed:</h4>
+                        <ul class="space-y-2 list-disc pl-4 text-slate-600">
+                            <li><strong>Drip Irrigation Blockages:</strong> Mineral deposits clogging pipe interiors and fine drip emitters, leading to uneven water output.</li>
+                            <li><strong>Sprinkler System Failure:</strong> Limescale encrusting sprinkler nozzles and water outlets, disrupting spray patterns.</li>
+                            <li><strong>Fertigation Complexities:</strong> Chemical interactions between hard water minerals and water-soluble fertilizers, impacting dissolution and line maintenance.</li>
+                            <li><strong>Nursery & Polyhouse Vulnerability:</strong> Irregular water distribution caused by scale deposits affecting delicate seedling irrigation outlets.</li>
+                            <li><strong>High Operational Costs:</strong> Frequent labor and chemical cleaning required for filters, emitters, and valves.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-slate-900">Field Trial Evaluation Parameters:</h4>
+                        <div class="p-3 bg-orange-50/50 rounded-xl border border-orange-200/60 space-y-2 text-slate-700">
+                            <p><strong>Crop Vitality:</strong> Overall plant growth, leaf shine/appearance, vegetable and fruit freshness, and crop quality.</p>
+                            <p><strong>Soil & Water Dynamics:</strong> Soil moisture retention levels, irrigation frequency, overall water volume requirements, and fertilizer uptake efficiency.</p>
+                            <p><strong>Target Sectors:</strong> Plant nurseries, commercial greenhouses, polyhouses, seedling units, drip/micro systems, sprinkler lines, fertigation systems, field crop supply lines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: LABORATORY WATER TEST OBSERVATIONS -->
+    <section id="lab-tests" class="py-20 bg-white border-y border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-8">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Empirical Laboratory Verification</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Laboratory Water Test Observations</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Certified analytical water observations from poultry and livestock farm water lines:
+                </p>
+                <div class="text-xs font-mono text-slate-500">Report Sample Date: 29 October 2026</div>
+            </div>
+
+            <div class="bg-win-base rounded-3xl border border-win-border p-6 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200 bg-white">
+                                <th class="py-3.5 px-4 font-heading font-bold text-slate-900">Tested Water Parameter</th>
+                                <th class="py-3.5 px-4 font-heading font-bold text-slate-700 bg-red-50/60">Before Treatment</th>
+                                <th class="py-3.5 px-4 font-heading font-bold text-emerald-800 bg-emerald-50/60">After Treatment</th>
+                                <th class="py-3.5 px-4 font-heading font-bold text-slate-900">Observed Variance / Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+                            <tr>
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Total Count</td>
+                                <td class="py-3.5 px-4 font-mono text-red-600">4,587</td>
+                                <td class="py-3.5 px-4 font-mono font-bold text-emerald-700">967</td>
+                                <td class="py-3.5 px-4 text-slate-600">~79% reduction in total microbial count environment</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Coliform</td>
+                                <td class="py-3.5 px-4 font-mono text-red-600">179</td>
+                                <td class="py-3.5 px-4 font-mono font-bold text-emerald-700">40</td>
+                                <td class="py-3.5 px-4 text-slate-600">~78% decrease in coliform presence</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Water Hardness</td>
+                                <td class="py-3.5 px-4 font-mono text-slate-700">680 ppm</td>
+                                <td class="py-3.5 px-4 font-mono font-bold text-emerald-700">586 ppm</td>
+                                <td class="py-3.5 px-4 text-slate-600">Restructured dissolved mineral crystallization behavior</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-semibold text-slate-900">Total Dissolved Solids (TDS)</td>
+                                <td class="py-3.5 px-4 font-mono text-slate-700">1,245 ppm</td>
+                                <td class="py-3.5 px-4 font-mono font-bold text-emerald-700">1,120 ppm</td>
+                                <td class="py-3.5 px-4 text-slate-600">Precipitation alteration within suspended flow</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4 p-4 rounded-2xl bg-amber-50/80 border border-amber-200/80 text-[11px] text-amber-900 leading-relaxed">
+                    <strong>Note on Test Report:</strong> These laboratory observations demonstrate differences between the two tested samples; they do not guarantee identical results on every farm and must not be taken as proof of total bacterial elimination or complete purification. Hardness/nitrate filtration and separate validated water sanitation remain recommended where required.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7: TECHNICAL SPECIFICATIONS & COMPARISON MATRIX -->
+    <section id="specs" class="py-20 bg-win-base">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Engineering Data</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Technical Specifications & Comparison Matrix</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Comprehensive technical parameters and segment comparison:
+                </p>
+            </div>
+
+            <!-- Comparison Matrix -->
+            <div class="bg-white rounded-3xl border border-win-border p-6 shadow-xs overflow-hidden">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-4">Comprehensive Technical Comparison Matrix</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200 bg-slate-50">
+                                <th class="py-3 px-4 font-heading font-bold text-slate-900">Technical Specification</th>
+                                <th class="py-3 px-4 font-heading font-bold text-slate-900">Domestic Model</th>
+                                <th class="py-3 px-4 font-heading font-bold text-slate-900">Poultry & Animal Model</th>
+                                <th class="py-3 px-4 font-heading font-bold text-slate-900">Agriculture Model</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Brand</td>
+                                <td class="py-3 px-4">WIN ENERGY</td>
+                                <td class="py-3 px-4">WIN ENERGY</td>
+                                <td class="py-3 px-4">WIN ENERGY</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Product Name</td>
+                                <td class="py-3 px-4 font-bold text-orange-700">ScaleBreak</td>
+                                <td class="py-3 px-4 font-bold text-orange-700">ScaleBreak</td>
+                                <td class="py-3 px-4 font-bold text-orange-700">ScaleBreak</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Technology</td>
+                                <td class="py-3 px-4">Hydro-Polarization</td>
+                                <td class="py-3 px-4">Hydro-Polarization</td>
+                                <td class="py-3 px-4">Hydro-Polarization / Electronic Conditioning</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Power Supply</td>
+                                <td class="py-3 px-4">12V Power Supply</td>
+                                <td class="py-3 px-4">12V Power Supply</td>
+                                <td class="py-3 px-4">12V Power Supply</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Pipeline Sizes</td>
+                                <td class="py-3 px-4">1", 1.5", 2" and above</td>
+                                <td class="py-3 px-4">1", 1.5", 2" and above</td>
+                                <td class="py-3 px-4">1", 1.5", 2", and >2" custom</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Chemical Dosing</td>
+                                <td class="py-3 px-4">No routine chemicals added</td>
+                                <td class="py-3 px-4">No routine chemicals added</td>
+                                <td class="py-3 px-4">No routine chemicals added</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Mounting Style</td>
+                                <td class="py-3 px-4">Pipeline-mounted, compact</td>
+                                <td class="py-3 px-4">Pipeline-mounted</td>
+                                <td class="py-3 px-4">Pipeline-mounted</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Warranty</td>
+                                <td class="py-3 px-4">1 Year</td>
+                                <td class="py-3 px-4">1 Year</td>
+                                <td class="py-3 px-4">1 Year</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Customer Support</td>
+                                <td class="py-3 px-4 font-mono font-semibold">+91 9595955585</td>
+                                <td class="py-3 px-4 font-mono font-semibold">+91 9595955585</td>
+                                <td class="py-3 px-4 font-mono font-semibold">+91 9595955585</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Full Engineering Parameters Table -->
+            <div class="bg-white rounded-3xl border border-win-border p-6 shadow-xs overflow-hidden">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-4">Engineering Specifications Table</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200 bg-slate-50">
+                                <th class="py-3 px-4 font-heading font-bold text-slate-900 w-1/3">Parameter</th>
+                                <th class="py-3 px-4 font-heading font-bold text-slate-900">Specification Details</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">System Components</td>
+                                <td class="py-3 px-4">Scale Breck base unit, induction signal cable, cable ties, mounting plugs, and instruction manual</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Enclosure Materials</td>
+                                <td class="py-3 px-4">Hermetically sealed electronics in high-grade thermoplastic / fabricated indoor casing; weatherproof enclosures for outdoor installation</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Controls & Indicators</td>
+                                <td class="py-3 px-4">Operational status LEDs confirming power input and active signal-coil loop connection</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Component Reliability</td>
+                                <td class="py-3 px-4">Custom-designed integrated circuit (IC) controller with an estimated component operational life exceeding <strong>20 years</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Electrical Safety</td>
+                                <td class="py-3 px-4">Resin-encapsulated core conforming to standard electrical safety guidelines; non-hazardous low output voltage with complete isolation (no direct pipe contact)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Power Requirements</td>
+                                <td class="py-3 px-4">110 V AC or 230 V AC (50/60 Hz); optional solar-powered or 24 V DC configurations</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-slate-900">Engineering & Manufacturing</td>
+                                <td class="py-3 px-4">Leanway Energy Pvt. Ltd. & Win Energy (Make in India initiative) · Support: +91 9595955585 / contact@winenergy.in</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 8: OFFICIAL DISCLAIMERS & OPERATIONAL BOUNDARIES -->
+    <section id="disclaimers" class="py-20 bg-white border-t border-win-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-8">
+            
+            <div class="max-w-2xl space-y-3">
+                <span class="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold bg-slate-100 px-3 py-1 rounded-full">Compliance & Transparency</span>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-win-dark">Official Disclaimers & Operational Boundaries</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    To maintain rigorous technical integrity and customer transparency:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-orange-600"></i> Not a Water Purifier / Softener
+                    </h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        ScaleBreak is strictly an electronic water conditioner. It is not a conventional salt-based water softener, drinking-water purifier, RO system, disinfectant, or sterilizer.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-orange-600"></i> Dissolved Minerals & TDS
+                    </h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        The device does not chemically remove calcium or magnesium ions from water, nor does it eliminate Total Dissolved Solids (TDS) or make non-potable water potable. Beneficial minerals remain in the water.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-orange-600"></i> No Substitute for Filtration / Biosecurity
+                    </h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        It does not replace mechanical sand/disc filtration, laboratory water testing, approved sanitation (chlorination/disinfection), or standard pipeline flush routines.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <h4 class="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-orange-600"></i> Not an Agrochemical Substitute
+                    </h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        In farming, ScaleBreak is not a fertilizer, pesticide, or plant growth regulator. It works alongside proper agronomic practices, crop nutrition, and irrigation scheduling.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="p-5 rounded-2xl bg-orange-50/70 border border-orange-200 text-xs text-slate-700 leading-relaxed">
+                <strong>Performance Variability:</strong> Real-world scale management depends upon source water chemistry, flow rates, pipeline materials, environmental temperature, and correct installation. Numerical agricultural benefits should only be cited when verified by company-approved field trials.
+            </div>
+
+            <!-- Bottom CTA Banner -->
+            <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-orange-600 to-amber-600 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                <div class="space-y-2 max-w-xl">
+                    <h3 class="font-heading font-bold text-2xl">Ready to Protect Your Pipelines & Equipment?</h3>
+                    <p class="text-xs sm:text-sm text-orange-100 leading-relaxed">
+                        Order your SCALEBRECK unit directly online with pan-India dispatch, or request a custom pipeline sizing consultation with our engineering team.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <button onclick="addToCart('ScaleBreck 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="px-6 py-3.5 bg-white text-orange-900 rounded-xl font-heading font-bold text-xs uppercase tracking-wider hover:bg-orange-50 transition-colors shadow-md">
+                        Buy Now (₹38,999)
+                    </button>
+                    <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20SCALEBRECK" target="_blank" class="px-6 py-3.5 bg-slate-900/40 hover:bg-slate-900/60 border border-white/20 text-white rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-colors">
+                        WhatsApp Team
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="bg-win-dark text-white border-t border-slate-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+                <div class="lg:col-span-2 space-y-6">
+                    <a href="index.html" class="inline-block">
+                        <img src="assets/images/company/win_energy_logo_white.png" alt="Win Energy — Always Reliable" class="h-10 sm:h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Win Energy engineers clean, non-chemical, maintenance-free physical solutions for water conditioning, limescale mitigation, and sustainable crop pest management.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://wa.me/919595955585" target="_blank" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-600 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919595955585" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-orange-600 hover:bg-orange-600 transition-all">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:contact@winenergy.in" class="w-10 h-10 rounded-full border border-slate-700 bg-slate-900 flex items-center justify-center text-slate-300 hover:text-white hover:border-win-hpBlue hover:bg-win-hpBlue transition-all">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="scalebreck.html" class="text-orange-400 font-semibold">ScaleBreck™ Water Conditioner</a></li>
+                        <li><a href="hydropulse.html" class="hover:text-win-hpBlue transition-colors">HydroPulse™ Electronic Descalers</a></li>
+                        <li><a href="buzzzap.html" class="hover:text-emerald-400 transition-colors">BuzzZap™ Solar Insect Killers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Navigation</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
+                        <li><a href="products.html" class="hover:text-win-hpBlue transition-colors">Our Products</a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Help</h4>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Request Consultation</a></li>
+                        <li><a href="tel:+919595955585" class="hover:text-win-hpBlue transition-colors">+91 9595955585</a></li>
+                        <li><a href="mailto:contact@winenergy.in" class="hover:text-win-hpBlue transition-colors">contact@winenergy.in</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+    <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/store.js"></script>
+</body>
+</html>
