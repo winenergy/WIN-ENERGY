@@ -1,5 +1,19 @@
 /* Win Energy Editorial Design System Enhancements */
 
+:root {
+    /* Exact Blue Palette from User Color Grading Card */
+    --win-blue-deep: #000926;
+    --win-blue-sapphire: #0F52BA;
+    --win-blue-powder: #A6C5D7;
+    --win-blue-ice: #D6E6F3;
+
+    /* Exact Green Palette from User Color Grading Card */
+    --win-green-dark: #013220;
+    --win-green-forest: #0B6E4F;
+    --win-green-emerald: #50C878;
+    --win-green-mint: #D1F2EB;
+}
+
 /* Global Anti-aliasing & Text Clarity */
 html, body {
     overflow-x: hidden;

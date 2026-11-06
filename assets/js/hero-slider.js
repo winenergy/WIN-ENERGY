@@ -150,9 +150,9 @@
             if (i === index) {
                 dot.classList.add('active-pill');
                 dot.style.width = '2.25rem'; // 36px elongated pill
-                dot.style.background = 'linear-gradient(90deg, #38BDF8, #4ADE80)'; // Win Blue to Eco Green
+                dot.style.background = 'linear-gradient(90deg, #0F52BA, #50C878)'; // User Sapphire to Emerald
                 dot.style.opacity = '1';
-                dot.style.boxShadow = '0 0 12px rgba(56, 189, 248, 0.4)';
+                dot.style.boxShadow = '0 0 12px rgba(15, 82, 186, 0.4)';
             } else {
                 dot.classList.remove('active-pill');
                 dot.style.width = '0.625rem'; // 10px circular dot
