@@ -3,7 +3,7 @@
  * Inspired by HydroPulse & HydroFlow:
  * - Ken Burns slow zoom background animation
  * - Auto-rotation (5.5s) with pause on hover
- * - Minimalist dots / pill indicator + 01 / 03 slide counter
+ * - Minimalist dots / pill indicator in Win Blue & Eco Green + 01 / 03 slide counter
  * - Full touch swipe & keyboard navigation
  * - Bulletproof display: flex / none to guarantee ZERO overlap
  */
@@ -145,18 +145,20 @@
             }
         });
 
-        // Update Dots / Indicator Pills
+        // Update Dots / Indicator Pills (Strictly Win Blue & Eco Green)
         indicatorDots.forEach((dot, i) => {
             if (i === index) {
                 dot.classList.add('active-pill');
-                dot.style.width = '2.5rem'; // 40px elongated pill
-                dot.style.backgroundColor = '#F59E0B'; // Warm amber highlight like HydroPulse
+                dot.style.width = '2.25rem'; // 36px elongated pill
+                dot.style.background = 'linear-gradient(90deg, #38BDF8, #4ADE80)'; // Win Blue to Eco Green
                 dot.style.opacity = '1';
+                dot.style.boxShadow = '0 0 12px rgba(56, 189, 248, 0.4)';
             } else {
                 dot.classList.remove('active-pill');
                 dot.style.width = '0.625rem'; // 10px circular dot
-                dot.style.backgroundColor = 'rgba(255, 255, 255, 0.45)';
+                dot.style.background = 'rgba(255, 255, 255, 0.40)';
                 dot.style.opacity = '0.65';
+                dot.style.boxShadow = 'none';
             }
         });
 
