@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Our Products — Win Energy (HydroPulse & BuzzZap)</title>
-    <meta name="description" content="Discover the full lineup of Win Energy products: HydroPulse physical water descalers (Marlin 1.0 & 1.5) and BuzzZap solar agricultural insect killers.">
+    <title>Our Products — Win Energy (ScaleBreck, HydroPulse & CropSafe)</title>
+    <meta name="description" content="Discover the full lineup of Win Energy products: ScaleBreck, HydroPulse physical water descalers and CropSafe solar agricultural insect killers.">
     <link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
 
     <!-- Tailwind CSS CDN -->
@@ -13,7 +13,7 @@
     <!-- Google Fonts: Plus Jakarta Sans, Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,9 +50,9 @@
                         'base': ['1.125rem', { lineHeight: '1.7' }]
                     },
                     fontFamily: {
-                        serif: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
-                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                        serif: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
                     }
                 }
             }
@@ -129,14 +129,14 @@
                 Our <span class="bg-gradient-to-r from-[#0F52BA] to-[#50C878] bg-clip-text text-transparent">Products</span>
             </h1>
             <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
-                <a href="#scalebreck" class="px-5 py-2 rounded-full bg-white hover:bg-[#D6E6F3]/50 border border-[#A6C5D7]/50 text-slate-700 hover:text-[#0F52BA] text-xs sm:text-sm font-heading font-semibold tracking-wide transition-all shadow-xs">
+                <a href="#scalebreck" class="px-5 py-2 rounded-full bg-white hover:bg-orange-50 border border-orange-200 text-slate-700 hover:text-orange-600 text-xs sm:text-sm font-heading font-semibold tracking-wide transition-all shadow-xs">
                     ScaleBreck™
                 </a>
                 <a href="#hydropulse" class="px-5 py-2 rounded-full bg-white hover:bg-[#D6E6F3]/50 border border-[#A6C5D7]/50 text-slate-700 hover:text-[#0F52BA] text-xs sm:text-sm font-heading font-semibold tracking-wide transition-all shadow-xs">
                     HydroPulse™
                 </a>
-                <a href="#buzzzap" class="px-5 py-2 rounded-full bg-white hover:bg-[#D6E6F3]/50 border border-[#A6C5D7]/50 text-slate-700 hover:text-[#50C878] text-xs sm:text-sm font-heading font-semibold tracking-wide transition-all shadow-xs">
-                    BuzzZap™
+                <a href="#cropsafe" class="px-5 py-2 rounded-full bg-white hover:bg-emerald-50 border border-emerald-200 text-slate-700 hover:text-emerald-600 text-xs sm:text-sm font-heading font-semibold tracking-wide transition-all shadow-xs">
+                    CropSafe™
                 </a>
             </div>
         </div>
@@ -165,23 +165,27 @@
             <!-- ScaleBreck Product Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 items-stretch">
                 
-                <!-- ScaleBreck 1.0 (Price: ₹38,999) -->
-                <div class="bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-orange-500 transition-colors">
-                    <div class="space-y-6">
-                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
-                            <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="SCALEBRECK 1.0 Electronic Water Conditioner" class="max-h-40 object-contain">
-                        </div>
+                <!-- ScaleBreck Eco 1.0 (Price: ₹38,999) -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='scalebreck.html?model=scalebreck-eco'" class="group cursor-pointer bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-orange-500 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="scalebreck.html?model=scalebreck-eco" class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-orange-200 transition-colors">
+                            <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="SCALEBRECK Eco 1.0 Electronic Water Conditioner" class="max-h-40 object-contain group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-2.5 py-1 rounded-full">Apartments & Small Homes</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">ScaleBreck™ 1.0</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-2.5 py-1 rounded-full">Apartments & Small Homes</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="scalebreck.html?model=scalebreck-eco" class="group-hover:text-orange-600 transition-colors">ScaleBreck™ Eco 1.0</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 Non-chemical physical water conditioner for flats, apartments, and independent homes (up to 1.0-inch / 25mm pipelines). Prevents limescale in geysers, showers, and plumbing.
                             </p>
                         </div>
 
                         <!-- Price Tag -->
-                        <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/60 flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/60 flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Standard Retail Price</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">₹38,999</div>
                             <div class="text-xs text-orange-700 font-semibold">Plug-in Non-Invasive Clamp-On</div>
@@ -208,44 +212,48 @@
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <button onclick="addToCart('ScaleBreck 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('ScaleBreck Eco 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             <span>Add to Cart</span>
                         </button>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="scalebreck.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                            <a href="scalebreck.html?model=scalebreck-eco" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
                                 <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
                                 <span>Explore</span>
                             </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20ScaleBreck%201.0%20(₹38,999)" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20ScaleBreck%20Eco%201.0%20(₹38,999)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- ScaleBreck Pro 1.5 (Price: ₹49,999) -->
-                <div class="bg-win-surface border-2 border-orange-500 rounded-3xl p-8 flex flex-col justify-between editorial-shadow relative">
+                <!-- ScaleBreck Mine 1.5 (Price: ₹49,999) -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='scalebreck.html?model=scalebreck-mine'" class="group cursor-pointer bg-win-surface border-2 border-orange-500 rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative">
                     <div class="absolute -top-3.5 right-8 bg-orange-600 text-white text-[10px] font-heading font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
                         Flagship Residential
                     </div>
 
-                    <div class="space-y-6">
-                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
-                            <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="SCALEBRECK Pro 1.5 Electronic Water Conditioner" class="max-h-40 object-contain">
-                        </div>
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="scalebreck.html?model=scalebreck-mine" class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-orange-200 transition-colors">
+                            <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="SCALEBRECK Mine 1.5 Electronic Water Conditioner" class="max-h-40 object-contain group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">ScaleBreck™ Pro 1.5</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-orange-100 text-orange-800 font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="scalebreck.html?model=scalebreck-mine" class="group-hover:text-orange-600 transition-colors">ScaleBreck™ Mine 1.5</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 High-resonance modulated frequency loops for luxury villas, multi-bathroom residences, and central geyser circuits handling larger flow rates (up to 1.5-inch / 40mm).
                             </p>
                         </div>
 
                         <!-- Price Tag -->
-                        <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/60 flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/60 flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Standard Retail Price</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">₹49,999</div>
                             <div class="text-xs text-orange-700 font-semibold">Dual-Signal High-Resonance Loop</div>
@@ -272,40 +280,44 @@
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <button onclick="addToCart('ScaleBreck Pro 1.5', 49999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('ScaleBreck Mine 1.5', 49999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             <span>Add to Cart</span>
                         </button>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="scalebreck.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                            <a href="scalebreck.html?model=scalebreck-mine" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
                                 <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
                                 <span>Explore</span>
                             </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20ScaleBreck%20Pro%201.5%20(₹49,999)" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20ScaleBreck%20Mine%201.5%20(₹49,999)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Commercial Series -->
-                <div class="bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-orange-500 transition-colors">
-                    <div class="space-y-6">
-                        <div class="h-52 bg-slate-50 rounded-2xl overflow-hidden border border-win-border flex items-center justify-center">
-                            <img src="assets/images/scalebreck/scalebreck_installation.jpg" alt="SCALEBRECK Commercial Water Conditioning" class="w-full h-full object-cover">
-                        </div>
+                <!-- Commercial Series Pro -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='scalebreck.html?model=scalebreck-pro'" class="group cursor-pointer bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-orange-500 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="scalebreck.html?model=scalebreck-pro" class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-orange-200 transition-colors">
+                            <img src="assets/images/scalebreck/scalebreck_installation.jpg" alt="SCALEBRECK Commercial Series Pro" class="max-h-40 object-contain rounded-xl group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-slate-200 text-slate-800 font-bold px-2.5 py-1 rounded-full">Societies & Commercial Plants</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">Commercial Series</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-slate-200 text-slate-800 font-bold px-2.5 py-1 rounded-full">Societies & Commercial Plants</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="scalebreck.html?model=scalebreck-pro" class="group-hover:text-orange-600 transition-colors">Commercial Series Pro</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 High-capacity electronic descaling loops for housing societies, hotels, hospitals, cooling towers, and commercial hot water loops.
                             </p>
                         </div>
 
                         <!-- Price Tag -->
-                        <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/60 flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/60 flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Pricing Model</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">Project Quote</div>
                             <div class="text-xs text-orange-700 font-semibold">Sized to Pipeline Diameter & TDS</div>
@@ -332,17 +344,17 @@
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <a href="contact.html?product=scalebreck-commercial" class="w-full bg-win-dark hover:bg-orange-600 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <a href="contact.html?product=scalebreck-commercial" onclick="event.stopPropagation();" class="w-full bg-win-dark hover:bg-orange-600 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
                             <i data-lucide="file-text" class="w-4 h-4"></i>
                             <span>Request Sizing Quote</span>
                         </a>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="scalebreck.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                            <a href="scalebreck.html?model=scalebreck-pro" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
                                 <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
                                 <span>Explore</span>
                             </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20need%20a%20quote%20for%20Commercial%20ScaleBreck" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20need%20a%20quote%20for%20Commercial%20Series%20Pro%20ScaleBreck" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
@@ -367,8 +379,8 @@
                     </p>
                 </div>
                 <div class="flex items-center gap-3">
-                    <span class="text-xs font-bold text-win-hpOrange bg-win-hpOrangeLight border border-win-hpOrange/30 px-4 py-2 rounded-xl flex items-center gap-2">
-                        <i data-lucide="shield-check" class="w-4 h-4"></i> Salt-Free · 100% Eco-Friendly
+                    <span class="text-xs font-bold text-win-hpBlue bg-win-hpBlueLight border border-win-hpBlue/30 px-4 py-2 rounded-xl flex items-center gap-2">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-win-hpBlue"></i> Salt-Free · 100% Eco-Friendly
                     </span>
                 </div>
             </div>
@@ -376,23 +388,27 @@
             <!-- HydroPulse Product Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 items-stretch">
                 
-                <!-- Marlin 1.0 (Price: ₹41,999) -->
-                <div class="bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-win-hpBlue transition-colors">
-                    <div class="space-y-6">
-                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
-                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin 1.0" class="max-h-40 object-contain">
-                        </div>
+                <!-- Marlin Eco 1.0 (Price: ₹41,999) -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='hydropulse.html?model=marlin-eco'" class="group cursor-pointer bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-win-hpBlue hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="hydropulse.html?model=marlin-eco" class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-sky-200 transition-colors">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Eco 1.0" class="max-h-40 object-contain group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpOrangeLight text-win-hpOrange font-bold px-2.5 py-1 rounded-full">Apartments & Small Homes</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">Marlin 1.0</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpBlueLight text-win-hpBlue font-bold px-2.5 py-1 rounded-full">Apartments & Small Homes</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="hydropulse.html?model=marlin-eco" class="group-hover:text-win-hpBlue transition-colors">Marlin Eco 1.0</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 Perfect limescale control for apartments, flats, and bungalows (up to 1.0-inch / 25mm pipelines). Protects geysers, showers, and plumbing fittings.
                             </p>
                         </div>
 
                         <!-- Price Tag -->
-                        <div class="p-4 bg-win-sand rounded-2xl border border-win-border flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-win-sand rounded-2xl border border-win-border flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Standard Retail Price</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">₹41,999</div>
                             <div class="text-xs text-win-hpBlue font-semibold">Plug-in Non-Invasive Clamp-On</div>
@@ -419,44 +435,48 @@
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <button onclick="addToCart('HydroPulse Marlin 1.0', 41999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('HydroPulse Marlin Eco 1.0', 41999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             <span>Add to Cart</span>
                         </button>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="hydropulse.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
-                                    <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
-                                    <span>Explore</span>
-                                </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse%20Marlin%201.0%20(₹41,999)" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="hydropulse.html?model=marlin-eco" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                                <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
+                                <span>Explore</span>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse%20Marlin%20Eco%201.0%20(₹41,999)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Marlin 1.5 (Price: ₹55,999) -->
-                <div class="bg-win-surface border-2 border-win-hpBlue rounded-3xl p-8 flex flex-col justify-between editorial-shadow relative">
+                <!-- Marlin Mine 1.5 (Price: ₹55,999) -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='hydropulse.html?model=marlin-mine'" class="group cursor-pointer bg-win-surface border-2 border-win-hpBlue rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative">
                     <div class="absolute -top-3.5 right-8 bg-win-hpBlue text-white text-[10px] font-heading font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
                         Flagship Commercial
                     </div>
 
-                    <div class="space-y-6">
-                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
-                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin 1.5" class="max-h-40 object-contain">
-                        </div>
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="hydropulse.html?model=marlin-mine" class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-sky-200 transition-colors">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Mine 1.5" class="max-h-40 object-contain group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpBlueLight text-win-hpBlue font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">Marlin 1.5</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpBlueLight text-win-hpBlue font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="hydropulse.html?model=marlin-mine" class="group-hover:text-win-hpBlue transition-colors">Marlin Mine 1.5</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 Dual-frequency signal loop for luxury villas, commercial setups, and pools (pipelines up to 1.5-inch / 40mm). Handles high flow rates.
                             </p>
                         </div>
 
                         <!-- Price Tag -->
-                        <div class="p-4 bg-win-hpBlueLight/30 rounded-2xl border border-win-hpBlue/30 flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-win-hpBlueLight/30 rounded-2xl border border-win-hpBlue/30 flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Standard Retail Price</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">₹55,999</div>
                             <div class="text-xs text-win-hpBlue font-semibold">Dual-Coil High Resonance System</div>
@@ -483,77 +503,81 @@
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <button onclick="addToCart('HydroPulse Marlin 1.5', 55999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('HydroPulse Marlin Mine 1.5', 55999, 'assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png')" class="w-full bg-win-hpBlue hover:bg-win-hpBlueDark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             <span>Add to Cart</span>
                         </button>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="hydropulse.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
-                                    <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
-                                    <span>Explore</span>
-                                </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse%20Marlin%201.5%20(₹55,999)" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="hydropulse.html?model=marlin-mine" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                                <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
+                                <span>Explore</span>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20HydroPulse%20Marlin%20Mine%201.5%20(₹55,999)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Industrial Units -->
-                <div class="bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-win-hpBlue transition-colors">
-                    <div class="space-y-6">
-                        <div class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border">
-                            <img src="assets/images/hydropulse/product_agriculture.png" alt="HydroPulse Industrial Unit" class="max-h-40 object-contain">
-                        </div>
+                <!-- Industrial Series Pro -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='hydropulse.html?model=industrial-pro'" class="group cursor-pointer bg-win-surface border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-win-hpBlue hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="hydropulse.html?model=industrial-pro" class="h-52 bg-slate-50 rounded-2xl p-6 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-sky-200 transition-colors">
+                            <img src="assets/images/hydropulse/product_agriculture.png" alt="HydroPulse Industrial Series Pro" class="max-h-40 object-contain group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-slate-200 text-slate-800 font-bold px-2.5 py-1 rounded-full">Factories & Agriculture</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">Industrial Series</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-win-hpBlueLight text-win-hpBlue font-bold px-2.5 py-1 rounded-full">Factories & Agriculture</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="hydropulse.html?model=industrial-pro" class="group-hover:text-win-hpBlue transition-colors">Industrial Series Pro</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 Multi-coil systems for boilers, cooling towers, heat exchangers, RO pre-treatment, and high-volume irrigation mains.
                             </p>
                         </div>
 
                         <!-- Price Tag -->
-                        <div class="p-4 bg-win-sand rounded-2xl border border-win-border flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-win-sand rounded-2xl border border-win-border flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Pricing Model</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">Project Quote</div>
-                            <div class="text-xs text-win-hpOrange font-semibold">Sized to Pipe Diameter & Flow</div>
+                            <div class="text-xs text-win-hpBlue font-semibold">Sized to Pipe Diameter & Flow</div>
                         </div>
 
                         <!-- Spec List -->
                         <ul class="space-y-2.5 text-xs text-slate-700 min-h-[148px] flex flex-col justify-center">
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
                                 <span><strong>Pipeline Size:</strong> 2.0" to 12.0"+ (Customizable)</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
                                 <span><strong>Flow Capacity:</strong> Hundreds of m³/hour</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
                                 <span><strong>Enclosure:</strong> Weatherproof IP65 Industrial Box</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-win-hpOrange shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-win-hpBlue shrink-0"></i>
                                 <span><strong>Payback:</strong> Under 6–12 months in fuel & acid savings</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <a href="contact.html?product=industrial" class="w-full bg-win-dark hover:bg-win-hpBlue text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <a href="contact.html?product=industrial" onclick="event.stopPropagation();" class="w-full bg-win-dark hover:bg-win-hpBlue text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
                             <i data-lucide="file-text" class="w-4 h-4"></i>
                             <span>Request Sizing Quote</span>
                         </a>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="hydropulse.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
-                                    <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
-                                    <span>Explore</span>
-                                </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20need%20a%20quote%20for%20Industrial%20HydroPulse" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="hydropulse.html?model=industrial-pro" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                                <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
+                                <span>Explore</span>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20need%20a%20quote%20for%20Industrial%20Series%20Pro%20HydroPulse" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
@@ -564,15 +588,16 @@
         </div>
     </section>
 
-    <!-- DIVISION 3: BUZZZAP CLEAN AGRI-TECH -->
-    <section id="buzzzap" class="py-24 bg-win-base border-t border-win-border">
+    <!-- DIVISION 3: CROPSAFE CLEAN AGRI-TECH -->
+    <span id="buzzzap"></span>
+    <section id="cropsafe" class="py-24 bg-win-base border-t border-win-border">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             
             <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-win-border">
                 <div class="space-y-3 max-w-2xl">
                     <span class="text-xs font-mono uppercase tracking-widest text-emerald-800 font-bold bg-emerald-100 px-3 py-1 rounded-full">Product Line 03 · Clean Agri-Tech</span>
-                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight">BuzzZap™ Solar Agricultural Insect Killers</h2>
+                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight">CropSafe™ Solar Agricultural Insect Killers</h2>
                     <p class="text-win-muted text-sm sm:text-base leading-relaxed">
                         100% solar autonomous pest control for open farms, vineyards, orchards, and tea gardens. Made in India with multi-functional protective microcontrollers and rain sensors.
                     </p>
@@ -584,25 +609,92 @@
                 </div>
             </div>
 
-            <!-- BuzzZap Product Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 items-stretch">
+            <!-- CropSafe Product Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 items-stretch">
                 
-                <!-- BuzzZap ECO Card -->
-                <div class="bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-emerald-600 transition-colors">
-                    <div class="space-y-6">
-                        <div class="h-64 bg-white rounded-2xl p-6 flex items-center justify-center border border-win-border overflow-hidden">
-                            <img src="assets/images/buzzzap/buzzzap_eco_hero.jpg" alt="BuzzZap ECO Solar Insect Trap" class="max-h-56 object-contain">
-                        </div>
+                <!-- CropSafe ECO Card -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='cropsafe.html?model=cropsafe-eco'" class="group cursor-pointer bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-emerald-600 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="cropsafe.html?model=cropsafe-eco" class="h-52 bg-white rounded-2xl p-4 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-emerald-200 transition-colors">
+                            <img src="assets/images/buzzzap/buzzzap_eco_hero.jpg" alt="CropSafe ECO Solar Insect Trap" class="max-h-40 object-contain group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Small & Medium Farms</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">BuzzZap ECO Trap</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Small & Medium Farms</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="cropsafe.html?model=cropsafe-eco" class="group-hover:text-emerald-700 transition-colors">CropSafe ECO Trap</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 Fully automatic solar insect trap equipped with yellow capture basin and single controlling microchip. Best-selling unit for small farmers and horticulture.
                             </p>
                         </div>
 
-                        <div class="p-4 bg-white rounded-2xl border border-win-border flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-white rounded-2xl border border-win-border flex flex-col justify-between h-[104px] shrink-0">
+                            <div class="text-xs text-win-muted font-medium">Standard Unit Price</div>
+                            <div class="font-serif text-4xl font-bold text-win-dark">₹2,000</div>
+                            <div class="text-xs text-emerald-700 font-semibold">Subsidy & Cooperative Friendly</div>
+                        </div>
+
+                        <!-- Specs -->
+                        <ul class="space-y-2.5 text-xs text-slate-700 min-h-[148px] flex flex-col justify-center">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Effective Coverage:</strong> Up to 0.5 Acre</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Operating Time:</strong> Automatic 2–3 Hours post-sunset</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Power System:</strong> High-efficiency PV panel with low-light diffuse charging</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span><strong>Circuit Protection:</strong> Overcharge & deep-discharge safety software</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('CropSafe ECO Trap', 2000, 'assets/images/buzzzap/buzzzap_eco_hero.jpg')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Add to Cart</span>
+                        </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="cropsafe.html?model=cropsafe-eco" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                                <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
+                                <span>Explore</span>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20CropSafe%20ECO%20Trap%20(₹2,000)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CropSafe MINE Trap -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='cropsafe.html?model=cropsafe-mine'" class="group cursor-pointer bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-emerald-600 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="cropsafe.html?model=cropsafe-mine" class="h-52 bg-white rounded-2xl p-2 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-emerald-200 transition-colors">
+                            <img src="assets/images/buzzzap/buzzzap_mine_trap.jpg" alt="CropSafe MINE Solar Insect Trap" class="w-full h-full object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-300">
+                        </a>
+
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Small & Medium Farms</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="cropsafe.html?model=cropsafe-mine" class="group-hover:text-emerald-700 transition-colors">CropSafe MINE Trap</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
+                                Fully automatic solar insect trap equipped with yellow capture basin and single controlling microchip. Best-selling unit for small farmers and horticulture.
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-2xl border border-win-border flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Standard Unit Price</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">₹7,499</div>
                             <div class="text-xs text-emerald-700 font-semibold">Subsidy & Cooperative Friendly</div>
@@ -611,57 +703,61 @@
                         <!-- Specs -->
                         <ul class="space-y-2.5 text-xs text-slate-700 min-h-[148px] flex flex-col justify-center">
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
                                 <span><strong>Effective Coverage:</strong> Up to 0.5 – 1.0 Acre</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
                                 <span><strong>Operating Time:</strong> Automatic 2–3 Hours post-sunset</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
                                 <span><strong>Power System:</strong> High-efficiency PV panel with low-light diffuse charging</span>
                             </li>
                             <li class="flex items-center gap-2.5">
-                                <i data-lucide="check" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
                                 <span><strong>Circuit Protection:</strong> Overcharge & deep-discharge safety software</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <button onclick="addToCart('BuzzZap ECO Trap', 7499, 'assets/images/buzzzap/buzzzap_eco_hero.jpg')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('CropSafe MINE Trap', 7499, 'assets/images/buzzzap/buzzzap_mine_trap.jpg')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             <span>Add to Cart</span>
                         </button>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="buzzzap.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
-                                    <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
-                                    <span>Explore</span>
-                                </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20BuzzZap%20ECO%20Trap%20(₹7,499)" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="cropsafe.html?model=cropsafe-mine" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                                <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
+                                <span>Explore</span>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20CropSafe%20MINE%20Trap%20(₹7,499)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- BuzzZap Pro Card -->
-                <div class="bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-emerald-600 transition-colors">
-                    <div class="space-y-6">
-                        <div class="h-64 bg-white rounded-2xl overflow-hidden border border-win-border">
-                            <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="BuzzZap Pro Solar Insect Killer" class="w-full h-full object-cover">
-                        </div>
+                <!-- CropSafe Pro Card -->
+                <div onclick="if (!event.target.closest('button, a')) window.location.href='cropsafe.html?model=cropsafe-pro'" class="group cursor-pointer bg-win-base border border-win-border rounded-3xl p-8 flex flex-col justify-between editorial-shadow hover:border-emerald-600 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="space-y-6 flex-1 flex flex-col">
+                        <a href="cropsafe.html?model=cropsafe-pro" class="h-52 bg-white rounded-2xl p-2 flex items-center justify-center border border-win-border shrink-0 overflow-hidden group-hover:border-emerald-200 transition-colors">
+                            <img src="assets/images/buzzzap/buzzzap_pro_farmland.jpg" alt="CropSafe Pro Solar Insect Killer" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
+                        </a>
 
-                        <div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest bg-win-bzIndigoLight text-win-bzIndigo font-bold px-2.5 py-1 rounded-full">Commercial & Large Acreage</span>
-                            <h3 class="font-serif text-3xl text-win-dark mt-2">BuzzZap Pro (Heavy-Duty)</h3>
-                            <p class="text-win-muted text-xs leading-relaxed mt-2 min-h-[52px]">
+                        <div class="space-y-2">
+                            <div class="min-h-[26px] flex items-center">
+                                <span class="text-[10px] font-mono uppercase tracking-widest bg-win-bzIndigoLight text-win-bzIndigo font-bold px-2.5 py-1 rounded-full">Commercial & Large Acreage</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-win-dark leading-snug min-h-[58px] flex items-center">
+                                <a href="cropsafe.html?model=cropsafe-pro" class="group-hover:text-emerald-700 transition-colors">CropSafe Pro (Heavy-Duty)</a>
+                            </h3>
+                            <p class="text-win-muted text-xs leading-relaxed min-h-[64px] flex items-center">
                                 Rectangular solar insect killer with high-voltage physical grid, collection tray, and rain sensor. Ideal for vineyards, orchards, and tea estates.
                             </p>
                         </div>
 
-                        <div class="p-4 bg-white rounded-2xl border border-win-border flex flex-col justify-between h-[104px]">
+                        <div class="p-4 bg-white rounded-2xl border border-win-border flex flex-col justify-between h-[104px] shrink-0">
                             <div class="text-xs text-win-muted font-medium">Commercial Unit Price</div>
                             <div class="font-serif text-4xl font-bold text-win-dark">₹18,499</div>
                             <div class="text-xs text-emerald-700 font-semibold">Multi-Acre Package · Bulk Discounts</div>
@@ -688,17 +784,17 @@
                         </ul>
                     </div>
 
-                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-6">
-                        <button onclick="addToCart('BuzzZap Pro (Heavy-Duty)', 18499, 'assets/images/buzzzap/buzzzap_pro_farmland.jpg')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                    <div class="pt-6 border-t border-win-border space-y-2.5 mt-auto">
+                        <button onclick="event.stopPropagation(); addToCart('CropSafe Pro (Heavy-Duty)', 18499, 'assets/images/buzzzap/buzzzap_pro_farmland.jpg')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             <span>Add to Cart</span>
                         </button>
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="buzzzap.html" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
-                                    <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
-                                    <span>Explore</span>
-                                </a>
-                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20BuzzZap%20Pro%20(₹18,499)" target="_blank" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
+                            <a href="cropsafe.html?model=cropsafe-pro" class="bg-win-sand hover:bg-slate-200 text-win-dark py-2.5 rounded-xl font-heading font-semibold text-xs uppercase text-center transition-colors flex items-center justify-center gap-1.5">
+                                <i data-lucide="compass" class="w-3.5 h-3.5 text-win-hpBlue"></i>
+                                <span>Explore</span>
+                            </a>
+                            <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20CropSafe%20Pro%20(₹18,499)" target="_blank" onclick="event.stopPropagation();" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 py-2.5 rounded-xl text-xs font-semibold text-center flex items-center justify-center gap-1 transition-colors">
                                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
                             </a>
                         </div>
@@ -709,7 +805,6 @@
         </div>
     </section>
 
-    
     <!-- Comprehensive Corporate Footer -->
     <footer class="bg-win-dark text-white pt-20 pb-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -721,7 +816,7 @@
                         <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain">
                     </a>
                     <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
-                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 / Marlin 1.5) and BuzzZap solar agricultural insect control.
+                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin Eco 1.0 / Marlin Mine 1.5) and CropSafe solar agricultural insect control.
                     </p>
 
                     <!-- Social Media Quicklinks (Row of 8 dark circular icons) -->
@@ -787,7 +882,7 @@
                     <ul class="space-y-3 text-xs text-slate-400">
                         <li><a href="products.html#scalebreck" class="hover:text-win-hpBlue transition-colors">ScaleBreck™ Water Conditioner</a></li>
                         <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse™ Electronic Descalers</a></li>
-                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap™ Solar Insect Killers</a></li>
+                        <li><a href="products.html#cropsafe" class="hover:text-win-hpBlue transition-colors">CropSafe™ Solar Insect Killers</a></li>
                     </ul>
                 </div>
 
@@ -836,7 +931,7 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
-    <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/ai-chat.js?v=3.0"></script>
     <script src="assets/js/store.js"></script>
 </body>
 </html>

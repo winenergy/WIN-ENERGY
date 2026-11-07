@@ -145,14 +145,21 @@
             }
         });
 
-        // Update Dots / Indicator Pills (Strictly Win Blue & Eco Green)
+        // Theme colors per product: 0: ScaleBreck (Orange), 1: HydroPulse (Blue), 2: CropSafe (Green)
+        const themeStyles = [
+            { bg: 'linear-gradient(90deg, #ea580c, #f97316)', shadow: '0 0 14px rgba(249, 115, 22, 0.5)' },
+            { bg: 'linear-gradient(90deg, #0F52BA, #0284c7)', shadow: '0 0 14px rgba(15, 82, 186, 0.5)' },
+            { bg: 'linear-gradient(90deg, #0B6E4F, #50C878)', shadow: '0 0 14px rgba(80, 200, 120, 0.5)' }
+        ];
+
+        // Update Dots / Indicator Pills with respective product theme color
         indicatorDots.forEach((dot, i) => {
             if (i === index) {
                 dot.classList.add('active-pill');
                 dot.style.width = '2.25rem'; // 36px elongated pill
-                dot.style.background = 'linear-gradient(90deg, #0F52BA, #50C878)'; // User Sapphire to Emerald
+                dot.style.background = themeStyles[index] ? themeStyles[index].bg : 'linear-gradient(90deg, #0F52BA, #50C878)';
                 dot.style.opacity = '1';
-                dot.style.boxShadow = '0 0 12px rgba(15, 82, 186, 0.4)';
+                dot.style.boxShadow = themeStyles[index] ? themeStyles[index].shadow : '0 0 12px rgba(15, 82, 186, 0.4)';
             } else {
                 dot.classList.remove('active-pill');
                 dot.style.width = '0.625rem'; // 10px circular dot

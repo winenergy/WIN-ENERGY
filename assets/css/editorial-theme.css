@@ -28,9 +28,12 @@ html, body {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0F172A;
     line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Crisp, Solid, High-Clarity Headings (Eliminating Blurry Faux-Bold Serifs) */
@@ -96,14 +99,19 @@ p.text-slate-400, span.text-slate-400 {
 
 /* Enhanced legibility for body, paragraphs, and list elements */
 p, li, .text-xs, .text-sm {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    color: #1E293B;
     text-rendering: optimizeLegibility;
 }
 
 .flex.items-start.text-xs,
 .flex.items-start.text-sm,
 ul.text-xs li,
-ul.text-sm li {
-    font-weight: 450;
+ul.text-sm li,
+ul li {
+    font-weight: 500 !important;
+    color: #0F172A;
 }
 
 /* Clear contrast in Dark Containers (Footer & Dark Sections) */

@@ -3,7 +3,7 @@
    Brand Colors:
    - Corporate Primary: #0b192c (Deep Ocean Navy) & #0284c7 (Sky Blue)
    - HydroPulse Accent: #f07020 (Vibrant Thermic Orange)
-   - BuzzZap Accent: #16a34a (Vibrant Agri Emerald Green)
+   - CropSafe Accent: #16a34a (Vibrant Agri Emerald Green)
    - Neutral Light: #f8fafc / #ffffff
    - Neutral Dark: #0f172a / #1e293b / #334155
 =================================================================== */
@@ -744,14 +744,14 @@ button, input, select, textarea {
   box-shadow: 0 25px 35px -5px rgba(15, 31, 56, 0.4), 0 0 30px rgba(240, 112, 32, 0.25);
 }
 
-/* BuzzZap Hero Theme (Green / Agri) */
-.hero-card-buzzzap {
+/* CropSafe Hero Theme (Green / Agri) */
+.hero-card-buzzzap, .hero-card-cropsafe {
   background: linear-gradient(145deg, #0e271a 0%, #153c29 100%);
   color: #ffffff;
   border: 1px solid rgba(22, 163, 74, 0.35);
 }
 
-.hero-card-buzzzap:hover {
+.hero-card-buzzzap:hover, .hero-card-cropsafe:hover {
   box-shadow: 0 25px 35px -5px rgba(14, 39, 26, 0.4), 0 0 30px rgba(22, 163, 74, 0.25);
 }
 
@@ -1091,7 +1091,7 @@ button, input, select, textarea {
   box-shadow: var(--shadow-glow-orange);
 }
 
-.tech-tab-btn.active.tab-buzzzap {
+.tech-tab-btn.active.tab-buzzzap, .tech-tab-btn.active.tab-cropsafe {
   background: var(--color-green);
   color: #ffffff;
   border-color: var(--color-green);
@@ -1413,7 +1413,7 @@ button, input, select, textarea {
   border: 1.5px solid rgba(240, 112, 32, 0.4);
 }
 
-.finder-result.result-buzzzap {
+.finder-result.result-buzzzap, .finder-result.result-cropsafe {
   background: var(--color-green-light);
   border: 1.5px solid rgba(22, 163, 74, 0.4);
 }

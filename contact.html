@@ -13,7 +13,7 @@
     <!-- Google Fonts: Plus Jakarta Sans, Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,9 +50,9 @@
                         'base': ['1.125rem', { lineHeight: '1.7' }]
                     },
                     fontFamily: {
-                        serif: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
-                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                        serif: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
                     }
                 }
             }
@@ -217,15 +217,15 @@
                         <span class="text-[10px] font-mono uppercase tracking-widest text-win-hpBlue font-bold">Product Specifications</span>
                         <div class="grid grid-cols-2 gap-3 text-xs">
                             <div class="p-3 bg-white rounded-xl border border-win-border">
-                                <span class="text-win-muted block text-[11px]">HydroPulse Marlin 1.0</span>
+                                <span class="text-win-muted block text-[11px]">HydroPulse Marlin Eco 1.0</span>
                                 <strong class="text-win-dark text-sm font-semibold">Up to 1" (25mm) Pipelines</strong>
                             </div>
                             <div class="p-3 bg-white rounded-xl border border-win-border">
-                                <span class="text-win-muted block text-[11px]">HydroPulse Marlin 1.5</span>
+                                <span class="text-win-muted block text-[11px]">HydroPulse Marlin Mine 1.5</span>
                                 <strong class="text-win-dark text-sm font-semibold">Up to 1.5" (40mm) Mainlines</strong>
                             </div>
                         </div>
-                        <p class="text-[11px] text-win-muted leading-relaxed">For standard product pricing, please visit our <a href="products.html" class="text-win-hpBlue font-semibold underline">Products Page</a>.<br>Industrial water systems and BuzzZap agricultural units are quoted upon specification.</p>
+                        <p class="text-[11px] text-win-muted leading-relaxed">For standard product pricing, please visit our <a href="products.html" class="text-win-hpBlue font-semibold underline">Products Page</a>.<br>Industrial water systems and CropSafe agricultural units are quoted upon specification.</p>
                     </div>
 
                 </div>
@@ -259,13 +259,17 @@
                                 <div class="space-y-1.5">
                                     <label for="contactProduct" class="text-xs font-heading font-semibold text-slate-700">Product / Division of Interest *</label>
                                     <select id="contactProduct" required class="w-full bg-win-base border border-win-border rounded-xl px-4 py-3 text-xs text-win-dark focus:outline-none focus:border-win-hpBlue">
-                                        <option value="SCALEBRECK Electronic Water Conditioner">SCALEBRECK™ — Residential & Commercial Conditioner</option>
-                                        <option value="HydroPulse Marlin 1.0">HydroPulse Marlin 1.0 — Homes</option>
-                                        <option value="HydroPulse Marlin 1.5">HydroPulse Marlin 1.5 — Villas/Commercial</option>
-                                        <option value="Industrial HydroPulse">HydroPulse Industrial (Boiler/Cooling Tower)</option>
-                                        <option value="BuzzZap ECO">BuzzZap ECO (0.5 - 1.0 Acre Solar Trap)</option>
-                                        <option value="BuzzZap Pro">BuzzZap Pro (Up to 2.0 Acres Solar Killer)</option>
+                                        <option value="ScaleBreck Eco 1.0">ScaleBreck™ Eco 1.0 (Flats & Apartments)</option>
+                                        <option value="ScaleBreck Mine 1.5">ScaleBreck™ Mine 1.5 (Villas & High Flow)</option>
+                                        <option value="ScaleBreck Commercial Series Pro">ScaleBreck™ Commercial Series Pro (Societies & Commercial)</option>
+                                        <option value="HydroPulse Marlin Eco 1.0">HydroPulse Marlin Eco 1.0 — Homes</option>
+                                        <option value="HydroPulse Marlin Mine 1.5">HydroPulse Marlin Mine 1.5 — Villas/Commercial</option>
+                                        <option value="Industrial HydroPulse">HydroPulse Industrial Series Pro (Boiler/Cooling Tower)</option>
+                                        <option value="CropSafe ECO">CropSafe ECO (Up to 0.5 Acre Solar Trap)</option>
+                                        <option value="CropSafe MINE">CropSafe MINE (0.5 - 1.0 Acre Solar Trap)</option>
+                                        <option value="CropSafe Pro">CropSafe Pro (Up to 2.0 Acres Solar Killer)</option>
                                         <option value="Dealership Opportunity">Regional Dealership / Distribution</option>
+                                        <option value="Few / All">Few / All</option>
                                     </select>
                                 </div>
                             </div>
@@ -307,7 +311,7 @@
                         <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain">
                     </a>
                     <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
-                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin 1.0 / Marlin 1.5) and BuzzZap solar agricultural insect control.
+                        Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin Eco 1.0 / Marlin Mine 1.5) and CropSafe solar agricultural insect control.
                     </p>
 
                     <!-- Social Media Quicklinks (Row of 8 dark circular icons) -->
@@ -373,7 +377,7 @@
                     <ul class="space-y-3 text-xs text-slate-400">
                         <li><a href="products.html#scalebreck" class="hover:text-win-hpBlue transition-colors">ScaleBreck™ Water Conditioner</a></li>
                         <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse™ Electronic Descalers</a></li>
-                        <li><a href="products.html#buzzzap" class="hover:text-win-hpBlue transition-colors">BuzzZap™ Solar Insect Killers</a></li>
+                        <li><a href="products.html#cropsafe" class="hover:text-win-hpBlue transition-colors">CropSafe™ Solar Insect Killers</a></li>
                     </ul>
                 </div>
 
@@ -469,7 +473,7 @@
             }
         });
     </script>
-    <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/ai-chat.js?v=3.0"></script>
     <script src="assets/js/store.js"></script>
 </body>
 </html>

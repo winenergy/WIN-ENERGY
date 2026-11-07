@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -39,9 +39,9 @@
                         }
                     },
                     fontFamily: {
-                        serif: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
-                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                        serif: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
                     }
                 }
             }
@@ -125,88 +125,188 @@
     </div>
 
     <!-- HERO SECTION -->
-    <section id="overview" class="relative py-16 sm:py-24 bg-gradient-to-b from-orange-50/50 via-win-base to-win-base overflow-hidden">
+    <section id="overview" class="relative py-10 sm:py-14 bg-gradient-to-b from-orange-50/60 via-win-base to-win-base overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-mono font-bold uppercase tracking-wider">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-orange-600"></i> Product Line 01 · Non-Chemical Physical Conditioning
-                    </div>
-                    
-                    <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-win-dark tracking-tight leading-tight">
-                        SCALEBRECK™ <span class="text-orange-600">Electronic Water Conditioner</span>
-                    </h1>
+            
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs text-slate-500 font-mono mb-6">
+                <a href="index.html" class="hover:text-orange-600 transition-colors">Home</a>
+                <span>/</span>
+                <a href="products.html" class="hover:text-orange-600 transition-colors">Products</a>
+                <span>/</span>
+                <span class="text-orange-600 font-bold">ScaleBreck™ Water Conditioner</span>
+            </nav>
 
-                    <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
-                        An eco-friendly, non-chemical physical water conditioning system engineered by <strong>Leanway Energy Pvt. Ltd. & Win Energy</strong> to mitigate limescale deposits and manage high Total Dissolved Solids (TDS) water. Pure physical conditioning with zero salts, zero recurring chemicals, and zero water pressure drop.
-                    </p>
-
-                    <!-- Slogans & Badges -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                        <div class="p-3 bg-white rounded-xl border border-orange-200/60 shadow-xs">
-                            <span class="text-[11px] font-bold text-orange-700 block uppercase tracking-wide">Domestic Slogan</span>
-                            <span class="text-xs text-slate-700 font-medium">"Better Water. Smarter Home. Easier Maintenance."</span>
+            <!-- Top Header: Title, Category Badge, Rating & Description (Horizontal across top) -->
+            <div class="pb-8 mb-8 border-b border-win-border">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-mono font-bold uppercase tracking-wider">
+                            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-orange-600"></i> Product Line 01 · Non-Chemical Physical Conditioning
                         </div>
-                        <div class="p-3 bg-white rounded-xl border border-orange-200/60 shadow-xs">
-                            <span class="text-[11px] font-bold text-orange-700 block uppercase tracking-wide">Poultry & Livestock</span>
-                            <span class="text-xs text-slate-700 font-medium">"Better Water Management. Smarter Farming."</span>
-                        </div>
-                        <div class="p-3 bg-white rounded-xl border border-orange-200/60 shadow-xs">
-                            <span class="text-[11px] font-bold text-orange-700 block uppercase tracking-wide">Agriculture</span>
-                            <span class="text-xs text-slate-700 font-medium">"Smart Water Conditioning for Agriculture"</span>
-                        </div>
+                        <h1 class="font-heading text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-win-dark tracking-tight leading-tight">
+                            SCALEBRECK™ <span class="text-orange-600">Electronic Water Conditioner</span>
+                        </h1>
                     </div>
 
-                    <!-- CTAs -->
-                    <div class="flex flex-wrap items-center gap-4 pt-4">
-                        <button onclick="addToCart('ScaleBreck 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="px-7 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-heading font-semibold text-sm flex items-center gap-2 shadow-lg shadow-orange-500/20 transition-all cursor-pointer">
-                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
-                            <span>Buy ScaleBreck (₹38,999)</span>
-                        </button>
-                        <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20am%20interested%20in%20ScaleBreck%20Water%20Conditioner" target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 font-heading font-semibold text-sm flex items-center gap-2 transition-all">
-                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
-                            <span>WhatsApp Consultation</span>
-                        </a>
-                        <a href="contact.html?product=scalebreck" class="px-6 py-3.5 rounded-xl bg-win-sand hover:bg-slate-200 text-slate-800 font-heading font-semibold text-sm flex items-center gap-2 transition-all">
-                            <i data-lucide="file-text" class="w-4 h-4 text-slate-600"></i>
-                            <span>Custom Sizing Quote</span>
-                        </a>
+                    <!-- Ratings & Verified Social Proof -->
+                    <div class="flex items-center gap-3 bg-white px-4 py-2.5 rounded-2xl border border-win-border shadow-xs shrink-0 self-start lg:self-auto">
+                        <div class="flex items-center text-amber-400 gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-900">4.92 / 5</span>
+                        <span class="text-xs text-slate-300">|</span>
+                        <span class="text-xs text-slate-600 font-medium">140+ verified domestic & industrial deployments</span>
                     </div>
                 </div>
 
-                <!-- Right Visual: Clean Product & Live Pipe -->
-                <div class="lg:col-span-5 space-y-4">
-                    <div class="bg-white rounded-3xl p-6 border border-win-border shadow-sm">
-                        <div class="h-64 sm:h-72 rounded-2xl bg-slate-50 flex items-center justify-center p-4 border border-slate-100 overflow-hidden">
-                            <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="SCALEBRECK Base Unit" class="h-full object-contain">
+                <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-normal mt-4 max-w-5xl">
+                    Engineered by <strong>Leanway Energy Pvt. Ltd. & Win Energy</strong> for severe Total Dissolved Solids (TDS) and limescale control. Restructures calcium and magnesium crystals without salts, acids, resin regeneration, or pipe alterations.
+                </p>
+            </div>
+
+            <!-- Side-by-Side: Image Gallery and Buying & Product Info starting on the EXACT SAME HORIZONTAL BASELINE -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                
+                <!-- Left Column: Interactive Multi-Image Gallery -->
+                <div class="lg:col-span-6 space-y-4" id="scalebreck-gallery">
+                    <div class="bg-white rounded-3xl p-5 sm:p-6 border border-win-border shadow-xs">
+                        
+                        <!-- Main Image Display Box -->
+                        <div class="relative w-full h-80 sm:h-96 rounded-2xl bg-slate-50 flex items-center justify-center p-6 border border-slate-100 overflow-hidden">
+                            <img data-gallery-main 
+                                 src="assets/images/scalebreck/scalebreck_product_clean.jpg" 
+                                 alt="SCALEBRECK Electronic Water Conditioner" 
+                                 class="max-h-72 sm:max-h-84 w-auto object-contain transition-opacity duration-200">
+                            
+                            <!-- Prev / Next Navigation Arrows -->
+                            <button data-gallery-prev aria-label="Previous Image" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-orange-600 shadow-md flex items-center justify-center transition-all cursor-pointer z-10">
+                                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                            </button>
+                            <button data-gallery-next aria-label="Next Image" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-orange-600 shadow-md flex items-center justify-center transition-all cursor-pointer z-10">
+                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </button>
+
+                            <!-- Slide Counter Pill -->
+                            <span data-gallery-counter class="absolute bottom-3 right-3 px-3 py-1 bg-slate-900/80 backdrop-blur-sm text-white font-mono text-xs rounded-full shadow-xs">
+                                1 / 4
+                            </span>
                         </div>
-                        <div class="mt-4 flex items-center justify-between text-xs text-slate-500 font-mono">
-                            <span>Clamp-On Induction Loop</span>
-                            <span class="text-orange-600 font-bold">12V Power Supply · Solid State</span>
+
+                        <!-- Clickable Thumbnails Row -->
+                        <div class="grid grid-cols-4 gap-3 mt-4">
+                            <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-orange-500 ring-2 ring-orange-200 flex items-center justify-center overflow-hidden transition-all cursor-pointer">
+                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="Base Unit" class="h-full object-contain">
+                            </button>
+                            <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-orange-300 transition-all cursor-pointer">
+                                <img src="assets/images/scalebreck/scalebreck_installation.jpg" alt="Pipeline Installation" class="h-full object-cover rounded-lg">
+                            </button>
+                            <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-orange-300 transition-all cursor-pointer">
+                                <img src="assets/images/scalebreck/hardwater_scale_damage.jpg" alt="Limescale Solved" class="h-full object-cover rounded-lg">
+                            </button>
+                            <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-orange-300 transition-all cursor-pointer">
+                                <img src="assets/images/scalebreck/scalebreck_circle_preview.jpg" alt="Hardware Core" class="h-full object-cover rounded-lg">
+                            </button>
                         </div>
                     </div>
+
+                    <!-- Mini Specification Tags Below Gallery -->
+                    <div class="flex flex-wrap items-center justify-between gap-3 px-2 text-xs font-mono text-slate-500">
+                        <span class="flex items-center gap-1.5"><i data-lucide="cpu" class="w-3.5 h-3.5 text-orange-600"></i> Solid State IC Controller</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-3.5 h-3.5 text-orange-600"></i> 12V DC Adapter</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-orange-600"></i> IP65 Weather Sealed</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Buying & Product Info (Starts at exact same height as Gallery) -->
+                <div class="lg:col-span-6 space-y-5" id="scalebreck-buybox">
                     
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="p-3 bg-white rounded-2xl border border-win-border flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
-                                <i data-lucide="check-circle" class="w-5 h-5"></i>
-                            </div>
-                            <div class="text-xs">
-                                <strong class="block text-slate-900">Zero Pipe Cutting</strong>
-                                <span class="text-slate-500">External clamp install</span>
-                            </div>
-                        </div>
-                        <div class="p-3 bg-white rounded-2xl border border-win-border flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
-                                <i data-lucide="award" class="w-5 h-5"></i>
-                            </div>
-                            <div class="text-xs">
-                                <strong class="block text-slate-900">1-Year Warranty</strong>
-                                <span class="text-slate-500">>20 Year component life</span>
-                            </div>
+                    <!-- Interactive Model Selection Pills -->
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-700 uppercase tracking-wider font-mono block">
+                            Select Model & Capacity:
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            <button type="button" data-model-id="scalebreck-eco" class="p-3 rounded-xl border-2 text-left transition-all cursor-pointer">
+                                <div class="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-semibold">Eco Tier</div>
+                                <div class="font-heading font-bold text-sm text-slate-900 mt-0.5">ScaleBreck™ Eco 1.0</div>
+                                <div class="text-xs font-bold text-orange-600 mt-1">₹38,999</div>
+                            </button>
+                            <button type="button" data-model-id="scalebreck-mine" class="p-3 rounded-xl border-2 text-left transition-all cursor-pointer">
+                                <div class="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-semibold">Mine Tier</div>
+                                <div class="font-heading font-bold text-sm text-slate-900 mt-0.5">ScaleBreck™ Mine 1.5</div>
+                                <div class="text-xs font-bold text-orange-600 mt-1">₹49,999</div>
+                            </button>
+                            <button type="button" data-model-id="scalebreck-pro" class="p-3 rounded-xl border-2 text-left transition-all cursor-pointer">
+                                <div class="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-semibold">Pro Tier</div>
+                                <div class="font-heading font-bold text-sm text-slate-900 mt-0.5">Commercial Pro</div>
+                                <div class="text-xs font-bold text-orange-600 mt-1">Project Quote</div>
+                            </button>
                         </div>
                     </div>
+
+                    <!-- Dynamic Price Display Card -->
+                    <div class="p-4 bg-orange-50/50 rounded-2xl border border-orange-200/80 space-y-2">
+                        <div class="flex items-baseline gap-3">
+                            <span data-product-price class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">₹38,999</span>
+                            <span data-product-mrp class="text-sm sm:text-base text-slate-400 line-through">₹48,000</span>
+                            <span data-product-savings class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 text-xs font-bold">Save ₹9,001 (19% OFF)</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-orange-800 font-medium">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-orange-600 shrink-0"></i>
+                            <span data-product-fit>Fits 0.5" to 1.0" (25mm) pipelines · Up to 1500 ppm TDS · Flats & Apartments</span>
+                        </div>
+                    </div>
+
+                    <!-- High-Converting CTA Buttons Group -->
+                    <div class="space-y-3 pt-1">
+                        <!-- Primary Add to Cart -->
+                        <button type="button" data-product-cart-btn class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-heading font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transform hover:-translate-y-0.5 transition-all cursor-pointer">
+                            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                            <span data-product-cart-text>Add to Cart — ₹38,999</span>
+                        </button>
+
+                        <!-- Secondary Actions: WhatsApp & Custom Sizing Quote -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a data-product-wa-btn href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20am%20interested%20in%20ScaleBreck%20Eco%201.0%20(₹38,999)" target="_blank" class="py-3 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 font-heading font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-2xs">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                                <span>WhatsApp Consultation</span>
+                            </a>
+                            <a href="contact.html?product=scalebreck" class="py-3 px-4 rounded-xl bg-win-sand hover:bg-slate-200 border border-slate-200 text-slate-800 font-heading font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-2xs">
+                                <i data-lucide="calculator" class="w-4 h-4 text-slate-600"></i>
+                                <span>Custom Sizing Quote</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trust & Guarantee Badges Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 border-t border-win-border">
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-100 flex flex-col items-center text-center">
+                            <i data-lucide="shield" class="w-4 h-4 text-orange-600 mb-1"></i>
+                            <span class="text-[11px] font-bold text-slate-800 leading-tight">5-Year Warranty</span>
+                            <span class="text-[10px] text-slate-500">>20 yr life</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-100 flex flex-col items-center text-center">
+                            <i data-lucide="wrench" class="w-4 h-4 text-orange-600 mb-1"></i>
+                            <span class="text-[11px] font-bold text-slate-800 leading-tight">Zero Pipe Cutting</span>
+                            <span class="text-[10px] text-slate-500">Clamp-on DIY</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-100 flex flex-col items-center text-center">
+                            <i data-lucide="droplet-off" class="w-4 h-4 text-orange-600 mb-1"></i>
+                            <span class="text-[11px] font-bold text-slate-800 leading-tight">100% Salt-Free</span>
+                            <span class="text-[10px] text-slate-500">Zero refills</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-100 flex flex-col items-center text-center">
+                            <i data-lucide="truck" class="w-4 h-4 text-orange-600 mb-1"></i>
+                            <span class="text-[11px] font-bold text-slate-800 leading-tight">Pan-India Dispatch</span>
+                            <span class="text-[10px] text-slate-500">Ready stock</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -805,8 +905,8 @@
                     </p>
                 </div>
                 <div class="flex items-center gap-3 shrink-0">
-                    <button onclick="addToCart('ScaleBreck 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="px-6 py-3.5 bg-white text-orange-900 rounded-xl font-heading font-bold text-xs uppercase tracking-wider hover:bg-orange-50 transition-colors shadow-md">
-                        Buy Now (₹38,999)
+                    <button onclick="addToCart('ScaleBreck Eco 1.0', 38999, 'assets/images/scalebreck/scalebreck_product_clean.jpg')" class="px-6 py-3.5 bg-white text-orange-900 rounded-xl font-heading font-bold text-xs uppercase tracking-wider hover:bg-orange-50 transition-colors shadow-md">
+                        Buy ScaleBreck Eco 1.0 (₹38,999)
                     </button>
                     <a href="https://wa.me/919595955585?text=Hello%20Win%20Energy,%20I%20want%20to%20order%20SCALEBRECK" target="_blank" class="px-6 py-3.5 bg-slate-900/40 hover:bg-slate-900/60 border border-white/20 text-white rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-colors">
                         WhatsApp Team
@@ -823,7 +923,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
                 <div class="lg:col-span-2 space-y-6">
                     <a href="index.html" class="inline-block">
-                        <img src="assets/images/company/win_energy_logo_white.png" alt="Win Energy — Always Reliable" class="h-10 sm:h-12 w-auto object-contain">
+                        <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" class="h-10 sm:h-12 w-auto object-contain">
                     </a>
                     <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
                         Win Energy engineers clean, non-chemical, maintenance-free physical solutions for water conditioning, limescale mitigation, and sustainable crop pest management.
@@ -846,7 +946,7 @@
                     <ul class="space-y-3 text-xs text-slate-400">
                         <li><a href="scalebreck.html" class="text-orange-400 font-semibold">ScaleBreck™ Water Conditioner</a></li>
                         <li><a href="hydropulse.html" class="hover:text-win-hpBlue transition-colors">HydroPulse™ Electronic Descalers</a></li>
-                        <li><a href="buzzzap.html" class="hover:text-emerald-400 transition-colors">BuzzZap™ Solar Insect Killers</a></li>
+                        <li><a href="cropsafe.html" class="hover:text-emerald-400 transition-colors">CropSafe™ Solar Insect Killers</a></li>
                     </ul>
                 </div>
 
@@ -891,7 +991,59 @@
             });
         }
     </script>
-    <script src="assets/js/ai-chat.js?v=2.1"></script>
+    <script src="assets/js/ai-chat.js?v=3.0"></script>
     <script src="assets/js/store.js"></script>
+    <!-- Product Buy Box & Gallery Engine -->
+    <script src="assets/js/product-gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            WinProductBuyBox.init({
+                galleryId: 'scalebreck-gallery',
+                buyBoxId: 'scalebreck-buybox',
+                activeBorderClass: 'border-orange-500 ring-2 ring-orange-200',
+                pillActiveClass: 'border-orange-500 bg-orange-50/50 text-slate-900 shadow-sm ring-1 ring-orange-400',
+                images: [
+                    { src: 'assets/images/scalebreck/scalebreck_product_clean.jpg', alt: 'ScaleBreck Unit' },
+                    { src: 'assets/images/scalebreck/scalebreck_installation.jpg', alt: 'ScaleBreck Vertical Pipe Installation' },
+                    { src: 'assets/images/scalebreck/hardwater_scale_damage.jpg', alt: 'Hard Water Limescale Solved' },
+                    { src: 'assets/images/scalebreck/scalebreck_circle_preview.jpg', alt: 'Hardware Detail' }
+                ],
+                models: [
+                    {
+                        id: 'scalebreck-eco',
+                        name: 'ScaleBreck™ Eco 1.0',
+                        priceNumber: 38999,
+                        priceFormatted: '₹38,999',
+                        mrpFormatted: '₹48,000',
+                        savingsText: 'Save ₹9,001 (19% OFF)',
+                        fitText: 'Fits 0.5" to 1.0" (25mm) pipelines · Up to 1500 ppm TDS · Apartments & Flats',
+                        imageIndex: 0,
+                        image: 'assets/images/scalebreck/scalebreck_product_clean.jpg'
+                    },
+                    {
+                        id: 'scalebreck-mine',
+                        name: 'ScaleBreck™ Mine 1.5',
+                        priceNumber: 49999,
+                        priceFormatted: '₹49,999',
+                        mrpFormatted: '₹62,000',
+                        savingsText: 'Save ₹12,001 (20% OFF)',
+                        fitText: 'Fits 1.0" to 1.5" (40mm) pipelines · High flow rates · Villas & Multi-Bathroom Residences',
+                        imageIndex: 0,
+                        image: 'assets/images/scalebreck/scalebreck_product_clean.jpg'
+                    },
+                    {
+                        id: 'scalebreck-pro',
+                        name: 'Commercial Series Pro',
+                        isQuote: true,
+                        priceFormatted: 'Project Quote',
+                        mrpFormatted: '',
+                        savingsText: 'Custom Sized',
+                        fitText: 'Fits 2.0" to 8.0"+ pipelines · Central hot water, boilers & cooling towers · Societies & Commercial',
+                        imageIndex: 1
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 </html>

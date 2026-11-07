@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle URL hash on load for deep linking (e.g. #hydropulse, #buzzzap, #techHydropulse)
   function handleUrlHash() {
     const hash = window.location.hash.toLowerCase();
-    if (hash.includes('buzzzap')) {
+    if ((hash.includes('cropsafe') || hash.includes('buzzzap'))) {
       if (document.getElementById('techBuzzzap')) activateTab('techBuzzzap');
       if (document.getElementById('sectorBuzzzap')) activateTab('sectorBuzzzap');
     } else if (hash.includes('hydropulse')) {
@@ -112,12 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
       finderResult.className = 'finder-result show';
 
       if (challenge === 'insects' || sector === 'vineyard' || sector === 'crops' || sector === 'tea') {
-        finderResult.classList.add('result-buzzzap');
-        finderTitle.textContent = 'Recommended: BuzzZap Solar Clean Tech';
-        finderDesc.textContent = 'BuzzZap Eco & Pro Solar Traps eliminate 1,800+ nocturnal crop pests with zero chemical spray, reducing crop losses and lowering pesticide costs by 50%.';
-        finderAction.href = 'products.html#buzzzap';
+        finderResult.classList.add('result-cropsafe');
+        finderTitle.textContent = 'Recommended: CropSafe Solar Clean Tech';
+        finderDesc.textContent = 'CropSafe Eco & Pro Solar Traps eliminate 1,800+ nocturnal crop pests with zero chemical spray, reducing crop losses and lowering pesticide costs by 50%.';
+        finderAction.href = 'products.html#cropsafe';
         finderAction.className = 'btn btn-green btn-sm';
-        finderAction.textContent = 'View BuzzZap Range →';
+        finderAction.textContent = 'View CropSafe Range →';
       } else {
         finderResult.classList.add('result-hydropulse');
         finderTitle.textContent = 'Recommended: HydroPulse Polarization Unit';
