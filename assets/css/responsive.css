@@ -1,0 +1,719 @@
+/* ================================================================
+   WIN ENERGY — COMPREHENSIVE RESPONSIVE DESIGN SYSTEM
+   Breakpoints:
+     xs:  < 480px   (small mobile: 360–479px)
+     sm:  480–639px (large mobile)
+     md:  640–767px (large mobile / small tablet)
+     lg:  768–1023px (tablet / small laptop)
+     xl:  1024–1279px (standard laptop)
+     2xl: 1280–1535px (large laptop)
+     3xl: 1536px+  (projector / wide screen)
+================================================================ */
+
+/* ================================================================
+   0. GLOBAL OVERFLOW PREVENTION (applies always)
+================================================================ */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+*, *::before, *::after {
+    max-width: 100%;
+}
+img { max-width: 100%; height: auto; }
+
+/* ================================================================
+   1. SMALL MOBILE  (max 479px)
+================================================================ */
+@media (max-width: 479px) {
+
+    /* -- HEADER / NAV -- */
+    header .h-20 { height: 3.75rem !important; }
+    header .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+    /* Shrink logo on very small screens */
+    header img.h-11, header img.h-12 {
+        height: 2.25rem !important;
+    }
+
+    /* Account label already hidden by sm: class; ensure cart badge fits */
+    .header-cart-count {
+        min-width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+
+    /* -- HERO SECTION -- */
+    #hero-slider {
+        min-height: 540px !important;
+    }
+
+    /* Slide padding — give content room */
+    #hero-slider .pt-14 { padding-top: 2.5rem !important; }
+    #hero-slider .pb-24 { padding-bottom: 3.5rem !important; }
+    #hero-slider .px-6  { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+    /* Hero headline: scale down */
+    #hero-slider h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Hero description */
+    #hero-slider p.text-slate-200 {
+        font-size: 0.875rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Stats strip — stack into 1-col grid so all 3 fit */
+    #hero-slider .flex.items-center.gap-5,
+    #hero-slider .flex.items-center.gap-8 {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.75rem !important;
+        align-items: start !important;
+    }
+
+    /* Hide dividers between stats on mobile */
+    #hero-slider .w-px.h-8 { display: none !important; }
+
+    /* Stat icon circles */
+    #hero-slider .w-9.h-9 { width: 2rem !important; height: 2rem !important; }
+
+    /* Stat numbers */
+    #hero-slider .text-xl { font-size: 1rem !important; }
+    #hero-slider .text-2xl { font-size: 1.1rem !important; }
+
+    /* Hero CTA buttons */
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.65rem !important;
+    }
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 a,
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 button {
+        justify-content: center !important;
+        width: 100% !important;
+        padding: 0.85rem 1.25rem !important;
+    }
+
+    /* Hero slide nav arrows */
+    #hero-prev, #hero-next,
+    button[onclick*="heroSlide"],
+    .hero-prev-btn, .hero-next-btn {
+        width: 2rem !important;
+        height: 2rem !important;
+        padding: 0.35rem !important;
+    }
+
+    /* -- SCALEBRECK / PRODUCT PAGE BREADCRUMB -- */
+    nav.flex.items-center.gap-2.text-xs {
+        flex-wrap: wrap !important;
+        gap: 0.25rem 0.4rem !important;
+        line-height: 1.6 !important;
+    }
+    nav.flex.items-center.gap-2.text-xs span.text-orange-600,
+    nav.flex.items-center.gap-2.text-xs span.text-sky-600,
+    nav.flex.items-center.gap-2.text-xs span.text-emerald-600,
+    nav.flex.items-center.gap-2.text-xs span.text-green-700 {
+        font-size: 0.75rem !important;
+        word-break: break-word !important;
+    }
+
+    /* -- PRODUCT CATEGORY BADGE (long text pill) -- */
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-orange-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-sky-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-emerald-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-green-100 {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 0.03em !important;
+        padding: 0.35rem 0.65rem !important;
+        line-height: 1.4 !important;
+        max-width: 100% !important;
+    }
+
+    /* -- PRODUCT PAGE H1 -- */
+    .font-heading.text-3xl { font-size: 1.5rem !important; }
+    .font-heading.text-4xl { font-size: 1.65rem !important; }
+
+    /* -- CLIENTS LOGO STRIP -- */
+    .clients-marquee-track img,
+    .marquee-track img {
+        height: 2rem !important;
+        max-width: 90px !important;
+    }
+
+    /* -- SECTOR GRID (index.html) -- */
+    .sectors-grid,
+    .sector-cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* -- PRODUCTS PAGE: card grids -- */
+    .products-grid,
+    .product-cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* -- FOOTER -- */
+    footer .grid { grid-template-columns: 1fr !important; }
+    footer .gap-10, footer .gap-12 { gap: 2rem !important; }
+    footer .px-6, footer .px-12 { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+    /* -- GENERAL SECTION PADDING -- */
+    section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+    section.py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    section.py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    .max-w-7xl.px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+    .max-w-7xl.px-12 { padding-left: 1rem !important; padding-right: 1rem !important; }
+    .lg\:px-12 { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+    /* -- BUY BOX (product pages) -- */
+    .buy-box, .product-buy-box {
+        padding: 1.25rem !important;
+        border-radius: 1rem !important;
+    }
+
+    /* -- CONTACT FORM -- */
+    .contact-section-grid { grid-template-columns: 1fr !important; }
+
+    /* Sections with side-by-side layout on larger screens */
+    .grid.grid-cols-1.lg\:grid-cols-12 { gap: 1.5rem !important; }
+
+    /* Hero slide counter */
+    .hero-counter, [class*="hero-counter"] {
+        font-size: 0.7rem !important;
+        padding: 0.25rem 0.5rem !important;
+    }
+
+    /* About page intro */
+    .about-intro-grid { grid-template-columns: 1fr !important; }
+
+    /* Stat cards row */
+    .stat-cards-row {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.75rem !important;
+    }
+}
+
+/* ================================================================
+   2. LARGE MOBILE  (480px – 639px)
+================================================================ */
+@media (min-width: 480px) and (max-width: 639px) {
+
+    #hero-slider { min-height: 560px !important; }
+    #hero-slider h1 { font-size: 2rem !important; }
+
+    /* Stats: show as a row but tighter */
+    #hero-slider .flex.items-center.gap-5 { gap: 0.75rem !important; }
+    #hero-slider .flex.items-center.gap-8 { gap: 0.75rem !important; }
+    #hero-slider .w-px.h-8 { height: 2rem !important; }
+
+    /* Hero CTA buttons: allow side-by-side if they fit */
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 {
+        gap: 0.65rem !important;
+    }
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 a,
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 button {
+        padding: 0.75rem 1.25rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Breadcrumb */
+    nav.flex.items-center.gap-2.text-xs { flex-wrap: wrap !important; gap: 0.3rem !important; }
+
+    /* Category badge */
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-orange-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-sky-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-emerald-100 {
+        font-size: 0.7rem !important;
+        letter-spacing: 0.04em !important;
+        flex-wrap: wrap !important;
+        line-height: 1.4 !important;
+    }
+
+    .font-heading.text-3xl { font-size: 1.65rem !important; }
+    .font-heading.text-4xl { font-size: 1.9rem !important; }
+
+    footer .grid { grid-template-columns: 1fr 1fr !important; }
+    .contact-section-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ================================================================
+   3. TABLET  (640px – 1023px)
+================================================================ */
+@media (min-width: 640px) and (max-width: 1023px) {
+
+    #hero-slider { min-height: 580px !important; }
+
+    /* Slightly tighten stat strip spacing */
+    #hero-slider .flex.items-center.gap-8 { gap: 1.25rem !important; }
+
+    /* Breadcrumb — always flex-wrap just in case */
+    nav.flex.items-center.gap-2.text-xs { flex-wrap: wrap !important; }
+
+    /* Category badge — allow wrap */
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-orange-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-sky-100,
+    .inline-flex.items-center.gap-2.px-3.py-1.rounded-full.bg-emerald-100 {
+        white-space: normal !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* Section containers */
+    .max-w-7xl.px-6, .max-w-7xl.px-12 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    /* Clients marquee logos */
+    .clients-marquee-track img { height: 2.25rem !important; }
+
+    /* Products grid: 2 cols */
+    .products-grid { grid-template-columns: 1fr 1fr !important; }
+
+    /* Sector grid: 2 cols */
+    .sectors-grid { grid-template-columns: 1fr 1fr !important; }
+
+    /* Footer: 2-col */
+    footer .grid.lg\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
+    footer .grid.lg\:grid-cols-5 { grid-template-columns: 1fr 1fr !important; }
+
+    /* Contact grid */
+    .contact-section-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ================================================================
+   4. LAPTOP  (1024px – 1279px)
+================================================================ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    /* Containers: use full width with reasonable padding */
+    .max-w-7xl { max-width: 100% !important; padding-left: 2rem !important; padding-right: 2rem !important; }
+
+    /* Hero */
+    #hero-slider h1 { font-size: 2.5rem !important; }
+
+    /* Product grids: 3-col if 3 items, else keep existing */
+    .products-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* ================================================================
+   5. STANDARD LAPTOP / WIDE  (1280px – 1535px)
+================================================================ */
+@media (min-width: 1280px) and (max-width: 1535px) {
+
+    .max-w-7xl { max-width: 1200px !important; }
+    #hero-slider h1 { font-size: 2.75rem !important; }
+}
+
+/* ================================================================
+   6. PROJECTOR / WIDE SCREEN  (1536px+)
+================================================================ */
+@media (min-width: 1536px) {
+
+    /* Wider containers with generous spacing */
+    .max-w-7xl {
+        max-width: 1440px !important;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+
+    /* Hero — larger text, more breathing room */
+    #hero-slider {
+        min-height: 780px !important;
+    }
+    #hero-slider h1 {
+        font-size: 3.5rem !important;
+        line-height: 1.1 !important;
+    }
+    #hero-slider p.text-slate-200 {
+        font-size: 1.125rem !important;
+        max-width: 42rem !important;
+    }
+
+    /* Stat numbers larger */
+    #hero-slider .text-xl { font-size: 1.75rem !important; }
+    #hero-slider .text-2xl { font-size: 2rem !important; }
+
+    /* Hero CTA buttons */
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 a,
+    #hero-slider .flex.flex-wrap.items-center.gap-3\.5 button {
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
+    }
+
+    /* Product headings */
+    .font-heading.text-3xl { font-size: 2.25rem !important; }
+    .font-heading.text-4xl { font-size: 2.75rem !important; }
+    section h2.text-3xl { font-size: 2.5rem !important; }
+    section h2.text-4xl { font-size: 3rem !important; }
+
+    /* Client logos */
+    .clients-marquee-track img { height: 3rem !important; max-width: 160px !important; }
+
+    /* Footer */
+    footer { font-size: 1rem !important; }
+}
+
+/* ================================================================
+   7. HERO STATS STRIP — Universal fix (all sizes)
+   Prevent 3rd stat (Easy DIY) from being cut off at any width
+================================================================ */
+.hero-stats-strip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem 1.5rem !important;
+    align-items: flex-start !important;
+}
+
+/* Target the actual stats container class in index.html */
+#hero-slider > div > div > div .flex.items-center.gap-5,
+#hero-slider > div > div > div .flex.items-center.gap-8 {
+    flex-wrap: wrap;
+}
+@media (max-width: 479px) {
+    #hero-slider > div > div > div .flex.items-center.gap-5,
+    #hero-slider > div > div > div .flex.items-center.gap-8 {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.65rem !important;
+    }
+    /* Third stat centered when it's odd */
+    #hero-slider > div > div > div .flex.items-center.gap-5 > div:last-child:nth-child(3),
+    #hero-slider > div > div > div .flex.items-center.gap-8 > div:last-child:nth-child(3) {
+        grid-column: span 2 !important;
+    }
+}
+
+/* ================================================================
+   8. HEADER FIXES — All screens
+================================================================ */
+
+/* On tablet: logo + icons only, no text in account button, hamburger visible */
+@media (max-width: 1023px) {
+    /* Ensure the header row never overflows */
+    header > div {
+        gap: 0.5rem !important;
+    }
+    /* Tighten gap between header action buttons */
+    header .flex.items-center.gap-2\.5,
+    header .flex.items-center.gap-3 {
+        gap: 0.5rem !important;
+    }
+    /* Cart button */
+    header button[onclick*="toggleCartDrawer"] {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 479px) {
+    header > div {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        height: 3.5rem !important;
+    }
+    /* Compact account button */
+    header button[onclick*="openLoginModal"] {
+        padding: 0.4rem 0.6rem !important;
+    }
+    /* Compact cart button */
+    header button[onclick*="toggleCartDrawer"] {
+        padding: 0.4rem 0.6rem !important;
+    }
+    /* Hamburger */
+    header button[onclick*="toggleMobileMenu"],
+    header button[onclick*="openMobileNav"],
+    .mobile-menu-btn, .hamburger-btn {
+        padding: 0.4rem !important;
+    }
+}
+
+/* ================================================================
+   9. PRODUCT PAGE FIXES — Breadcrumb + Category Badge + Buy Box
+================================================================ */
+
+/* Breadcrumb: always wrap */
+nav[aria-label="breadcrumb"],
+nav.flex.items-center.gap-2 {
+    flex-wrap: wrap !important;
+}
+
+/* Category badge: never overflow */
+.product-category-badge,
+.inline-flex.items-center.gap-2.rounded-full.bg-orange-100,
+.inline-flex.items-center.gap-2.rounded-full.bg-sky-100,
+.inline-flex.items-center.gap-2.rounded-full.bg-emerald-100,
+.inline-flex.items-center.gap-2.rounded-full.bg-green-100 {
+    white-space: normal !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+}
+
+@media (max-width: 639px) {
+    /* Product page h1 */
+    h1.font-heading { font-size: 1.6rem !important; line-height: 1.2 !important; }
+
+    /* Rating bar */
+    .flex.items-center.gap-3.bg-white.px-4.py-2\.5.rounded-2xl {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    /* Buy box: single column */
+    .grid.grid-cols-2.gap-3,
+    .grid.grid-cols-3.gap-3 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Product model pill selector */
+    .model-pills, .model-selector {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    /* Product sub-nav (if present) */
+    .product-subnav {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        white-space: nowrap !important;
+        gap: 0 !important;
+    }
+    .product-subnav::-webkit-scrollbar { display: none !important; }
+
+    /* Spec grid: single col */
+    .spec-grid,
+    .grid.grid-cols-2.gap-4,
+    .grid.grid-cols-3.gap-4 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Tab nav on product pages */
+    .tab-nav, [role="tablist"] {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        white-space: nowrap !important;
+        scrollbar-width: none !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    .tab-nav::-webkit-scrollbar { display: none !important; }
+}
+
+/* ================================================================
+   10. CLIENTS / LOGO STRIP
+================================================================ */
+
+/* Ensure the marquee is always full width, logos don't clip */
+.clients-marquee, .logo-marquee {
+    overflow: hidden !important;
+    width: 100% !important;
+}
+.clients-marquee-track, .marquee-track {
+    display: flex !important;
+    gap: 2rem !important;
+    animation: marqueescroll 30s linear infinite !important;
+}
+@media (max-width: 479px) {
+    .clients-marquee-track, .marquee-track {
+        gap: 1.25rem !important;
+    }
+    .clients-marquee-track img, .marquee-track img {
+        height: 1.75rem !important;
+        max-width: 80px !important;
+    }
+}
+
+/* ================================================================
+   11. SECTOR CARDS (index.html)
+================================================================ */
+@media (max-width: 479px) {
+    /* Full width sector image cards */
+    section[id*="sector"] .grid,
+    .sector-overview-section .grid {
+        grid-template-columns: 1fr !important;
+    }
+    .sector-card img { height: 160px !important; object-fit: cover !important; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    section[id*="sector"] .grid,
+    .sector-overview-section .grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .sector-card img { height: 140px !important; object-fit: cover !important; }
+}
+
+/* ================================================================
+   12. ABOUT & CONTACT PAGE
+================================================================ */
+@media (max-width: 767px) {
+    /* About intro side by side -> stack */
+    .about-team-grid { grid-template-columns: 1fr !important; }
+
+    /* Contact grid */
+    .contact-section-grid,
+    .finder-box {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Contact card */
+    .contact-card-box { padding: 1.5rem !important; border-radius: 1.25rem !important; }
+
+    /* Map embed */
+    .contact-map-wrap { height: 240px !important; }
+}
+
+/* ================================================================
+   13. FOOTER — Responsive stacking
+================================================================ */
+@media (max-width: 639px) {
+    footer .grid {
+        grid-template-columns: 1fr !important;
+    }
+    footer .py-16 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    footer h3, footer h4 { font-size: 1rem !important; margin-bottom: 0.75rem !important; }
+    footer li { margin-bottom: 0.5rem !important; }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    footer .grid.lg\:grid-cols-4,
+    footer .grid.lg\:grid-cols-5,
+    footer .grid.grid-cols-4,
+    footer .grid.grid-cols-5 {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+/* ================================================================
+   14. AI ASSISTANT BUTTON — ensure it doesn't block content
+================================================================ */
+@media (max-width: 479px) {
+    /* AI chat bubble: move up slightly */
+    .ai-assistant-btn, [class*="ai-chat"], [class*="whatsapp-btn"] {
+        bottom: 1rem !important;
+        right: 0.75rem !important;
+    }
+}
+
+/* ================================================================
+   15. HERO SLIDE COUNTER & NAV DOTS
+================================================================ */
+@media (max-width: 479px) {
+    .hero-dots-container, .hero-indicators {
+        bottom: 0.75rem !important;
+        gap: 0.4rem !important;
+    }
+    .hero-dot, .hero-indicator-btn {
+        width: 0.5rem !important;
+        height: 0.5rem !important;
+    }
+    /* Slide counter e.g. "01 / 03" */
+    .hero-slide-counter, [class*="slide-counter"] {
+        font-size: 0.65rem !important;
+        padding: 0.2rem 0.4rem !important;
+        bottom: 0.75rem !important;
+        right: 0.75rem !important;
+    }
+}
+
+/* ================================================================
+   16. PRODUCTS.HTML — 3-col card grid on tablet+, 1-col mobile
+================================================================ */
+@media (max-width: 479px) {
+    /* ScaleBreck, HydroPulse, CropSafe product card grids */
+    .grid.grid-cols-1.md\:grid-cols-3,
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    .grid.grid-cols-1.md\:grid-cols-3,
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* ================================================================
+   17. BuzZap PAGE — same fixes as other product pages
+================================================================ */
+/* BuzZap uses yellow/amber theme, same layout patterns */
+.inline-flex.items-center.gap-2.rounded-full.bg-amber-100,
+.inline-flex.items-center.gap-2.rounded-full.bg-yellow-100 {
+    white-space: normal !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+}
+
+/* ================================================================
+   18. UTILITY — Prevent text overflow on small screens
+================================================================ */
+@media (max-width: 639px) {
+    .tracking-widest { letter-spacing: 0.08em !important; }
+    .tracking-wider  { letter-spacing: 0.06em !important; }
+
+    /* Long pill labels with tracking-widest */
+    .text-xs.font-mono.uppercase.tracking-widest {
+        font-size: 0.6rem !important;
+        letter-spacing: 0.06em !important;
+        white-space: normal !important;
+    }
+
+    /* Section eyebrow labels */
+    span.text-xs.font-heading.font-bold.uppercase.tracking-widest {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.08em !important;
+    }
+}
+
+/* ================================================================
+   19. SAFE HORIZONTAL SCROLL PREVENTION
+   (catch-all for any element wider than viewport)
+================================================================ */
+@media (max-width: 639px) {
+    .max-w-7xl,
+    .max-w-5xl,
+    .max-w-4xl,
+    .max-w-3xl,
+    .max-w-2xl,
+    .max-w-xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* ================================================================
+   20. SCALEBRECK / HYDROPULSE / CROPSAFE — Model pill switcher
+================================================================ */
+@media (max-width: 639px) {
+    /* Model tabs */
+    .flex.flex-wrap.gap-2,
+    .flex.gap-2.flex-wrap {
+        gap: 0.4rem !important;
+    }
+    /* Model pill text size */
+    .model-pill, [data-model-id] {
+        font-size: 0.7rem !important;
+        padding: 0.35rem 0.8rem !important;
+    }
+}
+
+/* ================================================================
+   21. SCALEBRECK PRODUCTS PAGE hero py spacing fix
+================================================================ */
+@media (max-width: 639px) {
+    section.relative.py-10 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+    section.relative.py-14 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    section.py-12 { padding-top: 1.75rem !important; padding-bottom: 1.75rem !important; }
+    section.py-16 { padding-top: 2.25rem !important; padding-bottom: 2.25rem !important; }
+}
+
