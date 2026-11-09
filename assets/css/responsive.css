@@ -45,7 +45,7 @@ img { max-width: 100%; height: auto; }
 
     /* -- HERO SECTION -- */
     #hero-slider {
-        min-height: 540px !important;
+        min-height: 600px !important;
     }
 
     /* Slide padding — give content room */
@@ -203,7 +203,7 @@ img { max-width: 100%; height: auto; }
 ================================================================ */
 @media (min-width: 480px) and (max-width: 639px) {
 
-    #hero-slider { min-height: 560px !important; }
+    #hero-slider { min-height: 620px !important; }
     #hero-slider h1 { font-size: 2rem !important; }
 
     /* Stats: show as a row but tighter */
@@ -717,3 +717,47 @@ nav.flex.items-center.gap-2 {
     section.py-16 { padding-top: 2.25rem !important; padding-bottom: 2.25rem !important; }
 }
 
+
+/* ================================================================
+   22. HERO MOBILE IMAGE — ensure product image shows on mobile
+================================================================ */
+@media (max-width: 1023px) {
+    /* Mobile product image circles */
+    #hero-slider .order-first {
+        order: -1 !important;
+    }
+    #hero-slider .grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    #hero-slider .lg\:col-span-5,
+    #hero-slider .lg\:col-span-7 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 479px) {
+    /* Hero mobile image circle size */
+    #hero-slider .flex.lg\:hidden.justify-center .w-40 {
+        width: 8.5rem !important;
+        height: 8.5rem !important;
+    }
+    /* Stats strip — keep horizontal, 3 in a row */
+    #hero-slider .flex.items-center.gap-x-3 {
+        gap: 0.5rem !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        padding-bottom: 2px !important;
+    }
+    #hero-slider .flex.items-center.gap-x-3::-webkit-scrollbar {
+        display: none !important;
+    }
+    /* Stat item shrink */
+    #hero-slider .flex.items-center.gap-x-3 > div {
+        shrink: 0 !important;
+        min-width: 0 !important;
+    }
+}
