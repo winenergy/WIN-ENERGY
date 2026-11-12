@@ -117,7 +117,6 @@
 
         slides.forEach((slide, i) => {
             const bg = slide.querySelector('.hero-bg-photo');
-            const video = slide.querySelector('.hero-bg-video');
             if (i === index) {
                 // Ensure strictly visible
                 slide.style.display = 'flex';
@@ -125,15 +124,6 @@
                 slide.style.visibility = 'visible';
                 slide.classList.add('active');
                 slide.setAttribute('aria-hidden', 'false');
-
-                // Play video if present
-                if (video) {
-                    try {
-                        video.currentTime = 0;
-                        const p = video.play();
-                        if (p && typeof p.catch === 'function') p.catch(() => {});
-                    } catch (e) {}
-                }
 
                 // Restart Ken Burns Animation
                 if (bg) {
@@ -148,10 +138,6 @@
                 slide.style.visibility = 'hidden';
                 slide.classList.remove('active');
                 slide.setAttribute('aria-hidden', 'true');
-
-                if (video) {
-                    try { video.pause(); } catch (e) {}
-                }
 
                 if (bg) {
                     bg.style.animation = 'none';
