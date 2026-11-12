@@ -15,6 +15,8 @@ const MIME_TYPES = {
     '.svg': 'image/svg+xml',
     '.ico': 'image/x-icon',
     '.webp': 'image/webp',
+    '.mp4': 'video/mp4',
+    '.webm': 'video/webm',
     '.woff2': 'font/woff2',
     '.woff': 'font/woff',
     '.ttf': 'font/ttf'
@@ -39,7 +41,7 @@ const server = http.createServer((req, res) => {
         const contentType = MIME_TYPES[ext] || 'application/octet-stream';
         
         // Optimize cache lifetimes for static assets (fixes Lighthouse caching audit)
-        const isStaticAsset = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif', '.ico', '.woff', '.woff2', '.ttf', '.css', '.js'].includes(ext);
+        const isStaticAsset = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif', '.ico', '.woff', '.woff2', '.ttf', '.css', '.js', '.mp4', '.webm'].includes(ext);
         const cacheControl = isStaticAsset 
             ? 'public, max-age=31536000, immutable' 
             : 'public, max-age=0, must-revalidate';

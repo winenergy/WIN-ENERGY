@@ -187,17 +187,30 @@
             background-position: center;
             transform-origin: center center;
             will-change: transform;
+            z-index: 1;
+        }
+        .hero-bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            pointer-events: none;
+            filter: brightness(1.08) contrast(1.02);
+            z-index: 1;
         }
         /* Luminous Clear Scrim: High visibility for authentic photography, crystal-clear white text */
         .hero-scrim-cinematic {
             position: absolute;
             inset: 0;
+            z-index: 2;
             background: linear-gradient(
                 90deg,
-                rgba(0, 9, 38, 0.74) 0%,
-                rgba(0, 9, 38, 0.48) 45%,
-                rgba(0, 9, 38, 0.12) 75%,
-                rgba(0, 9, 38, 0.02) 100%
+                rgba(0, 9, 38, 0.68) 0%,
+                rgba(0, 9, 38, 0.42) 42%,
+                rgba(0, 9, 38, 0.10) 70%,
+                rgba(0, 9, 38, 0.0) 100%
             );
             pointer-events: none;
         }
@@ -205,9 +218,9 @@
             .hero-scrim-cinematic {
                 background: linear-gradient(
                     180deg,
-                    rgba(0, 9, 38, 0.84) 0%,
-                    rgba(0, 9, 38, 0.72) 60%,
-                    rgba(0, 9, 38, 0.45) 100%
+                    rgba(0, 9, 38, 0.78) 0%,
+                    rgba(0, 9, 38, 0.58) 60%,
+                    rgba(0, 9, 38, 0.25) 100%
                 );
             }
         }
@@ -225,8 +238,12 @@
         <!-- SLIDE 1: SCALEBRECK™ Electronic Water Conditioner               -->
         <!-- ============================================================== -->
         <div class="hero-slide active absolute inset-0 w-full h-full items-center" style="display: flex; opacity: 1;" data-slide-index="0" aria-hidden="false">
-            <!-- Authentic Realistic Background (Clean Modern Residential Bathroom) -->
-            <div class="hero-bg-photo" style="background-image: url('assets/images/hero/formosa_plant_dusk.jpg'); filter: brightness(1.02) contrast(1.02);"></div>
+            <!-- Authentic Realistic Background (Bright Luxury Bathroom with Crystal Pure Flowing Water & Video Motion) -->
+            <div class="hero-bg-photo" style="background-image: url('assets/images/hero/scalebreck_bright_water_hero.jpg'); filter: brightness(1.08) contrast(1.02);"></div>
+            <video class="hero-bg-video" autoplay muted loop playsinline poster="assets/images/hero/scalebreck_bright_water_hero.jpg" aria-hidden="true">
+                <source src="assets/videos/scalebreck_water_flow.webm" type="video/webm">
+                <source src="assets/videos/scalebreck_water_flow.mp4" type="video/mp4">
+            </video>
             <!-- Luminous Scrim Gradient -->
             <div class="hero-scrim-cinematic"></div>
 
