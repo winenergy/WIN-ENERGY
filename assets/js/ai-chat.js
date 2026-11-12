@@ -21,6 +21,10 @@ function initFloatingWidgets() {
       flex-direction: column;
       align-items: flex-end;
       gap: 12px;
+      pointer-events: none;
+    }
+    .win-float-container > * {
+      pointer-events: auto;
     }
     @media (max-width: 640px) {
       .win-float-container {
@@ -46,11 +50,15 @@ function initFloatingWidgets() {
         height: 6px !important;
       }
       .win-chat-modal {
+        position: fixed !important;
+        bottom: 74px !important;
+        right: 14px !important;
+        left: 14px !important;
         width: calc(100vw - 28px) !important;
+        min-width: unset !important;
+        max-width: calc(100vw - 28px) !important;
         height: 520px !important;
-        max-height: 80vh !important;
-        right: 0 !important;
-        bottom: 60px !important;
+        max-height: calc(100vh - 90px) !important;
       }
     }
     .win-wa-btn {
@@ -116,21 +124,31 @@ function initFloatingWidgets() {
       box-shadow: 0 0 10px #22C55E;
     }
     .win-chat-modal {
-      position: absolute;
-      bottom: 68px;
-      right: 0;
-      width: 400px;
-      height: 560px;
-      max-height: 85vh;
-      background: #FFFFFF;
-      border-radius: 24px;
-      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(15, 23, 42, 0.08);
+      position: fixed !important;
+      bottom: 86px !important;
+      right: 24px !important;
+      left: auto !important;
+      width: 400px !important;
+      min-width: 360px !important;
+      max-width: min(420px, calc(100vw - 32px)) !important;
+      height: 580px !important;
+      max-height: calc(100vh - 110px) !important;
+      background: #FFFFFF !important;
+      border-radius: 24px !important;
+      box-shadow: 0 25px 60px -12px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(15, 23, 42, 0.08) !important;
       display: none;
       flex-direction: column;
-      overflow: hidden;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
       animation: winChatSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      z-index: 10000;
+      z-index: 10000 !important;
+      box-sizing: border-box !important;
+    }
+    .win-chat-modal * {
+      box-sizing: border-box;
+    }
+    .win-chat-modal .chat-bubble {
+      max-width: 86% !important;
     }
     @keyframes winChatSlideUp {
       from {

@@ -20,6 +20,9 @@ html, body {
 *, *::before, *::after {
     max-width: 100%;
 }
+.win-chat-modal {
+    max-width: min(420px, calc(100vw - 32px)) !important;
+}
 img { max-width: 100%; height: auto; }
 
 /* ================================================================
