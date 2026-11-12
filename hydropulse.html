@@ -17,10 +17,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    </noscript>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Tailwind Configuration -->
     <script>
@@ -63,7 +67,7 @@
     <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center group py-1">
-                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" width="210" height="48" fetchpriority="high" decoding="async" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
             </a>
 
             <!-- Navigation Links -->
@@ -217,7 +221,7 @@
                         <!-- Clickable Thumbnails Row -->
                         <div class="grid grid-cols-4 gap-3 mt-4">
                             <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-win-hpBlue ring-2 ring-sky-200 flex items-center justify-center overflow-hidden transition-all cursor-pointer">
-                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="Marlin Unit" class="h-full object-contain">
+                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" width="400" height="300" loading="lazy" decoding="async" alt="Marlin Unit" class="h-full object-contain">
                             </button>
                             <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-sky-300 transition-all cursor-pointer">
                                 <img src="assets/images/hydropulse/product_agriculture.png" alt="Industrial Unit" class="h-full object-contain">
@@ -390,7 +394,7 @@
 
                 <div class="p-6 bg-sky-50/50 rounded-3xl border border-sky-200 space-y-3">
                     <div class="h-48 rounded-2xl overflow-hidden bg-white border border-sky-200 flex items-center justify-center p-4">
-                        <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Conditioned Flow" class="h-full object-contain">
+                        <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" width="400" height="300" loading="lazy" decoding="async" alt="HydroPulse Conditioned Flow" class="h-full object-contain">
                     </div>
                     <h4 class="font-heading font-bold text-sm text-win-hpBlue">HydroPulse Treated: Suspended Micro-Crystals</h4>
                     <p class="text-xs text-slate-600 leading-relaxed">
@@ -558,7 +562,7 @@
                 <div onclick="if (!event.target.closest('button, a')) { if (window.WinProductBuyBox && window.WinProductBuyBox.selectModel) { window.WinProductBuyBox.selectModel('marlin-eco'); } const bb = document.getElementById('hydropulse-buybox') || document.getElementById('overview'); if (bb) bb.scrollIntoView({behavior:'smooth'}); }" class="group cursor-pointer bg-white rounded-3xl p-8 border border-win-border shadow-xs hover:border-win-hpBlue hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
                     <div class="space-y-4 flex flex-col flex-1">
                         <div class="h-44 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100 shrink-0">
-                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="Marlin Eco 1.0" class="h-full object-contain">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" width="400" height="300" loading="lazy" decoding="async" alt="Marlin Eco 1.0" class="h-full object-contain">
                         </div>
                         <div class="min-h-[26px] flex items-center">
                             <span class="text-[10px] font-mono uppercase tracking-widest bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-full">Flats & Apartments</span>
@@ -590,7 +594,7 @@
                     </div>
                     <div class="space-y-4 flex flex-col flex-1">
                         <div class="h-44 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100 shrink-0">
-                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="Marlin Mine 1.5" class="h-full object-contain">
+                            <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" width="400" height="300" loading="lazy" decoding="async" alt="Marlin Mine 1.5" class="h-full object-contain">
                         </div>
                         <div class="min-h-[26px] flex items-center">
                             <span class="text-[10px] font-mono uppercase tracking-widest bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-full">Villas & High Flow</span>
@@ -792,8 +796,8 @@
             });
         }
     </script>
-    <script src="assets/js/ai-chat.js?v=3.0"></script>
-    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ai-chat.js?v=3.0" defer></script>
+    <script src="assets/js/store.js" defer></script>
     <!-- Product Buy Box & Gallery Engine -->
     <script src="assets/js/product-gallery.js"></script>
     <script>
@@ -846,10 +850,10 @@
             });
         });
     </script>
-    <script src="assets/js/i18next.min.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18next.min.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
     <!-- Interactive Dot Particle Cursor & Click Burst System -->
-    <script src="assets/js/dot-particle-cursor.js"></script>
+    <script src="assets/js/dot-particle-cursor.js" defer></script>
 
 </body>
 </html>

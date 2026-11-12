@@ -17,10 +17,14 @@
     <!-- Google Fonts: Plus Jakarta Sans, Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    </noscript>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Tailwind Configuration -->
     <script>
@@ -75,7 +79,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="index.html" class="flex items-center group py-1">
-                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" width="210" height="48" fetchpriority="high" decoding="async" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
             </a>
 
                         <!-- Navigation Links -->
@@ -228,7 +232,7 @@
                         <div class="relative w-40 h-40 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-br from-orange-500/40 via-white/10 to-amber-500/40 shadow-2xl backdrop-blur-md flex items-center justify-center group">
                             <div class="absolute w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-orange-500/30 to-amber-500/20 blur-xl tech-pulse-halo pointer-events-none"></div>
                             <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-white/20 bg-[#000926]/70 flex items-center justify-center shadow-inner">
-                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="ScaleBreck Water Conditioner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="ScaleBreck Water Conditioner" width="300" height="300" fetchpriority="high" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#000926]/50 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                         </div>
@@ -300,7 +304,7 @@
                         <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full p-2.5 bg-gradient-to-br from-orange-500/40 via-white/10 to-amber-500/40 shadow-2xl backdrop-blur-md flex items-center justify-center group">
                             <!-- Inner Circular Showcase -->
                             <div class="w-full h-full rounded-full overflow-hidden relative border-2 border-white/20 bg-[#000926]/70 flex items-center justify-center shadow-inner">
-                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="ScaleBreck Pipe Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="ScaleBreck Pipe Installation" width="384" height="384" fetchpriority="high" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#000926]/60 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                         </div>
@@ -328,7 +332,7 @@
                         <div class="relative w-40 h-40 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-br from-[#0F52BA]/40 via-white/10 to-[#0284c7]/40 shadow-2xl backdrop-blur-md flex items-center justify-center group">
                             <div class="absolute w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-[#0F52BA]/30 to-[#0284c7]/20 blur-xl tech-pulse-halo pointer-events-none"></div>
                             <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-white/20 bg-[#000926]/75 flex items-center justify-center shadow-inner p-4">
-                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Unit" class="w-full max-h-32 sm:max-h-40 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
+                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Unit" width="320" height="160" loading="lazy" decoding="async" class="w-full max-h-32 sm:max-h-40 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
                             </div>
                         </div>
                     </div>
@@ -399,7 +403,7 @@
                         <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full p-2.5 bg-gradient-to-br from-[#0F52BA]/40 via-white/10 to-[#0284c7]/40 shadow-2xl backdrop-blur-md flex items-center justify-center group">
                             <!-- Inner Circular Showcase -->
                             <div class="w-full h-full rounded-full overflow-hidden relative border-2 border-white/20 bg-[#000926]/75 flex items-center justify-center shadow-inner p-6">
-                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Unit on Pipe" class="w-full max-h-56 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
+                                <img src="assets/images/hydropulse/product_marlin_nobg_checkerboard_removed.png" alt="HydroPulse Marlin Unit on Pipe" width="380" height="224" loading="lazy" decoding="async" class="w-full max-h-56 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
                             </div>
                         </div>
                     </div>
@@ -426,7 +430,7 @@
                         <div class="relative w-40 h-40 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-br from-[#0B6E4F]/40 via-white/10 to-[#50C878]/40 shadow-2xl backdrop-blur-md flex items-center justify-center group">
                             <div class="absolute w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-[#0B6E4F]/30 to-[#50C878]/20 blur-xl tech-pulse-halo pointer-events-none"></div>
                             <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-white/20 bg-[#000926]/75 flex items-center justify-center shadow-inner p-5">
-                                <img src="assets/images/buzzzap/buzzzap_product_clean.png" alt="CropSafe Solar Pest Trap" class="w-full max-h-32 sm:max-h-40 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
+                                <img src="assets/images/buzzzap/buzzzap_product_clean.png" alt="CropSafe Solar Pest Trap" width="320" height="160" loading="lazy" decoding="async" class="w-full max-h-32 sm:max-h-40 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
                             </div>
                         </div>
                     </div>
@@ -497,7 +501,7 @@
                         <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full p-2.5 bg-gradient-to-br from-[#0B6E4F]/40 via-white/10 to-[#50C878]/40 shadow-2xl backdrop-blur-md flex items-center justify-center group">
                             <!-- Inner Circular Showcase -->
                             <div class="w-full h-full rounded-full overflow-hidden relative border-2 border-white/20 bg-[#000926]/75 flex items-center justify-center shadow-inner p-8">
-                                <img src="assets/images/buzzzap/buzzzap_product_clean.png" alt="CropSafe Solar Pest Trap" class="w-full max-h-56 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
+                                <img src="assets/images/buzzzap/buzzzap_product_clean.png" alt="CropSafe Solar Pest Trap" width="380" height="224" loading="lazy" decoding="async" class="w-full max-h-56 object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]">
                             </div>
                         </div>
                     </div>
@@ -549,109 +553,109 @@
             <div class="animate-marquee flex items-center gap-5">
                 <!-- Set 1 -->
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl1.png" alt="Bajaj Electricals Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl1.png" alt="Bajaj Electricals Ltd." width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Bajaj Electricals Ltd.</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl2.png" alt="Mungi Engineers Pvt. Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl2.png" alt="Mungi Engineers Pvt. Ltd." width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mungi Engineers</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl3.png" alt="PWD Maharashtra" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl3.png" alt="PWD Maharashtra" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PWD Maharashtra</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl4.png" alt="SOM Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl4.png" alt="SOM Group" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">SOM Group</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl5.png" alt="Ramee Panchshil" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl5.png" alt="Ramee Panchshil" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Ramee Panchshil</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl6.png" alt="PMPML Transport" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl6.png" alt="PMPML Transport" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PMPML Transport</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl7.png" alt="Aakar Foundry" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl7.png" alt="Aakar Foundry" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Aakar Foundry</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl8.png" alt="Palvi Industries" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl8.png" alt="Palvi Industries" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Palvi Industries</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl9.png" alt="Deccan Cold Storages" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl9.png" alt="Deccan Cold Storages" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Deccan Cold Storages</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl10.png" alt="Mahabal Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl10.png" alt="Mahabal Group" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mahabal Group</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl11.png" alt="Western Metal Ind." class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl11.png" alt="Western Metal Ind." width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Western Metal Ind.</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl12.png" alt="Wind Water Systems" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl12.png" alt="Wind Water Systems" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Wind Water</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl13.png" alt="INOX Movies" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl13.png" alt="INOX Movies" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">INOX Movies</span>
                 </div>
 
                 <!-- Set 2 (for seamless loop) -->
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl1.png" alt="Bajaj Electricals Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl1.png" alt="Bajaj Electricals Ltd." width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Bajaj Electricals Ltd.</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl2.png" alt="Mungi Engineers Pvt. Ltd." class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl2.png" alt="Mungi Engineers Pvt. Ltd." width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mungi Engineers</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl3.png" alt="PWD Maharashtra" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl3.png" alt="PWD Maharashtra" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PWD Maharashtra</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl4.png" alt="SOM Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl4.png" alt="SOM Group" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">SOM Group</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl5.png" alt="Ramee Panchshil" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl5.png" alt="Ramee Panchshil" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Ramee Panchshil</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl6.png" alt="PMPML Transport" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl6.png" alt="PMPML Transport" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">PMPML Transport</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl7.png" alt="Aakar Foundry" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl7.png" alt="Aakar Foundry" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Aakar Foundry</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl8.png" alt="Palvi Industries" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl8.png" alt="Palvi Industries" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Palvi Industries</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl9.png" alt="Deccan Cold Storages" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl9.png" alt="Deccan Cold Storages" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Deccan Cold Storages</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl10.png" alt="Mahabal Group" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl10.png" alt="Mahabal Group" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Mahabal Group</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl11.png" alt="Western Metal Ind." class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl11.png" alt="Western Metal Ind." width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Western Metal Ind.</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl12.png" alt="Wind Water Systems" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl12.png" alt="Wind Water Systems" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">Wind Water</span>
                 </div>
                 <div class="shrink-0 w-48 h-28 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xs hover:border-win-hpBlue hover:shadow-md transition-all">
-                    <img src="assets/images/clientLogos/cl13.png" alt="INOX Movies" class="h-10 w-auto max-w-[120px] object-contain">
+                    <img src="assets/images/clientLogos/cl13.png" alt="INOX Movies" width="120" height="40" loading="lazy" decoding="async" class="h-10 w-auto max-w-[120px] object-contain">
                     <span class="text-xs font-heading font-bold text-slate-800 text-center leading-tight truncate w-full">INOX Movies</span>
                 </div>
             </div>
@@ -671,7 +675,7 @@
                 <!-- Sector 1: Agriculture -->
                 <div class="bg-win-surface border border-win-border rounded-3xl overflow-hidden flex flex-col justify-between editorial-shadow hover:border-win-hpBlue transition-colors group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="assets/images/hydropulse/farmland_hero.png" alt="Agriculture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/images/hydropulse/farmland_hero.png" alt="Agriculture" width="480" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
@@ -687,7 +691,7 @@
                 <!-- Sector 2: Residential -->
                 <div class="bg-win-surface border border-win-border rounded-3xl overflow-hidden flex flex-col justify-between editorial-shadow hover:border-win-hpBlue transition-colors group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="assets/images/hydropulse/domestic_hero.png" alt="Residential Homes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/images/hydropulse/domestic_hero.png" alt="Residential Homes" width="480" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
@@ -703,7 +707,7 @@
                 <!-- Sector 3: Hotels & Hospitality -->
                 <div class="bg-win-surface border border-win-border rounded-3xl overflow-hidden flex flex-col justify-between editorial-shadow hover:border-win-hpBlue transition-colors group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="assets/images/hydropulse/hotel_hero.png" alt="Hotels & Commercial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/images/hydropulse/hotel_hero.png" alt="Hotels & Commercial" width="480" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
@@ -719,7 +723,7 @@
                 <!-- Sector 4: Industrial Plants -->
                 <div class="bg-win-surface border border-win-border rounded-3xl overflow-hidden flex flex-col justify-between editorial-shadow hover:border-win-hpBlue transition-colors group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="assets/images/hydropulse/industry_hero.png" alt="Industrial Plants" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="assets/images/hydropulse/industry_hero.png" alt="Industrial Plants" width="480" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
@@ -748,28 +752,28 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-win-base rounded-2xl overflow-hidden border border-win-border group">
                     <div class="h-52 overflow-hidden">
-                        <img src="assets/images/buzzzap/buzzzap_factory_stock.jpg" alt="Win Energy Manufacturing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/images/buzzzap/buzzzap_factory_stock.jpg" alt="Win Energy Manufacturing" width="380" height="260" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="p-4 text-xs font-heading font-semibold text-slate-700">Durable Quality Parts Assembly</div>
                 </div>
 
                 <div class="bg-win-base rounded-2xl overflow-hidden border border-win-border group">
                     <div class="h-52 overflow-hidden">
-                        <img src="assets/images/buzzzap/buzzzap_factory_assembly.jpg" alt="CropSafe Assembly Line" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/images/buzzzap/buzzzap_factory_assembly.jpg" alt="CropSafe Assembly Line" width="380" height="260" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="p-4 text-xs font-heading font-semibold text-slate-700">Device Effectiveness Testing</div>
                 </div>
 
                 <div class="bg-win-base rounded-2xl overflow-hidden border border-win-border group">
                     <div class="h-52 overflow-hidden">
-                        <img src="assets/images/buzzzap/buzzzap_vineyard_field.jpg" alt="CropSafe in Vineyard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/images/buzzzap/buzzzap_vineyard_field.jpg" alt="CropSafe in Vineyard" width="380" height="260" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="p-4 text-xs font-heading font-semibold text-slate-700">Real Field Deployment in Grape Vineyards</div>
                 </div>
 
                 <div class="bg-win-base rounded-2xl overflow-hidden border border-win-border group">
                     <div class="h-52 overflow-hidden">
-                        <img src="assets/images/buzzzap/buzzzap_insect_tray.jpg" alt="CropSafe Catch Tray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/images/buzzzap/buzzzap_insect_tray.jpg" alt="CropSafe Catch Tray" width="380" height="260" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="p-4 text-xs font-heading font-semibold text-slate-700">Overnight Catch: Hundreds of Pest Beetles Trapped</div>
                 </div>
@@ -859,7 +863,7 @@
                 <!-- Brand Info + Socials + Certifications -->
                 <div class="lg:col-span-2 space-y-6">
                     <a href="index.html" class="inline-flex items-center">
-                        <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain">
+                        <img src="assets/images/company/win_energy_logo_footer.png" alt="Win Energy — Always Reliable" width="200" height="48" loading="lazy" decoding="async" class="h-11 sm:h-12 w-auto object-contain">
                     </a>
                     <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
                         Pioneering physical clean-tech engineering featuring HydroPulse water descaling (Marlin Eco 1.0 / Marlin Mine 1.5) and CropSafe solar agricultural insect control.
@@ -896,13 +900,13 @@
                     <!-- Certification Presence (Dark Rounded Boxes exactly like user Image 1) -->
                     <div class="flex items-center gap-3 pt-2">
                         <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
-                            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" class="h-10 w-auto object-contain brightness-95">
+                            <img src="assets/images/hydropulse/badge_iso9001.png" alt="ISO 9001:2015" width="100" height="40" loading="lazy" decoding="async" class="h-10 w-auto object-contain brightness-95">
                         </div>
                         <div class="h-16 px-4 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
-                            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" class="h-10 w-auto object-contain brightness-95">
+                            <img src="assets/images/hydropulse/badge_iso14001.png" alt="ISO 14001:2015" width="100" height="40" loading="lazy" decoding="async" class="h-10 w-auto object-contain brightness-95">
                         </div>
                         <div class="h-16 px-5 bg-slate-900/90 border border-slate-700/80 rounded-2xl flex items-center justify-center shadow-xs">
-                            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" class="h-9 w-auto object-contain brightness-95">
+                            <img src="assets/images/hydropulse/badge_ce.png" alt="CE Certified" width="90" height="36" loading="lazy" decoding="async" class="h-9 w-auto object-contain brightness-95">
                         </div>
                     </div>
 
@@ -1012,13 +1016,13 @@
             }
         }
     </script>
-    <script src="assets/js/ai-chat.js?v=3.0"></script>
-    <script src="assets/js/store.js"></script>
-    <script src="assets/js/hero-slider.js"></script>
-    <script src="assets/js/i18next.min.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/ai-chat.js?v=3.0" defer></script>
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/hero-slider.js" defer></script>
+    <script src="assets/js/i18next.min.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
     <!-- Interactive Dot Particle Cursor & Click Burst System -->
-    <script src="assets/js/dot-particle-cursor.js"></script>
+    <script src="assets/js/dot-particle-cursor.js" defer></script>
 
 </body>
 </html>

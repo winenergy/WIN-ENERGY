@@ -17,10 +17,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    </noscript>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Tailwind Configuration -->
     <script>
@@ -63,7 +67,7 @@
     <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center group py-1">
-                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" width="210" height="48" fetchpriority="high" decoding="async" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
             </a>
 
             <!-- Navigation Links -->
@@ -854,8 +858,8 @@
             });
         }
     </script>
-    <script src="assets/js/ai-chat.js?v=3.0"></script>
-    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ai-chat.js?v=3.0" defer></script>
+    <script src="assets/js/store.js" defer></script>
     <!-- Product Buy Box & Gallery Engine -->
     <script src="assets/js/product-gallery.js"></script>
     <script>
@@ -909,10 +913,10 @@
             });
         });
     </script>
-    <script src="assets/js/i18next.min.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18next.min.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
     <!-- Interactive Dot Particle Cursor & Click Burst System -->
-    <script src="assets/js/dot-particle-cursor.js"></script>
+    <script src="assets/js/dot-particle-cursor.js" defer></script>
 
 </body>
 </html>

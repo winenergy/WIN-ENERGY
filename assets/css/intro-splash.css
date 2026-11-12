@@ -38,6 +38,7 @@
     filter: blur(60px);
     pointer-events: none;
     animation: splashGlowPulse 2.8s ease-in-out infinite alternate;
+    will-change: transform, opacity;
 }
 
 .splash-ambient-green {
@@ -51,6 +52,7 @@
     filter: blur(50px);
     pointer-events: none;
     animation: splashGlowDrift 3s ease-in-out infinite alternate;
+    will-change: transform, opacity;
 }
 
 .splash-ambient-orange {
@@ -58,6 +60,14 @@
     width: 400px;
     height: 400px;
     background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, transparent 65%);
+    top: 25%;
+    left: 20%;
+    border-radius: 50%;
+    filter: blur(50px);
+    pointer-events: none;
+    animation: splashGlowDrift 3.5s ease-in-out infinite alternate-reverse;
+    will-change: transform, opacity;
+}
     top: 15%;
     left: 15%;
     border-radius: 50%;
@@ -278,7 +288,10 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 0%;
+    width: 100%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    will-change: transform;
     background: linear-gradient(90deg, #EA580C 0%, #0F52BA 45%, #10B981 85%, #F59E0B 100%);
     border-radius: 9999px;
     box-shadow: 0 0 10px rgba(15, 82, 186, 0.5);
@@ -375,9 +388,9 @@
 }
 
 @keyframes splashProgressFill {
-    0% { width: 0%; }
-    60% { width: 75%; }
-    100% { width: 100%; }
+    0% { transform: scaleX(0); }
+    60% { transform: scaleX(0.75); }
+    100% { transform: scaleX(1); }
 }
 
 @keyframes splashHaloScale {

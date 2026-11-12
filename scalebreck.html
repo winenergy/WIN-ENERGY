@@ -17,10 +17,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+    </noscript>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Tailwind Configuration -->
     <script>
@@ -63,7 +67,7 @@
     <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center group py-1">
-                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" width="210" height="48" fetchpriority="high" decoding="async" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
             </a>
 
             <!-- Navigation Links -->
@@ -200,6 +204,7 @@
                             <img data-gallery-main 
                                  src="assets/images/scalebreck/scalebreck_product_clean.jpg" 
                                  alt="SCALEBRECK Electronic Water Conditioner" 
+                                 width="480" height="360" fetchpriority="high" decoding="async" 
                                  class="max-h-72 sm:max-h-84 w-auto object-contain transition-opacity duration-200">
                             
                             <!-- Prev / Next Navigation Arrows -->
@@ -219,16 +224,16 @@
                         <!-- Clickable Thumbnails Row -->
                         <div class="grid grid-cols-4 gap-3 mt-4">
                             <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-orange-500 ring-2 ring-orange-200 flex items-center justify-center overflow-hidden transition-all cursor-pointer">
-                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="Base Unit" class="h-full object-contain">
+                                <img src="assets/images/scalebreck/scalebreck_product_clean.jpg" alt="Base Unit" width="80" height="80" loading="lazy" decoding="async" class="h-full object-contain">
                             </button>
                             <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-orange-300 transition-all cursor-pointer">
-                                <img src="assets/images/scalebreck/scalebreck_installation.jpg" alt="Pipeline Installation" class="h-full object-cover rounded-lg">
+                                <img src="assets/images/scalebreck/scalebreck_installation.jpg" alt="Pipeline Installation" width="80" height="80" loading="lazy" decoding="async" class="h-full object-cover rounded-lg">
                             </button>
                             <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-orange-300 transition-all cursor-pointer">
-                                <img src="assets/images/scalebreck/hardwater_scale_damage.jpg" alt="Limescale Solved" class="h-full object-cover rounded-lg">
+                                <img src="assets/images/scalebreck/hardwater_scale_damage.jpg" alt="Limescale Solved" width="80" height="80" loading="lazy" decoding="async" class="h-full object-cover rounded-lg">
                             </button>
                             <button type="button" data-gallery-thumb class="h-20 rounded-xl bg-slate-50 p-1.5 border-2 border-slate-200 flex items-center justify-center overflow-hidden hover:border-orange-300 transition-all cursor-pointer">
-                                <img src="assets/images/scalebreck/scalebreck_circle_preview.jpg" alt="Hardware Core" class="h-full object-cover rounded-lg">
+                                <img src="assets/images/scalebreck/scalebreck_circle_preview.jpg" alt="Hardware Core" width="80" height="80" loading="lazy" decoding="async" class="h-full object-cover rounded-lg">
                             </button>
                         </div>
                     </div>
@@ -398,7 +403,7 @@
 
             <!-- Hard Water Damage Banner Photo -->
             <div class="rounded-3xl border border-win-border p-6 bg-orange-50/40 flex flex-col md:flex-row items-center gap-6">
-                <img src="assets/images/scalebreck/hardwater_scale_damage.jpg" alt="Typical Hard Water Damage Solved by ScaleBreck" class="w-full md:w-72 h-44 rounded-2xl object-cover border border-orange-200 shrink-0">
+                <img src="assets/images/scalebreck/hardwater_scale_damage.jpg" alt="Typical Hard Water Damage Solved by ScaleBreck" width="288" height="176" loading="lazy" decoding="async" class="w-full md:w-72 h-44 rounded-2xl object-cover border border-orange-200 shrink-0">
                 <div class="space-y-2">
                     <div class="text-xs font-bold font-mono text-orange-800 uppercase tracking-wider">Visual Evidence</div>
                     <h4 class="font-heading font-bold text-base text-win-dark">Severe Limescale Encrustation Inside Plumbing & Showers</h4>
@@ -1010,8 +1015,8 @@
             });
         }
     </script>
-    <script src="assets/js/ai-chat.js?v=3.0"></script>
-    <script src="assets/js/store.js"></script>
+    <script src="assets/js/ai-chat.js?v=3.0" defer></script>
+    <script src="assets/js/store.js" defer></script>
     <!-- Product Buy Box & Gallery Engine -->
     <script src="assets/js/product-gallery.js"></script>
     <script>
@@ -1064,10 +1069,10 @@
             });
         });
     </script>
-    <script src="assets/js/i18next.min.js"></script>
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18next.min.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
     <!-- Interactive Dot Particle Cursor & Click Burst System -->
-    <script src="assets/js/dot-particle-cursor.js"></script>
+    <script src="assets/js/dot-particle-cursor.js" defer></script>
 
 </body>
 </html>
