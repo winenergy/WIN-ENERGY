@@ -73,8 +73,16 @@
 <!-- Sticky Minimalist Header -->
     <header class="sticky top-0 z-40 bg-win-base/90 backdrop-blur-md border-b border-win-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center group py-1">
-                <img src="assets/images/company/win_energy_logo_horizontal.png" alt="Win Energy — Always Reliable" width="210" height="48" fetchpriority="high" decoding="async" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+            <!-- Prominent Brand Crest / Left Logo Bay (Holds full stacked logo while navbar stays thin) -->
+            <a href="index.html" class="win-brand-crest group" aria-label="Win Energy — Always Reliable">
+                <div class="win-brand-crest-inner">
+                    <img src="assets/images/company/win_energy_official_stacked.png" 
+                         alt="Win Energy — Always Reliable" 
+                         width="136" height="90" 
+                         fetchpriority="high" decoding="async" 
+                         class="win-brand-crest-logo">
+                </div>
+                <div class="win-brand-crest-accent"></div>
             </a>
 
                         <!-- Navigation Links -->

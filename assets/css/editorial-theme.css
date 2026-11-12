@@ -675,4 +675,98 @@ html.lang-mr .font-heading, html.lang-mr .font-serif {
     line-height: 1.65;
 }
 
+/* ============================================================== */
+/* WIN ENERGY - ARCHITECTURAL BRAND CREST (HEADER BADGE)          */
+/* Broad left pedestal housing the full stacked logo while        */
+/* keeping the entire navbar strip thin, clean, and normal        */
+/* ============================================================== */
+.win-brand-crest {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-left: 1px solid rgba(226, 232, 240, 0.95);
+    border-right: 1px solid rgba(226, 232, 240, 0.95);
+    border-bottom: 1.5px solid rgba(226, 232, 240, 0.95);
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.10), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+    padding: 8px 16px 11px 16px;
+    align-self: flex-start;
+    margin-top: -1px;
+    margin-bottom: -32px;
+    z-index: 50;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.win-brand-crest:hover {
+    transform: translateY(2px);
+    box-shadow: 0 18px 36px -6px rgba(15, 23, 42, 0.14), 0 6px 14px -3px rgba(2, 132, 199, 0.15);
+}
+
+.win-brand-crest-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.win-brand-crest-logo {
+    width: 136px;
+    height: auto;
+    max-height: 88px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.win-brand-crest:hover .win-brand-crest-logo {
+    transform: scale(1.03);
+}
+
+.win-brand-crest-accent {
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    right: 18%;
+    height: 3px;
+    background: linear-gradient(90deg, #0055A5 0%, #10B981 100%);
+    border-radius: 9999px;
+}
+
+@media (max-width: 640px) {
+    .win-brand-crest {
+        padding: 5px 10px 8px 10px;
+        margin-bottom: -24px;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+    }
+    .win-brand-crest-logo {
+        width: 95px;
+        max-height: 62px;
+    }
+    .win-brand-crest-accent {
+        height: 2px;
+        left: 15%;
+        right: 15%;
+    }
+}
+
+@media (max-width: 420px) {
+    .win-brand-crest {
+        padding: 4px 8px 6px 8px;
+        margin-bottom: -20px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .win-brand-crest-logo {
+        width: 82px;
+        max-height: 54px;
+    }
+}
+
+
 
