@@ -2,18 +2,51 @@
  * Win Energy - 3-Second Cinematic Intro Animation Controller
  * Light Modern Clean-Tech Theme (White & Light Blue)
  * 
- * Runs smoothly at the start of the website (index.html)
- * - 100% GPU-composited pure CSS animation with zero load lag
- * - Auto-transitions into the full website in 3 seconds
- * - Interactive: click anywhere or click "Skip" for instant entry
+ * Rules:
+ * - Shows ONLY the very first time a user lands on the homepage.
+ * - When the user navigates to other pages and comes back to the homepage,
+ *   it will NEVER show again during that browser session.
+ * - 100% GPU-composited pure CSS animation with zero load lag.
+ * - Interactive: click anywhere or click "Skip" for instant entry.
+ * - Manual preview supported via ?splash=1 query parameter.
  */
 
 (function () {
     'use strict';
 
+    const SESSION_KEY = 'win_energy_intro_shown';
     const EXIT_START = 2600; // Transition begins at 2.6s, completes by 3.0s
 
+    function shouldShowIntro() {
+        try {
+            // Allow manual preview via ?splash=1
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('splash') === '1') {
+                return true;
+            }
+
+            // If already shown once during this browser session, never show again
+            if (sessionStorage.getItem(SESSION_KEY) === 'true') {
+                return false;
+            }
+        } catch (e) {
+            console.warn('SessionStorage check:', e);
+        }
+        return true;
+    }
+
     function createSplashOverlay() {
+        if (!shouldShowIntro()) {
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+            return;
+        }
+
+        // Mark as shown so navigating away and returning to the homepage never triggers it again
+        try {
+            sessionStorage.setItem(SESSION_KEY, 'true');
+        } catch (e) {}
+
         if (document.getElementById('win-splash-overlay')) return;
 
         // Freeze scrolling while intro animation is active
