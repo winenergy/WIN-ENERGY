@@ -2,61 +2,21 @@
  * Win Energy - 3-Second Cinematic Intro Animation Controller
  * Light Modern Clean-Tech Theme (White & Light Blue)
  * 
- * Rules:
- * - Runs ONLY ONCE per session when a user first enters the site from any link (Google, shared, direct).
- * - Never shows again when navigating between internal pages, links, or subsequent visits in the session.
- * - Supports ?splash=1 query parameter for testing/previewing at any time.
+ * Runs smoothly at the start of the website (index.html)
+ * - 100% GPU-composited pure CSS animation with zero load lag
+ * - Auto-transitions into the full website in 3 seconds
+ * - Interactive: click anywhere or click "Skip" for instant entry
  */
 
 (function () {
     'use strict';
 
-    const SPLASH_KEY = 'win_energy_splash_shown';
-    const SPLASH_DURATION = 3000; // 3.0 seconds
-    const EXIT_START = 2600;       // Transition start at 2.6s
-
-    // Check if splash was already shown in this browser session or if running in an automated audit/bot
-    function shouldShowSplash() {
-        try {
-            // Allow manual preview via ?splash=1
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('splash') === '1') {
-                return true;
-            }
-
-            // Skip instantly for automated Lighthouse/PageSpeed/performance audits or search engine bots
-            const isAuditOrBot = /Chrome-Lighthouse|Lighthouse|PageSpeed|HeadlessChrome|GTmetrix|Googlebot|bingbot/i.test(navigator.userAgent)
-                || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-            if (isAuditOrBot) {
-                return false;
-            }
-
-            // If already shown once during this session, do not show again
-            if (sessionStorage.getItem(SPLASH_KEY) === 'true') {
-                return false;
-            }
-        } catch (e) {
-            console.warn('SessionStorage check:', e);
-        }
-        return true;
-    }
+    const EXIT_START = 2600; // Transition begins at 2.6s, completes by 3.0s
 
     function createSplashOverlay() {
-        if (!shouldShowSplash()) {
-            // Already visited in this session: ensure scrolling is normal and do nothing
-            document.documentElement.style.overflow = '';
-            document.body.style.overflow = '';
-            return;
-        }
-
-        // Mark as shown so navigation across other pages never triggers it again
-        try {
-            sessionStorage.setItem(SPLASH_KEY, 'true');
-        } catch (e) {}
-
         if (document.getElementById('win-splash-overlay')) return;
 
-        // Freeze scrolling while 3-second intro is active
+        // Freeze scrolling while intro animation is active
         document.documentElement.style.overflow = 'hidden';
         document.body.style.overflow = 'hidden';
 
@@ -88,12 +48,12 @@
                         <div class="splash-orbit-particle"></div>
                         <div class="splash-orbit-particle-green"></div>
                     </div>
-                    <img src="assets/images/company/win_energy_emblem.png" alt="Win Energy Emblem" class="splash-emblem-img">
+                    <img src="assets/images/company/win_energy_emblem.png" alt="Win Energy Emblem" class="splash-emblem-img" width="120" height="120" fetchpriority="high">
                 </div>
 
                 <!-- Official Win Energy Typography (All-Blue Wordmark & Tagline) -->
                 <div class="splash-text-wrap">
-                    <img src="assets/images/company/win_energy_text.png" alt="Win Energy — Always Reliable" class="splash-logo-text-img">
+                    <img src="assets/images/company/win_energy_text.png" alt="Win Energy — Always Reliable" class="splash-logo-text-img" width="260" height="70" fetchpriority="high">
                     <div class="splash-subtitle">Physical Clean-Tech & Water Engineering</div>
 
                     <!-- 3-Second Precision Progress Beam -->
@@ -130,18 +90,20 @@
         }
 
         // Automatic 3-second schedule
-        setTimeout(exitSplash, EXIT_START);
+        const autoTimer = setTimeout(exitSplash, EXIT_START);
 
         // Click to skip listeners
         const skipBtn = document.getElementById('splash-skip-btn');
         if (skipBtn) {
             skipBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                clearTimeout(autoTimer);
                 exitSplash();
             });
         }
 
         overlay.addEventListener('click', () => {
+            clearTimeout(autoTimer);
             exitSplash();
         });
     }
