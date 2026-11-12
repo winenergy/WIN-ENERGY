@@ -676,23 +676,33 @@ html.lang-mr .font-heading, html.lang-mr .font-serif {
 }
 
 /* ============================================================== */
-/* WIN ENERGY - ARCHITECTURAL BRAND CREST (HEADER BADGE)          */
-/* Broad left pedestal housing the full stacked logo cleanly      */
-/* perfectly centered, never cut off, navbar stays sleek & thin   */
+/* WIN ENERGY - SPACIOUS HEADER STRIP & BRAND LOGO                */
+/* White strip is comfortably wide & tall so logo fits perfectly  */
 /* ============================================================== */
+header {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+}
+
+header .header-nav-wrap,
+header .h-20 {
+    min-height: 98px !important;
+    height: 98px !important;
+}
+
 .win-brand-crest {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
-    border: 1px solid rgba(226, 232, 240, 0.95);
-    border-radius: 16px;
-    box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
-    padding: 6px 16px 8px 16px;
-    margin: 4px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: auto 0;
     z-index: 50;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
     text-decoration: none;
     flex-shrink: 0;
     box-sizing: border-box;
@@ -700,8 +710,7 @@ html.lang-mr .font-heading, html.lang-mr .font-serif {
 
 .win-brand-crest:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px -3px rgba(15, 23, 42, 0.12), 0 2px 6px -1px rgba(2, 132, 199, 0.12);
-    border-color: #CBD5E1;
+    opacity: 0.92;
 }
 
 .win-brand-crest-inner {
@@ -712,9 +721,9 @@ html.lang-mr .font-heading, html.lang-mr .font-serif {
 }
 
 .win-brand-crest-logo {
-    height: 52px;
+    height: 70px;
     width: auto;
-    max-width: 105px;
+    max-width: 140px;
     object-fit: contain;
     display: block;
     transition: transform 0.25s ease;
@@ -725,40 +734,30 @@ html.lang-mr .font-heading, html.lang-mr .font-serif {
 }
 
 .win-brand-crest-accent {
-    position: absolute;
-    bottom: 0;
-    left: 18%;
-    right: 18%;
-    height: 2.5px;
-    background: linear-gradient(90deg, #0055A5 0%, #10B981 100%);
-    border-radius: 9999px;
+    display: none;
 }
 
 @media (max-width: 768px) {
-    .win-brand-crest {
-        padding: 4px 12px 6px 12px;
-        border-radius: 13px;
-        margin: 2px 0;
+    header .header-nav-wrap,
+    header .h-20 {
+        min-height: 84px !important;
+        height: 84px !important;
     }
     .win-brand-crest-logo {
-        height: 44px;
-        max-width: 90px;
+        height: 56px;
+        max-width: 110px;
     }
 }
 
 @media (max-width: 480px) {
-    .win-brand-crest {
-        padding: 3px 10px 5px 10px;
-        border-radius: 11px;
+    header .header-nav-wrap,
+    header .h-20 {
+        min-height: 76px !important;
+        height: 76px !important;
     }
     .win-brand-crest-logo {
-        height: 38px;
-        max-width: 78px;
-    }
-    .win-brand-crest-accent {
-        height: 2px;
-        left: 12%;
-        right: 12%;
+        height: 50px;
+        max-width: 95px;
     }
 }
 

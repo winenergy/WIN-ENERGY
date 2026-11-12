@@ -31,7 +31,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 479px) {
 
     /* -- HEADER / NAV -- */
-    header .h-20 { height: 3.75rem !important; }
+    header .h-20, header .header-nav-wrap { height: 4.75rem !important; min-height: 4.75rem !important; }
     header .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
 
     /* Shrink logo on very small screens */
@@ -417,7 +417,8 @@ img { max-width: 100%; height: auto; }
     header > div {
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
-        height: 3.5rem !important;
+        height: 4.75rem !important;
+        min-height: 4.75rem !important;
     }
     /* Compact account button */
     header button[onclick*="openLoginModal"] {
