@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Our Products — Win Energy (ScaleBreck, HydroPulse & CropSafe)</title>
     <meta name="description" content="Discover the full lineup of Win Energy products: ScaleBreck, HydroPulse physical water descalers and CropSafe solar agricultural insect killers.">
-    <link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
+        <!-- Multi-language SEO alternates -->
+    <link rel="alternate" hreflang="en" href="https://winenergy.in/products.html">
+    <link rel="alternate" hreflang="mr" href="https://winenergy.in/products.html?lang=mr">
+    <link rel="alternate" hreflang="x-default" href="https://winenergy.in/products.html">
+<link rel="icon" type="image/png" href="assets/images/company/win_energy_emblem.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,7 +17,7 @@
     <!-- Google Fonts: Plus Jakarta Sans, Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,9 +54,9 @@
                         'base': ['1.125rem', { lineHeight: '1.7' }]
                     },
                     fontFamily: {
-                        serif: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-                        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
+                        serif: ['"Plus Jakarta Sans"', 'Inter', '"Noto Sans Devanagari"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', '"Noto Sans Devanagari"', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'Inter', '"Noto Sans Devanagari"', 'sans-serif']
                     }
                 }
             }
@@ -72,24 +76,33 @@
 
                         <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Home</a>
-                <a href="products.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1">Our Products</a>
-                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">About Win Energy</a>
-                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors">Contact</a>
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors"><span data-i18n="nav.home">Home</span></a>
+                <a href="products.html" class="text-sm font-semibold text-win-hpBlue border-b-2 border-win-hpBlue pb-1"><span data-i18n="nav.products">Our Products</span></a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors"><span data-i18n="nav.about">About Win Energy</span></a>
+                <a href="contact.html" class="text-sm font-medium text-slate-700 hover:text-win-hpBlue transition-colors"><span data-i18n="nav.contact">Contact</span></a>
             </nav>
 
             <!-- User & Commerce Actions -->
             <div class="flex items-center gap-2.5 sm:gap-3">
+                <!-- Language Switcher -->
+                <div class="relative flex items-center bg-white border border-win-border hover:border-win-hpBlue rounded-xl px-2 sm:px-2.5 py-2 shadow-xs transition-all">
+                    <i data-lucide="globe" class="w-4 h-4 text-win-hpBlue mr-1 sm:mr-1.5 shrink-0"></i>
+                    <select class="lang-switcher bg-transparent text-xs font-heading font-semibold text-slate-700 focus:outline-none cursor-pointer pr-1" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="mr">मराठी</option>
+                    </select>
+                </div>
+
                 <!-- Log In Button -->
                 <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-win-hpBlue px-3.5 py-2.5 rounded-xl border border-win-border hover:border-win-hpBlue bg-white shadow-xs transition-all">
                     <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
-                    <span class="header-user-label hidden sm:inline">Account</span>
+                    <span class="header-user-label hidden sm:inline" data-i18n="nav.account">Account</span>
                 </button>
 
                 <!-- Cart Button -->
                 <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-sky-100 hover:bg-sky-200 text-sky-900 font-heading font-bold px-3.5 sm:px-4 py-2.5 rounded-xl text-xs tracking-wide border border-sky-200 shadow-xs transition-all group">
                     <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600 group-hover:scale-110 transition-transform"></i>
-                    <span class="hidden sm:inline">Cart</span>
+                    <span class="hidden sm:inline" data-i18n="nav.cart">Cart</span>
                     <span id="header-cart-count" class="px-1.5 py-0.5 bg-sky-600 text-white text-[10px] font-bold rounded-full min-w-[18px] text-center leading-none">0</span>
                 </button>
 
@@ -102,15 +115,15 @@
 
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden bg-win-surface border-b border-win-border px-6 py-6 space-y-4 shadow-xl">
-                        <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Home</a>
-            <a href="products.html" class="block text-base font-semibold text-win-hpBlue">Our Products</a>
-            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">About Win Energy</a>
-            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue">Contact</a>
+                        <a href="index.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue"><span data-i18n="nav.home">Home</span></a>
+            <a href="products.html" class="block text-base font-semibold text-win-hpBlue"><span data-i18n="nav.products">Our Products</span></a>
+            <a href="about.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue"><span data-i18n="nav.about">About Win Energy</span></a>
+            <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-win-hpBlue"><span data-i18n="nav.contact">Contact</span></a>
             
             <div class="pt-3 border-t border-win-border grid grid-cols-2 gap-3">
                 <button onclick="openLoginModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
                     <i data-lucide="user" class="w-4 h-4 text-win-hpBlue"></i>
-                    <span>Log In</span>
+                    <span data-i18n="nav.login">Log In</span>
                 </button>
                 <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-2 text-xs font-heading font-bold text-sky-900 py-3 rounded-xl bg-sky-100 hover:bg-sky-200 border border-sky-200 transition-colors">
                     <i data-lucide="shopping-bag" class="w-4 h-4 text-sky-600"></i>
@@ -120,6 +133,17 @@
             <a href="tel:+919595955585" class="w-full bg-win-dark text-white py-3 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2">
                 <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9595955585
             </a>
+            <div class="pt-3 border-t border-win-border flex items-center justify-between">
+                <span class="text-xs font-heading font-semibold text-slate-500 uppercase tracking-wider" data-i18n="nav.language">Language</span>
+                <div class="relative flex items-center bg-win-sand border border-win-border rounded-xl px-3 py-1.5">
+                    <i data-lucide="globe" class="w-4 h-4 text-win-hpBlue mr-2"></i>
+                    <select class="lang-switcher bg-transparent text-xs font-heading font-semibold text-slate-800 focus:outline-none cursor-pointer" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="mr">मराठी</option>
+                    </select>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -127,7 +151,7 @@
     <section class="py-8 sm:py-10 bg-gradient-to-b from-[#D6E6F3]/30 to-win-base border-b border-win-border">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center space-y-3">
             <h1 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#000926] tracking-tight">
-                Our <span class="bg-gradient-to-r from-[#0F52BA] to-[#50C878] bg-clip-text text-transparent">Products</span>
+                <span data-i18n="products.title">Our Products</span>
             </h1>
             <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
                 <a href="#scalebreck" class="px-5 py-2 rounded-full bg-white hover:bg-orange-50 border border-orange-200 text-slate-700 hover:text-orange-600 text-xs sm:text-sm font-heading font-semibold tracking-wide transition-all shadow-xs">
@@ -151,7 +175,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-win-border">
                 <div class="space-y-3 max-w-2xl">
                     <span class="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold bg-orange-100 px-3 py-1 rounded-full">Product Line 01 · Non-Chemical Physical Conditioning</span>
-                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight">SCALEBRECK™ Electronic Water Conditioner</h2>
+                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight" data-i18n="products.scalebreck_title">SCALEBRECK™ Electronic Water Conditioner</h2>
                     <p class="text-win-muted text-sm sm:text-base leading-relaxed">
                         Engineered by <strong>Leanway Energy Pvt. Ltd. & Win Energy</strong> to mitigate limescale deposits and manage high Total Dissolved Solids (TDS) water. Pure physical conditioning with zero salts, zero recurring chemicals, and zero water pressure drop.
                     </p>
@@ -374,7 +398,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-win-border">
                 <div class="space-y-3 max-w-2xl">
                     <span class="text-xs font-mono uppercase tracking-widest text-win-hpBlue font-bold bg-win-hpBlueLight px-3 py-1 rounded-full">Product Line 02 · Hydropolarization</span>
-                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight">HydroPulse™ Electronic Water Descalers</h2>
+                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight" data-i18n="products.hydropulse_title">HydroPulse™ Electronic Water Descalers</h2>
                     <p class="text-win-muted text-sm sm:text-base leading-relaxed">
                         Eco-friendly physical descalers engineered for molecular crystal restructuring. Zero salt refills, zero chemicals, zero pressure drop across pipelines.
                     </p>
@@ -598,7 +622,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-win-border">
                 <div class="space-y-3 max-w-2xl">
                     <span class="text-xs font-mono uppercase tracking-widest text-emerald-800 font-bold bg-emerald-100 px-3 py-1 rounded-full">Product Line 03 · Clean Agri-Tech</span>
-                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight">CropSafe™ Solar Agricultural Insect Killers</h2>
+                    <h2 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-win-dark leading-tight" data-i18n="products.cropsafe_title">CropSafe™ Solar Agricultural Insect Killers</h2>
                     <p class="text-win-muted text-sm sm:text-base leading-relaxed">
                         100% solar autonomous pest control for open farms, vineyards, orchards, and tea gardens. Made in India with multi-functional protective microcontrollers and rain sensors.
                     </p>
@@ -879,34 +903,34 @@
 
                 <!-- Products -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Products</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n="footer.products_title">Products</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="products.html#scalebreck" class="hover:text-win-hpBlue transition-colors">ScaleBreck™ Water Conditioner</a></li>
-                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors">HydroPulse™ Electronic Descalers</a></li>
-                        <li><a href="products.html#cropsafe" class="hover:text-win-hpBlue transition-colors">CropSafe™ Solar Insect Killers</a></li>
+                        <li><a href="products.html#scalebreck" class="hover:text-win-hpBlue transition-colors"><span data-i18n="footer.scalebreck">ScaleBreck™ Water Conditioner</span></a></li>
+                        <li><a href="products.html#hydropulse" class="hover:text-win-hpBlue transition-colors"><span data-i18n="footer.hydropulse">HydroPulse™ Electronic Descalers</span></a></li>
+                        <li><a href="products.html#cropsafe" class="hover:text-win-hpBlue transition-colors"><span data-i18n="footer.cropsafe">CropSafe™ Solar Insect Killers</span></a></li>
                     </ul>
                 </div>
 
                 <!-- Navigation -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Navigation</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n="footer.navigation_title">Navigation</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors">Home</a></li>
-                        <li><a href="products.html" class="hover:text-win-hpBlue transition-colors">Our Products</a></li>
-                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors">About Win Energy</a></li>
-                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Contact Us</a></li>
-                        <li><a href="contact.html#dealership" class="hover:text-win-hpBlue transition-colors">Become a Dealer</a></li>
+                        <li><a href="index.html" class="hover:text-win-hpBlue transition-colors"><span data-i18n="nav.home">Home</span></a></li>
+                        <li><a href="products.html" class="hover:text-win-hpBlue transition-colors"><span data-i18n="nav.products">Our Products</span></a></li>
+                        <li><a href="about.html" class="hover:text-win-hpBlue transition-colors"><span data-i18n="nav.about">About Win Energy</span></a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors"><span data-i18n="nav.contact">Contact Us</span></a></li>
+                        <li><a href="contact.html#dealership" class="hover:text-win-hpBlue transition-colors"><span data-i18n="nav.dealer">Become a Dealer</span></a></li>
                     </ul>
                 </div>
 
                 <!-- Quick Help -->
                 <div>
-                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Help</h4>
+                    <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4" data-i18n="footer.quick_help_title">Quick Help</h4>
                     <ul class="space-y-3 text-xs text-slate-400">
-                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors">Request a Consultation</a></li>
+                        <li><a href="contact.html" class="hover:text-win-hpBlue transition-colors"><span data-i18n="footer.request_consultation">Request a Consultation</span></a></li>
                         <li><a href="tel:+919595955585" class="hover:text-win-hpBlue transition-colors">+91 9595955585</a></li>
                         <li><a href="mailto:contact@winenergy.in" class="hover:text-win-hpBlue transition-colors">contact@winenergy.in</a></li>
-                        <li><a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Chat on WhatsApp</a></li>
+                        <li><a href="https://wa.me/919595955585" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors"><span data-i18n="footer.chat_whatsapp">Chat on WhatsApp</span></a></li>
                     </ul>
                 </div>
 
@@ -914,9 +938,9 @@
 
             <!-- Bottom Copyright -->
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>© 2026 Win Energy. All rights reserved. Made in India.</p>
+                <p data-i18n="footer.rights">© 2026 Win Energy. All rights reserved. Made in India.</p>
                 <div class="flex items-center gap-6">
-                    <span class="text-slate-400">Pan-India Delivery & Global Exports</span>
+                    <span class="text-slate-400" data-i18n="footer.pan_india">Pan-India Delivery & Global Exports</span>
                     <a href="tel:+919595955585" class="hover:text-slate-300 transition-colors">+91 9595955585</a>
                 </div>
             </div>
@@ -934,5 +958,8 @@
     </script>
     <script src="assets/js/ai-chat.js?v=3.0"></script>
     <script src="assets/js/store.js"></script>
+    <script src="assets/js/i18next.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
+
 </body>
 </html>

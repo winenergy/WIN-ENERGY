@@ -31,10 +31,14 @@
             if (currentUser && currentUser.name) {
                 btn.textContent = currentUser.name.split(' ')[0];
             } else {
-                btn.textContent = 'Account';
+                btn.textContent = (window.i18next && typeof window.i18next.t === 'function') ? window.i18next.t('nav.account') : 'Account';
             }
         });
     }
+
+    window.addEventListener('winEnergyLanguageChanged', () => {
+        updateCartBadges();
+    });
 
     // 5. Hide / Show Floating Widgets (AI Assistant & WhatsApp) to prevent overlap
     function setFloatingWidgetsVisible(visible) {
