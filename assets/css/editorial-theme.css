@@ -129,45 +129,77 @@ ul li {
     color: #94a3b8 !important; /* Slate-400 */
 }
 
-/* Crisp Readability & Contrast for Light-Theme Footer with Agricultural Morning Background */
+/* High Contrast Crisp White Typography for Corporate Footer with Agricultural Landscape Background */
 footer {
-    color: #1e293b !important; /* Deep Slate-800 for maximum clarity */
+    color: #ffffff !important;
 }
 
 footer h4 {
-    color: #0f172a !important; /* Slate-900 bold headings */
+    color: #ffffff !important; /* Pure white bold headings */
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
 }
 
 footer li a,
 footer ul li a {
-    color: #334155 !important; /* Slate-700 links */
+    color: #ffffff !important; /* Pure white links */
     font-weight: 500;
-    transition: color 0.2s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 footer li a:hover,
 footer ul li a:hover {
-    color: #0284c7 !important; /* Brand Blue */
+    color: #38bdf8 !important; /* Sky Blue glow on hover */
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
 }
 
 footer strong {
-    color: #0f172a !important;
+    color: #ffffff !important; /* Pure white bold labels like Sangli Works, Direct Phone, Official Email */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 }
 
-footer .text-slate-800 {
-    color: #0f172a !important;
+footer p,
+footer span {
+    color: #ffffff !important; /* Pure white text for address, copyright, descriptions */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
 }
 
-footer .text-slate-700 {
-    color: #1e293b !important;
+footer .text-slate-100,
+footer .text-slate-200,
+footer .text-slate-300,
+footer .text-slate-400,
+footer .text-slate-500,
+footer .text-slate-600,
+footer .text-slate-700,
+footer .text-slate-800,
+footer .text-slate-900 {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
 }
 
-footer .text-slate-600 {
-    color: #334155 !important;
+/* Vibrant phone, WhatsApp and email accents in footer */
+footer a[href^="tel:"] {
+    color: #38bdf8 !important; /* Bright sky blue for phone numbers */
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 }
 
-footer .text-slate-500 {
-    color: #475569 !important;
+footer a[href*="wa.me"] {
+    color: #4ade80 !important; /* Luminous emerald green for WhatsApp */
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+footer a[href^="mailto:"] {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 3px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+footer a[href^="mailto:"]:hover {
+    color: #38bdf8 !important;
 }
 
 /* Sky Blue Hero & Banner Sections (Light Theme Harmony) */
