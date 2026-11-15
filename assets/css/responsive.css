@@ -398,7 +398,8 @@ img { max-width: 100%; height: auto; }
 /* On tablet: logo + icons only, no text in account button, hamburger visible */
 @media (max-width: 1023px) {
     /* Ensure the header row never overflows */
-    header > div {
+    header > .header-nav-wrap,
+    header > div:first-child {
         gap: 0.5rem !important;
     }
     /* Tighten gap between header action buttons */
@@ -414,7 +415,8 @@ img { max-width: 100%; height: auto; }
 }
 
 @media (max-width: 479px) {
-    header > div {
+    header > .header-nav-wrap,
+    header > div:first-child {
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
         height: 4.75rem !important;
@@ -431,9 +433,19 @@ img { max-width: 100%; height: auto; }
     /* Hamburger */
     header button[onclick*="toggleMobileMenu"],
     header button[onclick*="openMobileNav"],
-    .mobile-menu-btn, .hamburger-btn {
+    .mobile-menu-btn, .hamburger-btn,
+    #menu-btn {
         padding: 0.4rem !important;
     }
+}
+
+/* Mobile Menu Drawer Styling */
+#mobile-menu {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: calc(100vh - 5rem) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
 }
 
 /* ================================================================

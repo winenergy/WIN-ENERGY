@@ -114,29 +114,60 @@ ul li {
     color: #0F172A;
 }
 
-/* Clear contrast in Dark Containers (Footer & Dark Sections) */
+/* Clear contrast in Dark Sections */
 .bg-win-dark,
 .bg-win-dark .text-win-muted,
 .bg-win-dark .text-slate-700,
 .bg-win-dark .text-slate-600,
 .bg-win-dark p.text-slate-400,
 .bg-win-dark span.text-slate-400,
-.bg-win-dark li a.text-slate-400,
-footer,
-footer .text-win-muted,
-footer .text-slate-700,
-footer .text-slate-600,
-footer p.text-slate-400,
-footer span.text-slate-400,
-footer li a,
-footer ul li a {
+.bg-win-dark li a.text-slate-400 {
     color: #cbd5e1 !important; /* Slate-300 on dark background */
 }
 
-.bg-win-dark p.text-slate-500,
-footer p.text-slate-500,
-footer .text-slate-500 {
+.bg-win-dark p.text-slate-500 {
     color: #94a3b8 !important; /* Slate-400 */
+}
+
+/* Crisp Readability & Contrast for Light-Theme Footer with Agricultural Morning Background */
+footer {
+    color: #1e293b !important; /* Deep Slate-800 for maximum clarity */
+}
+
+footer h4 {
+    color: #0f172a !important; /* Slate-900 bold headings */
+}
+
+footer li a,
+footer ul li a {
+    color: #334155 !important; /* Slate-700 links */
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+footer li a:hover,
+footer ul li a:hover {
+    color: #0284c7 !important; /* Brand Blue */
+}
+
+footer strong {
+    color: #0f172a !important;
+}
+
+footer .text-slate-800 {
+    color: #0f172a !important;
+}
+
+footer .text-slate-700 {
+    color: #1e293b !important;
+}
+
+footer .text-slate-600 {
+    color: #334155 !important;
+}
+
+footer .text-slate-500 {
+    color: #475569 !important;
 }
 
 /* Sky Blue Hero & Banner Sections (Light Theme Harmony) */
