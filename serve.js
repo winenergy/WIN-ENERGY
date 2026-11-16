@@ -40,11 +40,11 @@ const server = http.createServer((req, res) => {
         const ext = path.extname(filePath).toLowerCase();
         const contentType = MIME_TYPES[ext] || 'application/octet-stream';
         
-        // Optimize cache lifetimes for static assets (fixes Lighthouse caching audit)
-        const isStaticAsset = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif', '.ico', '.woff', '.woff2', '.ttf', '.css', '.js', '.mp4', '.webm'].includes(ext);
-        const cacheControl = isStaticAsset 
+        // Optimize cache lifetimes: media/fonts cached, code/data revalidated
+        const isMediaOrFont = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif', '.ico', '.woff', '.woff2', '.ttf', '.mp4', '.webm'].includes(ext);
+        const cacheControl = isMediaOrFont 
             ? 'public, max-age=31536000, immutable' 
-            : 'public, max-age=0, must-revalidate';
+            : 'no-cache, must-revalidate';
 
         res.writeHead(200, {
             'Content-Type': contentType,

@@ -40,17 +40,20 @@
     async function loadTranslations() {
         const resources = {
             en: { translation: { ...bundledResources.en.translation } },
-            mr: { translation: { ...bundledResources.mr.translation } }
+            mr: { translation: { ...bundledResources.mr.translation } },
+            hi: { translation: { ...bundledResources.hi.translation } }
         };
 
         if (window.location.protocol.startsWith('http')) {
             try {
-                const [enRes, mrRes] = await Promise.all([
+                const [enRes, mrRes, hiRes] = await Promise.all([
                     fetch('locales/en.json').then(r => r.ok ? r.json() : null),
-                    fetch('locales/mr.json').then(r => r.ok ? r.json() : null)
+                    fetch('locales/mr.json').then(r => r.ok ? r.json() : null),
+                    fetch('locales/hi.json').then(r => r.ok ? r.json() : null)
                 ]);
                 if (enRes) resources.en.translation = Object.assign(resources.en.translation, enRes);
                 if (mrRes) resources.mr.translation = Object.assign(resources.mr.translation, mrRes);
+                if (hiRes) resources.hi.translation = Object.assign(resources.hi.translation, hiRes);
             } catch (err) {
                 console.log('Serving from bundled translation resources.');
             }
@@ -63,11 +66,12 @@
         const currentLang = lng || (window.i18next && window.i18next.language) || 'en';
         document.documentElement.lang = currentLang;
 
-        // Apply/toggle Marathi-specific typography class if needed
+        // Apply/toggle Marathi or Hindi typography class if needed
+        document.documentElement.classList.remove('lang-mr', 'lang-hi');
         if (currentLang === 'mr') {
             document.documentElement.classList.add('lang-mr');
-        } else {
-            document.documentElement.classList.remove('lang-mr');
+        } else if (currentLang === 'hi') {
+            document.documentElement.classList.add('lang-hi');
         }
 
         // Translate inner text / html
