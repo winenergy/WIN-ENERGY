@@ -84,6 +84,16 @@
 
             <!-- Commerce Actions -->
             <div class="flex items-center gap-2.5 sm:gap-3">
+                <!-- Language Switcher -->
+                <div class="relative flex items-center bg-white border border-win-border hover:border-emerald-500 rounded-xl px-2 sm:px-2.5 py-2 shadow-xs transition-all">
+                    <i data-lucide="globe" class="w-4 h-4 text-emerald-600 mr-1 sm:mr-1.5 shrink-0"></i>
+                    <select class="lang-switcher bg-transparent text-xs font-heading font-semibold text-slate-700 focus:outline-none cursor-pointer pr-1" aria-label="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="mr">मराठी</option>
+                    </select>
+                </div>
+
                 <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-emerald-600 px-3.5 py-2.5 rounded-xl border border-win-border bg-white shadow-xs transition-all">
                     <i data-lucide="user" class="w-4 h-4 text-emerald-600"></i>
                     <span class="header-user-label hidden sm:inline" data-i18n="nav.account">Account</span>
@@ -124,6 +134,7 @@
                     <i data-lucide="globe" class="w-4 h-4 text-win-hpBlue mr-2"></i>
                     <select class="lang-switcher bg-transparent text-xs font-heading font-semibold text-slate-800 focus:outline-none cursor-pointer" aria-label="Select Language">
                         <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
                         <option value="mr">मराठी</option>
                     </select>
                 </div>
