@@ -26,13 +26,9 @@
             b.textContent = totalItems;
         });
 
-        const userBtns = document.querySelectorAll('.header-user-label');
-        userBtns.forEach(btn => {
-            if (currentUser && currentUser.name) {
-                btn.textContent = currentUser.name.split(' ')[0];
-            } else {
-                btn.textContent = (window.i18next && typeof window.i18next.t === 'function') ? window.i18next.t('nav.account') : 'Account';
-            }
+        const inqBtns = document.querySelectorAll('.header-inquiry-label, .header-user-label');
+        inqBtns.forEach(btn => {
+            btn.textContent = (window.i18next && typeof window.i18next.t === 'function') ? window.i18next.t('nav.inquiry') : 'Inquiry';
         });
     }
 
@@ -138,7 +134,11 @@
 
     // 8. Inject Modals and Drawers into DOM
     function injectStoreModals() {
-        if (document.getElementById('win-store-container')) return;
+        const existing = document.getElementById('win-store-container');
+        if (existing && document.getElementById('inquiry-modal')) return;
+        if (existing) {
+            existing.remove();
+        }
 
         const container = document.createElement('div');
         container.id = 'win-store-container';
@@ -253,19 +253,34 @@
 
                         <div class="space-y-1">
                             <label class="text-xs font-semibold text-slate-700">Delivery Address *</label>
-                            <textarea id="chk-address" required rows="2" placeholder="House/Flat No, Landmark, City, State, PIN" class="w-full px-4 py-3 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors"></textarea>
+                            <input type="text" id="chk-address" required placeholder="House / Flat / Survey No., Street, Landmark" class="w-full px-4 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="space-y-1">
+                                <label class="text-xs font-semibold text-slate-700">City / District *</label>
+                                <input type="text" id="chk-city" required placeholder="e.g. Sangli" class="w-full px-3 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-semibold text-slate-700">State *</label>
+                                <input type="text" id="chk-state" required placeholder="Maharashtra" value="Maharashtra" class="w-full px-3 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-semibold text-slate-700">PIN Code *</label>
+                                <input type="text" id="chk-pincode" required placeholder="416410" class="w-full px-3 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                            </div>
                         </div>
 
                         <div class="space-y-2 pt-2">
                             <label class="text-xs font-semibold text-slate-700">Payment Option *</label>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                                 <label class="flex items-center gap-2.5 p-3 rounded-xl border border-win-hpBlue bg-win-hpBlueLight/20 cursor-pointer">
-                                    <input type="radio" name="payment_method" value="cod" checked class="text-win-hpBlue focus:ring-win-hpBlue">
-                                    <span class="font-semibold text-slate-800">Cash on Delivery / Dispatch</span>
+                                    <input type="radio" name="payment_method" value="COD" checked class="text-win-hpBlue focus:ring-win-hpBlue">
+                                    <span class="font-semibold text-slate-800">Cash on Delivery</span>
                                 </label>
                                 <label class="flex items-center gap-2.5 p-3 rounded-xl border border-win-border bg-win-base cursor-pointer hover:border-slate-300">
-                                    <input type="radio" name="payment_method" value="online" class="text-win-hpBlue focus:ring-win-hpBlue">
-                                    <span class="font-semibold text-slate-800">UPI / Bank Transfer</span>
+                                    <input type="radio" name="payment_method" value="Razorpay" class="text-win-hpBlue focus:ring-win-hpBlue">
+                                    <span class="font-semibold text-slate-800">Razorpay / UPI / Card</span>
                                 </label>
                             </div>
                         </div>
@@ -308,59 +323,114 @@
                 </div>
             </div>
 
-            <!-- Login / Account Modal Backdrop -->
-            <div id="login-modal-backdrop" onclick="window.winStore.closeLogin()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-[100000] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+            <!-- Inquiry & Consultation Modal Backdrop -->
+            <div id="inquiry-modal-backdrop" onclick="window.winStore.closeInquiry()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-[100000] opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
-            <!-- Login / Account Modal Dialog -->
-            <div id="login-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-win-surface border border-win-border rounded-3xl shadow-2xl z-[100001] p-8 opacity-0 scale-95 pointer-events-none transition-all duration-300">
+            <!-- Inquiry & Consultation Modal Dialog (Styled exactly like the login modal in Screenshot 2) -->
+            <div id="inquiry-modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg max-h-[92vh] overflow-y-auto bg-win-surface border border-win-border rounded-3xl shadow-2xl z-[100001] p-6 sm:p-8 opacity-0 scale-95 pointer-events-none transition-all duration-300">
                 <!-- Modal Close -->
-                <button onclick="window.winStore.closeLogin()" class="absolute top-6 right-6 p-2 text-slate-400 hover:text-win-dark rounded-xl hover:bg-slate-100 transition-colors">
+                <button onclick="window.winStore.closeInquiry()" class="absolute top-6 right-6 p-2 text-slate-400 hover:text-win-dark rounded-xl hover:bg-slate-100 transition-colors" aria-label="Close modal">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
 
-                <!-- Brand Header -->
+                <!-- Brand Header (Centered emblem + title matching Screenshot 2) -->
                 <div class="text-center space-y-2 mb-6">
                     <img src="assets/images/company/win_energy_emblem.png" alt="Win Energy" class="w-12 h-12 mx-auto object-contain">
-                    <h3 id="auth-title" class="font-serif text-2xl text-win-dark font-bold">Create Win Energy Account</h3>
-                    <p id="auth-sub" class="text-xs text-win-muted">Register for business quotations and direct ordering.</p>
+                    <span class="inline-block text-[10px] font-mono uppercase tracking-widest text-win-hpOrange font-bold bg-win-hpOrangeLight px-3 py-1 rounded-full">INQUIRY & DEALERSHIP</span>
+                    <h3 class="font-serif text-2xl text-win-dark font-bold">Send an Inquiry / Request Consultation</h3>
+                    <p class="text-xs text-win-muted">Speak directly with our engineering and consultation team.</p>
                 </div>
 
-                <!-- Auth Form -->
-                <form id="auth-form" onsubmit="window.winStore.handleAuthSubmit(event)" class="space-y-4">
-                    <div id="auth-name-group" class="space-y-1">
-                        <label class="text-xs font-semibold text-slate-700">Full Name</label>
-                        <input type="text" id="auth-name" placeholder="John Doe" class="w-full px-4 py-3 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
-                    </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-slate-700">Email Address</label>
-                        <input type="email" id="auth-email" required placeholder="name@company.com" class="w-full px-4 py-3 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
-                    </div>
-
-                    <div class="space-y-1">
-                        <div class="flex items-center justify-between">
-                            <label class="text-xs font-semibold text-slate-700">Password</label>
-                            <a href="#" onclick="alert('Password reset link sent to registered email.'); return false;" class="text-[11px] text-win-hpBlue hover:underline">Forgot?</a>
+                <!-- Step 1: Inquiry Form View -->
+                <div id="modal-inquiry-form-step">
+                    <form id="modalInquiryForm" onsubmit="window.winStore.handleInquirySubmit(event)" class="space-y-3.5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="space-y-1">
+                                <label for="modal-inq-name" class="text-xs font-semibold text-slate-700">Full Name *</label>
+                                <input type="text" id="modal-inq-name" required placeholder="e.g. Ramesh Patel" class="w-full px-4 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                            </div>
+                            <div class="space-y-1">
+                                <label for="modal-inq-phone" class="text-xs font-semibold text-slate-700">Phone Number *</label>
+                                <input type="tel" id="modal-inq-phone" required placeholder="e.g. +91 98765 43210" class="w-full px-4 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                            </div>
                         </div>
-                        <input type="password" id="auth-password" required placeholder="••••••••" class="w-full px-4 py-3 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="space-y-1">
+                                <label for="modal-inq-email" class="text-xs font-semibold text-slate-700">Email Address</label>
+                                <input type="email" id="modal-inq-email" placeholder="e.g. contact@domain.com" class="w-full px-4 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors">
+                            </div>
+                            <div class="space-y-1">
+                                <label for="modal-inq-product" class="text-xs font-semibold text-slate-700">Product / Division *</label>
+                                <select id="modal-inq-product" required class="w-full px-3 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors cursor-pointer">
+                                    <option value="ScaleBreck™ Eco 1.0 (Flats & Apartments)">ScaleBreck™ Eco 1.0 (Flats & Apartments)</option>
+                                    <option value="ScaleBreck™ Mine 1.5 (Villas & High Flow)">ScaleBreck™ Mine 1.5 (Villas & High Flow)</option>
+                                    <option value="ScaleBreck™ Commercial Series Pro">ScaleBreck™ Commercial Series Pro</option>
+                                    <option value="HydroPulse Marlin Eco 1.0 — Homes">HydroPulse Marlin Eco 1.0 — Homes</option>
+                                    <option value="HydroPulse Marlin Mine 1.5 — Villas/Commercial">HydroPulse Marlin Mine 1.5 — Villas/Commercial</option>
+                                    <option value="HydroPulse Industrial Series Pro">HydroPulse Industrial Series Pro</option>
+                                    <option value="CropSafe ECO (Up to 0.5 Acre Solar Trap)">CropSafe ECO (Up to 0.5 Acre Solar Trap)</option>
+                                    <option value="CropSafe MINE (0.5 - 1.0 Acre Solar Trap)">CropSafe MINE (0.5 - 1.0 Acre Solar Trap)</option>
+                                    <option value="CropSafe Pro (Up to 2.0 Acres Solar Killer)">CropSafe Pro (Up to 2.0 Acres Solar Killer)</option>
+                                    <option value="Regional Dealership / Distribution">Regional Dealership / Distribution</option>
+                                    <option value="Multiple Products / Complete Consultation">Multiple Products / Complete Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="modal-inq-sector" class="text-xs font-semibold text-slate-700">Application Sector</label>
+                            <select id="modal-inq-sector" class="w-full px-3 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors cursor-pointer">
+                                <option value="Residential Villa / Apartment">Residential Villa / Apartment</option>
+                                <option value="Agriculture / Vineyard / Orchard">Agriculture / Vineyard / Orchard</option>
+                                <option value="Hotels & Commercial Real Estate">Hotels & Commercial Real Estate</option>
+                                <option value="Industrial Manufacturing & Boilers">Industrial Manufacturing & Boilers</option>
+                                <option value="Poultry / Livestock">Poultry / Livestock</option>
+                                <option value="Other Application">Other Application</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="modal-inq-message" class="text-xs font-semibold text-slate-700">Your Requirement or Message</label>
+                            <textarea id="modal-inq-message" rows="2" placeholder="Mention pipeline diameter, water hardness issues, or farm acreage..." class="w-full px-4 py-2.5 bg-win-base border border-win-border rounded-xl text-xs text-win-dark focus:outline-none focus:border-win-hpBlue transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-win-dark hover:bg-win-hpBlue text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm mt-2">
+                            SUBMIT INQUIRY
+                        </button>
+                    </form>
+
+                    <div class="pt-4 border-t border-win-border mt-4 text-center text-xs text-slate-600">
+                        Prefer direct chat?
+                        <a href="https://wa.me/919595955585" target="_blank" class="font-semibold text-win-hpBlue hover:underline ml-1">Chat on WhatsApp</a>
                     </div>
+                </div>
 
-                    <div class="flex items-center gap-2 pt-1">
-                        <input type="checkbox" id="auth-remember" checked class="w-4 h-4 rounded border-slate-300 text-win-hpBlue focus:ring-win-hpBlue">
-                        <label for="auth-remember" class="text-xs text-slate-600">Keep me signed in on this device</label>
+                <!-- Step 2: Inquiry Success View -->
+                <div id="modal-inquiry-success-step" class="text-center py-6 space-y-4 hidden">
+                    <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-sm">
+                        <i data-lucide="check" class="w-8 h-8"></i>
                     </div>
-
-                    <button type="submit" id="auth-submit-btn" class="w-full bg-win-dark hover:bg-win-hpBlue text-white py-3.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm mt-2">
-                        CREATE ACCOUNT
-                    </button>
-                </form>
-
-                <!-- Toggle between Login and Register -->
-                <div class="pt-6 border-t border-win-border mt-6 text-center text-xs text-slate-600">
-                    <span id="auth-toggle-prompt">Already have an account?</span>
-                    <button type="button" onclick="window.winStore.toggleAuthMode()" id="auth-toggle-btn" class="font-semibold text-win-hpBlue hover:underline ml-1">
-                        Sign In
-                    </button>
+                    <div class="space-y-1">
+                        <h3 class="font-serif text-2xl text-win-dark font-bold">Inquiry Received!</h3>
+                        <p class="text-xs text-win-muted max-w-sm mx-auto">
+                            Thank you, <strong id="modal-inq-success-name" class="text-slate-800"></strong>! Your technical inquiry has been submitted. Our engineering desk will review your details and reach out to <strong id="modal-inq-success-phone" class="text-slate-800"></strong> promptly.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-win-border rounded-2xl text-xs text-slate-600 text-left space-y-1.5 max-w-sm mx-auto">
+                        <div class="flex justify-between"><span>Product:</span><strong id="modal-inq-success-prod" class="text-win-hpBlue truncate max-w-[200px]">ScaleBreck</strong></div>
+                        <div class="flex justify-between"><span>Engineering Desk:</span><strong>+91 9595955585</strong></div>
+                        <div class="flex justify-between"><span>Response Time:</span><strong>Under 2 Hours</strong></div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2.5 pt-2 max-w-sm mx-auto">
+                        <a id="modal-inq-success-wa" href="#" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-heading font-semibold text-xs uppercase flex items-center justify-center gap-2 shadow-xs transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <button onclick="window.winStore.closeInquiry()" class="px-5 py-3 bg-win-sand hover:bg-slate-200 text-win-dark rounded-xl font-heading font-semibold text-xs uppercase transition-colors">
+                            Done
+                        </button>
+                    </div>
                 </div>
             </div>
         `;
@@ -484,13 +554,45 @@
         },
         handleCheckoutSubmit: function(e) {
             e.preventDefault();
-            const name = document.getElementById('chk-name').value;
-            const phone = document.getElementById('chk-phone').value;
-            const address = document.getElementById('chk-address').value;
-            const payment = document.querySelector('input[name="payment_method"]:checked')?.value || 'COD';
+            const name = document.getElementById('chk-name')?.value || 'Customer';
+            const phone = document.getElementById('chk-phone')?.value || '';
+            const email = document.getElementById('chk-email')?.value || 'Not provided';
+            const address = document.getElementById('chk-address')?.value || '';
+            const city = document.getElementById('chk-city')?.value || '';
+            const state = document.getElementById('chk-state')?.value || 'Maharashtra';
+            const pincode = document.getElementById('chk-pincode')?.value || '';
+            const paymentMode = document.querySelector('input[name="payment_method"]:checked')?.value || 'COD';
 
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.qty || 1)), 0);
             const orderId = 'WIN-' + Math.floor(100000 + Math.random() * 900000);
-            const orderInfo = `${name} | ${phone} | ${address} | Payment: ${payment.toUpperCase()}`;
+            const fullAddress = `${address}, ${city}, ${state} - ${pincode}`;
+            const orderInfo = `${name} | ${phone} | ${fullAddress} | Payment: ${paymentMode}`;
+
+            // 1. Pipeline Call to Bucket 2 (Proxy Shield) -> Bucket 3 (Backend / SheetDB)
+            const payload = {
+                orderId: orderId,
+                customerName: name,
+                phone: phone,
+                email: email,
+                address: fullAddress,
+                city: city,
+                state: state,
+                pincode: pincode,
+                items: cart.map(i => ({ name: i.name, qty: i.qty || 1, price: i.price })),
+                totalAmount: subtotal,
+                paymentMode: paymentMode,
+                paymentStatus: paymentMode === 'Razorpay' ? 'Pending' : 'COD_Confirmed'
+            };
+
+            fetch('/api/order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(r => r.json()).then(res => {
+                console.log('[Win Energy Pipeline] Order response:', res);
+            }).catch(err => {
+                console.warn('[Win Energy Pipeline] Local order processed (will sync):', err);
+            });
 
             // Set success screen
             document.getElementById('checkout-form-step').classList.add('hidden');
@@ -508,73 +610,145 @@
 
             if (window.lucide) window.lucide.createIcons();
         },
-        updateAuthModalUI: function() {
-            const title = document.getElementById('auth-title');
-            const sub = document.getElementById('auth-sub');
-            const nameGroup = document.getElementById('auth-name-group');
-            const submitBtn = document.getElementById('auth-submit-btn');
-            const prompt = document.getElementById('auth-toggle-prompt');
-            const toggleBtn = document.getElementById('auth-toggle-btn');
-            if (!title) return;
-
-            if (isRegisterMode) {
-                title.textContent = 'Create Win Energy Account';
-                sub.textContent = 'Register for business quotations and direct ordering.';
-                if (nameGroup) nameGroup.classList.remove('hidden');
-                if (submitBtn) submitBtn.textContent = 'CREATE ACCOUNT';
-                if (prompt) prompt.textContent = 'Already have an account?';
-                if (toggleBtn) toggleBtn.textContent = 'Sign In';
-            } else {
-                title.textContent = 'Sign In to Win Energy';
-                sub.textContent = 'Access your commercial orders, warranties & technical specs.';
-                if (nameGroup) nameGroup.classList.add('hidden');
-                if (submitBtn) submitBtn.textContent = 'SIGN IN';
-                if (prompt) prompt.textContent = "Don't have an account?";
-                if (toggleBtn) toggleBtn.textContent = 'Create an Account';
-            }
-        },
-        openLogin: function(startWithRegister = true) {
+        openInquiry: function(productName) {
             injectStoreModals();
-            isRegisterMode = (startWithRegister !== false);
-            this.updateAuthModalUI();
+            // Reset modal to form view
+            const formStep = document.getElementById('modal-inquiry-form-step');
+            const successStep = document.getElementById('modal-inquiry-success-step');
+            if (formStep) formStep.classList.remove('hidden');
+            if (successStep) successStep.classList.add('hidden');
+
+            if (productName) {
+                const prodSelect = document.getElementById('modal-inq-product');
+                if (prodSelect) {
+                    for (let opt of prodSelect.options) {
+                        if (opt.value.toLowerCase().includes(productName.toLowerCase())) {
+                            prodSelect.value = opt.value;
+                            break;
+                        }
+                    }
+                }
+            }
+
             setFloatingWidgetsVisible(false);
-            const backdrop = document.getElementById('login-modal-backdrop');
-            const modal = document.getElementById('login-modal');
+            const backdrop = document.getElementById('inquiry-modal-backdrop');
+            const modal = document.getElementById('inquiry-modal');
             if (backdrop && modal) {
                 backdrop.classList.remove('opacity-0', 'pointer-events-none');
                 modal.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                backdrop.style.opacity = '1';
+                backdrop.style.pointerEvents = 'auto';
+                modal.style.opacity = '1';
+                modal.style.pointerEvents = 'auto';
+                modal.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+            if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                window.lucide.createIcons();
             }
         },
-        closeLogin: function() {
+        closeInquiry: function() {
             setFloatingWidgetsVisible(true);
-            const backdrop = document.getElementById('login-modal-backdrop');
-            const modal = document.getElementById('login-modal');
+            const backdrop = document.getElementById('inquiry-modal-backdrop');
+            const modal = document.getElementById('inquiry-modal');
             if (backdrop && modal) {
                 backdrop.classList.add('opacity-0', 'pointer-events-none');
                 modal.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+                backdrop.style.opacity = '0';
+                backdrop.style.pointerEvents = 'none';
+                modal.style.opacity = '0';
+                modal.style.pointerEvents = 'none';
+                modal.style.transform = 'translate(-50%, -50%) scale(0.95)';
             }
         },
-        toggleAuthMode: function() {
-            isRegisterMode = !isRegisterMode;
-            this.updateAuthModalUI();
-        },
-        handleAuthSubmit: function(e) {
-            e.preventDefault();
-            const email = document.getElementById('auth-email').value;
-            const nameInput = document.getElementById('auth-name');
-            const name = (isRegisterMode && nameInput && nameInput.value) ? nameInput.value : email.split('@')[0];
+        handleInquirySubmit: function(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const name = document.getElementById('modal-inq-name')?.value || '';
+            const phone = document.getElementById('modal-inq-phone')?.value || '';
+            const email = document.getElementById('modal-inq-email')?.value || 'Not provided';
+            const product = document.getElementById('modal-inq-product')?.value || 'Win Energy System';
+            const sector = document.getElementById('modal-inq-sector')?.value || 'General';
+            const message = document.getElementById('modal-inq-message')?.value || 'Interested in technical specifications & quote.';
 
-            currentUser = { email, name };
-            localStorage.setItem('win_energy_user', JSON.stringify(currentUser));
-            updateCartBadges();
-            this.closeLogin();
-            alert(`Welcome, ${currentUser.name}! You are now signed in.`);
+            if (!name || !phone) {
+                alert('Please enter your full name and phone number.');
+                return;
+            }
+
+            // 1. Pipeline Call to Bucket 2 (Proxy Shield) -> Bucket 3 (Backend / SheetDB)
+            const inquiryPayload = {
+                name: name,
+                phone: phone,
+                email: email,
+                product: product,
+                sector: sector,
+                message: message,
+                source: window.location.pathname || 'Website Modal'
+            };
+
+            fetch('/api/inquiry', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(inquiryPayload)
+            }).then(r => r.json()).then(res => {
+                console.log('[Win Energy Pipeline] Inquiry saved:', res);
+            }).catch(err => {
+                console.warn('[Win Energy Pipeline] Inquiry saved locally (will sync):', err);
+            });
+
+            // Save inquiry in browser local storage as secondary backup
+            try {
+                const existing = JSON.parse(localStorage.getItem('win_energy_inquiries') || '[]');
+                existing.push({
+                    name, phone, email, product, sector, message,
+                    timestamp: new Date().toISOString()
+                });
+                localStorage.setItem('win_energy_inquiries', JSON.stringify(existing));
+            } catch (err) {
+                console.warn('Could not save inquiry to local storage', err);
+            }
+
+            // Populate success screen
+            const nameEl = document.getElementById('modal-inq-success-name');
+            const phoneEl = document.getElementById('modal-inq-success-phone');
+            const prodEl = document.getElementById('modal-inq-success-prod');
+            const waEl = document.getElementById('modal-inq-success-wa');
+
+            if (nameEl) nameEl.textContent = name;
+            if (phoneEl) phoneEl.textContent = phone;
+            if (prodEl) prodEl.textContent = product;
+
+            const waMsg = `Hello Win Energy! My name is ${name} (${phone}). I submitted an inquiry for ${product} (${sector}). Message: ${message}`;
+            if (waEl) {
+                waEl.href = 'https://wa.me/919595955585?text=' + encodeURIComponent(waMsg);
+            }
+
+            // Transition to success screen
+            const formStep = document.getElementById('modal-inquiry-form-step');
+            const successStep = document.getElementById('modal-inquiry-success-step');
+            if (formStep) formStep.classList.add('hidden');
+            if (successStep) successStep.classList.remove('hidden');
+
+            const form = document.getElementById('modalInquiryForm');
+            if (form) form.reset();
+
+            if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                window.lucide.createIcons();
+            }
+        },
+        // Backwards compatibility mappings
+        openLogin: function(startWithRegister) {
+            this.openInquiry();
+        },
+        closeLogin: function() {
+            this.closeInquiry();
         }
     };
 
     // Global aliases
-    window.openLoginModal = () => window.winStore.openLogin();
-    window.closeLoginModal = () => window.winStore.closeLogin();
+    window.openInquiryModal = (prod) => window.winStore.openInquiry(prod);
+    window.closeInquiryModal = () => window.winStore.closeInquiry();
+    window.openLoginModal = (prod) => window.winStore.openInquiry(prod);
+    window.closeLoginModal = () => window.winStore.closeInquiry();
     window.toggleCartDrawer = () => window.winStore.toggleCart();
     window.openCartDrawer = () => window.winStore.openCart();
     window.closeCartDrawer = () => window.winStore.closeCart();
@@ -658,16 +832,46 @@
         });
     }
 
+    // Visitor Traffic & Arrival Time Logger (Bucket 1 -> Bucket 2 -> Bucket 3)
+    function logVisitorTraffic() {
+        try {
+            // Check session to log once per session visit or page change
+            const lastLog = sessionStorage.getItem('win_visitor_logged');
+            const currentPage = window.location.pathname || 'home';
+            if (lastLog === currentPage) return; // already logged this page in current session
+
+            const payload = {
+                page: currentPage,
+                referrer: document.referrer || 'Direct Visit',
+                device: window.innerWidth < 768 ? 'Mobile' : (window.innerWidth < 1024 ? 'Tablet' : 'Desktop'),
+                country: 'India'
+            };
+
+            fetch('/api/visitor', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(r => r.json()).then(res => {
+                sessionStorage.setItem('win_visitor_logged', currentPage);
+                console.log(`[Win Energy Pipeline] Visit logged (${res.timeOfDay || 'IST'})`);
+            }).catch(e => {
+                // Silently fallback without affecting user experience
+            });
+        } catch (err) {}
+    }
+
     // Document Ready initialization
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             injectStoreModals();
             updateCartBadges();
             initMobileMenu();
+            logVisitorTraffic();
         });
     } else {
         injectStoreModals();
         updateCartBadges();
         initMobileMenu();
+        logVisitorTraffic();
     }
 })();

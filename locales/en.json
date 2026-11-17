@@ -4,7 +4,8 @@
         "products": "Our Products",
         "about": "About Win Energy",
         "contact": "Contact",
-        "account": "Account",
+        "inquiry": "Inquiry",
+        "account": "Inquiry",
         "cart": "Cart",
         "login": "Log In",
         "logout": "Log Out",
@@ -12,7 +13,7 @@
         "dealer": "Become a Dealer"
     },
     "header": {
-        "account": "Account",
+        "inquiry": "Inquiry",
         "cart": "Cart",
         "login": "Log In",
         "toggle_menu": "Toggle Menu"

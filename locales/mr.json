@@ -4,7 +4,8 @@
         "products": "आमची उत्पादने",
         "about": "विन एनर्जी विषयी",
         "contact": "संपर्क",
-        "account": "खाते",
+        "inquiry": "चौकशी",
+        "account": "चौकशी",
         "cart": "कार्ट",
         "login": "लॉग इन",
         "logout": "लॉग आउट",
@@ -12,7 +13,7 @@
         "dealer": "डीलर बना"
     },
     "header": {
-        "account": "खाते",
+        "inquiry": "चौकशी",
         "cart": "कार्ट",
         "login": "लॉग इन",
         "toggle_menu": "मेनू उघडा"

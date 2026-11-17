@@ -57,6 +57,27 @@
     </script>
     <link rel="stylesheet" href="assets/css/editorial-theme.css?v=2.3">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Immediate Global Modal Helpers -->
+    <script>
+        window.openInquiryModal = function(prod) {
+            if (window.winStore && typeof window.winStore.openInquiry === 'function') {
+                window.winStore.openInquiry(prod);
+            } else {
+                window.addEventListener('DOMContentLoaded', function() {
+                    if (window.winStore && typeof window.winStore.openInquiry === 'function') {
+                        window.winStore.openInquiry(prod);
+                    }
+                });
+            }
+        };
+        window.closeInquiryModal = function() {
+            if (window.winStore && typeof window.winStore.closeInquiry === 'function') {
+                window.winStore.closeInquiry();
+            }
+        };
+        window.openLoginModal = window.openInquiryModal;
+        window.closeLoginModal = window.closeInquiryModal;
+    </script>
 </head>
 <body class="bg-win-base text-win-dark font-sans antialiased selection:bg-emerald-600 selection:text-white">
 <!-- Sticky Header -->
@@ -94,9 +115,10 @@
                     </select>
                 </div>
 
-                <button onclick="openLoginModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-emerald-600 px-3.5 py-2.5 rounded-xl border border-win-border bg-white shadow-xs transition-all">
-                    <i data-lucide="user" class="w-4 h-4 text-emerald-600"></i>
-                    <span class="header-user-label hidden sm:inline" data-i18n="nav.account">Account</span>
+                <!-- Inquiry & Consultation CTA Button -->
+                <button onclick="openInquiryModal()" class="flex items-center gap-2 text-xs font-heading font-semibold text-slate-700 hover:text-win-hpBlue px-3.5 py-2.5 rounded-xl border border-win-border hover:border-win-hpBlue bg-white shadow-xs transition-all cursor-pointer" title="Send an Inquiry / Request Consultation">
+                    <i data-lucide="clipboard-list" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span class="header-inquiry-label hidden sm:inline" data-i18n="nav.inquiry">Inquiry</span>
                 </button>
 
                 <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-950 font-heading font-bold px-3.5 sm:px-4 py-2.5 rounded-xl text-xs tracking-wide border border-emerald-200 shadow-xs transition-all group">
@@ -119,9 +141,9 @@
             <a href="contact.html" class="block text-base font-medium text-slate-700 hover:text-emerald-600"><span data-i18n="nav.contact">Contact</span></a>
             
             <div class="pt-3 border-t border-win-border grid grid-cols-2 gap-3">
-                <button onclick="openLoginModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
-                    <i data-lucide="user" class="w-4 h-4 text-emerald-600"></i>
-                    <span data-i18n="nav.login">Log In</span>
+                <button onclick="openInquiryModal()" class="flex items-center justify-center gap-2 text-xs font-heading font-semibold text-slate-800 py-3 rounded-xl border border-win-border bg-win-sand hover:bg-slate-200 transition-colors">
+                    <i data-lucide="clipboard-list" class="w-4 h-4 text-win-hpBlue"></i>
+                    <span data-i18n="nav.inquiry">Inquiry</span>
                 </button>
                 <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-2 text-xs font-heading font-bold text-emerald-950 py-3 rounded-xl bg-emerald-100 hover:bg-emerald-200 border border-emerald-200 transition-colors">
                     <i data-lucide="shopping-bag" class="w-4 h-4 text-emerald-600"></i>
@@ -950,7 +972,7 @@
         }
     </script>
     <script src="assets/js/ai-chat.js?v=3.0" defer></script>
-    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/store.js?v=6.0" defer></script>
     <!-- Product Buy Box & Gallery Engine -->
     <script src="assets/js/product-gallery.js"></script>
     <script>
